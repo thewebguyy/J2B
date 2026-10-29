@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* ==========================================================================
+     VERIFIED BRAND COLOUR TOKENS (Extracted from client live identity)
+     Roles:
+     - Primary: Deep plum / burgundy (Logo, headings, buttons, footer, thresholds)
+     - Secondary: Soft light pink / warm beige (Main backgrounds, editorial surfaces)
+     - Supporting: White (Content surfaces, cards) & Dark Grey (Body typography)
+     ========================================================================== */
+  --radius: 0.75rem;
+
+  /* Client exact OKLCH tokens */
+  --cream: oklch(97.5% 0.012 60);         /* Warm beige canvas: #FAF6F0 */
+  --blush: oklch(94.5% 0.02 20);          /* Soft light pink: #F6ECE8 */
+  --plum: oklch(36% 0.11 340);            /* Primary warm burgundy: #521A37 */
+  --plum-deep: oklch(28% 0.09 340);       /* Deep plum sanctuary: #381226 */
+  --berry: oklch(52% 0.17 3);             /* Primary button / link accent: #8E2543 */
+  --gold: oklch(78% 0.13 78);             /* Woven thread / delicate highlight: #D8B467 */
+
+  --background: var(--cream);
+  --foreground: oklch(24% 0.03 340);      /* Dark charcoal / plum-grey: #221C20 */
+  --card: #FFFFFF;
+  --card-foreground: var(--foreground);
+  --border: oklch(90% 0.02 350);          /* #E5DCD6 */
+  --muted: oklch(95.5% 0.014 40);         /* #F3ECE5 */
+  --muted-foreground: oklch(50% 0.02 340);/* #635A60 */
+}
+
+/* Base Body & Reset */
+html {
+  scroll-behavior: smooth;
+  background-color: var(--background);
+  color: var(--foreground);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), "Plus Jakarta Sans", system-ui, sans-serif;
+  line-height: 1.65;
+}
+
+/* Subtle editorial paper grain texture overlay */
+.editorial-grain {
+  background-image: radial-gradient(rgba(82, 26, 55, 0.03) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* Editorial Typography Styles */
+h1, h2, h3, h4, .font-serif {
+  font-family: var(--font-playfair), "Playfair Display", Georgia, serif;
+  font-feature-settings: "pnum" 1, "onum" 1;
+  letter-spacing: -0.015em;
+}
+
+/* Accessible Focus States */
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
+  outline: 2px solid var(--berry);
+  outline-offset: 3px;
+}
+
+/* Golden Thread Canvas Layer */
+.thread-path {
+  stroke: var(--gold);
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  fill: none;
+  filter: drop-shadow(0 1px 2px rgba(216, 180, 103, 0.3));
+}
+
+/* Breath Easing Transitions */
+.transition-breath {
+  transition-timing-function: cubic-bezier(0.25, 1, 0.5, 1);
+  transition-duration: 500ms;
+}
+
+/* Strict Reduced Motion Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .thread-path {
+    stroke-dashoffset: 0 !important;
+    animation: none !important;
+  }
+}
