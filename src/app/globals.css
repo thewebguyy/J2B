@@ -73,13 +73,32 @@ body {
 h1, h2, h3, h4, .font-serif {
   font-family: var(--font-playfair), "Playfair Display", Georgia, serif;
   font-feature-settings: "pnum" 1, "onum" 1;
-  letter-spacing: -0.018em;
+  letter-spacing: -0.022em;
+}
+
+.editorial-display {
+  font-size: clamp(2.4rem, 4.8vw + 0.8rem, 4.4rem);
+  line-height: 1.06;
+  letter-spacing: -0.026em;
+}
+
+.editorial-h2 {
+  font-size: clamp(1.85rem, 3.2vw + 0.6rem, 3.25rem);
+  line-height: 1.12;
+  letter-spacing: -0.022em;
+}
+
+.editorial-pullquote {
+  font-size: clamp(1.35rem, 2.2vw + 0.5rem, 2.15rem);
+  line-height: 1.32;
+  letter-spacing: -0.015em;
 }
 
 /* Accessible Focus States */
-a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, summary:focus-visible {
   outline: 2px solid var(--gold);
-  outline-offset: 3px;
+  outline-offset: 4px;
+  border-radius: 4px;
 }
 
 /* The Path of Becoming SVG Ribbon Stroke */
@@ -87,7 +106,54 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   stroke-linecap: round;
   stroke-linejoin: round;
   fill: none;
-  filter: drop-shadow(0 2px 4px rgba(213, 160, 68, 0.25));
+  filter: drop-shadow(0 2px 4px rgba(213, 160, 68, 0.22));
+}
+
+.path-draw-enter {
+  stroke-dasharray: 1400;
+  stroke-dashoffset: 1400;
+  animation: pathDrawEnter 1000ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes pathDrawEnter {
+  0% {
+    stroke-dashoffset: 1400;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Section Heading Restrained Reveal */
+.reveal-heading {
+  animation: revealHeadingUp 750ms cubic-bezier(0.25, 1, 0.5, 1) both;
+}
+
+@keyframes revealHeadingUp {
+  0% {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Tactile Editorial Surface Hover */
+.tactile-surface {
+  transition: transform 400ms cubic-bezier(0.25, 1, 0.5, 1),
+              border-color 400ms cubic-bezier(0.25, 1, 0.5, 1),
+              background-color 400ms cubic-bezier(0.25, 1, 0.5, 1),
+              box-shadow 400ms cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .tactile-surface:hover {
+    transform: scale(1.008);
+    border-color: rgba(213, 160, 68, 0.55);
+    box-shadow: 0 8px 30px -12px rgba(213, 160, 68, 0.18);
+  }
 }
 
 /* Breath Easing Transitions */
@@ -104,8 +170,16 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
-  .path-ribbon {
+  .path-ribbon, .path-draw-enter {
     stroke-dashoffset: 0 !important;
     animation: none !important;
+  }
+  .reveal-heading {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+  }
+  .tactile-surface:hover {
+    transform: none !important;
   }
 }

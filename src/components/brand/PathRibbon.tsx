@@ -1,7 +1,13 @@
 import React from "react";
 
 interface PathRibbonProps {
-  variant?: "ascending-beacon" | "narrative-flow" | "chapter-divider" | "soft-horizon";
+  variant?:
+    | "ascending-beacon"
+    | "narrative-flow"
+    | "chapter-divider"
+    | "soft-horizon"
+    | "vertical-spine"
+    | "margin-anchor";
   className?: string;
 }
 
@@ -13,6 +19,68 @@ export const PathRibbon: React.FC<PathRibbonProps> = ({
   variant = "narrative-flow",
   className = "",
 }) => {
+  if (variant === "margin-anchor") {
+    return (
+      <div className={`pointer-events-none select-none ${className}`} aria-hidden="true">
+        <svg
+          viewBox="0 0 44 360"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className="w-9 h-full overflow-visible"
+        >
+          <circle cx="22" cy="12" r="5" fill="#D5A044" />
+          <circle cx="22" cy="12" r="10" stroke="#D5A044" strokeWidth="1" strokeOpacity="0.35" />
+          <path
+            d="M22 20C8 85 36 165 18 245C10 285 26 325 22 356"
+            stroke="#D5A044"
+            strokeWidth="2"
+            strokeLinecap="round"
+            className="path-ribbon path-draw-enter"
+          />
+          <path
+            d="M22 36C32 100 10 180 26 260C32 295 18 330 22 356"
+            stroke="#036E76"
+            strokeWidth="1"
+            strokeDasharray="3 5"
+            strokeLinecap="round"
+            className="opacity-35"
+          />
+        </svg>
+      </div>
+    );
+  }
+
+  if (variant === "vertical-spine") {
+    return (
+      <div className={`pointer-events-none select-none ${className}`} aria-hidden="true">
+        <svg
+          viewBox="0 0 60 800"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className="w-12 h-full overflow-visible"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M30 0C10 160 50 320 26 480C8 600 46 710 30 800"
+            stroke="#E9E1C9"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+          />
+          <path
+            d="M30 0C10 160 50 320 26 480C8 600 46 710 30 800"
+            stroke="#D5A044"
+            strokeWidth="2.2"
+            strokeLinecap="round"
+            className="path-ribbon path-draw-enter"
+          />
+          <circle cx="30" cy="120" r="4" fill="#D5A044" />
+          <circle cx="26" cy="480" r="4.5" fill="#036E76" />
+          <circle cx="30" cy="760" r="4" fill="#D5A044" />
+        </svg>
+      </div>
+    );
+  }
+
   if (variant === "ascending-beacon") {
     return (
       <div className={`relative inline-flex flex-col items-center select-none ${className}`} aria-hidden="true">

@@ -3,6 +3,7 @@ import { BotanicalMotif } from "@/components/brand/BotanicalMotif";
 
 const VALUES = [
   {
+    number: "01",
     title: "Honesty",
     tagline: "Dropping the mask",
     description:
@@ -10,6 +11,7 @@ const VALUES = [
     theme: "midnight",
   },
   {
+    number: "02",
     title: "Belonging",
     tagline: "Room at the table",
     description:
@@ -17,6 +19,7 @@ const VALUES = [
     theme: "ivory",
   },
   {
+    number: "03",
     title: "Courage",
     tagline: "Taking the next step",
     description:
@@ -24,6 +27,7 @@ const VALUES = [
     theme: "teal",
   },
   {
+    number: "04",
     title: "Celebration",
     tagline: "Honouring quiet victories",
     description:
@@ -34,95 +38,153 @@ const VALUES = [
 
 export const AboutValues: React.FC = () => {
   return (
-    <section className="relative py-24 sm:py-32 bg-ivory-canvas overflow-hidden">
+    <section className="relative py-20 sm:py-28 bg-ivory-canvas overflow-hidden">
       <div className="relative mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
         
-        {/* Header */}
-        <div className="max-w-3xl mb-16 sm:mb-20">
-          <div className="inline-flex items-center gap-2 mb-4">
-            <BotanicalMotif size={20} />
-            <span className="text-xs uppercase tracking-widest font-semibold text-teal-living">
-              Core Principles
-            </span>
+        {/* Asymmetric Header */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end mb-16 sm:mb-24">
+          <div className="lg:col-span-7">
+            <div className="inline-flex items-center gap-2.5 mb-4">
+              <BotanicalMotif size={20} />
+              <span className="text-xs uppercase tracking-[0.22em] font-semibold text-teal-living">
+                Core Principles
+              </span>
+            </div>
+
+            <h2 className="font-serif editorial-h2 font-bold text-midnight reveal-heading">
+              The values that anchor our sisterhood.
+            </h2>
           </div>
 
-          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-midnight leading-tight mb-6">
-            The values that anchor our sisterhood.
-          </h2>
-
-          <p className="font-sans text-base sm:text-lg text-charcoal/80 leading-relaxed">
-            These four commitments shape every circle we host, every workshop we curate, and every conversation we share.
-          </p>
+          <div className="lg:col-span-5 lg:pl-6 border-l border-gold-harvest/50">
+            <p className="font-sans text-base sm:text-lg text-charcoal/80 leading-relaxed">
+              These four commitments shape every circle we host, every workshop we curate, and every conversation we share.
+            </p>
+          </div>
         </div>
 
-        {/* 4 Distinct Value Storyboards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
-          {VALUES.map((val, idx) => {
-            return (
-              <div
-                key={val.title}
-                className={`rounded-3xl p-8 sm:p-10 border transition-all duration-300 relative overflow-hidden flex flex-col justify-between ${
-                  val.theme === "midnight"
-                    ? "bg-midnight-deep text-ivory-surface border-midnight"
-                    : val.theme === "teal"
-                    ? "bg-ivory-surface border-teal-living/40"
-                    : val.theme === "gold"
-                    ? "bg-gradient-to-br from-ivory-surface to-gold-subtle/40 border-gold-harvest/50"
-                    : "bg-ivory-surface border-ivory-border"
-                } shadow-sm hover:shadow-md`}
-              >
-                <div>
-                  <div className="flex items-center justify-between mb-6">
-                    <span
-                      className={`font-serif italic text-3xl font-bold ${
-                        val.theme === "midnight" ? "text-gold-harvest" : "text-teal-living"
-                      }`}
-                    >
-                      0{idx + 1}
-                    </span>
-                    <BotanicalMotif
-                      size={22}
-                      orientation={idx % 2 === 0 ? "right" : "left"}
-                    />
-                  </div>
+        {/* Staggered 2x2 Asymmetric Editorial Layout Connected by a Subtle Gold Thematic Thread */}
+        <div className="relative">
+          {/* Flowing Gold Thematic Thread across the center */}
+          <div
+            className="hidden md:block pointer-events-none absolute left-0 right-0 top-1/2 -translate-y-1/2 z-0"
+            aria-hidden="true"
+          >
+            <svg viewBox="0 0 1200 80" fill="none" className="w-full h-20 overflow-visible">
+              <path
+                d="M0 40C300 8 600 72 900 32C1050 12 1150 40 1200 40"
+                stroke="#D5A044"
+                strokeWidth="1.5"
+                strokeDasharray="6 6"
+                strokeLinecap="round"
+                className="opacity-55"
+              />
+            </svg>
+          </div>
 
-                  <h3
-                    className={`font-serif text-3xl font-bold mb-2 ${
-                      val.theme === "midnight" ? "text-white" : "text-midnight"
-                    }`}
-                  >
-                    {val.title}
-                  </h3>
-
-                  <p
-                    className={`text-xs uppercase tracking-widest font-semibold mb-4 ${
-                      val.theme === "midnight" ? "text-gold-harvest" : "text-teal-living"
-                    }`}
-                  >
-                    {val.tagline}
-                  </p>
-
-                  <p
-                    className={`font-sans text-base leading-relaxed ${
-                      val.theme === "midnight" ? "text-ivory-surface/85" : "text-charcoal/80"
-                    }`}
-                  >
-                    {val.description}
-                  </p>
-                </div>
-
-                <div
-                  className={`mt-8 pt-4 border-t text-xs font-medium ${
-                    val.theme === "midnight"
-                      ? "border-ivory-surface/15 text-ivory-surface/60"
-                      : "border-ivory-border text-muted-foreground"
-                  }`}
-                >
-                  Journey 2 Better Living Commitment
-                </div>
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12 relative z-10 items-start">
+            
+            {/* Principle 01: Honesty (7 columns, Deep Sanctuary Inversion) */}
+            <article className="md:col-span-7 bg-midnight-deep text-ivory-surface p-8 sm:p-11 border-l-4 border-gold-harvest relative overflow-hidden tactile-surface">
+              <div className="pointer-events-none absolute -right-8 -bottom-8 opacity-25" aria-hidden="true">
+                <BotanicalMotif variant="watermark" size={180} orientation="left" />
               </div>
-            );
-          })}
+
+              <div className="flex items-center justify-between mb-6">
+                <div className="flex items-center gap-3">
+                  <span className="font-serif italic text-4xl font-bold text-gold-harvest">
+                    {VALUES[0].number}
+                  </span>
+                  <span className="h-px w-8 bg-gold-harvest/50" />
+                  <span className="text-xs uppercase tracking-[0.2em] font-semibold text-gold-light">
+                    {VALUES[0].tagline}
+                  </span>
+                </div>
+                <BotanicalMotif size={22} orientation="right" />
+              </div>
+
+              <h3 className="font-serif text-3xl sm:text-4xl font-bold text-white mb-4">
+                {VALUES[0].title}
+              </h3>
+
+              <p className="font-sans text-base sm:text-lg text-ivory-surface/85 leading-relaxed max-w-xl">
+                {VALUES[0].description}
+              </p>
+            </article>
+
+            {/* Principle 02: Belonging (5 columns, Staggered Downward) */}
+            <article className="md:col-span-5 md:mt-12 bg-ivory-surface p-8 sm:p-10 border-t-2 border-teal-living relative tactile-surface">
+              <div className="flex items-center justify-between mb-5">
+                <span className="font-serif italic text-4xl font-bold text-teal-living">
+                  {VALUES[1].number}
+                </span>
+                <BotanicalMotif size={22} orientation="left" />
+              </div>
+
+              <p className="text-xs uppercase tracking-[0.2em] font-semibold text-teal-living mb-2">
+                {VALUES[1].tagline}
+              </p>
+
+              <h3 className="font-serif text-2xl sm:text-3xl font-bold text-midnight mb-3">
+                {VALUES[1].title}
+              </h3>
+
+              <p className="font-sans text-base text-charcoal/85 leading-relaxed">
+                {VALUES[1].description}
+              </p>
+            </article>
+
+            {/* Principle 03: Courage (5 columns, Offset Editorial Spread) */}
+            <article className="md:col-span-5 bg-ivory-surface p-8 sm:p-10 border-l-2 border-teal-living relative tactile-surface">
+              <div className="flex items-center justify-between mb-5">
+                <span className="font-serif italic text-4xl font-bold text-midnight">
+                  {VALUES[2].number}
+                </span>
+                <BotanicalMotif size={22} orientation="up" />
+              </div>
+
+              <p className="text-xs uppercase tracking-[0.2em] font-semibold text-teal-living mb-2">
+                {VALUES[2].tagline}
+              </p>
+
+              <h3 className="font-serif text-2xl sm:text-3xl font-bold text-midnight mb-3">
+                {VALUES[2].title}
+              </h3>
+
+              <p className="font-sans text-base text-charcoal/85 leading-relaxed">
+                {VALUES[2].description}
+              </p>
+            </article>
+
+            {/* Principle 04: Celebration (7 columns, Staggered Upward Warm Gold Wash) */}
+            <article className="md:col-span-7 md:-mt-6 bg-gradient-to-br from-ivory-surface via-ivory-canvas to-gold-subtle/45 p-8 sm:p-11 border-l-4 border-gold-harvest relative overflow-hidden tactile-surface">
+              <div className="pointer-events-none absolute -right-6 -top-6 opacity-40" aria-hidden="true">
+                <BotanicalMotif variant="watermark" size={170} />
+              </div>
+
+              <div className="flex items-center justify-between mb-6">
+                <div className="flex items-center gap-3">
+                  <span className="font-serif italic text-4xl font-bold text-gold-deep">
+                    {VALUES[3].number}
+                  </span>
+                  <span className="h-px w-8 bg-gold-harvest/60" />
+                  <span className="text-xs uppercase tracking-[0.2em] font-semibold text-teal-living">
+                    {VALUES[3].tagline}
+                  </span>
+                </div>
+                <BotanicalMotif size={22} orientation="left" />
+              </div>
+
+              <h3 className="font-serif text-3xl sm:text-4xl font-bold text-midnight mb-4">
+                {VALUES[3].title}
+              </h3>
+
+              <p className="font-sans text-base sm:text-lg text-charcoal/85 leading-relaxed max-w-xl">
+                {VALUES[3].description}
+              </p>
+            </article>
+
+          </div>
         </div>
 
       </div>

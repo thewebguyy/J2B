@@ -11,6 +11,7 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        charcoal: "#12242B",
         // New canonical palette: BECOMING — A LIVING JOURNEY
         ivory: {
           DEFAULT: "var(--ivory)",

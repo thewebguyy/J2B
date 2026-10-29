@@ -53,15 +53,15 @@ export const MagneticButton: React.FC<MagneticButtonProps> = ({
 
   const variantStyles = {
     primary:
-      "bg-midnight hover:bg-midnight-deep text-ivory-canvas border border-gold-harvest/40 shadow-sm hover:shadow transition-all duration-300",
+      "bg-midnight hover:bg-midnight-deep text-ivory-canvas border border-gold-harvest/45 hover:border-gold-harvest shadow-xs hover:shadow-[0_6px_22px_-6px_rgba(213,160,68,0.38)] transition-all duration-300",
     secondary:
-      "bg-ivory-surface hover:bg-ivory-dark text-midnight border border-border font-medium transition-all duration-300",
+      "bg-ivory-surface hover:bg-ivory-dark text-midnight border border-border hover:border-gold-harvest/60 font-medium transition-all duration-300",
     teal:
-      "bg-teal-living hover:bg-teal-hover text-white shadow-sm hover:shadow transition-all duration-300",
+      "bg-teal-living hover:bg-teal-hover text-white border border-gold-harvest/30 hover:border-gold-harvest/70 shadow-xs hover:shadow-[0_6px_22px_-6px_rgba(3,110,118,0.4)] transition-all duration-300",
     gold:
-      "bg-gold-harvest hover:bg-gold-deep text-midnight-deep font-semibold shadow-sm hover:shadow transition-all duration-300",
+      "bg-gold-harvest hover:bg-gold-light text-midnight-deep font-semibold border border-gold-deep/30 shadow-xs hover:shadow-[0_6px_24px_-4px_rgba(213,160,68,0.45)] transition-all duration-300",
     outline:
-      "border border-midnight/35 hover:border-midnight text-midnight hover:bg-ivory-surface transition-all duration-300",
+      "border border-midnight/35 hover:border-gold-harvest text-midnight hover:bg-ivory-surface/90 hover:shadow-[0_4px_18px_-6px_rgba(213,160,68,0.28)] transition-all duration-300",
   };
 
   const content = (

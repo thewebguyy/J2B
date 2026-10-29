@@ -18,24 +18,25 @@ export const LogoMark: React.FC<LogoMarkProps> = ({
 }) => {
   if (size === "nav") {
     return (
-      <div className={`flex items-center gap-3 select-none ${className}`}>
-        {/* Crisp circular cropped emblem view for high-density nav */}
-        <div className="relative w-10 h-10 rounded-full overflow-hidden border border-gold-harvest/40 bg-ivory-surface shadow-sm flex-shrink-0">
+      <div className={`flex items-center gap-3.5 select-none ${className}`}>
+        {/* Authentic Emblem Lockup with Golden Accent Border */}
+        <div className="relative w-11 h-11 rounded-full overflow-hidden border border-gold-harvest/60 bg-ivory-canvas shadow-xs flex-shrink-0">
           <Image
             src="/images/logo.jpeg"
             alt="Journey 2 Better Emblem"
-            width={80}
-            height={80}
+            width={88}
+            height={88}
             className="w-full h-full object-cover object-top scale-125"
             priority
           />
         </div>
         <div className="flex flex-col">
-          <span className="font-serif text-lg tracking-tight font-bold text-midnight leading-none">
-            Journey <span className="font-sans text-teal-living font-extrabold">2</span> <span className="text-gold-harvest">Better</span>
+          <span className="font-serif text-lg sm:text-[1.15rem] tracking-tight font-bold text-midnight leading-none">
+            Journey <span className="font-sans text-teal-living font-extrabold">2</span>{" "}
+            <span className="text-gold-harvest">Better</span>
           </span>
-          <span className="text-[10px] tracking-wider uppercase text-muted-foreground font-medium font-sans mt-0.5">
-            The Living Journey
+          <span className="text-[10px] tracking-[0.18em] uppercase text-muted-foreground font-medium font-sans mt-1">
+            Becoming &bull; UK Sisterhood
           </span>
         </div>
       </div>

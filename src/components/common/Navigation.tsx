@@ -51,7 +51,7 @@ export const Navigation: React.FC = () => {
 
         {/* Desktop Editorial Navigation */}
         <nav
-          className="hidden md:flex items-center gap-9 text-sm font-sans tracking-wide text-midnight/80"
+          className="hidden md:flex items-center gap-10 text-sm font-sans tracking-[0.04em] text-midnight/85"
           aria-label="Primary Navigation"
         >
           {NAV_LINKS.map((link) => {
@@ -60,14 +60,34 @@ export const Navigation: React.FC = () => {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`relative py-1 transition-colors duration-300 hover:text-midnight font-medium ${
+                className={`group relative py-1.5 transition-colors duration-300 hover:text-midnight font-medium ${
                   isActive ? "text-midnight font-semibold" : ""
                 }`}
                 aria-current={isActive ? "page" : undefined}
               >
-                {link.label}
-                {isActive && (
-                  <span className="absolute -bottom-1 left-0 right-0 h-[2px] bg-gold-harvest rounded-full" />
+                <span>{link.label}</span>
+                {isActive ? (
+                  <svg
+                    viewBox="0 0 64 10"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="absolute -bottom-1.5 left-0 w-full h-2.5 overflow-visible pointer-events-none"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M2 6C16 2 32 9 48 4C54 2.5 59 4.5 62 5"
+                      stroke="#D5A044"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      className="path-draw-enter"
+                    />
+                    <circle cx="48" cy="4" r="2" fill="#D5A044" />
+                  </svg>
+                ) : (
+                  <span
+                    className="pointer-events-none absolute -bottom-0.5 left-0 right-0 h-[1.5px] bg-gold-harvest/45 scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"
+                    aria-hidden="true"
+                  />
                 )}
               </Link>
             );
@@ -118,12 +138,29 @@ export const Navigation: React.FC = () => {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`font-serif text-3xl transition-colors ${
+                  className={`relative inline-flex items-center justify-between font-serif text-3xl py-1 transition-colors ${
                     isActive ? "text-teal-living italic font-medium" : "text-midnight hover:text-teal-living"
                   }`}
                   aria-current={isActive ? "page" : undefined}
                 >
-                  {link.label}
+                  <span>{link.label}</span>
+                  {isActive && (
+                    <svg
+                      viewBox="0 0 80 12"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="w-20 h-3 overflow-visible"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M2 6C24 2 48 10 76 5"
+                        stroke="#D5A044"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                      />
+                      <circle cx="76" cy="5" r="2.5" fill="#D5A044" />
+                    </svg>
+                  )}
                 </Link>
               );
             })}

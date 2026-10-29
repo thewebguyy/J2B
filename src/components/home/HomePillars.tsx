@@ -1,8 +1,7 @@
 import React from "react";
 import Link from "next/link";
-import { ArrowRight, Users, Compass, Calendar, HeartHandshake } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { BotanicalMotif } from "@/components/brand/BotanicalMotif";
-import { PathRibbon } from "@/components/brand/PathRibbon";
 
 const PILLARS = [
   {
@@ -11,8 +10,7 @@ const PILLARS = [
     subtitle: "Sister Circles & Safe Spaces",
     description:
       "Intentionally curated intimate circles where women share authentically without posturing. A community where your voice is heard, your vulnerability is respected, and your presence is welcomed unconditionally.",
-    icon: Users,
-    accent: "teal",
+    orientation: "right" as const,
     linkText: "Discover Community Circles",
     linkHref: "/community#circles",
   },
@@ -22,8 +20,7 @@ const PILLARS = [
     subtitle: "Personal Development & Mentorship",
     description:
       "Structured self-reflection, life architecture, and compassionate guidance to help you navigate pivotal seasons with clarity, resilience, and renewed self-trust.",
-    icon: Compass,
-    accent: "gold",
+    orientation: "up" as const,
     linkText: "Explore Mentorship",
     linkHref: "/community#mentorship",
   },
@@ -33,8 +30,7 @@ const PILLARS = [
     subtitle: "Mindful Gatherings & Retreats",
     description:
       "From sunrise reflection sessions to immersive in-person workshops and our annual sanctuary retreat, each gathering is designed to create space for mental stillness and renewed perspective.",
-    icon: Calendar,
-    accent: "midnight",
+    orientation: "left" as const,
     linkText: "View Gatherings Calendar",
     linkHref: "/events",
   },
@@ -44,8 +40,7 @@ const PILLARS = [
     subtitle: "Everyday Encouragement",
     description:
       "Consistent gentle check-ins, daily affirmations, and shared reminders that remind you to breathe, slow down, and trust your personal evolution.",
-    icon: HeartHandshake,
-    accent: "teal",
+    orientation: "right" as const,
     linkText: "Connect With Us",
     linkHref: "/community#join",
   },
@@ -53,91 +48,194 @@ const PILLARS = [
 
 export const HomePillars: React.FC = () => {
   return (
-    <section className="relative py-24 sm:py-32 bg-ivory-canvas overflow-hidden">
+    <section className="relative py-20 sm:py-28 bg-ivory-canvas overflow-hidden">
       <div className="relative mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
         
-        {/* Section Header */}
-        <div className="max-w-3xl mb-20">
-          <div className="inline-flex items-center gap-2 mb-4">
-            <BotanicalMotif size={20} />
-            <span className="text-xs uppercase tracking-widest font-semibold text-teal-living">
-              The Four Pillars of Becoming
-            </span>
+        {/* Asymmetric Section Header */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end mb-16 sm:mb-20">
+          <div className="lg:col-span-7">
+            <div className="inline-flex items-center gap-2.5 mb-4">
+              <BotanicalMotif size={20} />
+              <span className="text-xs uppercase tracking-[0.22em] font-semibold text-teal-living">
+                The Four Pillars of Becoming
+              </span>
+            </div>
+
+            <h2 className="font-serif editorial-h2 font-bold text-midnight reveal-heading">
+              Everything we cultivate is designed to companion your growth.
+            </h2>
           </div>
 
-          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-midnight leading-tight mb-6">
-            Everything we cultivate is designed to companion your growth.
-          </h2>
-
-          <p className="font-sans text-base sm:text-lg text-charcoal/80 leading-relaxed">
-            We do not believe in superficial quick fixes. Journey 2 Better is grounded in four foundational pillars that nurture the emotional, relational, and personal life of every woman.
-          </p>
+          <div className="lg:col-span-5 lg:pl-6 border-l border-gold-harvest/50">
+            <p className="font-sans text-base sm:text-lg text-charcoal/80 leading-relaxed">
+              We do not believe in superficial quick fixes. Journey 2 Better is grounded in four foundational pillars that nurture the emotional, relational, and personal life of every woman.
+            </p>
+          </div>
         </div>
 
-        {/* Storytelling Narrative Grid (Asymmetrical Editorial Layout) */}
-        <div className="space-y-12">
-          {PILLARS.map((pillar, idx) => {
-            const Icon = pillar.icon;
-            const isEven = idx % 2 === 1;
+        {/* Fluid Asymmetric 2x2 Editorial Quadrant Connected by Gold Narrative Lines */}
+        <div className="relative">
+          {/* Central Gold Intersection Medallion (Desktop) */}
+          <div
+            className="hidden lg:flex pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20 size-14 rounded-full bg-ivory-canvas border border-gold-harvest/60 items-center justify-center shadow-sm"
+            aria-hidden="true"
+          >
+            <BotanicalMotif size={22} orientation="up" />
+          </div>
 
-            return (
-              <div
-                key={pillar.title}
-                className={`group relative rounded-3xl p-8 sm:p-12 border transition-all duration-500 overflow-hidden ${
-                  pillar.accent === "gold"
-                    ? "bg-gradient-to-br from-ivory-surface via-ivory-canvas to-gold-subtle/30 border-gold-harvest/40 hover:border-gold-harvest"
-                    : pillar.accent === "midnight"
-                    ? "bg-gradient-to-br from-ivory-surface via-ivory-canvas to-teal-subtle/30 border-midnight/20 hover:border-midnight/40"
-                    : "bg-ivory-surface border-ivory-border hover:border-teal-living/50"
-                } shadow-sm hover:shadow-lg`}
-              >
-                {/* Background Path Strand */}
-                <div className="absolute top-0 right-0 w-1/2 h-full opacity-10 pointer-events-none" aria-hidden="true">
-                  <PathRibbon variant="narrative-flow" />
-                </div>
-
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
-                  
-                  {/* Left: Pillar Number & Identity */}
-                  <div className="lg:col-span-4 flex flex-col justify-center">
-                    <div className="flex items-center gap-4 mb-4">
-                      <span className="font-serif italic text-4xl sm:text-5xl font-bold text-gold-harvest">
-                        {pillar.number}
-                      </span>
-                      <div className="p-3 rounded-2xl bg-ivory-canvas border border-ivory-border shadow-xs text-teal-living group-hover:scale-105 transition-transform duration-300">
-                        <Icon className="size-6" />
-                      </div>
-                    </div>
-                    <h3 className="font-serif text-3xl sm:text-4xl font-bold text-midnight mb-2">
-                      {pillar.title}
-                    </h3>
-                    <p className="font-sans text-xs uppercase tracking-widest text-teal-living font-semibold">
-                      {pillar.subtitle}
-                    </p>
-                  </div>
-
-                  {/* Middle: Editorial Narrative */}
-                  <div className="lg:col-span-5">
-                    <p className="font-sans text-base sm:text-lg text-charcoal/85 leading-relaxed font-normal">
-                      {pillar.description}
-                    </p>
-                  </div>
-
-                  {/* Right: Meaningful Next Step */}
-                  <div className="lg:col-span-3 flex lg:justify-end">
-                    <Link
-                      href={pillar.linkHref}
-                      className="inline-flex items-center gap-2.5 rounded-full px-6 py-3 text-xs font-semibold uppercase tracking-wider text-midnight bg-ivory-canvas border border-ivory-border group-hover:border-gold-harvest group-hover:bg-midnight group-hover:text-ivory-canvas transition-all duration-300 shadow-xs"
-                    >
-                      <span>{pillar.linkText}</span>
-                      <ArrowRight className="size-3.5 text-gold-harvest transition-transform group-hover:translate-x-1" />
-                    </Link>
-                  </div>
-
-                </div>
+          <div className="grid grid-cols-1 lg:grid-cols-12 border-t border-b border-gold-harvest/40">
+            
+            {/* Quadrant 01: Connection (7 cols on top row) */}
+            <article className="lg:col-span-7 p-8 sm:p-11 lg:p-14 border-b lg:border-b border-gold-harvest/35 lg:border-r transition-colors duration-500 hover:bg-ivory-surface/90 focus-within:bg-ivory-surface/90 group relative overflow-hidden">
+              <div className="pointer-events-none absolute -right-8 -top-8 opacity-0 group-hover:opacity-60 transition-opacity duration-500" aria-hidden="true">
+                <BotanicalMotif variant="watermark" size={180} />
               </div>
-            );
-          })}
+
+              <div className="flex items-center justify-between mb-6">
+                <div className="flex items-center gap-3">
+                  <span className="font-serif italic text-4xl sm:text-5xl font-bold text-gold-harvest">
+                    {PILLARS[0].number}
+                  </span>
+                  <span className="h-px w-8 bg-gold-harvest/50" />
+                  <span className="text-xs uppercase tracking-[0.2em] font-semibold text-teal-living">
+                    {PILLARS[0].subtitle}
+                  </span>
+                </div>
+                <BotanicalMotif
+                  size={24}
+                  orientation={PILLARS[0].orientation}
+                  className="group-hover:scale-110"
+                />
+              </div>
+
+              <h3 className="font-serif text-3xl sm:text-4xl font-bold text-midnight mb-4">
+                {PILLARS[0].title}
+              </h3>
+
+              <p className="font-sans text-base sm:text-lg text-charcoal/85 leading-relaxed mb-8 max-w-xl">
+                {PILLARS[0].description}
+              </p>
+
+              <Link
+                href={PILLARS[0].linkHref}
+                className="inline-flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.18em] text-midnight group-hover:text-teal-living transition-colors py-1"
+              >
+                <span className="border-b border-gold-harvest pb-0.5">{PILLARS[0].linkText}</span>
+                <ArrowRight className="size-4 text-gold-harvest transition-transform duration-300 group-hover:translate-x-1" />
+              </Link>
+            </article>
+
+            {/* Quadrant 02: Growth (5 cols on top row, staggered vertical padding) */}
+            <article className="lg:col-span-5 p-8 sm:p-11 lg:p-14 lg:pt-20 border-b border-gold-harvest/35 bg-ivory-surface/45 transition-colors duration-500 hover:bg-gold-subtle/45 focus-within:bg-gold-subtle/45 group relative overflow-hidden">
+              <div className="flex items-center justify-between mb-6">
+                <div className="flex items-center gap-3">
+                  <span className="font-serif italic text-4xl sm:text-5xl font-bold text-teal-living">
+                    {PILLARS[1].number}
+                  </span>
+                  <span className="text-xs uppercase tracking-[0.2em] font-semibold text-gold-deep">
+                    {PILLARS[1].subtitle}
+                  </span>
+                </div>
+                <BotanicalMotif
+                  size={24}
+                  orientation={PILLARS[1].orientation}
+                  className="group-hover:scale-110"
+                />
+              </div>
+
+              <h3 className="font-serif text-3xl sm:text-4xl font-bold text-midnight mb-4">
+                {PILLARS[1].title}
+              </h3>
+
+              <p className="font-sans text-base text-charcoal/85 leading-relaxed mb-8">
+                {PILLARS[1].description}
+              </p>
+
+              <Link
+                href={PILLARS[1].linkHref}
+                className="inline-flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.18em] text-midnight group-hover:text-teal-living transition-colors py-1"
+              >
+                <span className="border-b border-gold-harvest pb-0.5">{PILLARS[1].linkText}</span>
+                <ArrowRight className="size-4 text-gold-harvest transition-transform duration-300 group-hover:translate-x-1" />
+              </Link>
+            </article>
+
+            {/* Quadrant 03: Events (5 cols on bottom row) */}
+            <article className="lg:col-span-5 p-8 sm:p-11 lg:p-14 border-b lg:border-b-0 lg:border-r border-gold-harvest/35 bg-ivory-surface/35 transition-colors duration-500 hover:bg-teal-subtle/40 focus-within:bg-teal-subtle/40 group relative overflow-hidden">
+              <div className="flex items-center justify-between mb-6">
+                <div className="flex items-center gap-3">
+                  <span className="font-serif italic text-4xl sm:text-5xl font-bold text-midnight">
+                    {PILLARS[2].number}
+                  </span>
+                  <span className="text-xs uppercase tracking-[0.2em] font-semibold text-teal-living">
+                    {PILLARS[2].subtitle}
+                  </span>
+                </div>
+                <BotanicalMotif
+                  size={24}
+                  orientation={PILLARS[2].orientation}
+                  className="group-hover:scale-110"
+                />
+              </div>
+
+              <h3 className="font-serif text-3xl sm:text-4xl font-bold text-midnight mb-4">
+                {PILLARS[2].title}
+              </h3>
+
+              <p className="font-sans text-base text-charcoal/85 leading-relaxed mb-8">
+                {PILLARS[2].description}
+              </p>
+
+              <Link
+                href={PILLARS[2].linkHref}
+                className="inline-flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.18em] text-midnight group-hover:text-teal-living transition-colors py-1"
+              >
+                <span className="border-b border-gold-harvest pb-0.5">{PILLARS[2].linkText}</span>
+                <ArrowRight className="size-4 text-gold-harvest transition-transform duration-300 group-hover:translate-x-1" />
+              </Link>
+            </article>
+
+            {/* Quadrant 04: Support (7 cols on bottom row, staggered editorial indent) */}
+            <article className="lg:col-span-7 p-8 sm:p-11 lg:p-14 lg:pl-20 transition-colors duration-500 hover:bg-ivory-surface/90 focus-within:bg-ivory-surface/90 group relative overflow-hidden">
+              <div className="pointer-events-none absolute -right-6 -bottom-6 opacity-0 group-hover:opacity-60 transition-opacity duration-500" aria-hidden="true">
+                <BotanicalMotif variant="watermark" size={180} orientation="left" />
+              </div>
+
+              <div className="flex items-center justify-between mb-6">
+                <div className="flex items-center gap-3">
+                  <span className="font-serif italic text-4xl sm:text-5xl font-bold text-gold-harvest">
+                    {PILLARS[3].number}
+                  </span>
+                  <span className="h-px w-8 bg-gold-harvest/50" />
+                  <span className="text-xs uppercase tracking-[0.2em] font-semibold text-gold-deep">
+                    {PILLARS[3].subtitle}
+                  </span>
+                </div>
+                <BotanicalMotif
+                  size={24}
+                  orientation={PILLARS[3].orientation}
+                  className="group-hover:scale-110"
+                />
+              </div>
+
+              <h3 className="font-serif text-3xl sm:text-4xl font-bold text-midnight mb-4">
+                {PILLARS[3].title}
+              </h3>
+
+              <p className="font-sans text-base sm:text-lg text-charcoal/85 leading-relaxed mb-8 max-w-xl">
+                {PILLARS[3].description}
+              </p>
+
+              <Link
+                href={PILLARS[3].linkHref}
+                className="inline-flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.18em] text-midnight group-hover:text-teal-living transition-colors py-1"
+              >
+                <span className="border-b border-gold-harvest pb-0.5">{PILLARS[3].linkText}</span>
+                <ArrowRight className="size-4 text-gold-harvest transition-transform duration-300 group-hover:translate-x-1" />
+              </Link>
+            </article>
+
+          </div>
         </div>
 
       </div>
