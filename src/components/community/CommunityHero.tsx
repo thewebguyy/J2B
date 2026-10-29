@@ -1,83 +1,91 @@
-"use client";
-
 import React from "react";
-import Link from "next/link";
-import { ArrowRight, Heart } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { MagneticButton } from "@/components/common/MagneticButton";
+import { BotanicalMotif } from "@/components/brand/BotanicalMotif";
+import { PathRibbon } from "@/components/brand/PathRibbon";
 
 export const CommunityHero: React.FC = () => {
   return (
-    <section className="relative pt-36 pb-20 sm:pt-44 sm:pb-28 overflow-hidden bg-cream">
-      {/* Subtle Grain Overlay */}
-      <div
-        className="pointer-events-none absolute inset-0 editorial-grain opacity-50"
-        aria-hidden="true"
-      />
-
+    <section className="relative pt-12 pb-20 sm:pb-28 bg-ivory-canvas overflow-hidden">
       <div className="relative mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-          {/* Headline Column (7 cols) */}
-          <div className="lg:col-span-7 flex flex-col items-start z-10">
-            <div className="inline-flex items-center gap-2 rounded-full bg-blush px-3.5 py-1 text-xs font-semibold uppercase tracking-widest text-plum border border-border/80 mb-6">
-              <Heart className="size-3 text-berry" />
-              <span>The Sisterhood Community</span>
-            </div>
-
-            <h1 className="font-serif text-5xl sm:text-7xl lg:text-8xl font-normal tracking-tight text-plum leading-[1.05] mb-8 text-balance">
-              You were never meant to do it{" "}
-              <span className="font-serif italic text-berry font-light">
-                alone.
-              </span>
-            </h1>
-
-            <p className="font-sans text-lg sm:text-xl text-foreground/85 leading-relaxed max-w-xl mb-10 font-normal">
-              Our community is small enough to feel like family and wide enough to
-              open doors you did not know existed.
-            </p>
-
-            <div className="flex flex-wrap items-center gap-4 sm:gap-6">
-              <MagneticButton href="#join" variant="primary">
-                <span>Request an Invitation</span>
-                <ArrowRight className="size-4" />
-              </MagneticButton>
-
-              <Link
-                href="#offerings"
-                className="group inline-flex items-center gap-2 text-sm font-medium tracking-wide text-plum hover:text-berry py-3 px-2 transition-colors duration-300"
-              >
-                <span>Explore Sister Circles</span>
-                <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">
-                  ↓
-                </span>
-              </Link>
-            </div>
+        
+        {/* Header Breadcrumb */}
+        <div className="max-w-3xl mb-12">
+          <div className="inline-flex items-center gap-2 mb-4">
+            <BotanicalMotif size={20} />
+            <span className="text-xs uppercase tracking-widest font-semibold text-teal-living">
+              The Together &bull; Community Life
+            </span>
           </div>
 
-          {/* Visual Composition Column (5 cols) */}
-          <div className="lg:col-span-5 relative">
-            <div className="relative mx-auto max-w-md lg:max-w-none">
-              <div className="relative aspect-[4/5] rounded-3xl overflow-hidden bg-blush border border-border shadow-[0_24px_50px_-15px_rgba(56,18,38,0.12)]">
-                <div
-                  className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 hover:scale-105"
-                  style={{
-                    backgroundImage: `url('https://images.unsplash.com/photo-1543807535-eceef0bc6599?auto=format&fit=crop&w=1000&q=80')`,
-                  }}
-                  role="img"
-                  aria-label="Women sitting closely together sharing in warm community"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-plum/75 via-plum/20 to-transparent" />
-                <div className="absolute bottom-0 inset-x-0 p-8 text-white">
-                  <p className="text-xs uppercase tracking-widest text-gold font-semibold mb-1">
-                    Monthly Sister Circles
-                  </p>
-                  <p className="font-serif italic text-2xl text-cream font-light">
-                    &ldquo;Heard by name, not lost in a crowd.&rdquo;
-                  </p>
-                </div>
-              </div>
+          <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-[4rem] font-bold text-midnight leading-[1.1] tracking-tight mb-8">
+            There is room for you{" "}
+            <span className="italic font-normal text-gold-harvest block sm:inline">
+              at this table.
+            </span>
+          </h1>
+
+          <p className="font-sans text-lg sm:text-xl text-charcoal/85 leading-relaxed font-normal">
+            You were never meant to walk this journey alone. In a world that often demands emotional detachment, Journey 2 Better creates spaces where women gather, speak truthfully, and rise in sisterhood.
+          </p>
+
+          <div className="mt-8 flex flex-wrap gap-4">
+            <MagneticButton href="#offerings" variant="primary">
+              <span>Explore Our Offerings</span>
+              <ArrowRight className="size-4 text-gold-harvest" />
+            </MagneticButton>
+
+            <MagneticButton href="#steps" variant="outline">
+              <span>How To Join Us</span>
+            </MagneticButton>
+          </div>
+        </div>
+
+        {/* Community Atmosphere Banner */}
+        <div className="relative rounded-3xl p-8 sm:p-12 bg-ivory-surface border border-ivory-border shadow-sm overflow-hidden">
+          <div className="absolute top-0 right-0 w-96 opacity-20 pointer-events-none" aria-hidden="true">
+            <PathRibbon variant="narrative-flow" />
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10">
+            <div>
+              <span className="text-xs font-semibold uppercase tracking-widest text-teal-living block mb-2">
+                Safe Sanctuary
+              </span>
+              <h3 className="font-serif text-xl font-bold text-midnight mb-2">
+                Zero Judgment
+              </h3>
+              <p className="font-sans text-sm text-charcoal/75 leading-relaxed">
+                Confidential, supportive environments where you can speak openly about your challenges without fear of being critiqued.
+              </p>
+            </div>
+
+            <div>
+              <span className="text-xs font-semibold uppercase tracking-widest text-gold-harvest block mb-2">
+                Mutual Uplift
+              </span>
+              <h3 className="font-serif text-xl font-bold text-midnight mb-2">
+                Sisterhood Over Rivalry
+              </h3>
+              <p className="font-sans text-sm text-charcoal/75 leading-relaxed">
+                We believe that another woman&apos;s light does not diminish your own. Every success in our community is shared and celebrated.
+              </p>
+            </div>
+
+            <div>
+              <span className="text-xs font-semibold uppercase tracking-widest text-midnight block mb-2">
+                Consistent Care
+              </span>
+              <h3 className="font-serif text-xl font-bold text-midnight mb-2">
+                Everyday Connection
+              </h3>
+              <p className="font-sans text-sm text-charcoal/75 leading-relaxed">
+                Not just occasional meetings, but a continuous web of encouragement that keeps you anchored during demanding weeks.
+              </p>
             </div>
           </div>
         </div>
+
       </div>
     </section>
   );

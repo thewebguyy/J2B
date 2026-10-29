@@ -1,108 +1,108 @@
 import React from "react";
-import { Sparkles, Calendar, MapPin, Video } from "lucide-react";
+import { BotanicalMotif } from "@/components/brand/BotanicalMotif";
+import { PathRibbon } from "@/components/brand/PathRibbon";
 
-interface CycleItem {
-  rhythm: string;
-  name: string;
-  cadence: string;
-  format: string;
-  icon: React.ElementType;
-  description: string;
-}
-
-const CYCLE: CycleItem[] = [
+const RHYTHM_STAGES = [
   {
-    rhythm: "Monthly",
-    name: "Rise & Reflect Circle",
-    cadence: "First Saturday of Every Month • 9:00am",
-    format: "Online Virtual Gathering",
-    icon: Video,
+    phase: "Weekly & Fortnightly",
+    title: "The Morning Hearth",
+    subtitle: "Rise & Reflect Virtual Circles",
     description:
-      "A 60-minute grounding container for honest journaling and shared intentions.",
+      "Consistent, gentle morning check-ins to anchor your thoughts, process weekly intentions, and maintain sisterhood connections between major milestones.",
+    tag: "Online Sanctuary",
+    accent: "teal",
   },
   {
-    rhythm: "Quarterly",
-    name: "Better Together Workshop",
-    cadence: "Four Saturdays Per Year",
-    format: "In-Person • Central London",
-    icon: MapPin,
+    phase: "Quarterly & Seasonal",
+    title: "The London Intensive",
+    subtitle: "Better Together Workshops",
     description:
-      "Intensive half-day workshops on confidence, personal boundaries, and life design.",
+      "Deep, focused half-day sessions in quiet Central London spaces. Work through structured personal development roadmaps, clarify life decisions, and share communal lunch.",
+    tag: "In-Person London",
+    accent: "gold",
   },
   {
-    rhythm: "Annual",
-    name: "Sisterhood Retreat",
-    cadence: "Announced Each Spring",
-    format: "Two Nights Away • UK Countryside",
-    icon: Sparkles,
+    phase: "Annual Flagship",
+    title: "The Sacred Pause",
+    subtitle: "Annual Sisterhood Retreat",
     description:
-      "A deeply restorative weekend away for rest, worship, deep laughter, and long nature walks.",
+      "An unhurried weekend in the English countryside. Step away from routine for quiet walks, deep evening circles, restorative wellness, and lifelong bonds.",
+    tag: "UK Countryside Estate",
+    accent: "midnight",
   },
 ];
 
 export const EventsTimeline: React.FC = () => {
   return (
-    <section className="relative py-28 sm:py-36 bg-blush/30 border-y border-border/80 overflow-hidden">
-      <div className="mx-auto max-w-5xl px-6 sm:px-8 lg:px-12">
-        {/* Section Heading */}
-        <div className="text-center max-w-2xl mx-auto mb-20">
+    <section id="rhythm" className="relative py-24 sm:py-32 bg-ivory-canvas overflow-hidden">
+      <div className="relative mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
+        
+        {/* Header */}
+        <div className="max-w-3xl mb-16 sm:mb-20">
           <div className="inline-flex items-center gap-2 mb-4">
-            <span className="size-2 rounded-full bg-berry" />
-            <span className="text-xs font-semibold uppercase tracking-widest text-plum">
-              The Annual Rhythm
+            <BotanicalMotif size={20} />
+            <span className="text-xs uppercase tracking-widest font-semibold text-teal-living">
+              Gathering Rhythm
             </span>
           </div>
-          <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-plum font-normal tracking-tight leading-[1.1] text-balance">
-            Our rhythm of{" "}
-            <span className="font-serif italic text-berry font-light">
-              gathering.
-            </span>
+
+          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-midnight leading-tight mb-6">
+            The Path of Becoming in practice.
           </h2>
-          <p className="font-sans text-base sm:text-lg text-foreground/80 mt-6 leading-relaxed">
-            Designed to sustain you continuously: from monthly virtual check-ins
-            to quarterly London intensives and our restorative spring retreat.
+
+          <p className="font-sans text-base sm:text-lg text-charcoal/80 leading-relaxed">
+            Our gatherings are not isolated events. They form an intentional, recurring rhythm that supports your growth throughout the seasons of the year.
           </p>
         </div>
 
-        {/* 3-Cycle Constellation Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
-          {CYCLE.map((item) => {
-            const Icon = item.icon;
+        {/* 3-Stage Gathering Cadence */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {RHYTHM_STAGES.map((stage, idx) => {
+            const isGold = stage.accent === "gold";
+            const isMidnight = stage.accent === "midnight";
+
             return (
               <div
-                key={item.rhythm}
-                className="rounded-3xl p-8 bg-white/90 border border-border shadow-xs hover:shadow-md transition-all flex flex-col justify-between"
+                key={stage.title}
+                className={`rounded-3xl p-8 border flex flex-col justify-between transition-all duration-300 relative overflow-hidden ${
+                  isGold
+                    ? "bg-gradient-to-br from-ivory-surface to-gold-subtle/30 border-gold-harvest/50"
+                    : isMidnight
+                    ? "bg-ivory-surface border-midnight/30"
+                    : "bg-ivory-surface border-ivory-border"
+                } shadow-sm hover:shadow-md`}
               >
                 <div>
-                  <div className="flex items-center justify-between mb-6">
-                    <span className="text-xs font-mono uppercase tracking-widest text-berry font-semibold">
-                      {item.rhythm}
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="text-xs uppercase tracking-widest font-bold text-teal-living">
+                      {stage.phase}
                     </span>
-                    <div className="size-9 rounded-full bg-cream border border-border flex items-center justify-center text-gold">
-                      <Icon className="size-4 text-berry" />
-                    </div>
+                    <span className="px-3 py-1 rounded-full text-[11px] font-semibold bg-ivory-canvas border border-ivory-border text-midnight">
+                      {stage.tag}
+                    </span>
                   </div>
 
-                  <h3 className="font-serif text-2xl text-plum font-normal mb-3">
-                    {item.name}
+                  <h3 className="font-serif text-2xl font-bold text-midnight mb-1">
+                    {stage.title}
                   </h3>
-
-                  <p className="text-xs font-mono text-muted-foreground uppercase tracking-wider mb-4">
-                    {item.cadence}
+                  <p className="font-sans text-xs uppercase tracking-wider text-gold-harvest font-semibold mb-4">
+                    {stage.subtitle}
                   </p>
 
-                  <p className="font-sans text-sm text-foreground/75 leading-relaxed">
-                    {item.description}
+                  <p className="font-sans text-sm text-charcoal/80 leading-relaxed">
+                    {stage.description}
                   </p>
                 </div>
 
-                <div className="mt-8 pt-4 border-t border-border/60 text-xs font-medium text-plum">
-                  {item.format}
+                <div className="mt-8 pt-4 border-t border-ivory-border/80 flex items-center gap-2 text-xs text-muted-foreground">
+                  <BotanicalMotif size={16} />
+                  <span>Cadence of intentional sisterhood</span>
                 </div>
               </div>
             );
           })}
         </div>
+
       </div>
     </section>
   );

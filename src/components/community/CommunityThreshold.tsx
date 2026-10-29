@@ -1,78 +1,59 @@
 import React from "react";
-import { ArrowRight, Phone, Mail, Heart } from "lucide-react";
+import { Mail, Phone, ArrowRight } from "lucide-react";
 import { MagneticButton } from "@/components/common/MagneticButton";
+import { BotanicalMotif } from "@/components/brand/BotanicalMotif";
+import { PathRibbon } from "@/components/brand/PathRibbon";
 
 export const CommunityThreshold: React.FC = () => {
   return (
-    <section
-      id="join"
-      className="relative py-32 sm:py-44 bg-plum-deep text-cream overflow-hidden border-t border-gold/20"
-    >
-      {/* Delicate Ambient Rings */}
-      <div
-        className="pointer-events-none absolute inset-0 opacity-10"
-        aria-hidden="true"
-      >
-        <svg
-          className="h-full w-full"
-          viewBox="0 0 1000 600"
-          preserveAspectRatio="none"
-          fill="none"
-        >
-          <path
-            d="M 100 300 Q 500 100 900 300 T 1700 300"
-            stroke="var(--gold)"
-            strokeWidth="1.5"
-            strokeDasharray="4 8"
-          />
-        </svg>
+    <section id="join" className="relative py-24 sm:py-32 bg-midnight-deep text-ivory-surface overflow-hidden">
+      <div className="absolute inset-0 pointer-events-none opacity-20" aria-hidden="true">
+        <PathRibbon variant="soft-horizon" />
       </div>
 
-      <div className="relative mx-auto max-w-4xl px-6 sm:px-8 lg:px-12 text-center z-10">
-        <div className="inline-flex items-center gap-2 rounded-full bg-cream/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-gold mb-8">
-          <Heart className="size-3 text-gold" />
-          <span>Membership by Invitation</span>
+      <div className="relative mx-auto max-w-4xl px-6 sm:px-8 lg:px-12 text-center">
+        
+        {/* Emblem Top Motif */}
+        <div className="inline-flex flex-col items-center mb-6">
+          <PathRibbon variant="ascending-beacon" className="scale-75 mb-2" />
+          <div className="flex items-center gap-2">
+            <BotanicalMotif size={20} />
+            <span className="text-xs uppercase tracking-widest font-semibold text-gold-harvest">
+              Begin Today
+            </span>
+            <BotanicalMotif size={20} orientation="left" />
+          </div>
         </div>
 
-        <h2 className="font-serif text-4xl sm:text-6xl lg:text-7xl font-normal tracking-tight text-cream leading-[1.1] mb-8 text-balance">
-          Request an{" "}
-          <span className="font-serif italic text-gold font-light">
-            invitation.
+        <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-8">
+          Reach out directly to join{" "}
+          <span className="italic font-normal text-gold-harvest block mt-1">
+            our next sister circle.
           </span>
         </h2>
 
-        <p className="font-sans text-lg sm:text-xl text-cream/80 max-w-2xl mx-auto leading-relaxed mb-12 font-normal">
-          Tell us a little about where you are on your journey, where you are
-          located, and what season of life you are walking through. We reply to
-          every woman personally.
+        <p className="font-sans text-base sm:text-lg text-ivory-surface/85 max-w-2xl mx-auto leading-relaxed mb-12">
+          We keep communication direct, warm, and personal. Send us an email or message to introduce yourself, and we will gladly connect you to our upcoming gathering.
         </p>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mb-16">
-          <MagneticButton
-            href="mailto:hello@journey2better.com?subject=Community%20Invitation%20Request"
-            variant="primary"
-            className="w-full sm:w-auto"
-          >
-            <span>Send Invitation Request</span>
-            <ArrowRight className="size-4" />
+        {/* Action Options */}
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-5 mb-14">
+          <MagneticButton href="mailto:hello@journey2better.com?subject=Joining%20Journey%202%20Better" variant="gold">
+            <Mail className="size-4 mr-2" />
+            <span>Send Us An Email</span>
           </MagneticButton>
 
-          <a
-            href="tel:+447960964839"
-            className="inline-flex items-center gap-2 text-sm text-cream/70 hover:text-gold transition-colors py-3 px-4"
-          >
-            <Phone className="size-4" />
-            <span>Or message us on WhatsApp</span>
-          </a>
+          <MagneticButton href="tel:+447960964839" variant="teal">
+            <Phone className="size-4 mr-2" />
+            <span>Call or WhatsApp</span>
+          </MagneticButton>
         </div>
 
-        <div className="pt-8 border-t border-cream/10 text-xs text-cream/60 max-w-lg mx-auto space-y-2">
-          <p>
-            No automated vetting, scoring, or subscription funnels. A facilitator
-            will connect with you directly to introduce you to the right circle.
-          </p>
-          <p className="font-mono text-gold/80">hello@journey2better.com • London, UK</p>
+        {/* Verification Note */}
+        <div className="pt-8 border-t border-ivory-surface/15 text-xs text-ivory-surface/70">
+          hello@journey2better.com &bull; +44 7960 964839 &bull; London & United Kingdom
         </div>
+
       </div>
     </section>
   );

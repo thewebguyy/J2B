@@ -1,22 +1,20 @@
 import type { Metadata } from "next";
 import { EventsHero } from "@/components/events/EventsHero";
-import { EventsRiseReflect } from "@/components/events/EventsRiseReflect";
-import { EventsPhysical } from "@/components/events/EventsPhysical";
+import { EventsCards } from "@/components/events/EventsCards";
 import { EventsTimeline } from "@/components/events/EventsTimeline";
 import { EventsThreshold } from "@/components/events/EventsThreshold";
 
 export const metadata: Metadata = {
-  title: "Events & Gatherings — Workshops & Retreats | Journey 2 Better",
+  title: "Events — The Moments | Journey 2 Better",
   description:
-    "Workshops, retreats and gatherings that inspire and energise. Rise & Reflect morning circles, London intensives, and our annual spring sisterhood retreat.",
+    "Some moments are better shared. Explore our Rise & Reflect morning circles, Better Together London workshops, and Annual Sisterhood Retreat.",
 };
 
 export default function EventsPage() {
   return (
     <>
       <EventsHero />
-      <EventsRiseReflect />
-      <EventsPhysical />
+      <EventsCards />
       <EventsTimeline />
       <EventsThreshold />
     </>

@@ -1,77 +1,59 @@
 import React from "react";
-import { ArrowRight, Mail, Phone, Calendar } from "lucide-react";
+import { Mail, Phone, Calendar } from "lucide-react";
 import { MagneticButton } from "@/components/common/MagneticButton";
+import { BotanicalMotif } from "@/components/brand/BotanicalMotif";
+import { PathRibbon } from "@/components/brand/PathRibbon";
 
 export const EventsThreshold: React.FC = () => {
   return (
-    <section
-      id="waitlist"
-      className="relative py-32 sm:py-44 bg-plum-deep text-cream overflow-hidden border-t border-gold/20"
-    >
-      {/* Decorative Golden Thread Ring Motif */}
-      <div
-        className="pointer-events-none absolute inset-0 opacity-10"
-        aria-hidden="true"
-      >
-        <svg
-          className="h-full w-full"
-          viewBox="0 0 1000 600"
-          preserveAspectRatio="none"
-          fill="none"
-        >
-          <path
-            d="M 50 150 Q 500 450 950 150"
-            stroke="var(--gold)"
-            strokeWidth="1.5"
-            strokeDasharray="5 5"
-          />
-        </svg>
+    <section className="relative py-24 sm:py-32 bg-midnight-deep text-ivory-surface overflow-hidden">
+      <div className="absolute inset-0 pointer-events-none opacity-20" aria-hidden="true">
+        <PathRibbon variant="soft-horizon" />
       </div>
 
-      <div className="relative mx-auto max-w-4xl px-6 sm:px-8 lg:px-12 text-center z-10">
-        <div className="inline-flex items-center gap-2 rounded-full bg-cream/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-gold mb-8">
-          <Calendar className="size-3 text-gold" />
-          <span>Member Priority Access</span>
+      <div className="relative mx-auto max-w-4xl px-6 sm:px-8 lg:px-12 text-center">
+        
+        {/* Top Motif */}
+        <div className="inline-flex flex-col items-center mb-6">
+          <PathRibbon variant="ascending-beacon" className="scale-75 mb-2" />
+          <div className="flex items-center gap-2">
+            <BotanicalMotif size={20} />
+            <span className="text-xs uppercase tracking-widest font-semibold text-gold-harvest">
+              Reserve Your Place
+            </span>
+            <BotanicalMotif size={20} orientation="left" />
+          </div>
         </div>
 
-        <h2 className="font-serif text-4xl sm:text-6xl lg:text-7xl font-normal tracking-tight text-cream leading-[1.1] mb-8 text-balance">
-          Never miss a{" "}
-          <span className="font-serif italic text-gold font-light">
-            gathering.
+        <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-8">
+          Step into our next circle{" "}
+          <span className="italic font-normal text-gold-harvest block mt-1">
+            and be reminded of your strength.
           </span>
         </h2>
 
-        <p className="font-sans text-lg sm:text-xl text-cream/80 max-w-2xl mx-auto leading-relaxed mb-12 font-normal">
-          Dates for upcoming workshops and our spring retreat are shared with
-          members first. Reach out to be added to the priority list.
+        <p className="font-sans text-base sm:text-lg text-ivory-surface/85 max-w-2xl mx-auto leading-relaxed mb-12">
+          Gatherings are intentionally kept intimate so every voice can be welcomed. Reach out directly to enquire about dates, schedule details, or booking your seat.
         </p>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mb-16">
-          <MagneticButton
-            href="mailto:hello@journey2better.com?subject=Events%20Waitlist%20Request"
-            variant="primary"
-            className="w-full sm:w-auto"
-          >
-            <span>Join the Events Waitlist</span>
-            <ArrowRight className="size-4" />
+        {/* Action Group */}
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-5 mb-14">
+          <MagneticButton href="mailto:hello@journey2better.com?subject=Events%20and%20Retreat%20Enquiry" variant="gold">
+            <Mail className="size-4 mr-2" />
+            <span>Enquire via Email</span>
           </MagneticButton>
 
-          <a
-            href="tel:+447960964839"
-            className="inline-flex items-center gap-2 text-sm text-cream/70 hover:text-gold transition-colors py-3 px-4"
-          >
-            <Phone className="size-4" />
-            <span>Or message us on WhatsApp</span>
-          </a>
+          <MagneticButton href="tel:+447960964839" variant="teal">
+            <Phone className="size-4 mr-2" />
+            <span>Call / WhatsApp Us</span>
+          </MagneticButton>
         </div>
 
-        <div className="pt-8 border-t border-cream/10 text-xs text-cream/60 max-w-lg mx-auto space-y-2">
-          <p>
-            We respect your inbox. You will only receive announcements regarding
-            verified gathering dates, London workshops, and retreat bookings.
-          </p>
-          <p className="font-mono text-gold/80">hello@journey2better.com • +44 7960 964839</p>
+        {/* Direct Contact Bar */}
+        <div className="pt-8 border-t border-ivory-surface/15 text-xs text-ivory-surface/70">
+          hello@journey2better.com &bull; +44 7960 964839 &bull; London & Across the UK
         </div>
+
       </div>
     </section>
   );

@@ -8,7 +8,7 @@ interface MagneticButtonProps {
   href?: string;
   onClick?: () => void;
   children: React.ReactNode;
-  variant?: "primary" | "secondary" | "claret" | "outline";
+  variant?: "primary" | "secondary" | "teal" | "gold" | "outline";
   className?: string;
   id?: string;
   ariaLabel?: string;
@@ -28,7 +28,6 @@ export const MagneticButton: React.FC<MagneticButtonProps> = ({
   const [canHover, setCanHover] = useState(false);
 
   useEffect(() => {
-    // Only enable magnetic pull on fine pointer devices with hover capability
     if (typeof window !== "undefined") {
       const match = window.matchMedia("(hover: hover) and (pointer: fine)");
       setCanHover(match.matches && !isReducedMotion());
@@ -40,7 +39,6 @@ export const MagneticButton: React.FC<MagneticButtonProps> = ({
     const rect = buttonRef.current.getBoundingClientRect();
     const centerX = rect.left + rect.width / 2;
     const centerY = rect.top + rect.height / 2;
-    // Constrain maximum displacement to 6px for subtle, stable physical feedback
     const deltaX = (e.clientX - centerX) * 0.15;
     const deltaY = (e.clientY - centerY) * 0.15;
     setOffset({
@@ -55,13 +53,15 @@ export const MagneticButton: React.FC<MagneticButtonProps> = ({
 
   const variantStyles = {
     primary:
-      "bg-berry hover:bg-berry-dark text-white shadow-sm hover:shadow transition-all duration-300",
+      "bg-midnight hover:bg-midnight-deep text-ivory-canvas border border-gold-harvest/40 shadow-sm hover:shadow transition-all duration-300",
     secondary:
-      "bg-blush hover:bg-blush-dark text-plum font-medium transition-all duration-300",
-    claret:
-      "bg-plum hover:bg-plum-deep text-white border border-gold/30 hover:border-gold/60 transition-all duration-300",
+      "bg-ivory-surface hover:bg-ivory-dark text-midnight border border-border font-medium transition-all duration-300",
+    teal:
+      "bg-teal-living hover:bg-teal-hover text-white shadow-sm hover:shadow transition-all duration-300",
+    gold:
+      "bg-gold-harvest hover:bg-gold-deep text-midnight-deep font-semibold shadow-sm hover:shadow transition-all duration-300",
     outline:
-      "border border-plum/30 hover:border-plum text-plum hover:bg-blush/40 transition-all duration-300",
+      "border border-midnight/35 hover:border-midnight text-midnight hover:bg-ivory-surface transition-all duration-300",
   };
 
   const content = (

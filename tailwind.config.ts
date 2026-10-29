@@ -11,30 +11,33 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        cream: {
-          DEFAULT: "var(--cream)",
-          light: "#FCFAF7",
-          dark: "#F3EDE3",
+        // New canonical palette: BECOMING — A LIVING JOURNEY
+        ivory: {
+          DEFAULT: "var(--ivory)",
+          canvas: "#FCF9E8",
+          surface: "#F7F2E2",
+          card: "#FFFFFF",
+          border: "#E9E1C9",
+          dark: "#E3DABF",
         },
-        blush: {
-          DEFAULT: "var(--blush)",
-          light: "#FBF3F1",
-          dark: "#EEDCD6",
+        midnight: {
+          DEFAULT: "var(--midnight)",
+          deep: "#012B34",
+          light: "#045667",
         },
-        plum: {
-          DEFAULT: "var(--plum)",
-          deep: "var(--plum-deep)",
-          light: "#6B2348",
-        },
-        berry: {
-          DEFAULT: "var(--berry)",
-          dark: "#751E36",
-          light: "#A83353",
+        teal: {
+          DEFAULT: "var(--teal)",
+          living: "#036E76",
+          bright: "#0A8B95",
+          subtle: "#E6F3F4",
+          hover: "#02555C",
         },
         gold: {
           DEFAULT: "var(--gold)",
-          light: "#EAD49E",
-          dark: "#BA9444",
+          harvest: "#D5A044",
+          light: "#E5B660",
+          deep: "#B6832A",
+          subtle: "#FAF2DE",
         },
         border: "var(--border)",
         muted: {
@@ -47,22 +50,27 @@ const config: Config = {
         sans: ["var(--font-sans)", "Plus Jakarta Sans", "Inter", "system-ui", "sans-serif"],
       },
       animation: {
-        "thread-draw": "threadDraw 2s cubic-bezier(0.25, 1, 0.5, 1) forwards",
+        "path-draw": "pathDraw 2.4s cubic-bezier(0.25, 1, 0.5, 1) forwards",
         "fade-in-up": "fadeInUp 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards",
-        "soft-pulse": "softPulse 4s ease-in-out infinite",
+        "gentle-float": "gentleFloat 6s ease-in-out infinite",
+        "sun-glow": "sunGlow 4s ease-in-out infinite",
       },
       keyframes: {
-        threadDraw: {
-          "0%": { strokeDashoffset: "1000" },
+        pathDraw: {
+          "0%": { strokeDashoffset: "1200" },
           "100%": { strokeDashoffset: "0" },
         },
         fadeInUp: {
-          "0%": { opacity: "0", transform: "translateY(20px)" },
+          "0%": { opacity: "0", transform: "translateY(24px)" },
           "100%": { opacity: "1", transform: "translateY(0)" },
         },
-        softPulse: {
-          "0%, 100%": { opacity: "0.4" },
-          "50%": { opacity: "0.8" },
+        gentleFloat: {
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-6px)" },
+        },
+        sunGlow: {
+          "0%, 100%": { opacity: "0.6", transform: "scale(1)" },
+          "50%": { opacity: "1", transform: "scale(1.05)" },
         },
       },
     },

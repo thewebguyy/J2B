@@ -1,73 +1,77 @@
 import React from "react";
-import { ArrowRight, Mail, Phone, Heart } from "lucide-react";
+import { ArrowRight, Mail, Phone } from "lucide-react";
 import { MagneticButton } from "@/components/common/MagneticButton";
+import { BotanicalMotif } from "@/components/brand/BotanicalMotif";
+import { PathRibbon } from "@/components/brand/PathRibbon";
 
 export const HomeThreshold: React.FC = () => {
   return (
-    <section
-      id="threshold"
-      className="relative py-32 sm:py-44 bg-plum-deep text-cream overflow-hidden border-t border-gold/20"
-    >
-      {/* Editorial Decorative Subtle Rings */}
-      <div
-        className="pointer-events-none absolute -top-40 -left-40 size-96 rounded-full border border-gold/15 opacity-50"
-        aria-hidden="true"
-      />
-      <div
-        className="pointer-events-none absolute -bottom-40 -right-40 size-96 rounded-full border border-gold/15 opacity-50"
-        aria-hidden="true"
-      />
+    <section className="relative py-24 sm:py-32 bg-midnight-deep text-ivory-surface overflow-hidden">
+      {/* Background Living Ribbon trace */}
+      <div className="absolute inset-0 pointer-events-none opacity-20" aria-hidden="true">
+        <PathRibbon variant="soft-horizon" className="w-full h-full" />
+      </div>
 
-      <div className="relative mx-auto max-w-4xl px-6 sm:px-8 lg:px-12 text-center z-10">
-        {/* Section Label */}
-        <div className="inline-flex items-center gap-2 rounded-full bg-cream/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-gold mb-8">
-          <Heart className="size-3 text-gold" />
-          <span>The Next Step</span>
+      <div className="relative mx-auto max-w-5xl px-6 sm:px-8 lg:px-12 text-center">
+        
+        {/* Emblem Top Accent */}
+        <div className="inline-flex flex-col items-center mb-6">
+          <PathRibbon variant="ascending-beacon" className="scale-75 mb-2" />
+          <div className="flex items-center gap-2">
+            <BotanicalMotif size={20} />
+            <span className="text-xs uppercase tracking-widest font-semibold text-gold-harvest">
+              The Invitation
+            </span>
+            <BotanicalMotif size={20} orientation="left" />
+          </div>
         </div>
 
-        {/* Primary Claret Headline */}
-        <h2 className="font-serif text-4xl sm:text-6xl lg:text-7xl font-normal tracking-tight text-cream leading-[1.1] mb-8 text-balance">
-          Walk the rest of the way{" "}
-          <span className="font-serif italic text-gold font-light">
-            together.
+        {/* Headline */}
+        <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-8">
+          You do not need to have it all figured out{" "}
+          <span className="italic font-normal text-gold-harvest block mt-1">
+            to begin walking.
           </span>
         </h2>
 
-        {/* Supporting Narrative */}
-        <p className="font-sans text-lg sm:text-xl text-cream/80 max-w-2xl mx-auto leading-relaxed mb-12 font-normal">
-          Come as you are. There are no expectations to perform, no prerequisites,
-          and no judgment. Just a circle of women who will know your story and cheer
-          for your growth.
+        {/* Honest Storytelling Copy */}
+        <p className="font-sans text-base sm:text-xl text-ivory-surface/85 max-w-2xl mx-auto leading-relaxed mb-12 font-normal">
+          Every transformation begins with the courage to seek companionship. Journey 2 Better is here to hold space for your story, celebrate your milestones, and remind you of your strength.
         </p>
 
-        {/* Action Button */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mb-16">
-          <MagneticButton
-            href="mailto:hello@journey2better.com?subject=Joining%20Journey%202%20Better"
-            variant="primary"
-            className="w-full sm:w-auto"
-          >
-            <span>Request An Invitation</span>
+        {/* Action Group */}
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-5 mb-14">
+          <MagneticButton href="/community#join" variant="gold">
+            <span>Connect With Our Sisterhood</span>
             <ArrowRight className="size-4" />
           </MagneticButton>
 
-          <a
-            href="tel:+447960964839"
-            className="inline-flex items-center gap-2 text-sm text-cream/70 hover:text-gold transition-colors py-3 px-4"
-          >
-            <Phone className="size-4" />
-            <span>Or message us on WhatsApp</span>
-          </a>
+          <MagneticButton href="/events" variant="teal">
+            <span>View Upcoming Circles</span>
+          </MagneticButton>
         </div>
 
-        {/* Honest Privacy & Welcome Notice */}
-        <div className="pt-8 border-t border-cream/10 text-xs text-cream/60 max-w-lg mx-auto">
-          <p>
-            We reply to every woman personally. Share a little about where you
-            are in your journey, and we will introduce you to a circle that fits
-            your season.
-          </p>
+        {/* Direct Contact Bar */}
+        <div className="pt-10 border-t border-ivory-surface/15 flex flex-wrap items-center justify-center gap-8 text-xs text-ivory-surface/75">
+          <a
+            href="mailto:hello@journey2better.com"
+            className="flex items-center gap-2 hover:text-gold-harvest transition-colors"
+          >
+            <Mail className="size-4 text-gold-harvest" />
+            <span>hello@journey2better.com</span>
+          </a>
+          <span className="hidden sm:inline text-ivory-surface/30">•</span>
+          <a
+            href="tel:+447960964839"
+            className="flex items-center gap-2 hover:text-gold-harvest transition-colors"
+          >
+            <Phone className="size-4 text-gold-harvest" />
+            <span>+44 7960 964839</span>
+          </a>
+          <span className="hidden sm:inline text-ivory-surface/30">•</span>
+          <span>United Kingdom</span>
         </div>
+
       </div>
     </section>
   );

@@ -1,6 +1,6 @@
-# Journey 2 Better — The Woven Thread
+# Journey 2 Better — Becoming: A Living Journey
 
-> A bespoke, editorial digital sanctuary for a UK-based women's community built on sisterhood, shared growth, and everyday encouragement.
+> A bespoke, editorial digital sanctuary for an emerging UK-based women's community built on sisterhood, personal development, mindful gatherings, and everyday encouragement.
 
 [![Next.js](https://img.shields.io/badge/Next.js-15.5-black?style=flat-square&logo=next.js)](https://nextjs.org/)
 [![React](https://img.shields.io/badge/React-19.0-61dafb?style=flat-square&logo=react)](https://react.dev/)
@@ -10,90 +10,68 @@
 
 ---
 
-## ✦ Overview
+## ✦ The Creative Concept: Becoming — A Living Journey
 
-**Journey 2 Better** is an award-calibre digital platform crafted around the creative concept of **The Woven Thread**. Transcending standard corporate templates, it provides a warm, editorial sanctuary where women navigate the messy middle of life through intentional connection, curated sister circles, mindful workshops, and annual retreats.
+**"The journey towards becoming a better version of yourself is personal, but it does not have to be lonely."**
 
----
-
-## ✦ Core Pages
-
-| Route | Page | Description |
-| :--- | :--- | :--- |
-| `/` | **Homepage** | Editorial welcome (*"Come as you are"*), the community ethos, 4 core pillars (Sisterhood, Growth, Sanctuary, Elevation), and threshold invitation. |
-| `/about` | **About** | The founding journey, embracing the messy middle of life, the 4 foundational values, and community heritage. |
-| `/community` | **Community** | The 3 core offerings (Sister Circles, Mentorship, Everyday Encouragement) and the 3-step vertical journey to belonging. |
-| `/events` | **Events** | Both virtual and physical gatherings (Rise & Reflect Morning Circle, London Workshop, Annual Sisterhood Retreat) with an interactive gathering rhythm timeline. |
+Journey 2 Better is an authentic, art-directed sanctuary designed around the client's official brand logo. Moving far beyond generic templates or clinical wellness SaaS patterns, it weaves expressive editorial design, organic botanical illustration, thoughtful typography, and honest human-centred storytelling.
 
 ---
 
-## ✦ Design System & Brand Identity
+## ✦ Canonical Brand Palette (Extracted From Official Logo)
 
-* **Creative Concept:** *The Woven Thread* — visualising life’s individual stories interweaving into a resilient tapestry of shared sisterhood.
-* **Curated Palette:**
-  * **Plum Deep:** `#24111E` — Primary grounding and editorial contrast
-  * **Plum:** `#3B1D32` — Warm deep midtone
-  * **Berry:** `#6B2D5C` — Vibrant brand accent
-  * **Cream:** `#FAF7F2` — Soft, breathable parchment background
-  * **Blush:** `#F3E8EE` — Gentle card container tint
-  * **Gold:** `#C49A45` — Subtle metallic highlight symbolizing the golden thread
-  * **Dark Grey:** `#2A2829` — High-legibility editorial typography
-* **Motion & Interactivity:**
-  * GSAP-driven scroll-triggered reveals and staggered text sequences
-  * Interactive `MagneticButton` components with spring physics
-  * Dynamic `GoldenThread` SVG flourishes connecting sections
+* **Midnight Teal (`#02404D`):** Primary grounding tone, silhouettes, editorial headings, and deep sanctuary threshold sections.
+* **Living Teal (`#036E76`):** Vibrancy, energy, right profile silhouette, and forward motion.
+* **Harvest Gold (`#D5A044`):** The ascending pathway ribbon, top sun beacon, and botanical leaf accents.
+* **Warm Ivory (`#FCF9E8`):** Canonical warm linen canvas extracted directly from the logo artwork.
+* **Soft Warm Parchment (`#F7F2E2`):** Textured card and container surfaces.
+* **Dark Slate Charcoal (`#12242B`):** High-legibility editorial typography (AAA contrast).
 
 ---
 
-## ✦ Tech Stack
+## ✦ Core Pages & Architecture
 
-* **Framework:** [Next.js 15.5](https://nextjs.org/) (App Router, Static Site Generation)
-* **Library:** [React 19](https://react.dev/)
-* **Language:** [TypeScript 5.7](https://www.typescriptlang.org/)
-* **Styling:** [Tailwind CSS 3.4](https://tailwindcss.com/) + PostCSS
-* **Animation:** [GSAP 3.12](https://gsap.com/)
-* **Icons:** [Lucide React](https://lucide.dev/)
+| Route | Page | Narrative Proposition | Highlights |
+| :--- | :--- | :--- | :--- |
+| `/` | **Homepage** | *"Every journey begins somewhere."* | Living brand moment, official logo lockup, the human truth of life transitions, the 4 Pillars of Becoming, and threshold invitation. |
+| `/about` | **About** | *"Becoming is not something we do alone."* | Founding intention, the sacred philosophy of the messy middle, the 4 anchoring values (Honesty, Belonging, Courage, Celebration), and future vision. |
+| `/community` | **Community** | *"There is room for you here."* | The 3 verified offerings (Sister Circles, 1-on-1 Mentorship, Everyday Encouragement) and the 3-step Path of Becoming vertical journey. |
+| `/events` | **Events** | *"Some moments are better shared."* | Virtual Rise & Reflect Morning Circles, in-person Better Together London workshops, Annual Sisterhood Retreat, and the Gathering Rhythm. |
+
+---
+
+## ✦ The Signature Visual System: The Path of Becoming
+
+Derived directly from the flowing golden pathway and ascending sun beacon in the official logo:
+* **Bespoke SVG Ribbon Paths (`PathRibbon`):** Flowing golden ribbons connecting narrative chapters.
+* **Botanical Leaf Accents (`BotanicalMotif`):** Organic dual-leaf motifs (Living Teal & Harvest Gold) echoing the logo's floral details.
+* **Authentic Brand Lockups (`LogoMark`):** High-density navigation mark, hero framed sanctuary artwork, and footer brand lockup with official tagline: *"Your companion on the journey to better"*.
 
 ---
 
 ## ✦ Getting Started
 
-### Prerequisites
-
-* **Node.js** 18.18+ (Node 20.x or 22.x recommended)
-* **npm**, **yarn**, or **pnpm**
-
 ### Installation
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/thewebguyy/J2B.git
-   cd J2B
-   ```
+```bash
+git clone https://github.com/thewebguyy/J2B.git
+cd J2B
+npm install
+```
 
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-
-3. Start the local development server:
-   ```bash
-   npm run dev
-   ```
-
-4. Open [http://localhost:3000](http://localhost:3000) in your browser.
-
----
-
-## ✦ Production Build
-
-To test and build the production bundle locally:
+### Development & Production
 
 ```bash
-# Type check and build
+# Run local dev server
+npm run dev
+
+# Run type checking
+npx tsc --noEmit
+
+# Build production bundle
 npm run build
 
-# Run production server
+# Start production server
 npm run start
 ```
 
@@ -101,15 +79,13 @@ npm run start
 
 ## ✦ Deployment
 
-This project is optimized for zero-config deployment on [Vercel](https://vercel.com):
-
+Optimized for continuous zero-config deployment on [Vercel](https://vercel.com):
 * **Framework Preset:** `Next.js`
 * **Root Directory:** `./`
-* **Build Command:** `next build`
-* **Output Directory:** `.next`
+* **Production Branch:** `main` / `master`
 
 ---
 
-## ✦ License
+## ✦ License & Rights
 
 Private repository. All rights reserved &copy; Journey 2 Better.

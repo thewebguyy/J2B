@@ -3,7 +3,6 @@ import { Playfair_Display, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import { Navigation } from "@/components/common/Navigation";
 import { Footer } from "@/components/common/Footer";
-import { GoldenThread } from "@/components/common/GoldenThread";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -21,18 +20,26 @@ const jakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Journey 2 Better — The Woven Thread | A Digital Sanctuary",
+  title: "Journey 2 Better — Becoming: A Living Journey | UK Women's Community",
   description:
-    "A sisterhood of women rising together — connection, personal growth, live events, and unwavering support in the messy middle of life.",
+    "Your companion on the journey to better. A UK sisterhood of women rising together — intentional connection, personal growth, mindful gatherings, and everyday encouragement.",
   metadataBase: new URL("https://journey2better.lovable.app"),
   openGraph: {
-    title: "Journey 2 Better — The Woven Thread",
+    title: "Journey 2 Better — Becoming: A Living Journey",
     description:
-      "A sisterhood of women rising together — connection, personal growth, live events, and unwavering support.",
+      "Your companion on the journey to better. A sisterhood of women rising together in the messy middle of life.",
     url: "https://journey2better.lovable.app",
     siteName: "Journey 2 Better",
     locale: "en_GB",
     type: "website",
+    images: [
+      {
+        url: "/images/logo.jpeg",
+        width: 1206,
+        height: 986,
+        alt: "Journey 2 Better — Your companion on the journey to better",
+      },
+    ],
   },
 };
 
@@ -43,10 +50,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${playfair.variable} ${jakarta.variable}`}>
-      <body className="min-h-screen flex flex-col bg-cream text-foreground antialiased selection:bg-berry selection:text-white">
+      <body className="min-h-screen flex flex-col bg-ivory-canvas text-foreground antialiased selection:bg-teal-living selection:text-white botanical-grain">
         <Navigation />
-        <GoldenThread />
-        <main id="main-content" className="flex-1 relative z-20">
+        <main id="main-content" className="flex-1 relative z-10 pt-20">
           {children}
         </main>
         <Footer />

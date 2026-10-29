@@ -1,122 +1,130 @@
 import React from "react";
-import { MessageSquare, Heart, Compass, Sparkles } from "lucide-react";
+import { BotanicalMotif } from "@/components/brand/BotanicalMotif";
 
-interface ValueItem {
-  id: string;
-  numeral: string;
-  title: string;
-  tagline: string;
-  reflection: string;
-  icon: React.ElementType;
-}
-
-const VALUES: ValueItem[] = [
+const VALUES = [
   {
-    id: "honesty",
-    numeral: "I",
     title: "Honesty",
-    tagline: "We speak truthfully and listen without judgement.",
-    reflection:
-      "Vulnerability is not weakness; it is the currency of real connection. We lay down pretense at the door so everyone can breathe.",
-    icon: MessageSquare,
+    tagline: "Dropping the mask",
+    description:
+      "We cultivate spaces where you never have to pretend you have everything together. Truthful reflection and vulnerability are honoured as the beginning of genuine growth.",
+    theme: "midnight",
   },
   {
-    id: "belonging",
-    numeral: "II",
     title: "Belonging",
-    tagline: "Every woman is welcome, exactly as she is today.",
-    reflection:
-      "You do not need to earn your seat at this table. Whether this is your first gathering or your fiftieth, your presence matters.",
-    icon: Heart,
+    tagline: "Room at the table",
+    description:
+      "You do not need to qualify, prove yourself, or audition for this sisterhood. From your very first step, your presence is valued and warmly received.",
+    theme: "ivory",
   },
   {
-    id: "courage",
-    numeral: "III",
     title: "Courage",
-    tagline: "We take the next brave step, however small it looks.",
-    reflection:
-      "Sometimes courage is quitting a job; sometimes courage is simply getting out of bed and joining the circle. We honour both.",
-    icon: Compass,
+    tagline: "Taking the next step",
+    description:
+      "Growth requires stepping into the unfamiliar. We walk beside each other through difficult decisions, bold ambitions, and heartfelt career or life pivots.",
+    theme: "teal",
   },
   {
-    id: "celebration",
-    numeral: "IV",
     title: "Celebration",
-    tagline: "We cheer loudly for each other's wins, big and quiet.",
-    reflection:
-      "In a culture that fosters competition, we choose mutual celebration. Your sister's breakthrough is proof of what is possible.",
-    icon: Sparkles,
+    tagline: "Honouring quiet victories",
+    description:
+      "Not just the promotions and milestones, but the quiet courage to set a boundary, choose rest, or begin again after a season of exhaustion.",
+    theme: "gold",
   },
 ];
 
 export const AboutValues: React.FC = () => {
   return (
-    <section id="values" className="relative py-28 sm:py-36 bg-cream overflow-hidden">
-      <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
-        {/* Section Header */}
-        <div className="max-w-2xl mb-20">
+    <section className="relative py-24 sm:py-32 bg-ivory-canvas overflow-hidden">
+      <div className="relative mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
+        
+        {/* Header */}
+        <div className="max-w-3xl mb-16 sm:mb-20">
           <div className="inline-flex items-center gap-2 mb-4">
-            <span className="size-2 rounded-full bg-berry" />
-            <span className="text-xs font-semibold uppercase tracking-widest text-plum">
-              What We Stand For
+            <BotanicalMotif size={20} />
+            <span className="text-xs uppercase tracking-widest font-semibold text-teal-living">
+              Core Principles
             </span>
           </div>
-          <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-plum font-normal tracking-tight leading-[1.1] text-balance">
-            Our guiding{" "}
-            <span className="font-serif italic text-berry font-light">
-              values.
-            </span>
+
+          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-midnight leading-tight mb-6">
+            The values that anchor our sisterhood.
           </h2>
-          <p className="font-sans text-base sm:text-lg text-foreground/80 mt-6 leading-relaxed">
-            These four commitments form the bedrock of every circle, mentorship
-            partnership, and retreat we curate.
+
+          <p className="font-sans text-base sm:text-lg text-charcoal/80 leading-relaxed">
+            These four commitments shape every circle we host, every workshop we curate, and every conversation we share.
           </p>
         </div>
 
-        {/* Distinctive Editorial Values Presentation (Asymmetrical grid) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+        {/* 4 Distinct Value Storyboards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
           {VALUES.map((val, idx) => {
-            const Icon = val.icon;
-            // Introduce deliberate visual tension: alternating background accents
-            const isHighlighted = idx === 0 || idx === 3;
-
             return (
               <div
-                key={val.id}
-                className={`relative rounded-3xl p-8 sm:p-10 border transition-all duration-300 hover:shadow-md ${
-                  isHighlighted
-                    ? "bg-blush/60 border-border/80"
-                    : "bg-white/90 border-border/70"
-                }`}
+                key={val.title}
+                className={`rounded-3xl p-8 sm:p-10 border transition-all duration-300 relative overflow-hidden flex flex-col justify-between ${
+                  val.theme === "midnight"
+                    ? "bg-midnight-deep text-ivory-surface border-midnight"
+                    : val.theme === "teal"
+                    ? "bg-ivory-surface border-teal-living/40"
+                    : val.theme === "gold"
+                    ? "bg-gradient-to-br from-ivory-surface to-gold-subtle/40 border-gold-harvest/50"
+                    : "bg-ivory-surface border-ivory-border"
+                } shadow-sm hover:shadow-md`}
               >
-                {/* Top Bar with Numeral and Icon */}
-                <div className="flex items-center justify-between mb-8">
-                  <span className="font-serif text-2xl font-light text-gold">
-                    {val.numeral}
-                  </span>
-                  <div className="size-10 rounded-full bg-cream border border-border/80 flex items-center justify-center text-berry shadow-xs">
-                    <Icon className="size-4" />
+                <div>
+                  <div className="flex items-center justify-between mb-6">
+                    <span
+                      className={`font-serif italic text-3xl font-bold ${
+                        val.theme === "midnight" ? "text-gold-harvest" : "text-teal-living"
+                      }`}
+                    >
+                      0{idx + 1}
+                    </span>
+                    <BotanicalMotif
+                      size={22}
+                      orientation={idx % 2 === 0 ? "right" : "left"}
+                    />
                   </div>
+
+                  <h3
+                    className={`font-serif text-3xl font-bold mb-2 ${
+                      val.theme === "midnight" ? "text-white" : "text-midnight"
+                    }`}
+                  >
+                    {val.title}
+                  </h3>
+
+                  <p
+                    className={`text-xs uppercase tracking-widest font-semibold mb-4 ${
+                      val.theme === "midnight" ? "text-gold-harvest" : "text-teal-living"
+                    }`}
+                  >
+                    {val.tagline}
+                  </p>
+
+                  <p
+                    className={`font-sans text-base leading-relaxed ${
+                      val.theme === "midnight" ? "text-ivory-surface/85" : "text-charcoal/80"
+                    }`}
+                  >
+                    {val.description}
+                  </p>
                 </div>
 
-                {/* Value Title */}
-                <h3 className="font-serif text-3xl sm:text-4xl text-plum font-normal tracking-tight mb-4">
-                  {val.title}
-                </h3>
-
-                {/* Primary Tagline */}
-                <p className="font-serif italic text-xl text-plum/90 font-light leading-snug mb-5">
-                  &ldquo;{val.tagline}&rdquo;
-                </p>
-
-                {/* Narrative Reflection */}
-                <p className="font-sans text-sm sm:text-base text-foreground/75 leading-relaxed pt-4 border-t border-border/60">
-                  {val.reflection}
-                </p>
+                <div
+                  className={`mt-8 pt-4 border-t text-xs font-medium ${
+                    val.theme === "midnight"
+                      ? "border-ivory-surface/15 text-ivory-surface/60"
+                      : "border-ivory-border text-muted-foreground"
+                  }`}
+                >
+                  Journey 2 Better Living Commitment
+                </div>
               </div>
             );
           })}
         </div>
+
       </div>
     </section>
   );

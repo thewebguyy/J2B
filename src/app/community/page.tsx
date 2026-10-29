@@ -5,9 +5,9 @@ import { CommunitySteps } from "@/components/community/CommunitySteps";
 import { CommunityThreshold } from "@/components/community/CommunityThreshold";
 
 export const metadata: Metadata = {
-  title: "The Community — Sister Circles & Mentorship | Journey 2 Better",
+  title: "Community — The Together | Journey 2 Better",
   description:
-    "Circles, mentorship and daily encouragement for women rising together. Small enough to feel like family, wide enough to open doors you did not know existed.",
+    "There is room for you here. Discover our Sister Circles, 1-on-1 Mentorship, and Everyday Encouragement in our UK women's community.",
 };
 
 export default function CommunityPage() {

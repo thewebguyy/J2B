@@ -4,29 +4,43 @@
 
 :root {
   /* ==========================================================================
-     VERIFIED BRAND COLOUR TOKENS (Extracted from client live identity)
+     CANONICAL BRAND TOKENS (Extracted from official Journey 2 Better logo)
      Roles:
-     - Primary: Deep plum / burgundy (Logo, headings, buttons, footer, thresholds)
-     - Secondary: Soft light pink / warm beige (Main backgrounds, editorial surfaces)
-     - Supporting: White (Content surfaces, cards) & Dark Grey (Body typography)
+     - Primary: Midnight Teal #02404D (Headings, primary buttons, deep sanctuary)
+     - Secondary: Living Teal #036E76 (Energy, growth, accents, right silhouette)
+     - Accent: Harvest Gold #D5A044 (Ascending pathway ribbon, sun beacon, floral leaves)
+     - Canvas Background: Warm Ivory #FCF9E8 (Exact warm ivory canvas from logo)
+     - Surface: Soft Warm Parchment #F7F2E2 (Cards, containers)
+     - Body Typography: Dark Slate Charcoal #12242B (High legibility, AAA contrast)
+     - Muted Text: Slate Teal #4A6971 (Eyebrows, metadata, secondary captions)
+     - Border: Soft Ivory Linen #E9E1C9
      ========================================================================== */
-  --radius: 0.75rem;
+  --radius: 0.875rem;
 
-  /* Client exact OKLCH tokens */
-  --cream: oklch(97.5% 0.012 60);         /* Warm beige canvas: #FAF6F0 */
-  --blush: oklch(94.5% 0.02 20);          /* Soft light pink: #F6ECE8 */
-  --plum: oklch(36% 0.11 340);            /* Primary warm burgundy: #521A37 */
-  --plum-deep: oklch(28% 0.09 340);       /* Deep plum sanctuary: #381226 */
-  --berry: oklch(52% 0.17 3);             /* Primary button / link accent: #8E2543 */
-  --gold: oklch(78% 0.13 78);             /* Woven thread / delicate highlight: #D8B467 */
+  --ivory: #FCF9E8;
+  --background: #FCF9E8;
+  --foreground: #12242B;
 
-  --background: var(--cream);
-  --foreground: oklch(24% 0.03 340);      /* Dark charcoal / plum-grey: #221C20 */
+  --midnight: #02404D;
+  --midnight-deep: #012B34;
+  --teal: #036E76;
+  --teal-bright: #0A8B95;
+  --teal-subtle: #E6F3F4;
+
+  --gold: #D5A044;
+  --gold-light: #E5B660;
+  --gold-deep: #B6832A;
+  --gold-subtle: #FAF2DE;
+
   --card: #FFFFFF;
-  --card-foreground: var(--foreground);
-  --border: oklch(90% 0.02 350);          /* #E5DCD6 */
-  --muted: oklch(95.5% 0.014 40);         /* #F3ECE5 */
-  --muted-foreground: oklch(50% 0.02 340);/* #635A60 */
+  --card-warm: #F7F2E2;
+  --card-foreground: #12242B;
+
+  --border: #E9E1C9;
+  --border-strong: #D6CCA8;
+
+  --muted: #EDE6D2;
+  --muted-foreground: #4A6971;
 }
 
 /* Base Body & Reset */
@@ -49,38 +63,37 @@ body {
   line-height: 1.65;
 }
 
-/* Subtle editorial paper grain texture overlay */
-.editorial-grain {
-  background-image: radial-gradient(rgba(82, 26, 55, 0.03) 1px, transparent 0);
-  background-size: 24px 24px;
+/* Subtle botanical linen grain texture */
+.botanical-grain {
+  background-image: radial-gradient(rgba(2, 64, 77, 0.04) 1px, transparent 0);
+  background-size: 28px 28px;
 }
 
-/* Editorial Typography Styles */
+/* Editorial Typography */
 h1, h2, h3, h4, .font-serif {
   font-family: var(--font-playfair), "Playfair Display", Georgia, serif;
   font-feature-settings: "pnum" 1, "onum" 1;
-  letter-spacing: -0.015em;
+  letter-spacing: -0.018em;
 }
 
 /* Accessible Focus States */
 a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
-  outline: 2px solid var(--berry);
+  outline: 2px solid var(--gold);
   outline-offset: 3px;
 }
 
-/* Golden Thread Canvas Layer */
-.thread-path {
-  stroke: var(--gold);
-  stroke-width: 1.5;
+/* The Path of Becoming SVG Ribbon Stroke */
+.path-ribbon {
   stroke-linecap: round;
+  stroke-linejoin: round;
   fill: none;
-  filter: drop-shadow(0 1px 2px rgba(216, 180, 103, 0.3));
+  filter: drop-shadow(0 2px 4px rgba(213, 160, 68, 0.25));
 }
 
 /* Breath Easing Transitions */
 .transition-breath {
   transition-timing-function: cubic-bezier(0.25, 1, 0.5, 1);
-  transition-duration: 500ms;
+  transition-duration: 400ms;
 }
 
 /* Strict Reduced Motion Accessibility */
@@ -91,7 +104,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
-  .thread-path {
+  .path-ribbon {
     stroke-dashoffset: 0 !important;
     animation: none !important;
   }

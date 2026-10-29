@@ -1,126 +1,107 @@
 import React from "react";
-import { ArrowRight, Compass, Users, Sparkles } from "lucide-react";
+import { BotanicalMotif } from "@/components/brand/BotanicalMotif";
+import { PathRibbon } from "@/components/brand/PathRibbon";
 
-interface StepItem {
-  number: string;
-  title: string;
-  description: string;
-  icon: React.ElementType;
-}
-
-const STEPS: StepItem[] = [
+const STEPS = [
   {
-    number: "01",
-    title: "Tell us where you are",
+    step: "01",
+    title: "Reach Out & Say Hello",
+    subtitle: "A Simple First Step",
     description:
-      "Tell us a little about where you are on your journey — the season of life you are walking through, what you are longing for, and what brings you here.",
-    icon: Compass,
+      "Send a brief email or message expressing your interest. There are no questionnaires, application fees, or prerequisites. Just tell us a little bit about what season of life you are currently experiencing.",
   },
   {
-    number: "02",
-    title: "Find your circle",
+    step: "02",
+    title: "Enter the Circle",
+    subtitle: "A Gentle Introduction",
     description:
-      "We introduce you to a circle that fits your season of life, whether in London or virtually. You will receive an invitation with meeting dates and quiet preparation details.",
-    icon: Users,
+      "Join an upcoming virtual Rise & Reflect session or an introduction circle. Meet our facilitators and fellow sisters in a relaxed, low-pressure setting where listening is just as welcome as speaking.",
   },
   {
-    number: "03",
-    title: "Begin the journey",
+    step: "03",
+    title: "Grow Together",
+    subtitle: "Your Living Journey",
     description:
-      "Show up, share honestly, and grow alongside your sisters. There is no performance required — only your authentic presence.",
-    icon: Sparkles,
+      "Find your regular rhythm. Participate in ongoing circles, engage with mentorship, attend our London workshops, and build enduring sisterhood as you step boldly into who you are becoming.",
   },
 ];
 
 export const CommunitySteps: React.FC = () => {
   return (
-    <section className="relative py-28 sm:py-36 bg-blush/30 border-y border-border/80 overflow-hidden">
-      <div className="mx-auto max-w-5xl px-6 sm:px-8 lg:px-12">
-        {/* Section Heading */}
-        <div className="text-center max-w-2xl mx-auto mb-20">
+    <section id="steps" className="relative py-24 sm:py-32 bg-ivory-canvas overflow-hidden">
+      <div className="relative mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
+        
+        {/* Header */}
+        <div className="max-w-3xl mb-16 sm:mb-20">
           <div className="inline-flex items-center gap-2 mb-4">
-            <span className="size-2 rounded-full bg-berry" />
-            <span className="text-xs font-semibold uppercase tracking-widest text-plum">
-              A Gentle Process
+            <BotanicalMotif size={20} />
+            <span className="text-xs uppercase tracking-widest font-semibold text-teal-living">
+              The Path of Becoming
             </span>
           </div>
-          <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-plum font-normal tracking-tight leading-[1.1] text-balance">
-            How joining{" "}
-            <span className="font-serif italic text-berry font-light">
-              works.
-            </span>
+
+          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-midnight leading-tight mb-6">
+            How joining our community works.
           </h2>
-          <p className="font-sans text-base sm:text-lg text-foreground/80 mt-6 leading-relaxed">
-            No complex application funnels or vetting interviews. We believe
-            belonging begins with unhurried hospitality.
+
+          <p className="font-sans text-base sm:text-lg text-charcoal/80 leading-relaxed">
+            We keep the threshold simple, thoughtful, and human. Here is how your journey into Journey 2 Better begins.
           </p>
         </div>
 
-        {/* Vertical Connected Journey */}
+        {/* 3-Step Vertical Progression with Path of Becoming Ribbon */}
         <div className="relative">
-          {/* Vertical Golden Connecting Line (Desktop) */}
-          <div
-            className="hidden md:block absolute left-1/2 top-10 bottom-10 -translate-x-1/2 w-0.5 bg-gradient-to-b from-gold/30 via-gold to-gold/30 -z-0"
-            aria-hidden="true"
-          />
+          
+          {/* Central Connecting Ribbon Strand (desktop) */}
+          <div className="hidden lg:block absolute left-1/2 top-10 bottom-10 -translate-x-1/2 w-1 pointer-events-none" aria-hidden="true">
+            <div className="w-0.5 h-full bg-gradient-to-b from-teal-living via-gold-harvest to-midnight mx-auto" />
+          </div>
 
-          <div className="space-y-16 sm:space-y-24 relative z-10">
-            {STEPS.map((step, idx) => {
+          <div className="space-y-12 lg:space-y-20">
+            {STEPS.map((stepItem, idx) => {
               const isEven = idx % 2 === 1;
-              const Icon = step.icon;
 
               return (
                 <div
-                  key={step.number}
-                  className={`grid grid-cols-1 md:grid-cols-12 gap-8 items-center ${
-                    isEven ? "md:text-right" : ""
-                  }`}
+                  key={stepItem.step}
+                  className={`relative grid grid-cols-1 lg:grid-cols-12 gap-8 items-center`}
                 >
-                  {/* Step Description */}
+                  {/* Step Card */}
                   <div
-                    className={`md:col-span-5 ${
-                      isEven ? "md:col-start-1 md:order-1" : "md:col-start-1"
-                    }`}
+                    className={`lg:col-span-5 ${
+                      isEven ? "lg:col-start-8" : "lg:col-start-1"
+                    } bg-ivory-surface rounded-3xl p-8 sm:p-10 border border-ivory-border shadow-sm transition-all duration-300 hover:shadow-md hover:border-gold-harvest/40`}
                   >
-                    <div className="rounded-3xl p-8 bg-white/90 border border-border shadow-xs hover:shadow transition-shadow">
-                      <div
-                        className={`flex items-center gap-3 mb-4 ${
-                          isEven ? "md:justify-end" : ""
-                        }`}
-                      >
-                        <span className="text-xs font-mono uppercase tracking-widest text-berry font-semibold">
-                          Step {step.number}
-                        </span>
-                      </div>
-                      <h3 className="font-serif text-2xl text-plum font-normal mb-3">
-                        {step.title}
-                      </h3>
-                      <p className="font-sans text-sm sm:text-base text-foreground/75 leading-relaxed">
-                        {step.description}
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* Central Node */}
-                  <div className="hidden md:flex md:col-span-2 justify-center items-center">
-                    <div className="size-14 rounded-full bg-cream border-2 border-gold flex items-center justify-center text-plum shadow-sm">
-                      <span className="font-serif text-lg font-semibold">
-                        {step.number}
+                    <div className="flex items-center justify-between mb-4">
+                      <span className="text-xs uppercase tracking-widest font-semibold text-teal-living">
+                        {stepItem.subtitle}
                       </span>
+                      <BotanicalMotif size={20} orientation={isEven ? "left" : "right"} />
+                    </div>
+
+                    <h3 className="font-serif text-2xl sm:text-3xl font-bold text-midnight mb-4">
+                      {stepItem.title}
+                    </h3>
+
+                    <p className="font-sans text-base text-charcoal/80 leading-relaxed font-normal">
+                      {stepItem.description}
+                    </p>
+                  </div>
+
+                  {/* Center Node Badge */}
+                  <div className="hidden lg:flex lg:col-span-2 lg:col-start-6 justify-center">
+                    <div className="w-14 h-14 rounded-full bg-ivory-canvas border-2 border-gold-harvest flex items-center justify-center shadow-md text-midnight font-serif text-lg font-bold">
+                      {stepItem.step}
                     </div>
                   </div>
 
-                  {/* Empty balance spacer */}
-                  <div
-                    className={`hidden md:block md:col-span-5 ${
-                      isEven ? "md:order-2" : ""
-                    }`}
-                  />
                 </div>
               );
             })}
           </div>
+
         </div>
+
       </div>
     </section>
   );

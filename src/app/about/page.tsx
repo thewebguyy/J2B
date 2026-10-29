@@ -5,9 +5,9 @@ import { AboutValues } from "@/components/about/AboutValues";
 import { AboutThreshold } from "@/components/about/AboutThreshold";
 
 export const metadata: Metadata = {
-  title: "About Us — Our Story & Values | Journey 2 Better",
+  title: "About Us — The Why | Journey 2 Better",
   description:
-    "Our story, our values, and the women at the heart of the community. A sisterhood built for the messy middle of life and the quiet work of becoming.",
+    "Becoming is not something we do alone. Discover the founding ethos, core values, and community purpose behind Journey 2 Better.",
 };
 
 export default function AboutPage() {
