@@ -9,38 +9,38 @@ const PILLARS = [
   {
     number: "01",
     title: "Connection",
-    subtitle: "Sister Circles & Safe Spaces",
+    subtitle: "Sister circles",
     description:
-      "Intentionally curated intimate circles where women share authentically without posturing. A community where your voice is heard, your vulnerability is respected, and your presence is welcomed unconditionally.",
+      "Small groups where women talk openly and listen without judging. Share as much or as little as you like.",
     detailNote:
-      "Facilitated small-group circles held both online and around communal tables in London.",
+      "Circles meet online and in person in London.",
   },
   {
     number: "02",
     title: "Growth",
-    subtitle: "Personal Development & Mentorship",
+    subtitle: "Mentoring",
     description:
-      "Structured self-reflection, life architecture, and compassionate guidance to help you navigate pivotal seasons with clarity, resilience, and renewed self-trust.",
+      "One-to-one support to help you think through a big decision or a new chapter — and keep going when it gets hard.",
     detailNote:
-      "Thoughtful 1-on-1 mentorship and life-design roadmapping for career, motherhood, and identity shifts.",
+      "Helpful for career changes, becoming a mum, or working out what you want next.",
   },
   {
     number: "03",
     title: "Events",
-    subtitle: "Mindful Gatherings & Retreats",
+    subtitle: "Gatherings & retreats",
     description:
-      "From sunrise reflection sessions to immersive in-person workshops and our annual sanctuary retreat, each gathering is designed to create space for mental stillness and renewed perspective.",
+      "Online morning sessions, workshops in London and a yearly retreat in the countryside. Time to slow down and think.",
     detailNote:
-      "Seasonal half-day London workshops, fortnightly morning reflections, and our flagship countryside retreat.",
+      "Have a look at the events page to see what's coming up.",
   },
   {
     number: "04",
     title: "Support",
-    subtitle: "Everyday Encouragement",
+    subtitle: "Everyday encouragement",
     description:
-      "Consistent gentle check-ins, daily affirmations, and shared reminders that remind you to breathe, slow down, and trust your personal evolution.",
+      "Regular check-ins, reflections and kind reminders to help you through busy or difficult weeks.",
     detailNote:
-      "Weekly written reflections, gratitude prompts, and unhurried sisterhood encouragement.",
+      "Small, regular bits of support — not just the occasional meet-up.",
   },
 ];
 
@@ -55,17 +55,17 @@ export const HomePillars: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end mb-14 sm:mb-20 pb-8 border-b border-ivory-canvas/15">
           <div className="lg:col-span-7">
             <span className="font-serif italic text-base sm:text-lg text-gold-harvest block mb-3">
-              II. The Sanctuary Architecture &mdash; Four Pillars of Becoming
+              What we offer
             </span>
 
             <h2 className="font-serif editorial-h2 font-bold text-ivory-canvas reveal-heading">
-              Everything we cultivate is designed to companion your growth.
+              Four ways we support you.
             </h2>
           </div>
 
           <div className="lg:col-span-5 lg:pl-8 border-l border-gold-harvest/40">
             <p className="font-sans text-base sm:text-lg text-ivory-canvas/80 leading-relaxed">
-              We do not believe in superficial quick fixes. Journey 2 Better is grounded in four foundational pillars that nurture the emotional, relational, and personal life of every woman.
+              No quick fixes. Just steady, practical support for your friendships, your growth and your wellbeing.
             </p>
           </div>
         </div>
@@ -101,7 +101,7 @@ export const HomePillars: React.FC = () => {
                       </h3>
                     </div>
                     <span className="text-[10px] uppercase tracking-[0.18em] text-gold-light font-semibold">
-                      {pillar.subtitle.split("&")[0]}
+                      {pillar.subtitle}
                     </span>
                   </div>
                   <p className="font-sans text-xs sm:text-sm text-ivory-canvas/75 line-clamp-2 pl-9">
@@ -154,10 +154,10 @@ export const HomePillars: React.FC = () => {
                 </div>
                 <div>
                   <span className="text-[11px] uppercase tracking-[0.18em] text-gold-harvest font-semibold block">
-                    The Complete Ecosystem
+                    All in one place
                   </span>
                   <p className="font-sans text-xs text-ivory-canvas/75">
-                    Circles, mentorship, and seasonal gatherings under one roof.
+                    Circles, mentoring and gatherings — pick what suits you.
                   </p>
                 </div>
               </div>
@@ -166,7 +166,7 @@ export const HomePillars: React.FC = () => {
                 href="/community"
                 className="inline-flex items-center justify-center gap-3 rounded-full bg-gold-harvest hover:bg-gold-light text-midnight-deep px-7 py-3.5 text-xs font-semibold uppercase tracking-wider transition-all duration-300 flex-shrink-0 shadow-sm"
               >
-                <span>Explore Community &amp; Circles</span>
+                <span>See How the Community Works</span>
                 <ArrowRight className="size-4" />
               </Link>
             </div>

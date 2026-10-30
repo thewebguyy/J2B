@@ -18,20 +18,20 @@ export const CommunityThreshold: React.FC = () => {
             <div className="inline-flex items-center gap-3 mb-5">
               <BotanicalMotif size={20} />
               <span className="text-xs uppercase tracking-[0.22em] font-semibold text-gold-harvest">
-                Begin Today
+                Get in touch
               </span>
               <span className="h-px w-10 bg-gold-harvest/50" aria-hidden="true" />
             </div>
 
             <h2 className="font-serif editorial-h2 font-bold text-white leading-tight mb-6 reveal-heading">
-              Reach out directly to join{" "}
+              Want to join a circle?{" "}
               <span className="italic font-normal text-gold-harvest block mt-1">
-                our next sister circle.
+                Just get in touch.
               </span>
             </h2>
 
             <p className="font-sans text-base sm:text-lg text-ivory-surface/85 max-w-2xl leading-relaxed">
-              We keep communication direct, warm, and personal. Send us an email or message to introduce yourself, and we will gladly connect you to our upcoming gathering.
+              Email or message us to introduce yourself, and we&apos;ll let you know about the next gathering.
             </p>
           </div>
 
@@ -39,17 +39,17 @@ export const CommunityThreshold: React.FC = () => {
             <div className="flex flex-col sm:flex-row lg:flex-col gap-4 w-full sm:w-auto lg:w-full mb-8">
               <MagneticButton href="mailto:hello@journey2better.com?subject=Introducing%20Myself%20to%20Journey%202%20Better" variant="gold" className="w-full justify-center">
                 <Mail className="size-4 mr-2" />
-                <span>Introduce Yourself via Email</span>
+                <span>Email Us</span>
               </MagneticButton>
 
               <MagneticButton href="https://wa.me/447960964839" variant="teal" className="w-full justify-center">
                 <Phone className="size-4 mr-2" />
-                <span>Send a WhatsApp Voice or Text Note</span>
+                <span>Message Us on WhatsApp</span>
               </MagneticButton>
             </div>
 
             <div className="pt-6 border-t border-ivory-surface/15 w-full text-xs text-ivory-surface/75">
-              Personal replies from our UK team &bull; hello@journey2better.com &bull; +44 7960 964839
+              We reply personally &bull; hello@journey2better.com &bull; +44 7960 964839
             </div>
           </div>
 

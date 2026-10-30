@@ -9,37 +9,37 @@ const RHYTHM_STAGES = [
     id: "morning-hearth",
     number: "01",
     phase: "Weekly & Fortnightly",
-    title: "The Morning Hearth",
-    subtitle: "Rise & Reflect Virtual Circles",
+    title: "Morning Circles",
+    subtitle: "Online on Zoom",
     description:
-      "Consistent, gentle morning check-ins to anchor your thoughts, process weekly intentions, and maintain sisterhood connections between major milestones.",
-    tag: "Online Sanctuary",
+      "Regular morning check-ins to quiet your mind, set intentions, and stay connected with women who understand.",
+    tag: "Online",
     rhythmNotes:
-      "Held online via Zoom so sisters across the UK can gather quietly from home before the day begins.",
+      "Held on Zoom so you can join easily from home before your day gets underway.",
   },
   {
     id: "london-intensive",
     number: "02",
     phase: "Quarterly & Seasonal",
-    title: "The London Intensive",
-    subtitle: "Better Together Workshops",
+    title: "London Workshops",
+    subtitle: "In person in London",
     description:
-      "Deep, focused half-day sessions in quiet Central London spaces. Work through structured personal development roadmaps, clarify life decisions, and share communal lunch.",
-    tag: "In-Person London",
+      "Focused half-day sessions in quiet Central London spaces. Work through structured exercises, think through next steps, and share lunch.",
+    tag: "Central London",
     rhythmNotes:
-      "Hosted seasonally in intimate Central London sanctuaries with capped attendance and nourishing shared meals.",
+      "Held in small groups in Central London with plenty of time for conversation and shared food.",
   },
   {
     id: "sacred-pause",
     number: "03",
-    phase: "Annual Flagship",
-    title: "The Sacred Pause",
-    subtitle: "Annual Sisterhood Retreat",
+    phase: "Once a Year",
+    title: "Country Retreat",
+    subtitle: "Weekend in the countryside",
     description:
-      "An unhurried weekend in the English countryside. Step away from routine for quiet walks, deep evening circles, restorative wellness, and lifelong bonds.",
-    tag: "UK Countryside Estate",
+      "A restful weekend away in the English countryside. Step back from the rush for quiet walks, evening talks, and good company.",
+    tag: "UK Countryside",
     rhythmNotes:
-      "Our annual multi-day countryside sanctuary gathering — dates and details shared directly upon enquiry.",
+      "Our yearly weekend away — dates and details sent directly when you get in touch.",
   },
 ];
 
@@ -57,16 +57,16 @@ export const EventsTimeline: React.FC = () => {
             <div className="inline-flex items-center gap-2.5 mb-4">
               <BotanicalMotif size={20} />
               <span className="text-xs uppercase tracking-[0.22em] font-semibold text-teal-living">
-                Gathering Rhythm
+                Meeting Rhythm
               </span>
             </div>
 
             <h2 className="font-serif editorial-h2 font-bold text-midnight mb-4 reveal-heading">
-              The Path of Becoming in practice.
+              How often we meet.
             </h2>
 
             <p className="font-sans text-base sm:text-lg text-charcoal/80 leading-relaxed max-w-2xl">
-              Our gatherings are not isolated events. They form an intentional, recurring rhythm that supports your growth throughout the seasons of the year.
+              Our gatherings aren&apos;t one-off events. They fit into an easy, regular rhythm that supports you across the year.
             </p>
           </div>
 

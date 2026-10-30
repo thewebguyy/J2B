@@ -5,17 +5,17 @@ const VALUES = [
   {
     number: "01",
     title: "Honesty",
-    tagline: "Dropping the mask",
+    tagline: "No pretending",
     description:
-      "We cultivate spaces where you never have to pretend you have everything together. Truthful reflection and vulnerability are honoured as the beginning of genuine growth.",
+      "You never have to act like you've got it all together. Being honest is where growth starts.",
     theme: "midnight",
   },
   {
     number: "02",
     title: "Belonging",
-    tagline: "Room at the table",
+    tagline: "Come as you are",
     description:
-      "You do not need to qualify, prove yourself, or audition for this sisterhood. From your very first step, your presence is valued and warmly received.",
+      "There's nothing to qualify for and nothing to prove. You belong from your first day.",
     theme: "ivory",
   },
   {
@@ -23,15 +23,15 @@ const VALUES = [
     title: "Courage",
     tagline: "Taking the next step",
     description:
-      "Growth requires stepping into the unfamiliar. We walk beside each other through difficult decisions, bold ambitions, and heartfelt career or life pivots.",
+      "Change can be scary. We stand by each other through hard decisions and big leaps — at home or at work.",
     theme: "teal",
   },
   {
     number: "04",
     title: "Celebration",
-    tagline: "Honouring quiet victories",
+    tagline: "Small wins count",
     description:
-      "Not just the promotions and milestones, but the quiet courage to set a boundary, choose rest, or begin again after a season of exhaustion.",
+      "Not just promotions and milestones. Setting a boundary, choosing rest or starting again after a hard time counts too.",
     theme: "gold",
   },
 ];
@@ -47,18 +47,18 @@ export const AboutValues: React.FC = () => {
             <div className="inline-flex items-center gap-2.5 mb-4">
               <BotanicalMotif size={20} />
               <span className="text-xs uppercase tracking-[0.22em] font-semibold text-teal-living">
-                Core Principles
+                Our values
               </span>
             </div>
 
             <h2 className="font-serif editorial-h2 font-bold text-midnight reveal-heading">
-              The values that anchor our sisterhood.
+              What we stand for.
             </h2>
           </div>
 
           <div className="lg:col-span-5 lg:pl-6 border-l border-gold-harvest/50">
             <p className="font-sans text-base sm:text-lg text-charcoal/80 leading-relaxed">
-              These four commitments shape every circle we host, every workshop we curate, and every conversation we share.
+              These four things shape every circle, workshop and conversation.
             </p>
           </div>
         </div>

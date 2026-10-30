@@ -16,9 +16,6 @@ export const HomeHero: React.FC = () => {
           <div className="lg:col-span-7 pt-2 lg:pt-4">
             {/* Editorial Folio Header — No generic leaf/sparkle icons */}
             <div className="inline-flex items-center gap-3 mb-7">
-              <span className="font-serif italic text-sm text-gold-deep">
-                Issue 01 &mdash;
-              </span>
               <span className="text-[11px] sm:text-xs uppercase tracking-[0.22em] font-semibold text-teal-living">
                 Your companion on the journey to better
               </span>
@@ -36,14 +33,14 @@ export const HomeHero: React.FC = () => {
             {/* Editorial Staggered Lead Copy */}
             <div className="pl-5 sm:pl-7 border-l-2 border-gold-harvest/65 max-w-xl mb-10">
               <p className="font-sans text-lg sm:text-xl text-charcoal/90 font-normal leading-relaxed">
-                Becoming the woman you are meant to be is deeply personal — but it was never intended to be lonely. Journey 2 Better is a welcoming UK sisterhood for mindful growth, meaningful connection, and everyday encouragement.
+                Growing into the woman you want to be is personal — but it doesn&apos;t have to be lonely. Journey 2 Better is a community of women in the UK who meet up, talk honestly and help each other through life&apos;s changes.
               </p>
             </div>
 
             {/* Explicit Primary CTA & High-Contrast Secondary CTA */}
             <div className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-5">
               <MagneticButton href="/events" variant="primary">
-                <span>Explore Upcoming Circles</span>
+                <span>See Upcoming Gatherings</span>
                 <ArrowRight className="size-4 text-gold-harvest" />
               </MagneticButton>
 
@@ -55,10 +52,7 @@ export const HomeHero: React.FC = () => {
             {/* Editorial Footnote Annotation (No AI sparkle icon) */}
             <div className="mt-10 pt-5 border-t border-ivory-border/90 max-w-lg">
               <p className="font-serif italic text-sm text-muted-foreground">
-                <span className="text-midnight font-semibold not-italic uppercase tracking-[0.15em] text-[11px] mr-2">
-                  Editorial Note:
-                </span>
-                No pretenses. No prerequisites. Come as you are in the messy middle.
+                No fees to join. No need to have it all sorted. Just come as you are.
               </p>
             </div>
           </div>
@@ -69,9 +63,9 @@ export const HomeHero: React.FC = () => {
               {/* Primary Atmospheric Photograph: Morning Tea & Open Journal in a Quiet London Room */}
               <figure className="relative bg-ivory-surface p-3 sm:p-4 border border-ivory-border shadow-[0_24px_60px_-20px_rgba(2,64,77,0.18)]">
                 <div className="flex items-center justify-between text-[10px] uppercase tracking-[0.2em] text-muted-foreground mb-2.5 pb-2 border-b border-ivory-border">
-                  <span>SANCTUARY &bull; MORNING TABLE</span>
+                  <span>Journey 2 Better</span>
                   <span className="font-serif italic normal-case tracking-normal text-xs text-midnight">
-                    London &amp; Across the UK
+                    London &amp; online
                   </span>
                 </div>
 
@@ -86,9 +80,8 @@ export const HomeHero: React.FC = () => {
                   />
                 </div>
 
-                <figcaption className="mt-3 flex items-center justify-between text-[11px] font-sans text-muted-foreground">
-                  <span>Intimate circles &bull; Unhurried conversation</span>
-                  <span className="text-gold-deep font-serif italic">Fig. 01</span>
+                <figcaption className="mt-3 text-[11px] font-sans text-muted-foreground">
+                  Small groups. Real conversations.
                 </figcaption>
               </figure>
 
@@ -96,10 +89,10 @@ export const HomeHero: React.FC = () => {
               <div className="relative mt-4 sm:-mt-8 sm:-ml-6 z-10 grid grid-cols-12 gap-4 items-end">
                 <blockquote className="col-span-12 sm:col-span-8 bg-midnight-deep text-ivory-surface p-5 sm:p-6 border-l-4 border-gold-harvest shadow-xl">
                   <span className="text-[10px] uppercase tracking-[0.2em] font-semibold text-gold-harvest block mb-1.5">
-                    The Living Thread
+                    What we believe
                   </span>
                   <p className="font-serif italic text-sm sm:text-base text-ivory-surface/95 leading-snug">
-                    &ldquo;A gentle reminder that growth happens together, one honest step at a time.&rdquo;
+                    Growing is easier when you&apos;re not doing it on your own.
                   </p>
                 </blockquote>
 

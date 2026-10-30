@@ -7,24 +7,24 @@ import { isReducedMotion } from "@/utils/motion";
 const STEPS = [
   {
     step: "01",
-    title: "Reach Out & Say Hello",
-    subtitle: "A Simple First Step",
+    title: "Say hello",
+    subtitle: "Step one",
     description:
-      "Send a brief email or message expressing your interest. There are no questionnaires, application fees, or prerequisites. Just tell us a little bit about what season of life you are currently experiencing.",
+      "Send us a short email or message. No forms, no fees, nothing to qualify for — just tell us a bit about where you are in life right now.",
   },
   {
     step: "02",
-    title: "Enter the Circle",
-    subtitle: "A Gentle Introduction",
+    title: "Come to a circle",
+    subtitle: "Try it out",
     description:
-      "Join an upcoming virtual Rise & Reflect session or an introduction circle. Meet our facilitators and fellow sisters in a relaxed, low-pressure setting where listening is just as welcome as speaking.",
+      "Join an online Rise & Reflect session or an introduction circle. Meet the hosts and other women in a relaxed setting. Listening is just as welcome as talking.",
   },
   {
     step: "03",
-    title: "Grow Together",
-    subtitle: "Your Living Journey",
+    title: "Grow together",
+    subtitle: "Keep coming",
     description:
-      "Find your regular rhythm. Participate in ongoing circles, engage with mentorship, attend our London workshops, and build enduring sisterhood as you step boldly into who you are becoming.",
+      "Find a rhythm that works for you — regular circles, mentoring, London workshops — and build real friendships along the way.",
   },
 ];
 
@@ -74,18 +74,18 @@ export const CommunitySteps: React.FC = () => {
             <div className="inline-flex items-center gap-2.5 mb-4">
               <BotanicalMotif size={20} />
               <span className="text-xs uppercase tracking-[0.22em] font-semibold text-teal-living">
-                The Path of Becoming
+                Joining
               </span>
             </div>
 
             <h2 className="font-serif editorial-h2 font-bold text-midnight reveal-heading">
-              How joining our community works.
+              How joining works.
             </h2>
           </div>
 
           <div className="lg:col-span-5 lg:pl-6 border-l border-gold-harvest/50">
             <p className="font-sans text-base sm:text-lg text-charcoal/80 leading-relaxed">
-              We keep the threshold simple, thoughtful, and human. Here is how your journey into Journey 2 Better begins.
+              We keep it simple. Here&apos;s how to get started.
             </p>
           </div>
         </div>

@@ -7,42 +7,42 @@ const OFFERINGS = [
     id: "circles",
     number: "01",
     title: "Sister Circles",
-    eyebrow: "Connection & Mutual Witness",
+    eyebrow: "Small group support",
     description:
-      "Small, facilitated intimate circles where women come together regularly to share life updates, process difficult seasons, and hold space for one another. Each circle operates under a code of confidentiality and gentle listening.",
+      "Small groups that meet regularly to catch up, talk through hard times and support each other. What's shared in the circle stays in the circle.",
     highlights: [
-      "Facilitated intimate group sizes",
-      "Confidential and non-judgmental atmosphere",
-      "Guided reflection themes on balance, identity, and courage",
-      "Both virtual and London-based gathering formats",
+      "Small groups with a host",
+      "Private and non-judgemental",
+      "Themes like balance, identity and confidence",
+      "Online and in London",
     ],
   },
   {
     id: "mentorship",
     number: "02",
-    title: "1-on-1 Mentorship",
-    eyebrow: "Guidance & Life Architecture",
+    title: "One-to-One Mentoring",
+    eyebrow: "Personal support",
     description:
-      "Personalised guidance for women navigating major personal, relational, or career transitions. Pair with an experienced mentor who listens, helps clarify goals, and provides steadfast accountability.",
+      "For women going through a big change at home, in a relationship or at work. A mentor listens, helps you get clear on what you want and keeps you on track.",
     highlights: [
-      "Focused 1-on-1 conversations",
-      "Personal life and personal development roadmapping",
-      "Accountability check-ins between sessions",
-      "Practical strategies for confidence and boundaries",
+      "One-to-one conversations",
+      "Help planning your next steps",
+      "Check-ins between sessions",
+      "Practical help with confidence and boundaries",
     ],
   },
   {
     id: "encouragement",
     number: "03",
     title: "Everyday Encouragement",
-    eyebrow: "Daily Uplift & Mindset",
+    eyebrow: "Regular encouragement",
     description:
-      "A steady, reassuring touchpoint in the rhythm of your week. Receive intentional reflections, affirmations, and promptings designed to ground you when life feels rushed or overwhelming.",
+      "A steady bit of support in your week — reflections, affirmations and prompts for when life feels rushed or too much.",
     highlights: [
-      "Weekly community reflections",
-      "Mindset and gratitude prompts",
-      "Peer encouragement threads",
-      "A gentle reminder to pause and breathe",
+      "Weekly reflections",
+      "Gratitude and mindset prompts",
+      "Encouragement from other members",
+      "A reminder to pause and breathe",
     ],
   },
 ];
@@ -61,18 +61,18 @@ export const CommunityOfferings: React.FC = () => {
             <div className="inline-flex items-center gap-2.5 mb-4">
               <BotanicalMotif size={20} />
               <span className="text-xs uppercase tracking-[0.22em] font-semibold text-teal-living">
-                Community Model
+                What we offer
               </span>
             </div>
 
             <h2 className="font-serif editorial-h2 font-bold text-midnight reveal-heading">
-              Three ways we support your personal evolution.
+              Three ways to get support.
             </h2>
           </div>
 
           <div className="lg:col-span-5 lg:pl-6 border-l border-gold-harvest/50">
             <p className="font-sans text-base sm:text-lg text-charcoal/80 leading-relaxed">
-              Whether you are seeking collective sisterhood in a circle, dedicated 1-on-1 mentorship, or everyday words of reassurance, there is an offering designed to meet your current season.
+              Join a circle, get one-to-one mentoring, or just receive regular encouragement — whatever fits where you are right now.
             </p>
           </div>
         </div>
@@ -111,7 +111,7 @@ export const CommunityOfferings: React.FC = () => {
             <div className="lg:col-span-5 lg:mt-6 bg-ivory-canvas/90 border-l-2 border-teal-living p-6 sm:p-8 tactile-surface">
               <div className="flex items-center justify-between mb-5 pb-3 border-b border-ivory-border">
                 <h4 className="font-serif italic text-lg font-bold text-midnight">
-                  What to expect in circle
+                  What to expect
                 </h4>
                 <BotanicalMotif size={18} />
               </div>
@@ -143,7 +143,7 @@ export const CommunityOfferings: React.FC = () => {
             {/* Left: Structured Mentorship Architecture List */}
             <div className="lg:col-span-5 order-2 lg:order-1 border-t lg:border-t-0 lg:border-r border-ivory-surface/15 pt-8 lg:pt-0 lg:pr-10">
               <h4 className="text-xs uppercase tracking-[0.22em] text-gold-harvest font-semibold mb-6">
-                Mentorship Architecture &mdash; What to Expect
+                What to expect
               </h4>
               <ul className="space-y-4 font-sans text-sm sm:text-base text-ivory-surface/90">
                 {OFFERINGS[1].highlights.map((item) => (
@@ -207,7 +207,7 @@ export const CommunityOfferings: React.FC = () => {
             <div className="lg:col-span-6">
               <div className="mb-3 flex items-center justify-between">
                 <h4 className="text-xs uppercase tracking-[0.2em] font-semibold text-teal-living">
-                  What to Expect Throughout Your Week
+                  What you&apos;ll get
                 </h4>
                 <span className="h-px flex-1 bg-gold-harvest/40 ml-4" />
               </div>
@@ -218,7 +218,7 @@ export const CommunityOfferings: React.FC = () => {
                     className="p-5 bg-ivory-canvas border-t-2 border-gold-harvest/60 tactile-surface"
                   >
                     <span className="font-serif italic text-xs text-teal-living font-semibold block mb-1.5">
-                      Touchpoint 0{idx + 1}
+                      0{idx + 1}
                     </span>
                     <p className="font-sans text-sm sm:text-base text-midnight font-medium leading-snug">
                       {item}

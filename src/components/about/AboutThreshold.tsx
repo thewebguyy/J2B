@@ -18,31 +18,31 @@ export const AboutThreshold: React.FC = () => {
             <div className="inline-flex items-center gap-3 mb-5">
               <BotanicalMotif size={20} />
               <span className="text-xs uppercase tracking-[0.22em] font-semibold text-gold-harvest">
-                The Path Ahead
+                Join us
               </span>
               <span className="h-px w-10 bg-gold-harvest/50" aria-hidden="true" />
             </div>
 
             <h2 className="font-serif editorial-h2 font-bold text-white leading-tight mb-6 reveal-heading">
-              The story of Journey 2 Better is{" "}
+              We&apos;re still growing —{" "}
               <span className="italic font-normal text-gold-harvest block mt-1">
-                being written with you.
+                and we&apos;d love you to be part of it.
               </span>
             </h2>
 
             <p className="font-sans text-base sm:text-lg text-ivory-surface/85 max-w-2xl leading-relaxed">
-              As an emerging UK sisterhood, our greatest strength is the intentionality of our members. When you step into this community, you don&apos;t just attend — you help shape a space where women truly thrive.
+              We&apos;re a new community in the UK. The women who join now help shape what it becomes.
             </p>
           </div>
 
           <div className="lg:col-span-5 lg:pl-8 border-l border-gold-harvest/35 flex flex-col sm:flex-row lg:flex-col gap-4">
             <MagneticButton href="/community#join" variant="gold" className="w-full justify-between">
-              <span>Introduce Yourself</span>
+              <span>How to Join</span>
               <ArrowRight className="size-4" />
             </MagneticButton>
 
             <MagneticButton href="/events" variant="teal" className="w-full justify-center">
-              <span>See the Gatherings Calendar</span>
+              <span>See Upcoming Gatherings</span>
             </MagneticButton>
           </div>
 

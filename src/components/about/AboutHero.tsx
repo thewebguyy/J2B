@@ -16,24 +16,21 @@ export const AboutHero: React.FC = () => {
 
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-3 mb-6">
-              <span className="font-serif italic text-sm text-gold-deep">
-                The Why &mdash;
-              </span>
               <span className="text-[11px] sm:text-xs uppercase tracking-[0.22em] font-semibold text-teal-living">
-                About Journey 2 Better
+                About us
               </span>
               <span className="h-px w-10 bg-gold-harvest/60" aria-hidden="true" />
             </div>
 
             <h1 className="font-serif editorial-display font-bold text-midnight mb-8 reveal-heading">
-              Becoming is not something{" "}
+              Growing is easier{" "}
               <span className="italic font-normal text-gold-harvest block sm:inline">
-                we do alone.
+                when you&apos;re not alone.
               </span>
             </h1>
 
             <p className="font-sans text-lg sm:text-xl text-charcoal/85 leading-relaxed font-normal max-w-2xl">
-              Journey 2 Better was founded in the UK out of a simple, undeniable human truth: every woman desires to grow, yet too many are asked to navigate life&apos;s pivotal transitions in isolation.
+              Journey 2 Better started in the UK for one simple reason: women want to grow, but too many of us go through life&apos;s big changes on our own.
             </p>
           </div>
         </div>
@@ -45,21 +42,21 @@ export const AboutHero: React.FC = () => {
           <div className="lg:col-span-7 pl-6 sm:pl-10 lg:pl-12 border-l-4 border-gold-harvest py-2 relative">
             <div className="flex items-center gap-2.5 mb-4">
               <span className="text-xs uppercase tracking-[0.22em] font-semibold text-gold-deep">
-                Our Founding Intention
+                Why we started
               </span>
               <BotanicalMotif size={16} orientation="up" />
             </div>
 
             <h2 className="font-serif editorial-pullquote font-bold text-midnight mb-6">
-              &ldquo;Creating a sanctuary where honesty replaces the pressure to perform.&rdquo;
+              &ldquo;A place where you can be honest, instead of pretending you&apos;re fine.&rdquo;
             </h2>
 
             <div className="space-y-5 text-charcoal/85 font-sans text-base sm:text-lg leading-relaxed max-w-2xl">
               <p>
-                In a culture saturated with curated success stories and relentless productivity, women frequently find themselves carrying family, career, and personal expectations without a safe place to speak truthfully about the fatigue, the uncertainty, or the quiet longing for more.
+                Life asks a lot of women — family, work, everyone else&apos;s needs. Most of us have nowhere to say how tired or unsure we really feel, or that we want something more.
               </p>
               <p>
-                Journey 2 Better is being built as that companion. A community where you don&apos;t have to present an edited version of yourself to belong. Whether you are thriving, rebuilding, or simply searching for like-minded companions, your seat at the table is prepared.
+                Journey 2 Better is being built to be that place. You don&apos;t need to have your life together to belong here. Whether things are going well, falling apart or somewhere in between, there&apos;s a seat for you.
               </p>
             </div>
           </div>
@@ -79,7 +76,7 @@ export const AboutHero: React.FC = () => {
               {/* Symbolism Annotation */}
               <div className="mt-4 pt-4 border-t border-ivory-border/80">
                 <p className="font-serif italic text-sm text-midnight leading-snug">
-                  Two silhouettes in harmony &bull; The ascending golden pathway &bull; Companions on the journey
+                  Our logo: two women side by side, with a golden path between them.
                 </p>
               </div>
             </div>

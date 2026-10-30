@@ -13,20 +13,20 @@ export const HomeTruth: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-baseline mb-16 sm:mb-24 pb-8 border-b border-ivory-border">
           <div className="lg:col-span-7">
             <span className="font-serif italic text-base sm:text-lg text-teal-living block mb-3">
-              I. The Quiet Weight &mdash; A Shared Reality
+              Why we started
             </span>
 
             <h2 className="font-serif editorial-h2 font-bold text-midnight reveal-heading">
-              So many women carry everything quietly.{" "}
+              So many women carry everything on their own.{" "}
               <span className="italic font-normal text-gold-deep block sm:inline mt-1">
-                Here, you don&apos;t have to do it alone.
+                Here, you don&apos;t have to.
               </span>
             </h2>
           </div>
 
           <div className="lg:col-span-5 lg:pl-8 border-l border-gold-harvest/50">
             <p className="font-sans text-base sm:text-lg text-charcoal/85 leading-relaxed">
-              We are conditioned to be strong, capable, and self-sufficient. But true personal growth isn&apos;t a solitary endurance test. It is a shared journey that flourishes when we are met with understanding.
+              We&apos;re taught to be strong and to cope by ourselves. But nobody grows well in isolation. It&apos;s easier when the people around you understand.
             </p>
           </div>
         </div>
@@ -75,25 +75,25 @@ export const HomeTruth: React.FC = () => {
                   </span>
                   <div>
                     <span className="text-xs uppercase tracking-[0.18em] font-semibold text-teal-living block">
-                      A space to exhale
+                      Somewhere to breathe
                     </span>
                     <h3 className="font-serif text-2xl sm:text-3xl font-bold text-midnight mt-1">
-                      Life Transitions
+                      Big life changes
                     </h3>
                   </div>
                 </div>
                 <p className="font-sans text-base sm:text-lg text-charcoal/85 leading-relaxed">
-                  Whether you are changing careers, redefining motherhood, healing, or questioning your direction, having sisters who listen without judgment makes the path clearer.
+                  A new job, a new baby, healing from something hard, or just not sure what&apos;s next. It helps to talk to women who listen and don&apos;t judge.
                 </p>
               </div>
 
-              {/* Paired Voice Note / Circle Reflection */}
+              {/* In-practice note (descriptive, not a testimonial) */}
               <div className="lg:col-span-5 lg:col-start-8 lg:mt-6 bg-ivory-canvas p-6 sm:p-7 border border-ivory-border">
                 <span className="font-serif italic text-xs text-teal-living block mb-2">
-                  From the circle table &bull; London reflection
+                  In practice
                 </span>
                 <p className="font-serif italic text-base sm:text-lg text-midnight/90 leading-relaxed">
-                  &ldquo;For the first time in months, I didn&apos;t have to explain why I felt tired or uncertain. Sitting with women who simply nodded and poured another cup of tea changed everything.&rdquo;
+                  You don&apos;t have to explain yourself or have the right words. You can just turn up and be heard.
                 </p>
               </div>
             </article>
@@ -103,10 +103,10 @@ export const HomeTruth: React.FC = () => {
               {/* Paired Editorial Margin Reflection on Left */}
               <div className="lg:col-span-5 order-2 lg:order-1 bg-ivory-canvas p-6 sm:p-7 border border-ivory-border">
                 <span className="font-serif italic text-xs text-gold-deep block mb-2">
-                  Journal margin note &bull; On becoming
+                  In practice
                 </span>
                 <p className="font-serif italic text-base sm:text-lg text-midnight/90 leading-relaxed">
-                  &ldquo;You do not need to wait until your story is tidy before you allow yourself to be witnessed and supported.&rdquo;
+                  You can come to a circle and say &ldquo;I don&apos;t know&rdquo; — and that&apos;s completely fine.
                 </p>
               </div>
 
@@ -114,7 +114,7 @@ export const HomeTruth: React.FC = () => {
                 <div className="flex items-baseline justify-between mb-4">
                   <div>
                     <span className="text-xs uppercase tracking-[0.18em] font-semibold text-gold-deep block">
-                      Honouring your process
+                      Where most of life happens
                     </span>
                     <h3 className="font-serif text-2xl sm:text-3xl lg:text-[2.15rem] font-bold text-midnight mt-1">
                       The Messy Middle
@@ -125,7 +125,7 @@ export const HomeTruth: React.FC = () => {
                   </span>
                 </div>
                 <p className="font-sans text-base sm:text-lg text-charcoal/85 leading-relaxed">
-                  Transformation is rarely linear. We honour the uncertain middle ground where you are shedding who you were and stepping courageously into who you are becoming.
+                  Change is rarely neat. We&apos;re here for the in-between part — when you&apos;re letting go of who you were and not yet sure who you&apos;re becoming.
                 </p>
               </div>
             </article>
@@ -139,24 +139,24 @@ export const HomeTruth: React.FC = () => {
                   </span>
                   <div>
                     <span className="text-xs uppercase tracking-[0.18em] font-semibold text-midnight block">
-                      Walking side by side
+                      Side by side
                     </span>
                     <h3 className="font-serif text-2xl sm:text-3xl font-bold text-midnight mt-1">
-                      True Companionship
+                      Real friendship
                     </h3>
                   </div>
                 </div>
                 <p className="font-sans text-base sm:text-lg text-charcoal/85 leading-relaxed">
-                  No competition. No hierarchy. Just genuine women walking beside you, holding your aspirations with respect, and celebrating every small milestone along the way.
+                  No competition and no pecking order. Just women who show up for each other and celebrate the small wins as well as the big ones.
                 </p>
               </div>
 
               <div className="lg:col-span-5 lg:col-start-8 lg:mt-4 bg-ivory-canvas p-6 sm:p-7 border border-ivory-border">
                 <span className="font-serif italic text-xs text-teal-living block mb-2">
-                  Sisterhood ethos &bull; Unhurried support
+                  In practice
                 </span>
                 <p className="font-serif italic text-base sm:text-lg text-midnight/90 leading-relaxed">
-                  &ldquo;Another woman&apos;s clarity does not diminish your own. We celebrate quiet boundaries just as warmly as bold career leaps.&rdquo;
+                  Nobody is ranked and nobody is selling you anything. Someone else doing well takes nothing away from you.
                 </p>
               </div>
             </article>

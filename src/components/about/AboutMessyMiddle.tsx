@@ -8,24 +8,24 @@ import { isReducedMotion } from "@/utils/motion";
 const PHASES = [
   {
     number: "01",
-    label: "Phase 01 • The Spark",
-    title: "The Decision to Grow",
+    label: "Step 1 • Deciding",
+    title: "Something needs to change",
     description:
-      "Acknowledging that your current life season demands renewal, courage, and a deliberate step forward.",
+      "Noticing you want more from this part of your life — and taking a first step.",
   },
   {
     number: "02",
-    label: "Phase 02 • The Messy Middle",
-    title: "The Shared Journey",
+    label: "Step 2 • The messy middle",
+    title: "Working it out together",
     description:
-      "Navigating questions, vulnerability, and evolving priorities with sisters who walk beside you every step of the way.",
+      "Figuring things out as you go, with other women beside you.",
   },
   {
     number: "03",
-    label: "Phase 03 • Becoming",
-    title: "Stepping Into Wholeness",
+    label: "Step 3 • Becoming",
+    title: "Feeling more like yourself",
     description:
-      "Standing tall in your grounded identity, equipped with clarity, self-compassion, and an enduring community.",
+      "On firmer ground, clearer about who you are, with good people around you.",
   },
 ];
 
@@ -76,14 +76,14 @@ export const AboutMessyMiddle: React.FC = () => {
               <div className="inline-flex items-center gap-2.5 mb-5">
                 <BotanicalMotif size={20} />
                 <span className="text-xs uppercase tracking-[0.22em] font-semibold text-gold-harvest">
-                  Signature Philosophy
+                  What we believe
                 </span>
               </div>
 
               <h2 className="font-serif editorial-h2 font-bold text-white leading-[1.1] reveal-heading">
-                We exist for the{" "}
+                We&apos;re here for{" "}
                 <span className="italic font-normal text-gold-harvest block mt-1">
-                  messy middle of life.
+                  the messy middle.
                 </span>
               </h2>
             </div>
@@ -91,17 +91,17 @@ export const AboutMessyMiddle: React.FC = () => {
             {/* Right Expansive Editorial Prose & Pull-Quote */}
             <div className="lg:col-span-7 space-y-6 text-ivory-surface/85 font-sans text-base sm:text-lg leading-relaxed">
               <p>
-                The world loves to celebrate the starting line and applaud the finish line. But almost all of life is lived in the stretch between: the quiet mornings of uncertainty, the moments of self-doubt, the unexpected career crossroads, and the emotional transitions that don&apos;t fit into a tidy narrative.
+                People celebrate the start and the finish. But most of life happens in between — the uncertain mornings, the self-doubt, the career wobbles and the changes that don&apos;t fit a neat story.
               </p>
 
               <blockquote className="pl-6 sm:pl-8 border-l-4 border-gold-harvest py-2 my-6">
                 <p className="font-serif italic editorial-pullquote text-white font-normal">
-                  &ldquo;You do not need to wait until you are &lsquo;finished&rsquo; to be worthy of deep connection.&rdquo;
+                  &ldquo;You don&apos;t need to wait until you&apos;re &lsquo;sorted&rsquo; to deserve real connection.&rdquo;
                 </p>
               </blockquote>
 
               <p>
-                In Journey 2 Better, the messy middle is not something to hide or apologize for. It is the sacred, fertile ground where real resilience, self-knowledge, and lifelong sisterhood take root.
+                Here, the messy middle isn&apos;t something to hide or apologise for. It&apos;s where real strength, self-knowledge and friendship grow.
               </p>
             </div>
           </div>

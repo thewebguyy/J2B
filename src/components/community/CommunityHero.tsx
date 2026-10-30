@@ -16,27 +16,27 @@ export const CommunityHero: React.FC = () => {
       </div>
 
       <div className="relative mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
-        
+
         {/* Asymmetric Editorial Hero Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-end mb-20 sm:mb-24">
           <div className="lg:col-span-8">
             <div className="inline-flex items-center gap-3 mb-6">
               <BotanicalMotif size={20} />
               <span className="text-[11px] sm:text-xs uppercase tracking-[0.22em] font-semibold text-teal-living">
-                The Together &bull; Community Life
+                Community
               </span>
               <span className="h-px w-10 bg-teal-living/40" aria-hidden="true" />
             </div>
 
             <h1 className="font-serif editorial-display font-bold text-midnight mb-8 reveal-heading">
-              There is room for you{" "}
+              There&apos;s room for you{" "}
               <span className="italic font-normal text-gold-harvest block sm:inline">
                 at this table.
               </span>
             </h1>
 
             <p className="font-sans text-lg sm:text-xl text-charcoal/85 leading-relaxed font-normal max-w-2xl">
-              You were never meant to walk this journey alone. In a world that often demands emotional detachment, Journey 2 Better creates spaces where women gather, speak truthfully, and rise in sisterhood.
+              You were never meant to do this alone. Journey 2 Better brings women together to talk honestly and support each other.
             </p>
           </div>
 
@@ -44,16 +44,16 @@ export const CommunityHero: React.FC = () => {
           <div className="lg:col-span-4 flex flex-col items-start lg:items-end justify-end">
             <div className="w-full border-l-2 border-teal-living/60 pl-6 py-2">
               <p className="font-serif italic text-base text-midnight/90 mb-6 leading-relaxed">
-                &ldquo;Come as you are — whether you are ready to share aloud or simply need a quiet seat among sisters.&rdquo;
+                Come as you are. Talk if you want to, or just listen.
               </p>
               <div className="flex flex-col sm:flex-row lg:flex-col gap-3.5 w-full">
                 <MagneticButton href="#offerings" variant="primary" className="w-full justify-between">
-                  <span>Explore Our Offerings</span>
+                  <span>See What We Offer</span>
                   <ArrowRight className="size-4 text-gold-harvest" />
                 </MagneticButton>
 
                 <MagneticButton href="#steps" variant="outline" className="w-full justify-center">
-                  <span>How To Join Us</span>
+                  <span>How to Join</span>
                 </MagneticButton>
               </div>
             </div>
@@ -82,43 +82,43 @@ export const CommunityHero: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-12 gap-10 lg:gap-12 items-start">
-            
+
             {/* Spread Column 1: Zero Judgment */}
             <article className="md:col-span-4 relative pl-5 border-l border-teal-living/35">
               <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-teal-living block mb-2">
-                01 &mdash; Safe Sanctuary
+                01 &mdash; Safe
               </span>
               <h2 className="font-serif text-2xl sm:text-[1.65rem] font-bold text-midnight mb-3">
-                Zero Judgment
+                No judgement
               </h2>
               <p className="font-sans text-sm sm:text-base text-charcoal/80 leading-relaxed">
-                Confidential, supportive environments where you can speak openly about your challenges without fear of being critiqued.
+                Private, supportive groups where you can talk about what&apos;s hard without being criticised.
               </p>
             </article>
 
             {/* Spread Column 2: Sisterhood Over Rivalry (Elevated Stagger) */}
             <article className="md:col-span-4 md:mt-5 relative pl-5 border-l border-gold-harvest/60">
               <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-gold-deep block mb-2">
-                02 &mdash; Mutual Uplift
+                02 &mdash; Supportive
               </span>
               <h2 className="font-serif text-2xl sm:text-[1.65rem] font-bold text-midnight mb-3">
-                Sisterhood Over Rivalry
+                Friends, not rivals
               </h2>
               <p className="font-sans text-sm sm:text-base text-charcoal/80 leading-relaxed">
-                We believe that another woman&apos;s light does not diminish your own. Every success in our community is shared and celebrated.
+                Another woman doing well takes nothing away from you. We celebrate each other&apos;s wins.
               </p>
             </article>
 
             {/* Spread Column 3: Everyday Connection */}
             <article className="md:col-span-4 md:mt-10 relative pl-5 border-l border-midnight/30">
               <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-midnight block mb-2">
-                03 &mdash; Consistent Care
+                03 &mdash; Ongoing
               </span>
               <h2 className="font-serif text-2xl sm:text-[1.65rem] font-bold text-midnight mb-3">
-                Everyday Connection
+                Support between meet-ups
               </h2>
               <p className="font-sans text-sm sm:text-base text-charcoal/80 leading-relaxed">
-                Not just occasional meetings, but a continuous web of encouragement that keeps you anchored during demanding weeks.
+                Not just the odd meeting — regular encouragement to keep you going through busy weeks.
               </p>
             </article>
 

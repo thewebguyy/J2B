@@ -4,34 +4,34 @@ import { ArrowRight, Mail, MessageCircle, Calendar } from "lucide-react";
 
 const ONBOARDING_TIERS = [
   {
-    tier: "01 • Gentle First Step",
-    commitment: "Low Commitment",
-    title: "Receive the Monthly Letter",
+    tier: "01 • Easiest",
+    commitment: "Takes two minutes",
+    title: "Send us an email",
     description:
-      "Quiet written reflections, journaling prompts, and early notice of seasonal London gatherings sent to your inbox once a month.",
-    actionLabel: "Request the Monthly Letter",
-    href: "mailto:hello@journey2better.com?subject=Monthly%20Reflection%20Letter",
+      "Tell us a little about yourself and what you're looking for. We'll reply personally.",
+    actionLabel: "Email hello@journey2better.com",
+    href: "mailto:hello@journey2better.com?subject=Hello%20from%20the%20website",
     icon: Mail,
     external: true,
   },
   {
-    tier: "02 • Shared Morning Rhythm",
-    commitment: "Medium Commitment",
-    title: "Attend a Sunrise Reflection",
+    tier: "02 • Try a session",
+    commitment: "From home",
+    title: "Join a morning circle",
     description:
-      "Join an upcoming virtual Rise & Reflect morning circle from home. Camera-optional, unhurried breathwork, and honest sisterhood.",
-    actionLabel: "See the Gatherings Calendar",
+      "Come along to an online Rise & Reflect session. You're welcome to just listen.",
+    actionLabel: "See Upcoming Gatherings",
     href: "/events",
     icon: Calendar,
     external: false,
   },
   {
-    tier: "03 • Direct Personal Connection",
-    commitment: "Personal Conversation",
-    title: "Send a WhatsApp or Email Note",
+    tier: "03 • Prefer to chat?",
+    commitment: "WhatsApp",
+    title: "Message us on WhatsApp",
     description:
-      "Have a question about our circles or mentorship? Send a brief WhatsApp text or voice note directly to introduce yourself.",
-    actionLabel: "Message Us on WhatsApp (+44 7960 964839)",
+      "Send a text or voice note with any questions. A real person will get back to you.",
+    actionLabel: "WhatsApp +44 7960 964839",
     href: "https://wa.me/447960964839",
     icon: MessageCircle,
     external: true,
@@ -47,20 +47,20 @@ export const HomeThreshold: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end mb-14 sm:mb-20">
           <div className="lg:col-span-7">
             <span className="font-serif italic text-base sm:text-lg text-teal-living block mb-3">
-              III. How to Step In &mdash; At Your Own Pace
+              Getting started
             </span>
 
             <h2 className="font-serif editorial-h2 font-bold text-midnight leading-tight reveal-heading">
-              You do not need to have it all figured out{" "}
+              You don&apos;t need to have it all figured out{" "}
               <span className="italic font-normal text-gold-deep block sm:inline mt-1">
-                to begin walking.
+                to get started.
               </span>
             </h2>
           </div>
 
           <div className="lg:col-span-5 lg:pl-8 border-l border-gold-harvest/50">
             <p className="font-sans text-base sm:text-lg text-charcoal/85 leading-relaxed">
-              Every woman enters our community differently. Choose the level of connection that feels most supportive for your current season.
+              Start in whatever way feels comfortable. There&apos;s no wrong way in.
             </p>
           </div>
         </div>

@@ -19,9 +19,6 @@ export const EventsHero: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-end">
             <div className="lg:col-span-7">
               <div className="inline-flex items-center gap-3 mb-6">
-                <span className="font-serif italic text-sm text-gold-deep">
-                  The Moments &mdash;
-                </span>
                 <span className="text-[11px] sm:text-xs uppercase tracking-[0.22em] font-semibold text-teal-living">
                   Gatherings &amp; Retreats
                 </span>
@@ -37,17 +34,17 @@ export const EventsHero: React.FC = () => {
 
             <div className="lg:col-span-5 lg:pb-2">
               <p className="font-sans text-lg sm:text-xl text-charcoal/85 leading-relaxed font-normal mb-8">
-                From sunrise virtual reflections that centre your week, to immersive London workshops and restorative annual retreats, our gatherings are curated to help you pause, reflect, and grow in sisterhood.
+                From morning online reflections to workshops in London and weekend retreats in the countryside, our gatherings give you time and space to slow down and connect.
               </p>
 
               <div className="flex flex-wrap items-center gap-4">
                 <MagneticButton href="#gatherings" variant="primary">
-                  <span>Explore Our Gatherings</span>
+                  <span>See Upcoming Gatherings</span>
                   <ArrowRight className="size-4 text-gold-harvest" />
                 </MagneticButton>
 
                 <MagneticButton href="#rhythm" variant="outline">
-                  <span>View Gathering Rhythm</span>
+                  <span>How Often We Meet</span>
                 </MagneticButton>
               </div>
             </div>
@@ -59,18 +56,18 @@ export const EventsHero: React.FC = () => {
           <blockquote className="relative pl-6 sm:pl-10 lg:pl-12 border-l-4 border-gold-harvest py-2">
             <div className="flex items-center gap-2.5 mb-4">
               <span className="text-xs uppercase tracking-[0.22em] font-semibold text-teal-living">
-                Intentional Gatherings
+                Small Groups
               </span>
               <span className="h-px w-8 bg-gold-harvest/60" aria-hidden="true" />
               <BotanicalMotif size={16} orientation="up" />
             </div>
 
             <h2 className="font-serif editorial-pullquote font-bold text-midnight mb-5 max-w-3xl">
-              &ldquo;Designed for stillness, clarity, and genuine connection.&rdquo;
+              &ldquo;Time to slow down, think clearly, and talk honestly.&rdquo;
             </h2>
 
             <p className="font-sans text-base sm:text-lg text-charcoal/85 leading-relaxed font-normal max-w-2xl">
-              We deliberately cap attendance at our gatherings to preserve an environment where every woman can be seen and heard. No crowded seminar rooms, no passive lectures. Just honest conversation, mindful practice, and shared meals.
+              We keep group sizes small so everyone has room to speak and be heard. No packed halls or lectures — just good conversations, quiet moments, and shared food.
             </p>
           </blockquote>
         </div>

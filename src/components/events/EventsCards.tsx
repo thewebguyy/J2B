@@ -6,56 +6,56 @@ import { PathRibbon } from "@/components/brand/PathRibbon";
 const EVENTS_DATA = [
   {
     id: "rise-reflect",
-    chapter: "Chapter I",
+    chapter: "Online",
     number: "01",
     title: "Rise & Reflect Morning Circle",
-    format: "Virtual Gathering • Zoom",
-    cadence: "Recurring Morning Rhythm",
+    format: "Online • Zoom",
+    cadence: "Every week or fortnight",
     description:
-      "Start your morning with mental clarity, gentle guided breathwork, and intentional journaling prompts. A quiet sanctuary to ground your spirit before the noise and responsibilities of the day begin.",
+      "Start your morning with guided breathwork, quiet journaling, and friendly conversation. An easy way to ground yourself from home before the day gets busy.",
     features: [
-      "Guided grounding reflection & breathwork",
-      "Curated journaling prompts on self-trust and courage",
-      "Intimate breakout conversations with fellow sisters",
-      "Join from the quiet comfort of your home",
+      "Gentle guided breathing and grounding",
+      "Thoughtful journaling prompts",
+      "Small-group breakout chats with other women",
+      "Join from home in comfortable clothes",
     ],
-    ctaText: "Register Interest for Next Circle",
+    ctaText: "Ask About Next Online Circle",
     ctaHref: "mailto:hello@journey2better.com?subject=Rise%20and%20Reflect%20Enquiry",
   },
   {
     id: "better-together",
-    chapter: "Chapter II",
+    chapter: "In Person",
     number: "02",
     title: "Better Together Workshop",
-    format: "In-Person Intensive • Central London",
-    cadence: "Seasonal Intensive Sessions",
+    format: "In Person • Central London",
+    cadence: "Seasonal workshops",
     description:
-      "A dedicated half-day or full-day in-person workshop focusing on real life architecture: establishing healthy boundaries, overcoming decision fatigue, and mapping your personal development with practical tools.",
+      "A half-day or full-day workshop in central London. We focus on real-life challenges: setting healthy boundaries, sorting through big decisions, and planning what comes next.",
     features: [
-      "Interactive life-design and boundary exercises",
-      "Deep group discussions and shared sister wisdom",
-      "Nourishing communal lunch and herbal teas included",
-      "Beautiful central London sanctuary venue",
+      "Practical exercises on boundaries and balance",
+      "Open group discussions and shared advice",
+      "Shared lunch and teas included",
+      "Quiet, welcoming London venue",
     ],
-    ctaText: "Enquire About London Workshop",
+    ctaText: "Ask About London Workshops",
     ctaHref: "mailto:hello@journey2better.com?subject=London%20Workshop%20Enquiry",
   },
   {
     id: "sisterhood-retreat",
-    chapter: "Chapter III",
+    chapter: "Weekend Away",
     number: "03",
     title: "Annual Sisterhood Retreat",
-    format: "Immersive Weekend • UK Countryside Sanctuary",
-    cadence: "Annual Flagship Gathering",
+    format: "Weekend Away • UK Countryside",
+    cadence: "Once a year",
     description:
-      "Our most transformative gathering of the year. Step away from daily duties and immerse yourself in a tranquil countryside estate for three days of rest, mindful movement, evening fireside reflections, and lifelong sisterhood.",
+      "Step away from daily chores and responsibilities. Three restful days in the English countryside with good food, nature walks, evening fireside chats, and genuine friendship.",
     features: [
-      "2 nights luxury countryside sanctuary accommodation",
-      "All wholesome farm-to-table meals and beverages",
-      "Daily guided reflection circles and wellness practices",
-      "Dedicated whitespace for solitude, journaling, and nature walks",
+      "2 nights comfortable countryside accommodation",
+      "Home-cooked meals and drinks included",
+      "Morning reflections and gentle movement",
+      "Free time for reading, resting, and walks",
     ],
-    ctaText: "Enquire About Retreat Dates",
+    ctaText: "Ask About Retreat Dates",
     ctaHref: "mailto:hello@journey2better.com?subject=Annual%20Retreat%20Enquiry",
   },
 ];
@@ -73,18 +73,18 @@ export const EventsCards: React.FC = () => {
             <div className="inline-flex items-center gap-2.5 mb-4">
               <BotanicalMotif size={20} />
               <span className="text-xs uppercase tracking-[0.22em] font-semibold text-teal-living">
-                Curated Gatherings
+                Our Gatherings
               </span>
             </div>
 
             <h2 className="font-serif editorial-h2 font-bold text-midnight reveal-heading">
-              Spaces designed to pause, reflect, and renew.
+              Space to pause, reflect, and renew.
             </h2>
           </div>
 
           <div className="lg:col-span-5 lg:pl-6 border-l border-gold-harvest/50">
             <p className="font-sans text-base sm:text-lg text-charcoal/80 leading-relaxed">
-              We offer both accessible digital morning circles and deeply restorative in-person experiences so that every sister can find her cadence of connection.
+              Join us online from your living room, or meet us in person in London and the countryside.
             </p>
           </div>
         </div>
@@ -140,7 +140,7 @@ export const EventsCards: React.FC = () => {
               <div className="lg:col-span-5 lg:mt-4 pl-6 sm:pl-8 border-l-2 border-teal-living/50">
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-xs uppercase tracking-[0.2em] font-semibold text-midnight">
-                    Experience Elements
+                    What to expect
                   </span>
                   <BotanicalMotif size={18} />
                 </div>
@@ -180,7 +180,7 @@ export const EventsCards: React.FC = () => {
               <div className="lg:col-span-5 order-2 lg:order-1 bg-midnight-deep/80 p-7 sm:p-9 border-l-2 border-gold-harvest">
                 <div className="flex items-center justify-between mb-5 pb-3 border-b border-ivory-surface/15">
                   <h4 className="font-serif italic text-lg font-bold text-gold-harvest">
-                    Experience Elements
+                    What to expect
                   </h4>
                   <span className="text-[11px] uppercase tracking-[0.18em] text-ivory-surface/70">
                     {EVENTS_DATA[1].cadence}
@@ -265,7 +265,7 @@ export const EventsCards: React.FC = () => {
             <div className="pt-8 border-t border-ivory-surface/15 grid grid-cols-1 lg:grid-cols-12 gap-8 items-end">
               <div className="lg:col-span-8">
                 <h4 className="text-xs uppercase tracking-[0.22em] text-gold-harvest font-semibold mb-5">
-                  Experience Elements &bull; {EVENTS_DATA[2].cadence}
+                  What to expect &bull; {EVENTS_DATA[2].cadence}
                 </h4>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   {EVENTS_DATA[2].features.map((feature, i) => (
