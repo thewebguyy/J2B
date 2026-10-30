@@ -76,34 +76,42 @@ export const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Authentic Contact Channels */}
+          {/* Authentic Contact Channels with Clear Context */}
           <div className="md:col-span-4">
             <h3 className="text-xs font-semibold uppercase tracking-widest text-gold-harvest mb-6">
-              Connect Directly
+              Personal Connection
             </h3>
-            <p className="text-xs text-ivory-surface/70 mb-5 leading-relaxed">
-              We respond personally to every sister. Reach out to ask about our circles, upcoming events, or simply to say hello.
+            <p className="text-xs text-ivory-surface/75 mb-5 leading-relaxed">
+              We respond personally to every sister. Send an email to introduce yourself or message us on WhatsApp with any questions about upcoming circles.
             </p>
-            <div className="space-y-3 text-sm">
+            <div className="space-y-3.5 text-sm">
               <a
-                href="mailto:hello@journey2better.com"
+                href="mailto:hello@journey2better.com?subject=Hello%20Journey%202%20Better"
                 className="flex items-center gap-3 text-ivory-surface/90 hover:text-gold-harvest transition-colors py-1 group"
-                aria-label="Send email to hello@journey2better.com"
+                aria-label="Send an introduction email to hello@journey2better.com"
               >
                 <div className="flex size-8 items-center justify-center rounded-full bg-ivory-surface/10 text-gold-harvest group-hover:bg-gold-harvest group-hover:text-midnight transition-colors">
                   <Mail className="size-4" />
                 </div>
-                <span>hello@journey2better.com</span>
+                <div>
+                  <span className="block text-xs text-ivory-surface/60">Write to us directly</span>
+                  <span>hello@journey2better.com</span>
+                </div>
               </a>
               <a
-                href="tel:+447960964839"
+                href="https://wa.me/447960964839"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center gap-3 text-ivory-surface/90 hover:text-gold-harvest transition-colors py-1 group"
-                aria-label="Call or WhatsApp on +44 7960 964839"
+                aria-label="Send a WhatsApp text or voice note on +44 7960 964839"
               >
                 <div className="flex size-8 items-center justify-center rounded-full bg-ivory-surface/10 text-gold-harvest group-hover:bg-gold-harvest group-hover:text-midnight transition-colors">
                   <Phone className="size-4" />
                 </div>
-                <span>+44 7960 964839</span>
+                <div>
+                  <span className="block text-xs text-ivory-surface/60">WhatsApp text or voice note</span>
+                  <span>+44 7960 964839</span>
+                </div>
               </a>
             </div>
           </div>

@@ -37,19 +37,19 @@ export const EventsThreshold: React.FC = () => {
 
           <div className="lg:col-span-5 lg:pl-8 border-l border-gold-harvest/35 flex flex-col items-start">
             <div className="flex flex-col sm:flex-row lg:flex-col gap-4 w-full sm:w-auto lg:w-full mb-8">
-              <MagneticButton href="mailto:hello@journey2better.com?subject=Events%20and%20Retreat%20Enquiry" variant="gold" className="w-full justify-center">
+              <MagneticButton href="mailto:hello@journey2better.com?subject=Gathering%20Dates%20and%20Seat%20Reservation" variant="gold" className="w-full justify-center">
                 <Mail className="size-4 mr-2" />
-                <span>Enquire via Email</span>
+                <span>Request Gathering Dates via Email</span>
               </MagneticButton>
 
-              <MagneticButton href="tel:+447960964839" variant="teal" className="w-full justify-center">
+              <MagneticButton href="https://wa.me/447960964839" variant="teal" className="w-full justify-center">
                 <Phone className="size-4 mr-2" />
-                <span>Call / WhatsApp Us</span>
+                <span>Message Us on WhatsApp</span>
               </MagneticButton>
             </div>
 
-            <div className="pt-6 border-t border-ivory-surface/15 w-full text-xs text-ivory-surface/70">
-              hello@journey2better.com &bull; +44 7960 964839 &bull; London &amp; Across the UK
+            <div className="pt-6 border-t border-ivory-surface/15 w-full text-xs text-ivory-surface/75">
+              Intimate capped circles &bull; hello@journey2better.com &bull; +44 7960 964839
             </div>
           </div>
 

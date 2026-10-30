@@ -37,19 +37,19 @@ export const CommunityThreshold: React.FC = () => {
 
           <div className="lg:col-span-5 lg:pl-8 border-l border-gold-harvest/35 flex flex-col items-start">
             <div className="flex flex-col sm:flex-row lg:flex-col gap-4 w-full sm:w-auto lg:w-full mb-8">
-              <MagneticButton href="mailto:hello@journey2better.com?subject=Joining%20Journey%202%20Better" variant="gold" className="w-full justify-center">
+              <MagneticButton href="mailto:hello@journey2better.com?subject=Introducing%20Myself%20to%20Journey%202%20Better" variant="gold" className="w-full justify-center">
                 <Mail className="size-4 mr-2" />
-                <span>Send Us An Email</span>
+                <span>Introduce Yourself via Email</span>
               </MagneticButton>
 
-              <MagneticButton href="tel:+447960964839" variant="teal" className="w-full justify-center">
+              <MagneticButton href="https://wa.me/447960964839" variant="teal" className="w-full justify-center">
                 <Phone className="size-4 mr-2" />
-                <span>Call or WhatsApp</span>
+                <span>Send a WhatsApp Voice or Text Note</span>
               </MagneticButton>
             </div>
 
-            <div className="pt-6 border-t border-ivory-surface/15 w-full text-xs text-ivory-surface/70">
-              hello@journey2better.com &bull; +44 7960 964839 &bull; London &amp; United Kingdom
+            <div className="pt-6 border-t border-ivory-surface/15 w-full text-xs text-ivory-surface/75">
+              Personal replies from our UK team &bull; hello@journey2better.com &bull; +44 7960 964839
             </div>
           </div>
 

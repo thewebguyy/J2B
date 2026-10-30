@@ -37,13 +37,12 @@ export const AboutThreshold: React.FC = () => {
 
           <div className="lg:col-span-5 lg:pl-8 border-l border-gold-harvest/35 flex flex-col sm:flex-row lg:flex-col gap-4">
             <MagneticButton href="/community#join" variant="gold" className="w-full justify-between">
-              <span>Join Our Sisterhood</span>
+              <span>Introduce Yourself</span>
               <ArrowRight className="size-4" />
             </MagneticButton>
 
-            <MagneticButton href="mailto:hello@journey2better.com" variant="teal" className="w-full justify-center">
-              <Mail className="size-4 mr-1 text-gold-harvest" />
-              <span>Say Hello Directly</span>
+            <MagneticButton href="/events" variant="teal" className="w-full justify-center">
+              <span>See the Gatherings Calendar</span>
             </MagneticButton>
           </div>
 

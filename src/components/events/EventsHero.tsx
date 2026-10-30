@@ -7,17 +7,9 @@ import { PathRibbon } from "@/components/brand/PathRibbon";
 export const EventsHero: React.FC = () => {
   return (
     <section className="relative pt-10 pb-20 sm:pb-28 bg-ivory-canvas overflow-hidden">
-      {/* Organic Botanical Watermark bleeding into left/bottom canvas */}
-      <div
-        className="pointer-events-none absolute -left-16 top-20 w-72 h-72 sm:w-96 sm:h-96 opacity-70 -z-10"
-        aria-hidden="true"
-      >
-        <BotanicalMotif variant="watermark" size={360} />
-      </div>
-
-      <div className="relative mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
+      <div className="relative mx-auto max-w-7xl px-6 sm:px-10 lg:px-14">
         
-        {/* Staggered Asymmetric Editorial Hero */}
+        {/* Staggered Asymmetric Editorial Hero on Unobstructed Canvas */}
         <div className="relative pl-0 sm:pl-10 lg:pl-14 mb-20 sm:mb-28">
           {/* Delicate Golden Line anchoring the left margin */}
           <div className="hidden sm:block absolute left-0 top-1 bottom-0 w-8 pointer-events-none" aria-hidden="true">
@@ -27,9 +19,11 @@ export const EventsHero: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-end">
             <div className="lg:col-span-7">
               <div className="inline-flex items-center gap-3 mb-6">
-                <BotanicalMotif size={20} />
+                <span className="font-serif italic text-sm text-gold-deep">
+                  The Moments &mdash;
+                </span>
                 <span className="text-[11px] sm:text-xs uppercase tracking-[0.22em] font-semibold text-teal-living">
-                  The Moments &bull; Gatherings &amp; Retreats
+                  Gatherings &amp; Retreats
                 </span>
               </div>
 

@@ -97,10 +97,10 @@ export const Navigation: React.FC = () => {
         {/* Action Button */}
         <div className="hidden md:flex items-center gap-4">
           <Link
-            href="/community#join"
-            className="group inline-flex items-center gap-2 rounded-full bg-midnight px-6 py-2.5 text-xs font-semibold uppercase tracking-wider text-ivory-canvas border border-gold-harvest/40 shadow-sm transition-all duration-300 hover:bg-midnight-deep hover:border-gold-harvest hover:shadow"
+            href="/events"
+            className="group inline-flex items-center gap-2 rounded-full bg-midnight px-6 py-2.5 text-xs font-semibold uppercase tracking-wider text-ivory-canvas border border-gold-harvest/45 shadow-xs transition-all duration-300 hover:bg-midnight-deep hover:border-gold-harvest hover:shadow"
           >
-            <span>Begin Journey</span>
+            <span>Upcoming Gatherings</span>
             <ArrowRight className="size-3.5 text-gold-harvest transition-transform duration-300 group-hover:translate-x-0.5" />
           </Link>
         </div>
@@ -168,14 +168,14 @@ export const Navigation: React.FC = () => {
 
           <div className="pt-8 border-t border-ivory-border flex flex-col gap-4">
             <Link
-              href="/community#join"
+              href="/events"
               className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-midnight py-4 text-center text-sm font-semibold tracking-wide text-ivory-canvas border border-gold-harvest/50 shadow"
             >
-              <span>Begin Your Journey</span>
+              <span>Explore Upcoming Gatherings</span>
               <ArrowRight className="size-4 text-gold-harvest" />
             </Link>
             <div className="text-center text-xs text-muted-foreground">
-              hello@journey2better.com • UK Women&apos;s Community
+              hello@journey2better.com &bull; UK Women&apos;s Community
             </div>
           </div>
         </div>

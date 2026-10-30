@@ -6,15 +6,7 @@ import { PathRibbon } from "@/components/brand/PathRibbon";
 export const AboutHero: React.FC = () => {
   return (
     <section className="relative pt-10 pb-20 sm:pb-28 bg-ivory-canvas overflow-hidden">
-      {/* Organic Botanical Watermark bleeding into left margin */}
-      <div
-        className="pointer-events-none absolute -left-14 top-16 w-72 h-72 sm:w-96 sm:h-96 opacity-70 -z-10"
-        aria-hidden="true"
-      >
-        <BotanicalMotif variant="watermark" size={340} />
-      </div>
-
-      <div className="relative mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
+      <div className="relative mx-auto max-w-7xl px-6 sm:px-10 lg:px-14">
         
         {/* Staggered Asymmetric Editorial Hero with Left Golden Line Anchor */}
         <div className="relative pl-0 sm:pl-10 lg:pl-14 mb-16 sm:mb-24">
@@ -24,9 +16,11 @@ export const AboutHero: React.FC = () => {
 
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-3 mb-6">
-              <BotanicalMotif size={20} />
+              <span className="font-serif italic text-sm text-gold-deep">
+                The Why &mdash;
+              </span>
               <span className="text-[11px] sm:text-xs uppercase tracking-[0.22em] font-semibold text-teal-living">
-                The Why &bull; About Journey 2 Better
+                About Journey 2 Better
               </span>
               <span className="h-px w-10 bg-gold-harvest/60" aria-hidden="true" />
             </div>
