@@ -128,7 +128,7 @@ export const EventsTimeline: React.FC = () => {
 
               <div>
                 <span className="text-[10px] uppercase tracking-[0.2em] font-semibold text-teal-living block mb-1">
-                  Cyclical Cadence
+                  How Often
                 </span>
                 <p className="font-serif italic text-base font-bold text-midnight">
                   {RHYTHM_STAGES[activeStage].phase}
@@ -249,7 +249,7 @@ export const EventsTimeline: React.FC = () => {
                         aria-expanded={isExpanded}
                         className="w-full flex items-center justify-between text-left text-xs uppercase tracking-[0.18em] font-semibold text-midnight hover:text-teal-living transition-colors py-1"
                       >
-                        <span>Format &amp; Cadence Note</span>
+                        <span>About this format</span>
                         <ChevronDown
                           className={`size-4 text-gold-harvest transition-transform duration-300 ${
                             isExpanded ? "rotate-180" : ""
