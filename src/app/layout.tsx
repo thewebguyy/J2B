@@ -20,23 +20,23 @@ const jakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Journey 2 Better — Becoming: A Living Journey | UK Women's Community",
+  title: "Journey 2 Better — A Community for Women in the UK",
   description:
-    "Your companion on the journey to better. A UK sisterhood of women rising together — intentional connection, personal growth, mindful gatherings, and everyday encouragement.",
-  metadataBase: new URL("https://journey2better.lovable.app"),
+    "Your companion on the journey to better. A welcoming community of women in the UK meeting up, talking honestly, and supporting each other through life's changes.",
+  metadataBase: new URL("https://j2b-theta.vercel.app"),
   openGraph: {
-    title: "Journey 2 Better — Becoming: A Living Journey",
+    title: "Journey 2 Better — Growing is easier when you're not alone",
     description:
-      "Your companion on the journey to better. A sisterhood of women rising together in the messy middle of life.",
-    url: "https://journey2better.lovable.app",
+      "A welcoming UK sisterhood for mindful growth, honest conversation, and everyday support in the messy middle of life.",
+    url: "https://j2b-theta.vercel.app",
     siteName: "Journey 2 Better",
     locale: "en_GB",
     type: "website",
     images: [
       {
-        url: "/images/logo.jpeg",
-        width: 1206,
-        height: 986,
+        url: "/images/sanctuary-gathering.jpg",
+        width: 1200,
+        height: 800,
         alt: "Journey 2 Better — Your companion on the journey to better",
       },
     ],

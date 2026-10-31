@@ -61,25 +61,32 @@ export const AboutHero: React.FC = () => {
             </div>
           </div>
 
-          {/* Right: Authentic Logo Artwork & Symbolism Editorial Plate */}
+          {/* Right: Authentic Still-Life Photography & Community Details */}
           <div className="lg:col-span-5 flex flex-col items-start lg:items-end justify-center">
-            <div className="relative w-full max-w-sm bg-ivory-surface/70 border-l-2 border-b-2 border-gold-harvest/50 p-5 sm:p-6 shadow-[0_18px_45px_-18px_rgba(2,64,77,0.12)]">
-              <div className="relative aspect-[1206/986] overflow-hidden bg-ivory-canvas flex items-center justify-center">
+            <figure className="relative w-full max-w-md bg-ivory-surface p-4 sm:p-5 border border-ivory-border shadow-[0_20px_50px_-20px_rgba(2,64,77,0.15)]">
+              <div className="flex items-center justify-between text-[10px] uppercase tracking-[0.2em] text-muted-foreground mb-3 pb-2 border-b border-ivory-border">
+                <span>COMMUNITY &bull; COMPANIONSHIP</span>
+                <span className="font-serif italic normal-case tracking-normal text-xs text-midnight">
+                  London &amp; UK
+                </span>
+              </div>
+
+              <div className="relative aspect-[4/3] overflow-hidden bg-midnight-deep">
                 <Image
-                  src="/images/logo.jpeg"
-                  alt="Journey 2 Better — Two silhouettes in harmony"
+                  src="/images/about-sisterhood.jpg"
+                  alt="Two pairs of hands resting by steaming ceramic tea mugs, soft linen, and an open journal at a wooden table in London"
                   fill
-                  className="object-contain p-2"
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 420px"
+                  priority
                 />
               </div>
 
-              {/* Symbolism Annotation */}
-              <div className="mt-4 pt-4 border-t border-ivory-border/80">
-                <p className="font-serif italic text-sm text-midnight leading-snug">
-                  Our logo: two women side by side, with a golden path between them.
-                </p>
-              </div>
-            </div>
+              <figcaption className="mt-3 flex items-center justify-between text-[11px] font-sans text-muted-foreground">
+                <span>Real conversation &bull; Cups of tea &bull; No posturing</span>
+                <span className="text-gold-deep font-serif italic">Fig. 02</span>
+              </figcaption>
+            </figure>
           </div>
 
         </div>
