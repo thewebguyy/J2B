@@ -37,13 +37,13 @@ export const EventsHero: React.FC = () => {
                 From morning online reflections to workshops in London and weekend retreats in the countryside, our gatherings give you time and space to slow down and connect.
               </p>
 
-              <div className="flex flex-wrap items-center gap-4">
-                <MagneticButton href="#gatherings" variant="primary">
+              <div className="flex flex-col sm:flex-row sm:items-center gap-4">
+                <MagneticButton href="#gatherings" variant="primary" className="w-full sm:w-auto">
                   <span>See Upcoming Gatherings</span>
                   <ArrowRight className="size-4 text-gold-harvest" />
                 </MagneticButton>
 
-                <MagneticButton href="#rhythm" variant="outline">
+                <MagneticButton href="#rhythm" variant="outline" className="w-full sm:w-auto">
                   <span>How Often We Meet</span>
                 </MagneticButton>
               </div>

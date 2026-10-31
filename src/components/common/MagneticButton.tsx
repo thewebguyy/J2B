@@ -79,16 +79,19 @@ export const MagneticButton: React.FC<MagneticButtonProps> = ({
     </div>
   );
 
+  const isFullWidth = className.includes("w-full");
+  const outerClassName = isFullWidth ? "w-full inline-block" : "inline-block";
+
   if (href) {
     return (
-      <Link href={href} id={id} aria-label={ariaLabel} className="inline-block">
+      <Link href={href} id={id} aria-label={ariaLabel} className={outerClassName}>
         {content}
       </Link>
     );
   }
 
   return (
-    <button type="button" onClick={onClick} id={id} aria-label={ariaLabel} className="inline-block">
+    <button type="button" onClick={onClick} id={id} aria-label={ariaLabel} className={outerClassName}>
       {content}
     </button>
   );

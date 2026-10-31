@@ -143,7 +143,7 @@ export const AboutMessyMiddle: React.FC = () => {
 
         {/* Mobile Left Golden Thread Spine */}
         <div
-          className="md:hidden pointer-events-none absolute left-9 top-20 bottom-16 w-0.5 bg-gradient-to-b from-teal-living via-gold-harvest to-midnight"
+          className="md:hidden pointer-events-none absolute left-[41px] top-20 bottom-16 w-0.5 bg-gradient-to-b from-teal-living via-gold-harvest to-midnight"
           aria-hidden="true"
         />
 

@@ -85,26 +85,26 @@ export const HomePillars: React.FC = () => {
                   aria-selected={isSelected}
                   onClick={() => setActiveTab(idx)}
                   onMouseEnter={() => setActiveTab(idx)}
-                  className={`w-full text-left p-5 sm:p-6 transition-all duration-300 border-l-2 ${
+                  className={`w-full text-left p-3.5 sm:p-5 lg:p-6 transition-all duration-300 border-l-2 ${
                     isSelected
                       ? "bg-ivory-canvas/10 border-gold-harvest text-ivory-canvas shadow-sm"
                       : "bg-transparent border-ivory-canvas/15 text-ivory-canvas/65 hover:bg-ivory-canvas/5 hover:text-ivory-canvas"
                   }`}
                 >
-                  <div className="flex items-baseline justify-between mb-1">
-                    <div className="flex items-baseline gap-3">
-                      <span className="font-serif italic text-2xl text-gold-harvest font-bold">
+                  <div className="flex items-baseline justify-between mb-0.5 sm:mb-1">
+                    <div className="flex items-baseline gap-2.5 sm:gap-3">
+                      <span className="font-serif italic text-xl sm:text-2xl text-gold-harvest font-bold">
                         {pillar.number}
                       </span>
-                      <h3 className="font-serif text-xl sm:text-2xl font-bold">
+                      <h3 className="font-serif text-lg sm:text-xl lg:text-2xl font-bold">
                         {pillar.title}
                       </h3>
                     </div>
-                    <span className="text-[10px] uppercase tracking-[0.18em] text-gold-light font-semibold">
+                    <span className="text-[10px] uppercase tracking-[0.16em] sm:tracking-[0.18em] text-gold-light font-semibold">
                       {pillar.subtitle}
                     </span>
                   </div>
-                  <p className="font-sans text-xs sm:text-sm text-ivory-canvas/75 line-clamp-2 pl-9">
+                  <p className="hidden sm:block font-sans text-xs sm:text-sm text-ivory-canvas/75 line-clamp-2 pl-9">
                     {pillar.description}
                   </p>
                 </button>

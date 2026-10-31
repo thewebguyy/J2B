@@ -129,7 +129,7 @@ export const EventsCards: React.FC = () => {
 
                 <a
                   href={EVENTS_DATA[0].ctaHref}
-                  className="inline-flex items-center gap-3 rounded-full bg-midnight hover:bg-midnight-deep text-ivory-canvas px-7 py-3.5 text-xs font-semibold uppercase tracking-wider border border-gold-harvest/40 transition-all duration-300 shadow-xs"
+                  className="inline-flex w-full sm:w-auto items-center justify-center gap-3 rounded-full bg-midnight hover:bg-midnight-deep text-ivory-canvas px-7 py-3.5 text-xs font-semibold uppercase tracking-wider border border-gold-harvest/40 transition-all duration-300 shadow-xs"
                 >
                   <span>{EVENTS_DATA[0].ctaText}</span>
                   <ArrowRight className="size-3.5 text-gold-harvest" />
@@ -218,7 +218,7 @@ export const EventsCards: React.FC = () => {
 
                 <a
                   href={EVENTS_DATA[1].ctaHref}
-                  className="inline-flex items-center gap-3 rounded-full bg-gold-harvest hover:bg-gold-light text-midnight-deep px-7 py-3.5 text-xs font-semibold uppercase tracking-wider transition-all duration-300 shadow-sm"
+                  className="inline-flex w-full sm:w-auto items-center justify-center gap-3 rounded-full bg-gold-harvest hover:bg-gold-light text-midnight-deep px-7 py-3.5 text-xs font-semibold uppercase tracking-wider transition-all duration-300 shadow-sm"
                 >
                   <span>{EVENTS_DATA[1].ctaText}</span>
                   <ArrowRight className="size-3.5" />
@@ -284,7 +284,7 @@ export const EventsCards: React.FC = () => {
               <div className="lg:col-span-4 flex lg:justify-end">
                 <a
                   href={EVENTS_DATA[2].ctaHref}
-                  className="inline-flex items-center gap-3 rounded-full bg-gold-harvest hover:bg-gold-light text-midnight-deep px-8 py-4 text-xs font-semibold uppercase tracking-wider transition-all duration-300 shadow-md"
+                  className="inline-flex w-full sm:w-auto items-center justify-center gap-3 rounded-full bg-gold-harvest hover:bg-gold-light text-midnight-deep px-8 py-4 text-xs font-semibold uppercase tracking-wider transition-all duration-300 shadow-md"
                 >
                   <span>{EVENTS_DATA[2].ctaText}</span>
                   <ArrowRight className="size-4" />

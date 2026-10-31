@@ -137,7 +137,7 @@ export const CommunitySteps: React.FC = () => {
 
           {/* Mobile Scroll-Linked SVG Golden Path Spine along Left Edge */}
           <div
-            className="lg:hidden pointer-events-none absolute left-3 top-2 bottom-2 w-8"
+            className="lg:hidden pointer-events-none absolute left-[2px] top-2 bottom-2 w-8"
             aria-hidden="true"
           >
             <svg
@@ -192,7 +192,7 @@ export const CommunitySteps: React.FC = () => {
                   <div
                     className={`lg:col-span-5 ${
                       isEven
-                        ? "lg:col-start-8 lg:pl-10 border-l-2 border-gold-harvest"
+                        ? "lg:col-start-8 pl-6 lg:pl-10 border-l-2 border-gold-harvest"
                         : "lg:col-start-1 lg:pr-10 lg:text-right border-l-2 lg:border-l-0 lg:border-r-2 border-teal-living/60 pl-6 lg:pl-0"
                     } py-2`}
                   >

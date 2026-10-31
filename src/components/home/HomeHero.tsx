@@ -39,12 +39,12 @@ export const HomeHero: React.FC = () => {
 
             {/* Explicit Primary CTA & High-Contrast Secondary CTA */}
             <div className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-5">
-              <MagneticButton href="/events" variant="primary">
+              <MagneticButton href="/events" variant="primary" className="w-full sm:w-auto">
                 <span>See Upcoming Gatherings</span>
                 <ArrowRight className="size-4 text-gold-harvest" />
               </MagneticButton>
 
-              <MagneticButton href="/about" variant="outline">
+              <MagneticButton href="/about" variant="outline" className="w-full sm:w-auto">
                 <span>Read Our Story</span>
               </MagneticButton>
             </div>
