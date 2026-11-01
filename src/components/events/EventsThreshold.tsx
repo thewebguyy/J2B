@@ -24,22 +24,22 @@ export const EventsThreshold: React.FC = () => {
             </div>
 
             <h2 className="font-serif editorial-h2 font-bold text-white leading-tight mb-6 reveal-heading">
-              Step into our next circle{" "}
+              Come along to our next circle —{" "}
               <span className="italic font-normal text-gold-harvest block mt-1">
-                and be reminded of your strength.
+                there&apos;s a seat waiting for you.
               </span>
             </h2>
 
             <p className="font-sans text-base sm:text-lg text-ivory-surface/85 max-w-2xl leading-relaxed">
-              Gatherings are intentionally kept intimate so every voice can be welcomed. Reach out directly to enquire about dates, schedule details, or booking your seat.
+              We keep our gatherings small so everyone can talk and be heard. Send an email or message us on WhatsApp to ask about upcoming dates and see what feels right for you.
             </p>
           </div>
 
           <div className="lg:col-span-5 lg:pl-8 border-l border-gold-harvest/35 flex flex-col items-start">
             <div className="flex flex-col sm:flex-row lg:flex-col gap-4 w-full sm:w-auto lg:w-full mb-8">
-              <MagneticButton href="mailto:hello@journey2better.com?subject=Gathering%20Dates%20and%20Seat%20Reservation" variant="gold" className="w-full justify-center">
+              <MagneticButton href="mailto:hello@journey2better.com?subject=Gathering%20Dates%20and%20Information" variant="gold" className="w-full justify-center">
                 <Mail className="size-4 mr-2" />
-                <span>Request Gathering Dates via Email</span>
+                <span>Ask About Dates by Email</span>
               </MagneticButton>
 
               <MagneticButton href="https://wa.me/447960964839" variant="teal" className="w-full justify-center">
@@ -49,7 +49,7 @@ export const EventsThreshold: React.FC = () => {
             </div>
 
             <div className="pt-6 border-t border-ivory-surface/15 w-full text-xs text-ivory-surface/75">
-              Intimate capped circles &bull; hello@journey2better.com &bull; +44 7960 964839
+              Small groups &bull; hello@journey2better.com &bull; +44 7960 964839
             </div>
           </div>
 
