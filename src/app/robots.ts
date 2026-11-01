@@ -16,3 +16,4 @@ export default function robots(): MetadataRoute.Robots {
     host: "https://j2b-theta.vercel.app",
   };
 }
+
