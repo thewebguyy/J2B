@@ -5,9 +5,12 @@ import { HomePillars } from "@/components/home/HomePillars";
 import { HomeThreshold } from "@/components/home/HomeThreshold";
 
 export const metadata: Metadata = {
-  title: "Journey 2 Better — Becoming: A Living Journey | UK Women's Community",
+  title: "Journey 2 Better — UK Women's Community & Sisterhood",
   description:
-    "Your companion on the journey to better. A UK sisterhood of women rising together — intentional connection, personal growth, mindful gatherings, and everyday encouragement.",
+    "Your companion on the journey to better. A welcoming UK community for women navigating life's changes with honest conversation, sister circles, mentoring, and retreats in London and online.",
+  alternates: {
+    canonical: "https://j2b-theta.vercel.app",
+  },
 };
 
 export default function HomePage() {

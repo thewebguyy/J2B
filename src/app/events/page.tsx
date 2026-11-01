@@ -5,9 +5,12 @@ import { EventsTimeline } from "@/components/events/EventsTimeline";
 import { EventsThreshold } from "@/components/events/EventsThreshold";
 
 export const metadata: Metadata = {
-  title: "Events — The Moments | Journey 2 Better",
+  title: "Events, Morning Circles & Retreats",
   description:
-    "Some moments are better shared. Explore our Rise & Reflect morning circles, Better Together London workshops, and Annual Sisterhood Retreat.",
+    "Join our Rise & Reflect morning circles on Zoom, Better Together London workshops, and Annual Sisterhood Retreat in the English countryside.",
+  alternates: {
+    canonical: "https://j2b-theta.vercel.app/events",
+  },
 };
 
 export default function EventsPage() {

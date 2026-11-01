@@ -5,9 +5,12 @@ import { CommunitySteps } from "@/components/community/CommunitySteps";
 import { CommunityThreshold } from "@/components/community/CommunityThreshold";
 
 export const metadata: Metadata = {
-  title: "Community — The Together | Journey 2 Better",
+  title: "Community Offerings & Sister Circles",
   description:
-    "There is room for you here. Discover our Sister Circles, 1-on-1 Mentorship, and Everyday Encouragement in our UK women's community.",
+    "Explore Journey 2 Better offerings: small-group Sister Circles, 1-on-1 Mentorship, and Everyday Encouragement for women in the UK.",
+  alternates: {
+    canonical: "https://j2b-theta.vercel.app/community",
+  },
 };
 
 export default function CommunityPage() {
