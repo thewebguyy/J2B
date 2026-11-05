@@ -15,7 +15,7 @@ interface LogoMarkProps {
  * Pure SVG Monogram of the official Journey 2 Better emblem (Two silhouettes in harmony,
  * ascending golden pathway, sun beacon, and dual botanical leaves — zero clipped embedded text).
  */
-const BrandMonogramSVG: React.FC<{ className?: string }> = ({ className = "w-full h-full" }) => (
+export const BrandMonogramSVG: React.FC<{ className?: string }> = ({ className = "w-full h-full" }) => (
   <svg
     viewBox="0 0 64 64"
     fill="none"
