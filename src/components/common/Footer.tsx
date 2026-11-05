@@ -20,7 +20,7 @@ export const Footer: React.FC = () => {
             <div>
               <LogoMark size="footer" showTagline={true} className="mb-6" />
               <p className="text-ivory-surface/80 text-sm leading-relaxed max-w-sm font-sans font-normal mt-4">
-                A sisterhood of women rising together — navigating the messy middle of life with genuine connection, personal development, and unwavering companionship.
+                A community rising together — navigating the messy middle of life with genuine connection, personal development, and unwavering companionship.
               </p>
             </div>
 
@@ -82,7 +82,7 @@ export const Footer: React.FC = () => {
               Personal Connection
             </h3>
             <p className="text-xs text-ivory-surface/75 mb-5 leading-relaxed">
-              We respond personally to every sister. Send an email to introduce yourself or message us on WhatsApp with any questions about upcoming circles.
+              We respond personally to every message. Send an email to introduce yourself or message us on WhatsApp with any questions about upcoming circles.
             </p>
             <div className="space-y-3.5 text-sm">
               <a
@@ -121,7 +121,7 @@ export const Footer: React.FC = () => {
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-ivory-surface/50">
           <p>© {new Date().getFullYear()} Journey 2 Better. All rights reserved.</p>
           <p className="text-center sm:text-right">
-            Becoming — A Living Journey • Dedicated to women rising and growing together in the UK
+            Becoming — A Living Journey • Dedicated to rising and growing together in the UK
           </p>
         </div>
       </div>

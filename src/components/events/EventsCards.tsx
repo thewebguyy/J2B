@@ -16,7 +16,7 @@ const EVENTS_DATA = [
     features: [
       "Gentle guided breathing and grounding",
       "Thoughtful journaling prompts",
-      "Small-group breakout chats with other women",
+      "Small-group breakout chats with other members",
       "Join from home in comfortable clothes",
     ],
     ctaText: "Ask About Next Online Circle",
@@ -44,7 +44,7 @@ const EVENTS_DATA = [
     id: "sisterhood-retreat",
     chapter: "Weekend Away",
     number: "03",
-    title: "Annual Sisterhood Retreat",
+    title: "Annual Community Retreat",
     format: "Weekend Away • UK Countryside",
     cadence: "Once a year",
     description:

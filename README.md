@@ -1,6 +1,6 @@
 # Journey 2 Better — Becoming: A Living Journey
 
-> A bespoke, editorial digital sanctuary for an emerging UK-based women's community built on sisterhood, personal development, mindful gatherings, and everyday encouragement.
+> A bespoke, editorial digital sanctuary for an emerging UK-based community built on personal development, mindful gatherings, and everyday encouragement for anyone navigating life's changes.
 
 [![Next.js](https://img.shields.io/badge/Next.js-15.5-black?style=flat-square&logo=next.js)](https://nextjs.org/)
 [![React](https://img.shields.io/badge/React-19.0-61dafb?style=flat-square&logo=react)](https://react.dev/)
@@ -35,8 +35,8 @@ Journey 2 Better is an authentic, art-directed sanctuary designed around the cli
 | :--- | :--- | :--- | :--- |
 | `/` | **Homepage** | *"Every journey begins somewhere."* | Living brand moment, official logo lockup, the human truth of life transitions, the 4 Pillars of Becoming, and threshold invitation. |
 | `/about` | **About** | *"Becoming is not something we do alone."* | Founding intention, the sacred philosophy of the messy middle, the 4 anchoring values (Honesty, Belonging, Courage, Celebration), and future vision. |
-| `/community` | **Community** | *"There is room for you here."* | The 3 verified offerings (Sister Circles, 1-on-1 Mentorship, Everyday Encouragement) and the 3-step Path of Becoming vertical journey. |
-| `/events` | **Events** | *"Some moments are better shared."* | Virtual Rise & Reflect Morning Circles, in-person Better Together London workshops, Annual Sisterhood Retreat, and the Gathering Rhythm. |
+| `/community` | **Community** | *"There is room for you here."* | The 3 verified offerings (Community Circles, 1-on-1 Mentorship, Everyday Encouragement) and the 3-step Path of Becoming vertical journey. |
+| `/events` | **Events** | *"Some moments are better shared."* | Virtual Rise & Reflect Morning Circles, in-person Better Together London workshops, Annual Community Retreat, and the Gathering Rhythm. |
 
 ---
 

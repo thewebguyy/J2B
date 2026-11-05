@@ -17,7 +17,7 @@ export const HomeTruth: React.FC = () => {
             </span>
 
             <h2 className="font-serif editorial-h2 font-bold text-midnight reveal-heading">
-              So many women carry everything on their own.{" "}
+              So many of us carry everything on our own.{" "}
               <span className="italic font-normal text-gold-deep block sm:inline mt-1">
                 Here, you don&apos;t have to.
               </span>
@@ -83,7 +83,7 @@ export const HomeTruth: React.FC = () => {
                   </div>
                 </div>
                 <p className="font-sans text-base sm:text-lg text-charcoal/85 leading-relaxed">
-                  A new job, a new baby, healing from something hard, or just not sure what&apos;s next. It helps to talk to women who listen and don&apos;t judge.
+                  A new job, a family change, healing from something hard, or just not sure what&apos;s next. It helps to talk to people who listen and don&apos;t judge.
                 </p>
               </div>
 
@@ -147,7 +147,7 @@ export const HomeTruth: React.FC = () => {
                   </div>
                 </div>
                 <p className="font-sans text-base sm:text-lg text-charcoal/85 leading-relaxed">
-                  No competition and no pecking order. Just women who show up for each other and celebrate the small wins as well as the big ones.
+                  No competition and no pecking order. Just people who show up for each other and celebrate the small wins as well as the big ones.
                 </p>
               </div>
 

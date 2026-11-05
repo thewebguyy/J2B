@@ -5,9 +5,9 @@ import { CommunitySteps } from "@/components/community/CommunitySteps";
 import { CommunityThreshold } from "@/components/community/CommunityThreshold";
 
 export const metadata: Metadata = {
-  title: "Community Offerings & Sister Circles",
+  title: "Community Offerings & Gatherings",
   description:
-    "Explore Journey 2 Better offerings: small-group Sister Circles, 1-on-1 Mentorship, and Everyday Encouragement for women in the UK.",
+    "Explore Journey 2 Better offerings: small-group Community Circles, 1-on-1 Mentorship, and Everyday Encouragement for anyone navigating personal growth in the UK.",
   alternates: {
     canonical: "https://j2b-theta.vercel.app/community",
   },

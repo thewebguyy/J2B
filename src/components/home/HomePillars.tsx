@@ -9,9 +9,9 @@ const PILLARS = [
   {
     number: "01",
     title: "Connection",
-    subtitle: "Sister circles",
+    subtitle: "Community circles",
     description:
-      "Small groups where women talk openly and listen without judging. Share as much or as little as you like.",
+      "Small groups where people talk openly and listen without judging. Share as much or as little as you like.",
     detailNote:
       "Circles meet online and in person in London.",
   },
@@ -22,7 +22,7 @@ const PILLARS = [
     description:
       "One-to-one support to help you think through a big decision or a new chapter — and keep going when it gets hard.",
     detailNote:
-      "Helpful for career changes, becoming a mum, or working out what you want next.",
+      "Helpful for career changes, family transitions, or working out what you want next.",
   },
   {
     number: "03",

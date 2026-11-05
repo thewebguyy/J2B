@@ -31,7 +31,7 @@ export const AboutThreshold: React.FC = () => {
             </h2>
 
             <p className="font-sans text-base sm:text-lg text-ivory-surface/85 max-w-2xl leading-relaxed">
-              We&apos;re a new community in the UK. The women who join now help shape what it becomes.
+              We&apos;re a new community in the UK. The members who join now help shape what it becomes.
             </p>
           </div>
 

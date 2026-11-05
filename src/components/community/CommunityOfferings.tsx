@@ -6,7 +6,7 @@ const OFFERINGS = [
   {
     id: "circles",
     number: "01",
-    title: "Sister Circles",
+    title: "Community Circles",
     eyebrow: "Small group support",
     description:
       "Small groups that meet regularly to catch up, talk through hard times and support each other. What's shared in the circle stays in the circle.",
@@ -23,7 +23,7 @@ const OFFERINGS = [
     title: "One-to-One Mentoring",
     eyebrow: "Personal support",
     description:
-      "For women going through a big change at home, in a relationship or at work. A mentor listens, helps you get clear on what you want and keeps you on track.",
+      "For anyone going through a big change at home, in a relationship or at work. A mentor listens, helps you get clear on what you want and keeps you on track.",
     highlights: [
       "One-to-one conversations",
       "Help planning your next steps",

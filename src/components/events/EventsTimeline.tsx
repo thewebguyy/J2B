@@ -12,7 +12,7 @@ const RHYTHM_STAGES = [
     title: "Morning Circles",
     subtitle: "Online on Zoom",
     description:
-      "Regular morning check-ins to quiet your mind, set intentions, and stay connected with women who understand.",
+      "Regular morning check-ins to quiet your mind, set intentions, and stay connected with people who understand.",
     tag: "Online",
     rhythmNotes:
       "Held on Zoom so you can join easily from home before your day gets underway.",

@@ -181,7 +181,7 @@ export const Navigation: React.FC = () => {
               <ArrowRight className="size-4 text-gold-harvest" />
             </Link>
             <div className="text-center text-xs text-muted-foreground font-sans">
-              hello@journey2better.com &bull; UK Women&apos;s Community
+              hello@journey2better.com &bull; UK Community &amp; Companionship
             </div>
           </div>
         </div>

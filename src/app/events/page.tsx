@@ -7,7 +7,7 @@ import { EventsThreshold } from "@/components/events/EventsThreshold";
 export const metadata: Metadata = {
   title: "Events, Morning Circles & Retreats",
   description:
-    "Join our Rise & Reflect morning circles on Zoom, Better Together London workshops, and Annual Sisterhood Retreat in the English countryside.",
+    "Join our Rise & Reflect morning circles on Zoom, Better Together London workshops, and Annual Community Retreat in the English countryside.",
   alternates: {
     canonical: "https://j2b-theta.vercel.app/events",
   },

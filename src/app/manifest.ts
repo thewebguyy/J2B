@@ -2,10 +2,10 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Journey 2 Better — UK Women's Community",
+    name: "Journey 2 Better — UK Community for Personal Growth",
     short_name: "Journey 2 Better",
     description:
-      "Your companion on the journey to better. A welcoming UK community for women navigating life's changes with honest conversation, sister circles, mentoring, and retreats.",
+      "Your companion on the journey to better. A welcoming UK community for anyone navigating life's changes with honest conversation, community circles, mentoring, and retreats.",
     start_url: "/",
     display: "standalone",
     background_color: "#FCF9E8",
@@ -34,4 +34,3 @@ export default function manifest(): MetadataRoute.Manifest {
     ],
   };
 }
-

@@ -18,7 +18,7 @@ const PHASES = [
     label: "Step 2 • The messy middle",
     title: "Working it out together",
     description:
-      "Figuring things out as you go, with other women beside you.",
+      "Figuring things out as you go, with good people beside you.",
   },
   {
     number: "03",

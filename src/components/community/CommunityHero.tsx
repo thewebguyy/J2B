@@ -36,7 +36,7 @@ export const CommunityHero: React.FC = () => {
             </h1>
 
             <p className="font-sans text-lg sm:text-xl text-charcoal/85 leading-relaxed font-normal max-w-2xl">
-              You were never meant to do this alone. Journey 2 Better brings women together to talk honestly and support each other.
+              You were never meant to do this alone. Journey 2 Better brings people together to talk honestly and support each other.
             </p>
           </div>
 

@@ -28,11 +28,11 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL("https://j2b-theta.vercel.app"),
   title: {
-    default: "Journey 2 Better — UK Women's Community & Sisterhood",
+    default: "Journey 2 Better — A Community for Personal Growth & Companionship in the UK",
     template: "%s | Journey 2 Better",
   },
   description:
-    "Your companion on the journey to better. A welcoming UK community for women navigating life's changes with honest conversation, small-group sister circles, mentoring, and countryside retreats in London and online.",
+    "Your companion on the journey to better. A welcoming UK community for anyone navigating life's changes with honest conversation, small-group community circles, mentoring, and countryside retreats in London and online.",
   applicationName: "Journey 2 Better",
   authors: [{ name: "Journey 2 Better", url: "https://j2b-theta.vercel.app" }],
   creator: "Journey 2 Better",
@@ -47,15 +47,15 @@ export const metadata: Metadata = {
     "Journey to Better",
     "J2B",
     "Journey 2 Better UK",
-    "UK women community",
-    "London sisterhood",
-    "women peer support UK",
-    "women life transitions",
-    "sister circles London",
-    "female personal growth UK",
-    "women mentoring London",
+    "UK community",
+    "personal growth UK",
+    "peer support network",
+    "life transitions support",
+    "community circles London",
+    "personal development UK",
+    "mentoring London",
     "wellbeing gatherings UK",
-    "the messy middle women",
+    "the messy middle",
   ],
   alternates: {
     canonical: "https://j2b-theta.vercel.app",
@@ -76,7 +76,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Journey 2 Better — Growing is easier when you're not alone",
     description:
-      "A welcoming UK sisterhood for mindful growth, honest conversation, and everyday support in the messy middle of life.",
+      "A welcoming UK community for personal growth, honest conversation, and everyday support in the messy middle of life.",
     url: "https://j2b-theta.vercel.app",
     siteName: "Journey 2 Better",
     locale: "en_GB",
@@ -86,15 +86,15 @@ export const metadata: Metadata = {
         url: "/images/sanctuary-gathering.jpg",
         width: 1200,
         height: 800,
-        alt: "Journey 2 Better — UK Women's Community & Sisterhood",
+        alt: "Journey 2 Better — A Community for Personal Growth & Companionship",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Journey 2 Better — UK Women's Community & Sisterhood",
+    title: "Journey 2 Better — A Community for Personal Growth & Companionship",
     description:
-      "Growing is easier when you're not alone. Welcome to Journey 2 Better — honest circles, mentoring, and retreats for women in the UK.",
+      "Growing is easier when you're not alone. Welcome to Journey 2 Better — honest circles, mentoring, and retreats in the UK.",
     images: ["/images/sanctuary-gathering.jpg"],
   },
   robots: {
@@ -131,7 +131,7 @@ export default function RootLayout({
         },
         image: "https://j2b-theta.vercel.app/images/sanctuary-gathering.jpg",
         description:
-          "A welcoming UK sisterhood for women navigating life's changes with honest conversation, small-group sister circles, mentoring, and retreats in London and online.",
+          "A welcoming UK community for anyone navigating life's changes with honest conversation, small-group community circles, mentoring, and retreats in London and online.",
         email: "hello@journey2better.com",
         telephone: "+447960964839",
         areaServed: {

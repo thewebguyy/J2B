@@ -7,14 +7,30 @@ import { MagneticButton } from "@/components/common/MagneticButton";
 
 export const HomeHero: React.FC = () => {
   return (
-    <section className="relative min-h-[86vh] flex items-center pt-8 pb-20 sm:pb-24 lg:pb-28 overflow-hidden">
-      <div className="relative mx-auto max-w-7xl px-6 sm:px-10 lg:px-14 w-full">
+    <section className="relative min-h-[88vh] flex items-center pt-8 pb-20 sm:pb-24 lg:pb-28 overflow-hidden">
+      {/* Full-Bleed Atmospheric Background: Walking in Tandem on the Ascending Path at Dawn */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden select-none" aria-hidden="true">
+        <Image
+          src="/images/journey-path-hero.jpg"
+          alt=""
+          fill
+          priority
+          quality={90}
+          className="object-cover object-right md:object-center opacity-40 sm:opacity-50"
+          sizes="100vw"
+        />
+        {/* Asymmetric Dual-Zone Editorial Scrim for AAA Typography Legibility */}
+        <div className="absolute inset-0 bg-gradient-to-r from-ivory-canvas via-ivory-canvas/95 to-ivory-canvas/60 lg:via-ivory-canvas/88 lg:to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-ivory-canvas via-transparent to-ivory-canvas/40" />
+      </div>
+
+      <div className="relative mx-auto max-w-7xl px-6 sm:px-10 lg:px-14 w-full z-10">
         {/* Tactile Editorial Sanctuary Composition — Unobstructed Left Reading Flow + Warm Documentary Photography */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 items-center">
           
-          {/* Left Column: Unobstructed Editorial Narrative (Zero colliding background line art) */}
+          {/* Left Column: Unobstructed Editorial Narrative */}
           <div className="lg:col-span-7 pt-2 lg:pt-4">
-            {/* Editorial Folio Header — No generic leaf/sparkle icons */}
+            {/* Editorial Folio Header */}
             <div className="inline-flex items-center gap-3 mb-7">
               <span className="text-[11px] sm:text-xs uppercase tracking-[0.22em] font-semibold text-teal-living">
                 Your companion on the journey to better
@@ -30,10 +46,10 @@ export const HomeHero: React.FC = () => {
               <span className="text-gold-harvest">.</span>
             </h1>
 
-            {/* Editorial Staggered Lead Copy */}
+            {/* Editorial Staggered Lead Copy — Calibrated for Everyone */}
             <div className="pl-5 sm:pl-7 border-l-2 border-gold-harvest/65 max-w-xl mb-10">
               <p className="font-sans text-lg sm:text-xl text-charcoal/90 font-normal leading-relaxed">
-                Growing into the woman you want to be is personal — but it doesn&apos;t have to be lonely. Journey 2 Better is a community of women in the UK who meet up, talk honestly and help each other through life&apos;s changes.
+                Growing into who you want to be is personal — but it doesn&apos;t have to be lonely. Journey 2 Better is a welcoming community in the UK for anyone navigating life&apos;s changes — meeting up, talking honestly, and supporting each other through the messy middle.
               </p>
             </div>
 
@@ -49,7 +65,7 @@ export const HomeHero: React.FC = () => {
               </MagneticButton>
             </div>
 
-            {/* Editorial Footnote Annotation (No AI sparkle icon) */}
+            {/* Editorial Footnote Annotation */}
             <div className="mt-10 pt-5 border-t border-ivory-border/90 max-w-lg">
               <p className="font-serif italic text-sm text-muted-foreground">
                 No fees to join. No need to have it all sorted. Just come as you are.
@@ -60,8 +76,8 @@ export const HomeHero: React.FC = () => {
           {/* Right Column: Warm Natural-Light Sanctuary Photography & Overlapping Print Plate */}
           <div className="lg:col-span-5 relative flex flex-col items-start lg:items-end">
             <div className="relative w-full max-w-lg">
-              {/* Primary Atmospheric Photograph: Morning Tea & Open Journal in a Quiet London Room */}
-              <figure className="relative bg-ivory-surface p-3 sm:p-4 border border-ivory-border shadow-[0_24px_60px_-20px_rgba(2,64,77,0.18)]">
+              {/* Primary Atmospheric Photograph: Morning Tea & Open Journal in a Quiet Room */}
+              <figure className="relative bg-ivory-surface/95 backdrop-blur-xs p-3 sm:p-4 border border-ivory-border shadow-[0_24px_60px_-20px_rgba(2,64,77,0.18)]">
                 <div className="flex items-center justify-between text-[10px] uppercase tracking-[0.2em] text-muted-foreground mb-2.5 pb-2 border-b border-ivory-border">
                   <span>Journey 2 Better</span>
                   <span className="font-serif italic normal-case tracking-normal text-xs text-midnight">

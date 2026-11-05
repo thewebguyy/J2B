@@ -30,7 +30,7 @@ export const AboutHero: React.FC = () => {
             </h1>
 
             <p className="font-sans text-lg sm:text-xl text-charcoal/85 leading-relaxed font-normal max-w-2xl">
-              Journey 2 Better started in the UK for one simple reason: women want to grow, but too many of us go through life&apos;s big changes on our own.
+              Journey 2 Better started in the UK for one simple reason: we all want to grow, but too many of us go through life&apos;s big changes on our own.
             </p>
           </div>
         </div>
@@ -53,7 +53,7 @@ export const AboutHero: React.FC = () => {
 
             <div className="space-y-5 text-charcoal/85 font-sans text-base sm:text-lg leading-relaxed max-w-2xl">
               <p>
-                Life asks a lot of women — family, work, everyone else&apos;s needs. Most of us have nowhere to say how tired or unsure we really feel, or that we want something more.
+                Life asks a lot of us — family, work, expectations, and changes. Most of us have nowhere to say how tired or unsure we really feel, or that we want something more.
               </p>
               <p>
                 Journey 2 Better is being built to be that place. You don&apos;t need to have your life together to belong here. Whether things are going well, falling apart or somewhere in between, there&apos;s a seat for you.

@@ -17,7 +17,7 @@ const STEPS = [
     title: "Come to a circle",
     subtitle: "Try it out",
     description:
-      "Join an online Rise & Reflect session or an introduction circle. Meet the hosts and other women in a relaxed setting. Listening is just as welcome as talking.",
+      "Join an online Rise & Reflect session or an introduction circle. Meet the hosts and other members in a relaxed setting. Listening is just as welcome as talking.",
   },
   {
     step: "03",
