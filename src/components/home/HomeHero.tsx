@@ -7,126 +7,70 @@ import { MagneticButton } from "@/components/common/MagneticButton";
 
 export const HomeHero: React.FC = () => {
   return (
-    <section className="relative min-h-[88vh] flex items-center pt-8 pb-20 sm:pb-24 lg:pb-28 overflow-hidden">
-      {/* Full-Bleed Atmospheric Background: Walking in Tandem on the Ascending Path at Dawn */}
-      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden select-none" aria-hidden="true">
+    <section className="relative min-h-[92vh] flex items-center overflow-hidden">
+      {/* Full-Bleed High-Visibility Journey Background: Walking in Tandem at Dawn */}
+      <div className="absolute inset-0 z-0 select-none overflow-hidden" aria-hidden="true">
         <Image
           src="/images/journey-path-hero.jpg"
-          alt=""
+          alt="Two companions walking side-by-side along an ascending ridge path toward the morning sun"
           fill
           priority
-          quality={90}
-          className="object-cover object-right md:object-center opacity-40 sm:opacity-50"
+          quality={95}
+          className="object-cover object-[70%_center] md:object-[60%_center] lg:object-center"
           sizes="100vw"
         />
-        {/* Asymmetric Dual-Zone Editorial Scrim for AAA Typography Legibility */}
-        <div className="absolute inset-0 bg-gradient-to-r from-ivory-canvas via-ivory-canvas/95 to-ivory-canvas/60 lg:via-ivory-canvas/88 lg:to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-ivory-canvas via-transparent to-ivory-canvas/40" />
+        {/* Soft Asymmetric Left-to-Right Scrim: Dark-charcoal text is crisp on the left, while the path, companions, and sunrise remain fully visible on the right */}
+        <div className="absolute inset-0 bg-gradient-to-r from-ivory-canvas/95 via-ivory-canvas/85 to-transparent lg:w-[58%]" />
+        {/* Mobile vertical gradient to keep text readable on narrow screens while keeping the scene visible */}
+        <div className="absolute inset-0 bg-gradient-to-t from-ivory-canvas via-ivory-canvas/40 to-transparent sm:hidden" />
       </div>
 
-      <div className="relative mx-auto max-w-7xl px-6 sm:px-10 lg:px-14 w-full z-10">
-        {/* Tactile Editorial Sanctuary Composition — Unobstructed Left Reading Flow + Warm Documentary Photography */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 items-center">
-          
-          {/* Left Column: Unobstructed Editorial Narrative */}
-          <div className="lg:col-span-7 pt-2 lg:pt-4">
-            {/* Editorial Folio Header */}
-            <div className="inline-flex items-center gap-3 mb-7">
-              <span className="text-[11px] sm:text-xs uppercase tracking-[0.22em] font-semibold text-teal-living">
-                Your companion on the journey to better
-              </span>
-            </div>
-
-            {/* Expressive Left-Aligned Editorial Headline on Clean Unobstructed Canvas */}
-            <h1 className="font-serif editorial-display font-bold text-midnight mb-8 max-w-2xl reveal-heading">
-              Every journey begins{" "}
-              <span className="italic font-normal text-teal-living block sm:inline">
-                somewhere
-              </span>
-              <span className="text-gold-harvest">.</span>
-            </h1>
-
-            {/* Editorial Staggered Lead Copy — Calibrated for Everyone */}
-            <div className="pl-5 sm:pl-7 border-l-2 border-gold-harvest/65 max-w-xl mb-10">
-              <p className="font-sans text-lg sm:text-xl text-charcoal/90 font-normal leading-relaxed">
-                Growing into who you want to be is personal — but it doesn&apos;t have to be lonely. Journey 2 Better is a welcoming community in the UK for anyone navigating life&apos;s changes — meeting up, talking honestly, and supporting each other through the messy middle.
-              </p>
-            </div>
-
-            {/* Explicit Primary CTA & High-Contrast Secondary CTA */}
-            <div className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-5">
-              <MagneticButton href="/events" variant="primary" className="w-full sm:w-auto">
-                <span>See Upcoming Gatherings</span>
-                <ArrowRight className="size-4 text-gold-harvest" />
-              </MagneticButton>
-
-              <MagneticButton href="/about" variant="outline" className="w-full sm:w-auto">
-                <span>Read Our Story</span>
-              </MagneticButton>
-            </div>
-
-            {/* Editorial Footnote Annotation */}
-            <div className="mt-10 pt-5 border-t border-ivory-border/90 max-w-lg">
-              <p className="font-serif italic text-sm text-muted-foreground">
-                No fees to join. No need to have it all sorted. Just come as you are.
-              </p>
-            </div>
+      <div className="relative mx-auto max-w-7xl px-6 sm:px-10 lg:px-14 w-full z-10 py-16 sm:py-24 lg:py-28">
+        <div className="max-w-2xl lg:max-w-xl">
+          {/* Folio Eyebrow */}
+          <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-ivory-canvas/90 backdrop-blur-md border border-gold-harvest/40 shadow-xs mb-7">
+            <span className="size-2 rounded-full bg-teal-living" />
+            <span className="text-[11px] sm:text-xs uppercase tracking-[0.22em] font-semibold text-teal-living">
+              Your companion on the journey to better
+            </span>
           </div>
 
-          {/* Right Column: Warm Natural-Light Sanctuary Photography & Overlapping Print Plate */}
-          <div className="lg:col-span-5 relative flex flex-col items-start lg:items-end">
-            <div className="relative w-full max-w-lg">
-              {/* Primary Atmospheric Photograph: Morning Tea & Open Journal in a Quiet Room */}
-              <figure className="relative bg-ivory-surface/95 backdrop-blur-xs p-3 sm:p-4 border border-ivory-border shadow-[0_24px_60px_-20px_rgba(2,64,77,0.18)]">
-                <div className="flex items-center justify-between text-[10px] uppercase tracking-[0.2em] text-muted-foreground mb-2.5 pb-2 border-b border-ivory-border">
-                  <span>Journey 2 Better</span>
-                  <span className="font-serif italic normal-case tracking-normal text-xs text-midnight">
-                    London &amp; online
-                  </span>
-                </div>
+          {/* Expressive Editorial Headline */}
+          <h1 className="font-serif editorial-display font-bold text-midnight mb-6 reveal-heading drop-shadow-xs">
+            Every journey begins{" "}
+            <span className="italic font-normal text-teal-living block sm:inline">
+              somewhere
+            </span>
+            <span className="text-gold-harvest">.</span>
+          </h1>
 
-                <div className="relative aspect-[16/11] overflow-hidden bg-midnight-deep">
-                  <Image
-                    src="/images/sanctuary-gathering.jpg"
-                    alt="Warm morning light falling across a wooden table in a quiet London sanctuary with two ceramic mugs of herbal tea and an open journal"
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 1024px) 100vw, 480px"
-                    priority
-                  />
-                </div>
-
-                <figcaption className="mt-3 text-[11px] font-sans text-muted-foreground">
-                  Small groups. Real conversations.
-                </figcaption>
-              </figure>
-
-              {/* Overlapping Editorial Marginalia Pull-Quote & Secondary Stillness Detail */}
-              <div className="relative mt-4 sm:-mt-8 sm:-ml-6 z-10 grid grid-cols-12 gap-4 items-end">
-                <blockquote className="col-span-12 sm:col-span-8 bg-midnight-deep text-ivory-surface p-5 sm:p-6 border-l-4 border-gold-harvest shadow-xl">
-                  <span className="text-[10px] uppercase tracking-[0.2em] font-semibold text-gold-harvest block mb-1.5">
-                    What we believe
-                  </span>
-                  <p className="font-serif italic text-sm sm:text-base text-ivory-surface/95 leading-snug">
-                    Growing is easier when you&apos;re not doing it on your own.
-                  </p>
-                </blockquote>
-
-                <div className="hidden sm:block sm:col-span-4 bg-ivory-canvas p-1.5 border border-ivory-border shadow-md">
-                  <div className="relative aspect-square overflow-hidden">
-                    <Image
-                      src="/images/journal-stillness.jpg"
-                      alt="Uncoated cotton paper journal and ceramic teacup on woven linen"
-                      fill
-                      className="object-cover"
-                      sizes="140px"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
+          {/* Staggered Lead Copy */}
+          <div className="pl-5 sm:pl-6 border-l-2 border-gold-harvest/80 mb-8 bg-ivory-canvas/60 backdrop-blur-xs py-2 pr-4 rounded-r-lg">
+            <p className="font-sans text-lg sm:text-xl text-charcoal/95 font-normal leading-relaxed">
+              Growing into who you want to be is personal — but it doesn&apos;t have to be lonely. Journey 2 Better is a welcoming community in the UK for anyone navigating life&apos;s changes — meeting up, talking honestly, and supporting each other through the messy middle.
+            </p>
           </div>
 
+          {/* Action CTAs */}
+          <div className="flex flex-col sm:flex-row sm:items-center gap-4 mb-8">
+            <MagneticButton href="/events" variant="primary" className="w-full sm:w-auto">
+              <span>See Upcoming Gatherings</span>
+              <ArrowRight className="size-4 text-gold-harvest" />
+            </MagneticButton>
+
+            <MagneticButton href="/about" variant="outline" className="w-full sm:w-auto">
+              <span>Read Our Story</span>
+            </MagneticButton>
+          </div>
+
+          {/* Editorial Footnote Callout */}
+          <div className="pt-5 border-t border-midnight/15 flex flex-wrap items-center gap-4 text-xs font-sans text-charcoal/85">
+            <span className="font-serif italic font-semibold text-teal-living text-sm">
+              &ldquo;Walking together in the messy middle&rdquo;
+            </span>
+            <span className="text-midnight/30 hidden sm:inline">&bull;</span>
+            <span>Free to join &bull; UK-wide community &bull; Come as you are</span>
+          </div>
         </div>
       </div>
     </section>
