@@ -20,7 +20,7 @@ export const EventsHero: React.FC = () => {
             <div className="lg:col-span-7">
               <div className="inline-flex items-center gap-3 mb-6">
                 <span className="text-[11px] sm:text-xs uppercase tracking-[0.22em] font-semibold text-teal-living">
-                  Gatherings &amp; Retreats
+                  Future Programmes &amp; Events
                 </span>
               </div>
 
@@ -34,17 +34,17 @@ export const EventsHero: React.FC = () => {
 
             <div className="lg:col-span-5 lg:pb-2">
               <p className="font-sans text-lg sm:text-xl text-charcoal/85 leading-relaxed font-normal mb-8">
-                From morning online reflections to workshops in London and weekend retreats in the countryside, our gatherings give you time and space to slow down and connect.
+                The founder’s ambitions include annual events, retreats, travel and social experiences that bring people together. These are future plans; dates, locations and availability are TBC.
               </p>
 
               <div className="flex flex-col sm:flex-row sm:items-center gap-4">
                 <MagneticButton href="#gatherings" variant="primary" className="w-full sm:w-auto">
-                  <span>See Upcoming Gatherings</span>
+                  <span>Explore Future Plans</span>
                   <ArrowRight className="size-4 text-gold-harvest" />
                 </MagneticButton>
 
                 <MagneticButton href="#rhythm" variant="outline" className="w-full sm:w-auto">
-                  <span>How Often We Meet</span>
+                  <span>Planning Status</span>
                 </MagneticButton>
               </div>
             </div>
@@ -67,7 +67,7 @@ export const EventsHero: React.FC = () => {
             </h2>
 
             <p className="font-sans text-base sm:text-lg text-charcoal/85 leading-relaxed font-normal max-w-2xl">
-              We keep group sizes small so everyone has room to speak and be heard. No packed halls or lectures — just good conversations, quiet moments, and shared food.
+              Becoming Better Together is planned as a 10-week small-group workshop programme. Its start date, format, location and participation details are to be confirmed.
             </p>
           </blockquote>
         </div>

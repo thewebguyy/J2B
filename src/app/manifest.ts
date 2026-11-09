@@ -1,11 +1,12 @@
 import type { MetadataRoute } from "next";
+import { brandPositioning } from "@/content/j2b";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Journey 2 Better — UK Community for Personal Growth",
+    name: brandPositioning.title,
     short_name: "Journey 2 Better",
     description:
-      "Your companion on the journey to better. A welcoming UK community for anyone navigating life's changes with honest conversation, community circles, mentoring, and retreats.",
+      brandPositioning.description,
     start_url: "/",
     display: "standalone",
     background_color: "#FCF9E8",

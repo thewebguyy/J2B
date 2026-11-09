@@ -1,41 +1,39 @@
 import React from "react";
+import { brandPositioning } from "@/content/j2b";
 import Link from "next/link";
 import { ArrowRight, Mail, MessageCircle, Calendar } from "lucide-react";
 
 const ONBOARDING_TIERS = [
   {
-    tier: "01 • Easiest",
-    commitment: "Takes two minutes",
-    title: "Send us an email",
-    description:
-      "Tell us a little about yourself and what you're looking for. We'll reply personally.",
-    actionLabel: "Email hello@journey2better.com",
-    href: "mailto:hello@journey2better.com?subject=Hello%20from%20the%20website",
-    icon: Mail,
-    external: true,
+    "tier": "01 • Connect",
+    "commitment": "By email",
+    "title": "Say hello",
+    "description": "Ask a question or tell us which part of the journey interests you. You do not need to share private experiences.",
+    "actionLabel": "Email hello@journey2better.com",
+    "href": "mailto:hello@journey2better.com?subject=Hello%20from%20the%20website",
+    "icon": Mail,
+    "external": true
   },
   {
-    tier: "02 • Try a session",
-    commitment: "From home",
-    title: "Join a morning circle",
-    description:
-      "Come along to an online Rise & Reflect session. You're welcome to just listen.",
-    actionLabel: "See Upcoming Gatherings",
-    href: "/events",
-    icon: Calendar,
-    external: false,
+    "tier": "02 • Looking ahead",
+    "commitment": "Details TBC",
+    "title": "Explore future plans",
+    "description": "Learn about the planned Better Together programme, annual events and memoir launch. Dates and details are still to be confirmed.",
+    "actionLabel": "Explore Future Plans",
+    "href": "/events",
+    "icon": Calendar,
+    "external": false
   },
   {
-    tier: "03 • Prefer to chat?",
-    commitment: "WhatsApp",
-    title: "Message us on WhatsApp",
-    description:
-      "Send a text or voice note with any questions. A real person will get back to you.",
-    actionLabel: "WhatsApp +44 7960 964839",
-    href: "https://wa.me/447960964839",
-    icon: MessageCircle,
-    external: true,
-  },
+    "tier": "03 • Stay curious",
+    "commitment": "Our story",
+    "title": "Discover the purpose",
+    "description": "Explore the vision behind a growing personal-development brand, beginning with life experiences and lessons learned.",
+    "actionLabel": "Read Our Story",
+    "href": "/about",
+    "icon": MessageCircle,
+    "external": false
+  }
 ];
 
 export const HomeThreshold: React.FC = () => {
@@ -60,7 +58,7 @@ export const HomeThreshold: React.FC = () => {
 
           <div className="lg:col-span-5 lg:pl-8 border-l border-gold-harvest/50">
             <p className="font-sans text-base sm:text-lg text-charcoal/85 leading-relaxed">
-              Start in whatever way feels comfortable. There&apos;s no wrong way in.
+              {brandPositioning.availability}
             </p>
           </div>
         </div>

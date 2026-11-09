@@ -1,4 +1,5 @@
 import React from "react";
+import { brandPositioning, j2bContent } from "@/content/j2b";
 import Image from "next/image";
 import { BotanicalMotif } from "@/components/brand/BotanicalMotif";
 import { PathRibbon } from "@/components/brand/PathRibbon";
@@ -30,7 +31,7 @@ export const AboutHero: React.FC = () => {
             </h1>
 
             <p className="font-sans text-lg sm:text-xl text-charcoal/85 leading-relaxed font-normal max-w-2xl">
-              Journey 2 Better started in the UK for one simple reason: we all want to grow, but too many of us go through life&apos;s big changes on our own.
+              Journey2Better begins with life experiences and lessons learned — and a belief that we can encourage one another to grow.
             </p>
           </div>
         </div>
@@ -48,15 +49,15 @@ export const AboutHero: React.FC = () => {
             </div>
 
             <h2 className="font-serif editorial-pullquote font-bold text-midnight mb-6">
-              &ldquo;A place where you can be honest, instead of pretending you&apos;re fine.&rdquo;
+              &ldquo;{j2bContent.about[0]}&rdquo;
             </h2>
 
             <div className="space-y-5 text-charcoal/85 font-sans text-base sm:text-lg leading-relaxed max-w-2xl">
               <p>
-                Life asks a lot of us — family, work, expectations, and changes. Most of us have nowhere to say how tired or unsure we really feel, or that we want something more.
+                {brandPositioning.memoir}
               </p>
               <p>
-                Journey 2 Better is being built to be that place. You don&apos;t need to have your life together to belong here. Whether things are going well, falling apart or somewhere in between, there&apos;s a seat for you.
+                {brandPositioning.future}
               </p>
             </div>
           </div>
@@ -67,14 +68,14 @@ export const AboutHero: React.FC = () => {
               <div className="flex items-center justify-between text-[10px] uppercase tracking-[0.2em] text-muted-foreground mb-3 pb-2 border-b border-ivory-border">
                 <span>COMMUNITY &bull; COMPANIONSHIP</span>
                 <span className="font-serif italic normal-case tracking-normal text-xs text-midnight">
-                  London &amp; UK
+                  Shared experiences
                 </span>
               </div>
 
               <div className="relative aspect-[4/3] overflow-hidden bg-midnight-deep">
                 <Image
                   src="/images/about-sisterhood.jpg"
-                  alt="Two pairs of hands resting by steaming ceramic tea mugs, soft linen, and an open journal at a wooden table in London"
+                  alt="Two pairs of hands resting by steaming ceramic tea mugs, soft linen, and an open journal at a wooden table"
                   fill
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 420px"

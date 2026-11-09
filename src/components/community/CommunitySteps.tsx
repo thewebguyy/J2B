@@ -6,26 +6,23 @@ import { isReducedMotion } from "@/utils/motion";
 
 const STEPS = [
   {
-    step: "01",
-    title: "Say hello",
-    subtitle: "Step one",
-    description:
-      "Send us a short email or message. No forms, no fees, nothing to qualify for — just tell us a bit about where you are in life right now.",
+    "step": "01",
+    "title": "Say hello",
+    "subtitle": "Start a conversation",
+    "description": "Send a question or tell us what interests you. Sharing private experiences is never required."
   },
   {
-    step: "02",
-    title: "Come to a circle",
-    subtitle: "Try it out",
-    description:
-      "Join an online Rise & Reflect session or an introduction circle. Meet the hosts and other members in a relaxed setting. Listening is just as welcome as talking.",
+    "step": "02",
+    "title": "Explore the plans",
+    "subtitle": "Details TBC",
+    "description": "Learn about the planned Better Together programme and future events. Dates, locations and participation details are still to be confirmed."
   },
   {
-    step: "03",
-    title: "Grow together",
-    subtitle: "Keep coming",
-    description:
-      "Find a rhythm that works for you — regular circles, mentoring, London workshops — and build real friendships along the way.",
-  },
+    "step": "03",
+    "title": "Share encouragement",
+    "subtitle": "One step at a time",
+    "description": "Reflect on your own experiences and the kind of community you would like to help shape."
+  }
 ];
 
 export const CommunitySteps: React.FC = () => {
@@ -79,13 +76,13 @@ export const CommunitySteps: React.FC = () => {
             </div>
 
             <h2 className="font-serif editorial-h2 font-bold text-midnight reveal-heading">
-              How joining works.
+              Getting to know Journey2Better.
             </h2>
           </div>
 
           <div className="lg:col-span-5 lg:pl-6 border-l border-gold-harvest/50">
             <p className="font-sans text-base sm:text-lg text-charcoal/80 leading-relaxed">
-              We keep it simple. Here&apos;s how to get started.
+              We keep it simple. Start with a question or an interest.
             </p>
           </div>
         </div>

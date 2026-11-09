@@ -1,4 +1,5 @@
 import React from "react";
+import { brandPositioning, j2bContent } from "@/content/j2b";
 import { PathRibbon } from "@/components/brand/PathRibbon";
 
 export const HomeTruth: React.FC = () => {
@@ -13,20 +14,20 @@ export const HomeTruth: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-baseline mb-16 sm:mb-24 pb-8 border-b border-ivory-border">
           <div className="lg:col-span-7">
             <span className="font-serif italic text-base sm:text-lg text-teal-living block mb-3">
-              Why we started
+              A story that opens a wider journey
             </span>
 
             <h2 className="font-serif editorial-h2 font-bold text-midnight reveal-heading">
-              So many of us carry everything on our own.{" "}
+              Beginning with a memoir.{" "}
               <span className="italic font-normal text-gold-deep block sm:inline mt-1">
-                Here, you don&apos;t have to.
+                Growing through shared experience.
               </span>
             </h2>
           </div>
 
           <div className="lg:col-span-5 lg:pl-8 border-l border-gold-harvest/50">
             <p className="font-sans text-base sm:text-lg text-charcoal/85 leading-relaxed">
-              We&apos;re taught to be strong and to cope by ourselves. But nobody grows well in isolation. It&apos;s easier when the people around you understand.
+              {brandPositioning.memoir}
             </p>
           </div>
         </div>
@@ -106,7 +107,7 @@ export const HomeTruth: React.FC = () => {
                   In practice
                 </span>
                 <p className="font-serif italic text-base sm:text-lg text-midnight/90 leading-relaxed">
-                  You can come to a circle and say &ldquo;I don&apos;t know&rdquo; — and that&apos;s completely fine.
+                  You can take time to reflect. Sharing your story is always your choice.
                 </p>
               </div>
 
@@ -156,7 +157,7 @@ export const HomeTruth: React.FC = () => {
                   In practice
                 </span>
                 <p className="font-serif italic text-base sm:text-lg text-midnight/90 leading-relaxed">
-                  Nobody is ranked and nobody is selling you anything. Someone else doing well takes nothing away from you.
+                  {j2bContent.vision}
                 </p>
               </div>
             </article>

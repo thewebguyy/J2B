@@ -5,59 +5,56 @@ import { PathRibbon } from "@/components/brand/PathRibbon";
 
 const EVENTS_DATA = [
   {
-    id: "rise-reflect",
-    chapter: "Online",
-    number: "01",
-    title: "Rise & Reflect Morning Circle",
-    format: "Online • Zoom",
-    cadence: "Every week or fortnight",
-    description:
-      "Start your morning with guided breathwork, quiet journaling, and friendly conversation. An easy way to ground yourself from home before the day gets busy.",
-    features: [
-      "Gentle guided breathing and grounding",
-      "Thoughtful journaling prompts",
-      "Small-group breakout chats with other members",
-      "Join from home in comfortable clothes",
+    "id": "programme-better-together",
+    "chapter": "Planned Programme",
+    "number": "01",
+    "title": "Becoming Better Together",
+    "format": "Workshop programme • Details TBC",
+    "cadence": "10 weeks • Start TBC",
+    "description": "A planned 10-week small-group workshop programme for shared learning and personal growth. The start date and participation details are to be confirmed.",
+    "features": [
+      "10-week programme",
+      "Start date TBC",
+      "Format and location TBC",
+      "Participation details TBC"
     ],
-    ctaText: "Ask About Next Online Circle",
-    ctaHref: "mailto:hello@journey2better.com?subject=Rise%20and%20Reflect%20Enquiry",
+    "ctaText": "Ask About Becoming Better Together",
+    "ctaHref": "/contact?interest=workshops-retreats-events"
   },
   {
-    id: "better-together",
-    chapter: "In Person",
-    number: "02",
-    title: "Better Together Workshop",
-    format: "In Person • Central London",
-    cadence: "Seasonal workshops",
-    description:
-      "A half-day or full-day workshop in central London. We focus on real-life challenges: setting healthy boundaries, sorting through big decisions, and planning what comes next.",
-    features: [
-      "Practical exercises on boundaries and balance",
-      "Open group discussions and shared advice",
-      "Shared lunch and teas included",
-      "Quiet, welcoming London venue",
+    "id": "programme-annual-events",
+    "chapter": "Future Gatherings",
+    "number": "02",
+    "title": "Annual Events & Shared Experiences",
+    "format": "Dates and locations TBC",
+    "cadence": "Annual events • Details TBC",
+    "description": "Annual events, retreats, travel and enjoyable social experiences are part of the founder’s ambitions for Journey2Better. No dates, venues or travel arrangements are confirmed here.",
+    "features": [
+      "Annual events are planned",
+      "Retreats and travel are ambitions",
+      "Formats and locations TBC",
+      "No bookings available here"
     ],
-    ctaText: "Ask About London Workshops",
-    ctaHref: "mailto:hello@journey2better.com?subject=London%20Workshop%20Enquiry",
+    "ctaText": "Ask About Future Events",
+    "ctaHref": "/contact?interest=workshops-retreats-events"
   },
   {
-    id: "sisterhood-retreat",
-    chapter: "Weekend Away",
-    number: "03",
-    title: "Annual Community Retreat",
-    format: "Weekend Away • UK Countryside",
-    cadence: "Once a year",
-    description:
-      "Step away from daily chores and responsibilities. Three restful days in the English countryside with good food, nature walks, evening fireside chats, and genuine friendship.",
-    features: [
-      "2 nights comfortable countryside accommodation",
-      "Home-cooked meals and drinks included",
-      "Morning reflections and gentle movement",
-      "Free time for reading, resting, and walks",
+    "id": "programme-memoir-launch",
+    "chapter": "Forthcoming Memoir",
+    "number": "03",
+    "title": "The Founder’s Memoir & Book Launch",
+    "format": "Launch details TBC",
+    "cadence": "Date and details TBC",
+    "description": "Sade Omatsuli’s reflective memoir is the starting point of a wider personal-development journey. Publication and launch details are to be confirmed.",
+    "features": [
+      "Life experiences and lessons learned",
+      "Launch date and location TBC",
+      "Book price and availability TBC",
+      "No orders or payments taken here"
     ],
-    ctaText: "Ask About Retreat Dates",
-    ctaHref: "mailto:hello@journey2better.com?subject=Annual%20Retreat%20Enquiry",
-  },
+    "ctaText": "Ask About the Memoir",
+    "ctaHref": "/contact?interest=book-resources"
+  }
 ];
 
 export const EventsCards: React.FC = () => {
@@ -73,7 +70,7 @@ export const EventsCards: React.FC = () => {
             <div className="inline-flex items-center gap-2.5 mb-4">
               <BotanicalMotif size={20} />
               <span className="text-xs uppercase tracking-[0.22em] font-semibold text-teal-living">
-                Our Gatherings
+                Future Plans
               </span>
             </div>
 
@@ -84,7 +81,7 @@ export const EventsCards: React.FC = () => {
 
           <div className="lg:col-span-5 lg:pl-6 border-l border-gold-harvest/50">
             <p className="font-sans text-base sm:text-lg text-charcoal/80 leading-relaxed">
-              Join us online from your living room, or meet us in person in London and the countryside.
+              Programmes and events are in development. Enquiries are welcome; dates, locations and participation details remain TBC.
             </p>
           </div>
         </div>
@@ -100,7 +97,7 @@ export const EventsCards: React.FC = () => {
           <PathRibbon variant="vertical-spine" className="h-full" />
         </div>
 
-        {/* CHAPTER I: Rise & Reflect Morning Circle (Warm Ivory Sanctuary Band) */}
+        {/* CHAPTER I: Better Together Programme (Warm Ivory Sanctuary Band) */}
         <article
           id={EVENTS_DATA[0].id}
           className="relative py-16 sm:py-24 bg-ivory-canvas border-t border-ivory-border"
@@ -163,7 +160,7 @@ export const EventsCards: React.FC = () => {
           </div>
         </article>
 
-        {/* CHAPTER II: Better Together Workshop (Deep-Teal Background Inversion Band) */}
+        {/* CHAPTER II: Annual Events & Shared Experiences (Deep-Teal Background Inversion Band) */}
         <article
           id={EVENTS_DATA[1].id}
           className="relative py-20 sm:py-28 bg-midnight text-ivory-surface overflow-hidden"
@@ -229,7 +226,7 @@ export const EventsCards: React.FC = () => {
           </div>
         </article>
 
-        {/* CHAPTER III: Annual Sisterhood Retreat (Deepest Sanctuary Inversion Spread) */}
+        {/* CHAPTER III: The Founder's Memoir & Book Launch (Deepest Sanctuary Inversion Spread) */}
         <article
           id={EVENTS_DATA[2].id}
           className="relative py-20 sm:py-28 bg-midnight-deep text-ivory-surface border-t border-gold-harvest/25 overflow-hidden"
@@ -261,7 +258,7 @@ export const EventsCards: React.FC = () => {
               </p>
             </div>
 
-            {/* Horizontal 4-Column Retreat Experience Spread + Action */}
+            {/* Horizontal 4-Column Memoir Experience Spread + Action */}
             <div className="pt-8 border-t border-ivory-surface/15 grid grid-cols-1 lg:grid-cols-12 gap-8 items-end">
               <div className="lg:col-span-8">
                 <h4 className="text-xs uppercase tracking-[0.22em] text-gold-harvest font-semibold mb-5">
@@ -271,7 +268,7 @@ export const EventsCards: React.FC = () => {
                   {EVENTS_DATA[2].features.map((feature, i) => (
                     <div key={feature} className="pl-4 border-l border-gold-harvest/40">
                       <span className="font-serif italic text-xs text-gold-harvest block mb-1">
-                        Retreat Element 0{i + 1}
+                        Detail 0{i + 1}
                       </span>
                       <p className="font-sans text-sm sm:text-base text-ivory-surface/90 leading-snug">
                         {feature}

@@ -3,6 +3,8 @@ import { Playfair_Display, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import { Navigation } from "@/components/common/Navigation";
 import { Footer } from "@/components/common/Footer";
+import { brandPositioning } from "@/content/j2b";
+import { organizationSchema, pageMetadata, siteUrl } from "@/content/seo";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -26,40 +28,14 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://j2b-theta.vercel.app"),
-  title: {
-    default: "Journey 2 Better — A Community for Personal Growth & Companionship in the UK",
-    template: "%s | Journey 2 Better",
-  },
-  description:
-    "Your companion on the journey to better. A welcoming UK community for anyone navigating life's changes with honest conversation, small-group community circles, mentoring, and countryside retreats in London and online.",
+  ...pageMetadata("/", brandPositioning.title, brandPositioning.description),
+  metadataBase: new URL(siteUrl),
   applicationName: "Journey 2 Better",
-  authors: [{ name: "Journey 2 Better", url: "https://j2b-theta.vercel.app" }],
+  authors: [{ name: "Journey 2 Better", url: siteUrl }],
   creator: "Journey 2 Better",
   publisher: "Journey 2 Better",
-  formatDetection: {
-    email: false,
-    address: false,
-    telephone: false,
-  },
-  keywords: [
-    "Journey 2 Better",
-    "Journey to Better",
-    "J2B",
-    "Journey 2 Better UK",
-    "UK community",
-    "personal growth UK",
-    "peer support network",
-    "life transitions support",
-    "community circles London",
-    "personal development UK",
-    "mentoring London",
-    "wellbeing gatherings UK",
-    "the messy middle",
-  ],
-  alternates: {
-    canonical: "https://j2b-theta.vercel.app",
-  },
+  formatDetection: { email: false, address: false, telephone: false },
+  keywords: ["Journey2Better", "Journey 2 Better", "J2B", "Sade Omatsuli", "memoir", "life stories", "life lessons", "personal growth", "community", "mutual encouragement"],
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },
@@ -73,30 +49,6 @@ export const metadata: Metadata = {
     shortcut: "/favicon.ico",
   },
   manifest: "/manifest.webmanifest",
-  openGraph: {
-    title: "Journey 2 Better — Growing is easier when you're not alone",
-    description:
-      "A welcoming UK community for personal growth, honest conversation, and everyday support in the messy middle of life.",
-    url: "https://j2b-theta.vercel.app",
-    siteName: "Journey 2 Better",
-    locale: "en_GB",
-    type: "website",
-    images: [
-      {
-        url: "/images/sanctuary-gathering.jpg",
-        width: 1200,
-        height: 800,
-        alt: "Journey 2 Better — A Community for Personal Growth & Companionship",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Journey 2 Better — A Community for Personal Growth & Companionship",
-    description:
-      "Growing is easier when you're not alone. Welcome to Journey 2 Better — honest circles, mentoring, and retreats in the UK.",
-    images: ["/images/sanctuary-gathering.jpg"],
-  },
   robots: {
     index: true,
     follow: true,
@@ -115,59 +67,12 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        "@id": "https://j2b-theta.vercel.app/#organization",
-        name: "Journey 2 Better",
-        alternateName: ["J2B", "Journey to Better", "Journey 2 Better UK"],
-        url: "https://j2b-theta.vercel.app",
-        logo: {
-          "@type": "ImageObject",
-          url: "https://j2b-theta.vercel.app/images/logo.jpeg",
-          caption: "Journey 2 Better Logo",
-        },
-        image: "https://j2b-theta.vercel.app/images/sanctuary-gathering.jpg",
-        description:
-          "A welcoming UK community for anyone navigating life's changes with honest conversation, small-group community circles, mentoring, and retreats in London and online.",
-        email: "hello@journey2better.com",
-        telephone: "+447960964839",
-        areaServed: {
-          "@type": "Country",
-          name: "United Kingdom",
-        },
-        contactPoint: [
-          {
-            "@type": "ContactPoint",
-            telephone: "+44-7960-964839",
-            contactType: "Customer Support",
-            email: "hello@journey2better.com",
-            availableLanguage: ["English"],
-          },
-        ],
-      },
-      {
-        "@type": "WebSite",
-        "@id": "https://j2b-theta.vercel.app/#website",
-        url: "https://j2b-theta.vercel.app",
-        name: "Journey 2 Better",
-        alternateName: "Journey to Better",
-        publisher: {
-          "@id": "https://j2b-theta.vercel.app/#organization",
-        },
-        inLanguage: "en-GB",
-      },
-    ],
-  };
-
   return (
     <html lang="en-GB" className={`${playfair.variable} ${jakarta.variable}`}>
       <head>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema).replace(/</g, "\\u003c") }}
         />
       </head>
       <body className="min-h-screen flex flex-col bg-ivory-canvas text-foreground antialiased selection:bg-teal-living selection:text-white botanical-grain">

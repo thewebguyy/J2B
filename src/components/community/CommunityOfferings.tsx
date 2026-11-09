@@ -4,47 +4,44 @@ import { PathRibbon } from "@/components/brand/PathRibbon";
 
 const OFFERINGS = [
   {
-    id: "circles",
-    number: "01",
-    title: "Community Circles",
-    eyebrow: "Small group support",
-    description:
-      "Small groups that meet regularly to catch up, talk through hard times and support each other. What's shared in the circle stays in the circle.",
-    highlights: [
-      "Small groups with a host",
-      "Private and non-judgemental",
-      "Themes like balance, identity and confidence",
-      "Online and in London",
-    ],
+    "id": "shared-experiences",
+    "number": "01",
+    "title": "Shared Experiences",
+    "eyebrow": "Community taking shape",
+    "description": "Life experiences can become lessons. We are building a community around listening, sharing by choice and respecting one another.",
+    "highlights": [
+      "Share only what you choose",
+      "Respect privacy and differences",
+      "Learn from different perspectives",
+      "Participation details TBC"
+    ]
   },
   {
-    id: "mentorship",
-    number: "02",
-    title: "One-to-One Mentoring",
-    eyebrow: "Personal support",
-    description:
-      "For anyone going through a big change at home, in a relationship or at work. A mentor listens, helps you get clear on what you want and keeps you on track.",
-    highlights: [
-      "One-to-one conversations",
-      "Help planning your next steps",
-      "Check-ins between sessions",
-      "Practical help with confidence and boundaries",
-    ],
+    "id": "life-stories",
+    "number": "02",
+    "title": "Life Stories & Personal Growth",
+    "eyebrow": "An ambition in development",
+    "description": "The founder hopes to support people who want to explore and write their own life stories. The shape and availability of this support are still to be confirmed.",
+    "highlights": [
+      "Writing support is an ambition",
+      "No sessions are currently offered here",
+      "Format and availability TBC",
+      "Questions are welcome by email"
+    ]
   },
   {
-    id: "encouragement",
-    number: "03",
-    title: "Everyday Encouragement",
-    eyebrow: "Regular encouragement",
-    description:
-      "A steady bit of support in your week — reflections, affirmations and prompts for when life feels rushed or too much.",
-    highlights: [
-      "Weekly reflections",
-      "Gratitude and mindset prompts",
-      "Encouragement from other members",
-      "A reminder to pause and breathe",
-    ],
-  },
+    "id": "encouragement",
+    "number": "03",
+    "title": "Mutual Encouragement",
+    "eyebrow": "A shared purpose",
+    "description": "A community shaped by shared progress, hope and belonging, where people can learn from one another.",
+    "highlights": [
+      "Respect different experiences",
+      "Celebrate small steps",
+      "Welcome different backgrounds and beliefs",
+      "Grow at your own pace"
+    ]
+  }
 ];
 
 export const CommunityOfferings: React.FC = () => {
@@ -61,23 +58,23 @@ export const CommunityOfferings: React.FC = () => {
             <div className="inline-flex items-center gap-2.5 mb-4">
               <BotanicalMotif size={20} />
               <span className="text-xs uppercase tracking-[0.22em] font-semibold text-teal-living">
-                What we offer
+                Our direction
               </span>
             </div>
 
             <h2 className="font-serif editorial-h2 font-bold text-midnight reveal-heading">
-              Three ways to get support.
+              What we are building together.
             </h2>
           </div>
 
           <div className="lg:col-span-5 lg:pl-6 border-l border-gold-harvest/50">
             <p className="font-sans text-base sm:text-lg text-charcoal/80 leading-relaxed">
-              Join a circle, get one-to-one mentoring, or just receive regular encouragement — whatever fits where you are right now.
+              Community, personal growth and encouragement shape our plans. Future activities and support are still in development.
             </p>
           </div>
         </div>
 
-        {/* Spread 01: Sister Circles — Flush-left Oversized Gold Numeral & Offset Ledger */}
+        {/* Spread 01: Shared Experiences — Flush-left Oversized Gold Numeral & Offset Ledger */}
         <article
           id={OFFERINGS[0].id}
           className="relative py-12 sm:py-16 border-t border-ivory-border/90"
@@ -129,7 +126,7 @@ export const CommunityOfferings: React.FC = () => {
           </div>
         </article>
 
-        {/* Spread 02: 1-on-1 Mentorship — Deep Sanctuary Editorial Band with Right-Aligned Architecture */}
+        {/* Spread 02: Life Stories & Personal Growth — Deep Sanctuary Editorial Band with Right-Aligned Architecture */}
         <article
           id={OFFERINGS[1].id}
           className="relative my-8 sm:my-12 bg-midnight-deep text-ivory-surface p-8 sm:p-12 lg:p-16 border-l-4 border-gold-harvest overflow-hidden"
@@ -178,7 +175,7 @@ export const CommunityOfferings: React.FC = () => {
           </div>
         </article>
 
-        {/* Spread 03: Everyday Encouragement — Open Two-Tone Editorial Essay & Horizontal Rhythm */}
+        {/* Spread 03: Mutual Encouragement — Open Two-Tone Editorial Essay & Horizontal Rhythm */}
         <article
           id={OFFERINGS[2].id}
           className="relative pt-12 sm:pt-16 pb-4 border-t border-ivory-border/90"
@@ -207,7 +204,7 @@ export const CommunityOfferings: React.FC = () => {
             <div className="lg:col-span-6">
               <div className="mb-3 flex items-center justify-between">
                 <h4 className="text-xs uppercase tracking-[0.2em] font-semibold text-teal-living">
-                  What you&apos;ll get
+                  What guides us
                 </h4>
                 <span className="h-px flex-1 bg-gold-harvest/40 ml-4" />
               </div>

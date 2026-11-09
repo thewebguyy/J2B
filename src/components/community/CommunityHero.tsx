@@ -1,5 +1,6 @@
 import React from "react";
 import { ArrowRight } from "lucide-react";
+import { j2bContent } from "@/content/j2b";
 import { MagneticButton } from "@/components/common/MagneticButton";
 import { BotanicalMotif } from "@/components/brand/BotanicalMotif";
 import { PathRibbon } from "@/components/brand/PathRibbon";
@@ -36,7 +37,7 @@ export const CommunityHero: React.FC = () => {
             </h1>
 
             <p className="font-sans text-lg sm:text-xl text-charcoal/85 leading-relaxed font-normal max-w-2xl">
-              You were never meant to do this alone. Journey 2 Better brings people together to talk honestly and support each other.
+              {j2bContent.communityIntroduction}
             </p>
           </div>
 
@@ -92,11 +93,11 @@ export const CommunityHero: React.FC = () => {
                 No judgement
               </h2>
               <p className="font-sans text-sm sm:text-base text-charcoal/80 leading-relaxed">
-                Private, supportive groups where you can talk about what&apos;s hard without being criticised.
+                Our intention is a supportive community where sharing personal experiences is always a choice.
               </p>
             </article>
 
-            {/* Spread Column 2: Sisterhood Over Rivalry (Elevated Stagger) */}
+            {/* Spread Column 2: Shared Celebration (Elevated Stagger) */}
             <article className="md:col-span-4 md:mt-5 relative pl-5 border-l border-gold-harvest/60">
               <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-gold-deep block mb-2">
                 02 &mdash; Supportive
@@ -105,7 +106,7 @@ export const CommunityHero: React.FC = () => {
                 Friends, not rivals
               </h2>
               <p className="font-sans text-sm sm:text-base text-charcoal/80 leading-relaxed">
-                Another woman doing well takes nothing away from you. We celebrate each other&apos;s wins.
+                Another person doing well takes nothing away from you. We celebrate each other&apos;s wins.
               </p>
             </article>
 
@@ -115,10 +116,10 @@ export const CommunityHero: React.FC = () => {
                 03 &mdash; Ongoing
               </span>
               <h2 className="font-serif text-2xl sm:text-[1.65rem] font-bold text-midnight mb-3">
-                Support between meet-ups
+                Encouragement along the way
               </h2>
               <p className="font-sans text-sm sm:text-base text-charcoal/80 leading-relaxed">
-                Not just the odd meeting — regular encouragement to keep you going through busy weeks.
+                Shared progress, hope and belonging are at the heart of the community we are building.
               </p>
             </article>
 

@@ -1,22 +1,17 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "@/content/seo";
 import { AboutHero } from "@/components/about/AboutHero";
+import { AboutFounder } from "@/components/about/AboutFounder";
 import { AboutMessyMiddle } from "@/components/about/AboutMessyMiddle";
 import { AboutValues } from "@/components/about/AboutValues";
 import { AboutThreshold } from "@/components/about/AboutThreshold";
 
-export const metadata: Metadata = {
-  title: "About Our Story & Values",
-  description:
-    "Why Journey 2 Better was founded in the UK. Discover our ethos, the messy middle of life, and our core values of honesty, belonging, courage, and celebration.",
-  alternates: {
-    canonical: "https://j2b-theta.vercel.app/about",
-  },
-};
+export const metadata = pageMetadata("/about", "About Our Story | Journey 2 Better", "Discover the story and purpose behind Journey2Better: life experiences, personal growth and encouragement.");
 
 export default function AboutPage() {
   return (
     <>
       <AboutHero />
+      <AboutFounder />
       <AboutMessyMiddle />
       <AboutValues />
       <AboutThreshold />

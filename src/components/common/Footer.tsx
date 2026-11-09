@@ -1,4 +1,5 @@
 import React from "react";
+import { brandPositioning, j2bContent } from "@/content/j2b";
 import Link from "next/link";
 import { Mail, Phone, Heart, ArrowUpRight, ArrowRight, MessageCircle } from "lucide-react";
 import { LogoMark, BrandMonogramSVG } from "@/components/brand/LogoMark";
@@ -89,13 +90,13 @@ export const Footer: React.FC = () => {
             <div>
               <LogoMark size="footer" showTagline={true} className="mb-6" />
               <p className="text-ivory-surface/80 text-sm leading-relaxed max-w-sm font-sans font-normal mt-4">
-                A welcoming UK community rising together — navigating the messy middle of life with genuine connection, personal growth, and unwavering companionship.
+                {brandPositioning.description}
               </p>
             </div>
 
             <div className="mt-8 pt-6 border-t border-ivory-surface/10 flex items-center gap-2.5 text-xs text-ivory-surface/70">
               <BotanicalMotif size={20} />
-              <span>Founded with intention in the United Kingdom</span>
+              <span>Life lessons, personal growth and shared experiences</span>
               <Heart className="size-3 text-gold-harvest inline ml-0.5" />
             </div>
           </div>
@@ -138,41 +139,77 @@ export const Footer: React.FC = () => {
                   href="/events"
                   className="hover:text-gold-harvest transition-colors flex items-center justify-between group"
                 >
-                  <span>Gatherings &amp; Retreats</span>
+                  <span>Future Programmes &amp; Events</span>
+                  <ArrowUpRight className="size-3 opacity-0 -translate-x-1 transition-all group-hover:opacity-100 group-hover:translate-x-0 text-gold-harvest" />
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/book"
+                  className="hover:text-gold-harvest transition-colors flex items-center justify-between group"
+                >
+                  <span>The Memoir</span>
+                  <ArrowUpRight className="size-3 opacity-0 -translate-x-1 transition-all group-hover:opacity-100 group-hover:translate-x-0 text-gold-harvest" />
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/resources"
+                  className="hover:text-gold-harvest transition-colors flex items-center justify-between group"
+                >
+                  <span>Resources</span>
+                  <ArrowUpRight className="size-3 opacity-0 -translate-x-1 transition-all group-hover:opacity-100 group-hover:translate-x-0 text-gold-harvest" />
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/shop"
+                  className="hover:text-gold-harvest transition-colors flex items-center justify-between group"
+                >
+                  <span>Merchandise Preview</span>
+                  <ArrowUpRight className="size-3 opacity-0 -translate-x-1 transition-all group-hover:opacity-100 group-hover:translate-x-0 text-gold-harvest" />
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/contact"
+                  className="hover:text-gold-harvest transition-colors flex items-center justify-between group"
+                >
+                  <span>Contact</span>
                   <ArrowUpRight className="size-3 opacity-0 -translate-x-1 transition-all group-hover:opacity-100 group-hover:translate-x-0 text-gold-harvest" />
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Column 3: The Gathering Rhythm (3 cols) */}
+          {/* Column 3: The Looking Ahead (3 cols) */}
           <div className="lg:col-span-3">
             <h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-gold-harvest mb-6 pb-2 border-b border-ivory-surface/10">
-              Gathering Rhythm
+              Looking Ahead
             </h3>
             <ul className="space-y-4 text-xs font-sans">
               <li className="p-3 rounded-lg bg-ivory-surface/5 border border-ivory-surface/10 hover:border-gold-harvest/40 transition-colors">
                 <span className="text-[10px] uppercase tracking-widest text-gold-harvest font-semibold block mb-0.5">
-                  Weekly &bull; Online
+                  Forthcoming &bull; Details TBC
                 </span>
-                <span className="text-sm font-serif italic text-white block">Rise &amp; Reflect Circles</span>
-                <span className="text-ivory-surface/65 mt-0.5 block">Quiet mornings from home via Zoom</span>
+                <span className="text-sm font-serif italic text-white block">The Founder’s Memoir</span>
+                <span className="text-ivory-surface/65 mt-0.5 block">Life experiences and lessons learned</span>
               </li>
 
               <li className="p-3 rounded-lg bg-ivory-surface/5 border border-ivory-surface/10 hover:border-gold-harvest/40 transition-colors">
                 <span className="text-[10px] uppercase tracking-widest text-teal-light font-semibold block mb-0.5">
-                  Seasonal &bull; Central London
+                  Planned &bull; Start TBC
                 </span>
-                <span className="text-sm font-serif italic text-white block">Better Together Workshops</span>
-                <span className="text-ivory-surface/65 mt-0.5 block">Half-day workshops &amp; shared lunch</span>
+                <span className="text-sm font-serif italic text-white block">Becoming Better Together</span>
+                <span className="text-ivory-surface/65 mt-0.5 block">A planned 10-week workshop programme</span>
               </li>
 
               <li className="p-3 rounded-lg bg-ivory-surface/5 border border-ivory-surface/10 hover:border-gold-harvest/40 transition-colors">
                 <span className="text-[10px] uppercase tracking-widest text-gold-light font-semibold block mb-0.5">
-                  Annual &bull; Countryside
+                  Annual &bull; Details TBC
                 </span>
-                <span className="text-sm font-serif italic text-white block">Annual Community Retreat</span>
-                <span className="text-ivory-surface/65 mt-0.5 block">3 days away in English nature</span>
+                <span className="text-sm font-serif italic text-white block">Events &amp; Shared Experiences</span>
+                <span className="text-ivory-surface/65 mt-0.5 block">Dates, formats and locations to be confirmed</span>
               </li>
             </ul>
           </div>
@@ -183,7 +220,7 @@ export const Footer: React.FC = () => {
               Personal Connection
             </h3>
             <p className="text-xs text-ivory-surface/75 mb-5 leading-relaxed">
-              We respond personally to every message. Introduce yourself or message us with any questions about upcoming gatherings.
+              We respond personally to every message. Introduce yourself or message us with any questions about our future plans.
             </p>
 
             <div className="space-y-3 text-xs">
@@ -231,20 +268,22 @@ export const Footer: React.FC = () => {
         <div className="py-6 border-b border-ivory-surface/15 flex flex-wrap items-center justify-between gap-4 text-xs font-sans text-ivory-surface/80">
           <div className="flex items-center gap-2.5">
             <span className="size-2 rounded-full bg-emerald-400 animate-pulse" />
-            <span className="font-semibold text-white">Community Status:</span>
-            <span className="text-gold-harvest font-serif italic">Welcoming new members across the UK</span>
+            <span className="font-semibold text-white">Our Direction:</span>
+            <span className="text-gold-harvest font-serif italic">Growing through stories and encouragement</span>
           </div>
 
           <div className="flex flex-wrap items-center gap-4 sm:gap-6 text-ivory-surface/65 text-[11px]">
-            <span>Online &amp; Central London</span>
+            <span>All walks of life</span>
             <span className="hidden sm:inline">&bull;</span>
-            <span>Weekly Morning Circles</span>
+            <span>Shared experiences</span>
             <span className="hidden sm:inline">&bull;</span>
-            <span>Free to Join</span>
+            <span>Future plans TBC</span>
             <span className="hidden sm:inline">&bull;</span>
             <span>Come As You Are</span>
           </div>
         </div>
+
+        <p className="pt-6 text-sm leading-relaxed text-ivory-surface/85">{j2bContent.healthDisclaimer}</p>
 
         {/* =========================================================================
             4. LEGAL & ATTRIBUTION BAR
@@ -252,7 +291,7 @@ export const Footer: React.FC = () => {
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-ivory-surface/50">
           <p>© {new Date().getFullYear()} Journey 2 Better. All rights reserved.</p>
           <p className="text-center sm:text-right">
-            Becoming — A Living Journey &bull; Dedicated to personal growth, honest connection, and everyday companionship across the UK
+            Becoming — A Living Journey &bull; Dedicated to personal growth, honest connection, and mutual encouragement
           </p>
         </div>
 

@@ -6,41 +6,35 @@ import { BotanicalMotif } from "@/components/brand/BotanicalMotif";
 
 const RHYTHM_STAGES = [
   {
-    id: "morning-hearth",
-    number: "01",
-    phase: "Weekly & Fortnightly",
-    title: "Morning Circles",
-    subtitle: "Online on Zoom",
-    description:
-      "Regular morning check-ins to quiet your mind, set intentions, and stay connected with people who understand.",
-    tag: "Online",
-    rhythmNotes:
-      "Held on Zoom so you can join easily from home before your day gets underway.",
+    "id": "rhythm-better-together",
+    "number": "01",
+    "phase": "10 weeks • Start TBC",
+    "title": "Becoming Better Together",
+    "subtitle": "Planned 10-week workshop programme",
+    "description": "An opportunity for shared learning and personal growth is being developed.",
+    "tag": "In development",
+    "rhythmNotes": "The start date, format, location and participation details are TBC."
   },
   {
-    id: "london-intensive",
-    number: "02",
-    phase: "Quarterly & Seasonal",
-    title: "London Workshops",
-    subtitle: "In person in London",
-    description:
-      "Focused half-day sessions in quiet Central London spaces. Work through structured exercises, think through next steps, and share lunch.",
-    tag: "Central London",
-    rhythmNotes:
-      "Held in small groups in Central London with plenty of time for conversation and shared food.",
+    "id": "rhythm-annual-events",
+    "number": "02",
+    "phase": "Annual • Details TBC",
+    "title": "Annual Events",
+    "subtitle": "Future shared experiences",
+    "description": "Events, retreats, travel and social experiences are ambitions for the growing brand.",
+    "tag": "Plans taking shape",
+    "rhythmNotes": "Dates, locations, arrangements and availability are not confirmed. No bookings are available here."
   },
   {
-    id: "sacred-pause",
-    number: "03",
-    phase: "Once a Year",
-    title: "Country Retreat",
-    subtitle: "Weekend in the countryside",
-    description:
-      "A restful weekend away in the English countryside. Step back from the rush for quiet walks, evening talks, and good company.",
-    tag: "UK Countryside",
-    rhythmNotes:
-      "Our yearly weekend away — dates and details sent directly when you get in touch.",
-  },
+    "id": "rhythm-memoir-launch",
+    "number": "03",
+    "phase": "Launch date TBC",
+    "title": "Memoir Launch",
+    "subtitle": "The founder’s story",
+    "description": "A forthcoming reflective memoir about life experiences and lessons learned.",
+    "tag": "Details TBC",
+    "rhythmNotes": "Publication details, launch arrangements, price and availability are TBC. Enquiries do not place an order."
+  }
 ];
 
 export const EventsTimeline: React.FC = () => {
@@ -57,16 +51,16 @@ export const EventsTimeline: React.FC = () => {
             <div className="inline-flex items-center gap-2.5 mb-4">
               <BotanicalMotif size={20} />
               <span className="text-xs uppercase tracking-[0.22em] font-semibold text-teal-living">
-                Meeting Rhythm
+                Planning Status
               </span>
             </div>
 
             <h2 className="font-serif editorial-h2 font-bold text-midnight mb-4 reveal-heading">
-              How often we meet.
+              What is taking shape.
             </h2>
 
             <p className="font-sans text-base sm:text-lg text-charcoal/80 leading-relaxed max-w-2xl">
-              Our gatherings aren&apos;t one-off events. They fit into an easy, regular rhythm that supports you across the year.
+              These plans reflect the founder&apos;s ambitions. Confirmed details will be shared when available.
             </p>
           </div>
 
@@ -128,7 +122,7 @@ export const EventsTimeline: React.FC = () => {
 
               <div>
                 <span className="text-[10px] uppercase tracking-[0.2em] font-semibold text-teal-living block mb-1">
-                  How Often
+                  Status
                 </span>
                 <p className="font-serif italic text-base font-bold text-midnight">
                   {RHYTHM_STAGES[activeStage].phase}

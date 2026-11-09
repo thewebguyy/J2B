@@ -12,6 +12,10 @@ const NAV_LINKS = [
   { href: "/about", label: "About" },
   { href: "/community", label: "Community" },
   { href: "/events", label: "Events" },
+  { href: "/book", label: "Book" },
+  { href: "/resources", label: "Resources" },
+  { href: "/shop", label: "Shop" },
+  { href: "/contact", label: "Contact" },
 ];
 
 export const Navigation: React.FC = () => {
@@ -62,7 +66,7 @@ export const Navigation: React.FC = () => {
 
         {/* Desktop Editorial Navigation */}
         <nav
-          className="hidden md:flex items-center gap-8 lg:gap-10 text-sm font-sans tracking-[0.04em] text-midnight/85"
+          className="hidden xl:flex items-center gap-5 xl:gap-7 text-[13px] font-sans tracking-[0.04em] text-midnight/85"
           aria-label="Primary Navigation"
         >
           {NAV_LINKS.map((link) => {
@@ -105,12 +109,12 @@ export const Navigation: React.FC = () => {
         </nav>
 
         {/* Action Button */}
-        <div className="hidden md:flex items-center gap-4 flex-shrink-0">
+        <div className="hidden xl:flex items-center gap-4 flex-shrink-0">
           <Link
-            href="/events"
+            href="/book"
             className="group inline-flex items-center gap-2 rounded-full bg-midnight px-5 lg:px-6 py-2.5 text-xs font-semibold uppercase tracking-wider text-ivory-canvas border border-gold-harvest/45 shadow-xs transition-all duration-300 hover:bg-midnight-deep hover:border-gold-harvest hover:shadow"
           >
-            <span>Upcoming Gatherings</span>
+            <span>The Memoir</span>
             <ArrowRight className="size-3.5 text-gold-harvest transition-transform duration-300 group-hover:translate-x-0.5" />
           </Link>
         </div>
@@ -122,7 +126,7 @@ export const Navigation: React.FC = () => {
           aria-expanded={mobileMenuOpen}
           aria-controls="mobile-navigation"
           aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
-          className="md:hidden inline-flex items-center justify-center p-2.5 text-midnight hover:text-teal-living focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-harvest rounded-xl bg-ivory-surface/80 border border-ivory-border"
+          className="xl:hidden inline-flex items-center justify-center p-2.5 text-midnight hover:text-teal-living focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-harvest rounded-xl bg-ivory-surface/80 border border-ivory-border"
         >
           {mobileMenuOpen ? <X className="size-6 text-midnight" /> : <Menu className="size-6 text-midnight" />}
         </button>
@@ -132,7 +136,7 @@ export const Navigation: React.FC = () => {
       {mobileMenuOpen && (
         <div
           id="mobile-navigation"
-          className="md:hidden fixed inset-x-0 top-[65px] h-[calc(100dvh-65px)] bg-ivory-canvas border-t border-ivory-border px-6 py-8 flex flex-col justify-between z-50 shadow-2xl overflow-y-auto"
+          className="xl:hidden fixed inset-x-0 top-[65px] h-[calc(100dvh-65px)] bg-ivory-canvas border-t border-ivory-border px-6 py-8 flex flex-col justify-between z-50 shadow-2xl overflow-y-auto"
         >
           <div className="flex flex-col gap-5">
             <div className="flex items-center justify-between pb-3 border-b border-ivory-border">
@@ -177,11 +181,11 @@ export const Navigation: React.FC = () => {
               onClick={() => setMobileMenuOpen(false)}
               className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-midnight py-3.5 text-center text-sm font-semibold tracking-wide text-ivory-canvas border border-gold-harvest/50 shadow"
             >
-              <span>Explore Upcoming Gatherings</span>
+              <span>Explore Future Plans</span>
               <ArrowRight className="size-4 text-gold-harvest" />
             </Link>
             <div className="text-center text-xs text-muted-foreground font-sans">
-              hello@journey2better.com &bull; UK Community &amp; Companionship
+              hello@journey2better.com &bull; Personal Growth &amp; Community
             </div>
           </div>
         </div>

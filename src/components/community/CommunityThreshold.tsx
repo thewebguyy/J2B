@@ -24,22 +24,22 @@ export const CommunityThreshold: React.FC = () => {
             </div>
 
             <h2 className="font-serif editorial-h2 font-bold text-white leading-tight mb-6 reveal-heading">
-              Want to join a circle?{" "}
+              Interested in the journey?{" "}
               <span className="italic font-normal text-gold-harvest block mt-1">
                 Just get in touch.
               </span>
             </h2>
 
             <p className="font-sans text-base sm:text-lg text-ivory-surface/85 max-w-2xl leading-relaxed">
-              Email or message us to introduce yourself, and we&apos;ll let you know about the next gathering.
+              Email or message us with questions about the community and future plans. This is an enquiry, not a booking or registration.
             </p>
           </div>
 
           <div className="lg:col-span-5 lg:pl-8 border-l border-gold-harvest/35 flex flex-col items-start">
             <div className="flex flex-col sm:flex-row lg:flex-col gap-4 w-full sm:w-auto lg:w-full mb-8">
-              <MagneticButton href="mailto:hello@journey2better.com?subject=Introducing%20Myself%20to%20Journey%202%20Better" variant="gold" className="w-full justify-center">
-                <Mail className="size-4 mr-2" />
-                <span>Email Us</span>
+              <MagneticButton href="/contact?interest=community" variant="gold" className="w-full justify-center">
+                <ArrowRight className="size-4 mr-2" />
+                <span>Make an enquiry</span>
               </MagneticButton>
 
               <MagneticButton href="https://wa.me/447960964839" variant="teal" className="w-full justify-center">
@@ -49,7 +49,11 @@ export const CommunityThreshold: React.FC = () => {
             </div>
 
             <div className="pt-6 border-t border-ivory-surface/15 w-full text-xs text-ivory-surface/75">
-              We reply personally &bull; hello@journey2better.com &bull; +44 7960 964839
+              We reply personally &bull;{" "}
+              <a href="mailto:hello@journey2better.com" className="underline decoration-gold-harvest/50 hover:text-gold-harvest transition-colors">
+                hello@journey2better.com
+              </a>{" "}
+              &bull; +44 7960 964839
             </div>
           </div>
 

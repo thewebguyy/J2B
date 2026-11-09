@@ -1,6 +1,5 @@
-"use client";
-
 import React from "react";
+import { j2bContent } from "@/content/j2b";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { MagneticButton } from "@/components/common/MagneticButton";
@@ -37,24 +36,23 @@ export const HomeHero: React.FC = () => {
 
           {/* Expressive Editorial Headline */}
           <h1 className="font-serif editorial-display font-bold text-midnight mb-6 reveal-heading drop-shadow-xs">
-            Every journey begins{" "}
+            {j2bContent.welcome.heading.split("Journey2Better!")[0]}
             <span className="italic font-normal text-teal-living block sm:inline">
-              somewhere
+              Journey2Better!
             </span>
-            <span className="text-gold-harvest">.</span>
           </h1>
 
           {/* Staggered Lead Copy */}
           <div className="pl-5 sm:pl-6 border-l-2 border-gold-harvest/80 mb-8 bg-ivory-canvas/60 backdrop-blur-xs py-2 pr-4 rounded-r-lg">
             <p className="font-sans text-lg sm:text-xl text-charcoal/95 font-normal leading-relaxed">
-              Growing into who you want to be is personal — but it doesn&apos;t have to be lonely. Journey 2 Better is a welcoming community in the UK for anyone navigating life&apos;s changes — meeting up, talking honestly, and supporting each other through the messy middle.
+              {j2bContent.welcome.body}
             </p>
           </div>
 
           {/* Action CTAs */}
           <div className="flex flex-col sm:flex-row sm:items-center gap-4 mb-8">
             <MagneticButton href="/events" variant="primary" className="w-full sm:w-auto">
-              <span>See Upcoming Gatherings</span>
+              <span>Explore Future Plans</span>
               <ArrowRight className="size-4 text-gold-harvest" />
             </MagneticButton>
 
@@ -69,7 +67,7 @@ export const HomeHero: React.FC = () => {
               &ldquo;Walking together in the messy middle&rdquo;
             </span>
             <span className="text-midnight/30 hidden sm:inline">&bull;</span>
-            <span>Free to join &bull; UK-wide community &bull; Come as you are</span>
+            <span>Men and women &bull; All walks of life &bull; One step at a time</span>
           </div>
         </div>
       </div>
