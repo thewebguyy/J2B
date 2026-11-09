@@ -5,7 +5,7 @@ import { join, relative, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const repoRoot = join(dirname(fileURLToPath(import.meta.url)), "..");
-const read = (p) => readFileSync(join(repoRoot, p), "utf8");
+const read = (p) => readFileSync(join(repoRoot, p), "utf8").replace(/\r\n/g, "\n");
 
 function listFiles(dir, out = []) {
   for (const entry of readdirSync(dir)) {

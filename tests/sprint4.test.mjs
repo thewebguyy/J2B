@@ -5,7 +5,7 @@ import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const repoRoot = join(dirname(fileURLToPath(import.meta.url)), "..");
-const read = (relativePath) => readFileSync(join(repoRoot, relativePath), "utf8");
+const read = (relativePath) => readFileSync(join(repoRoot, relativePath), "utf8").replace(/\r\n/g, "\n");
 
 test("Book, Resources and Shop routes reuse the shared SEO utility", () => {
   for (const [route, page] of [
