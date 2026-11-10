@@ -57,33 +57,33 @@ export const MentorshipSpeaking: React.FC = () => (
           return (
             <article
               key={offer.id}
-              className="p-7 sm:p-9 bg-[#0D2824] border border-gold-harvest/30 flex flex-col justify-between"
+              className="p-6 sm:p-8 rounded-2xl bg-midnight/80 border border-gold-harvest/25 flex flex-col justify-between"
             >
               <div>
-                <div className="flex items-center justify-between mb-6 pb-4 border-b border-ivory-surface/15">
-                  <div className="flex items-center gap-3">
-                    <Icon className="size-5 text-gold-harvest" />
-                    <span className="text-[10px] uppercase tracking-[0.22em] font-semibold text-gold-harvest">
+                <div className="flex items-center justify-between mb-5 pb-3 border-b border-ivory-surface/15">
+                  <div className="flex items-center gap-2.5">
+                    <Icon className="size-4.5 text-gold-harvest" />
+                    <span className="text-[10px] uppercase tracking-[0.2em] font-semibold text-gold-harvest">
                       {offer.eyebrow}
                     </span>
                   </div>
                 </div>
-                <h3 className="font-serif text-2xl sm:text-3xl font-bold text-white mb-4 leading-tight">
+                <h3 className="font-serif text-2xl sm:text-3xl font-bold text-white mb-3 leading-tight">
                   {offer.title}
                 </h3>
-                <p className="font-sans text-base text-ivory-surface/85 leading-relaxed mb-8">
+                <p className="font-sans text-sm sm:text-base text-ivory-surface/85 leading-relaxed mb-6">
                   {offer.description}
                 </p>
               </div>
               <div>
                 <Link
                   href={offer.href}
-                  className="inline-flex items-center gap-2.5 rounded-full bg-gold-harvest hover:bg-gold-light text-midnight-deep px-6 py-3 text-xs font-semibold uppercase tracking-wider transition-all duration-300"
+                  className="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full bg-gold-harvest hover:bg-gold-light text-midnight-deep px-5 py-3 text-xs font-semibold uppercase tracking-wider transition-all duration-200"
                 >
                   <span>{offer.cta}</span>
-                  <ArrowRight className="size-4" />
+                  <ArrowRight className="size-3.5" />
                 </Link>
-                <p className="mt-3 text-xs text-ivory-surface/60 font-sans">{offer.note}</p>
+                <p className="mt-2.5 text-xs text-ivory-surface/60 font-sans">{offer.note}</p>
               </div>
             </article>
           );

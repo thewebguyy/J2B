@@ -53,15 +53,15 @@ export const MagneticButton: React.FC<MagneticButtonProps> = ({
 
   const variantStyles = {
     primary:
-      "bg-midnight hover:bg-midnight-deep text-ivory-canvas border border-gold-harvest/45 hover:border-gold-harvest shadow-xs hover:shadow-[0_6px_22px_-6px_rgba(213,160,68,0.38)] transition-all duration-300",
+      "bg-midnight hover:bg-midnight-deep text-ivory-canvas border border-gold-harvest/40 hover:border-gold-harvest shadow-sm transition-all duration-200",
     secondary:
-      "bg-ivory-surface hover:bg-ivory-dark text-midnight border border-border hover:border-gold-harvest/60 font-medium transition-all duration-300",
+      "bg-ivory-surface hover:bg-ivory-dark text-midnight border border-border hover:border-gold-harvest/50 transition-all duration-200",
     teal:
-      "bg-teal-living hover:bg-teal-hover text-white border border-gold-harvest/30 hover:border-gold-harvest/70 shadow-xs hover:shadow-[0_6px_22px_-6px_rgba(3,110,118,0.4)] transition-all duration-300",
+      "bg-teal-living hover:bg-teal-hover text-white border border-gold-harvest/25 shadow-sm transition-all duration-200",
     gold:
-      "bg-gold-harvest hover:bg-gold-light text-midnight-deep font-semibold border border-gold-deep/30 shadow-xs hover:shadow-[0_6px_24px_-4px_rgba(213,160,68,0.45)] transition-all duration-300",
+      "bg-gold-harvest hover:bg-gold-light text-midnight-deep border border-gold-deep/20 shadow-sm transition-all duration-200",
     outline:
-      "border border-midnight/55 bg-ivory-canvas/60 hover:border-midnight text-midnight font-semibold hover:bg-ivory-surface underline-offset-4 hover:underline transition-all duration-300",
+      "border border-midnight/40 bg-ivory-canvas/70 hover:border-midnight hover:bg-ivory-surface text-midnight transition-all duration-200",
   };
 
   const content = (
@@ -73,7 +73,7 @@ export const MagneticButton: React.FC<MagneticButtonProps> = ({
         transform: canHover ? `translate(${offset.x}px, ${offset.y}px)` : "none",
         transition: offset.x === 0 && offset.y === 0 ? "transform 450ms cubic-bezier(0.25, 1, 0.5, 1)" : "none",
       }}
-      className={`inline-flex items-center justify-center gap-2 rounded-full px-8 py-3.5 text-sm font-medium tracking-wide ${variantStyles[variant]} ${className}`}
+      className={`inline-flex items-center justify-center gap-2 rounded-full px-6 sm:px-7 py-3 sm:py-3.5 text-xs sm:text-sm font-semibold uppercase tracking-wider min-h-[46px] ${variantStyles[variant]} ${className}`}
     >
       {children}
     </div>

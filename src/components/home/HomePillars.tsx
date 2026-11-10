@@ -18,13 +18,13 @@ export const HomePillars: React.FC = () => {
   };
 
   return (
-    <section className="relative py-20 sm:py-28 bg-[#123530] text-ivory-canvas overflow-hidden">
-      <div className="relative mx-auto max-w-7xl px-6 sm:px-10 lg:px-14">
+    <section className="relative py-16 sm:py-24 lg:py-28 bg-midnight-deep text-ivory-canvas overflow-hidden">
+      <div className="relative mx-auto max-w-7xl px-5 sm:px-10 lg:px-14">
         
-        {/* Editorial Chapter Header — Inverted Warm Cream on Deep Forest Teal */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end mb-14 sm:mb-20 pb-8 border-b border-ivory-canvas/15">
+        {/* Editorial Chapter Header — Inverted Warm Cream on Deep Midnight Teal */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-end mb-12 sm:mb-16 pb-8 border-b border-ivory-canvas/15">
           <div className="lg:col-span-7">
-            <span className="font-serif italic text-base sm:text-lg text-gold-harvest block mb-3">
+            <span className="font-serif italic text-base sm:text-lg text-gold-harvest block mb-2.5">
               Our community pillars
             </span>
 
@@ -40,11 +40,11 @@ export const HomePillars: React.FC = () => {
           </div>
         </div>
 
-        {/* Interactive Editorial Showcase & Horizontal Bento Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
+        {/* Interactive Editorial Showcase */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-stretch">
           
           {/* Left: Interactive Pillar Selector Tabs (5 cols) */}
-          <div className="lg:col-span-5 flex flex-col justify-between space-y-2" role="tablist" aria-orientation="vertical" aria-label="Community pillars">
+          <div className="lg:col-span-5 flex flex-col justify-between space-y-1.5 sm:space-y-2" role="tablist" aria-orientation="vertical" aria-label="Community pillars">
             {PILLARS.map((pillar, idx) => {
               const isSelected = activeTab === idx;
               return (
@@ -64,23 +64,23 @@ export const HomePillars: React.FC = () => {
                     if (next !== null) { event.preventDefault(); selectTab(next); }
                   }}
                   onClick={() => setActiveTab(idx)}
-                  className={`w-full text-left p-3.5 sm:p-5 lg:p-6 transition-all duration-300 border-l-2 ${
+                  className={`w-full text-left p-3.5 sm:p-5 rounded-xl transition-all duration-200 border-l-2 ${
                     isSelected
-                      ? "bg-ivory-canvas/10 border-gold-harvest text-ivory-canvas shadow-sm"
-                      : "bg-transparent border-ivory-canvas/15 text-ivory-canvas/65 hover:bg-ivory-canvas/5 hover:text-ivory-canvas"
+                      ? "bg-ivory-canvas/15 border-gold-harvest text-ivory-canvas shadow-sm"
+                      : "bg-transparent border-ivory-canvas/10 text-ivory-canvas/75 hover:bg-ivory-canvas/5 hover:text-ivory-canvas"
                   }`}
                 >
                   <div className="flex items-baseline justify-between mb-0.5 sm:mb-1">
                     <div className="flex items-baseline gap-2.5 sm:gap-3">
-                      <span className="font-serif italic text-xl sm:text-2xl text-gold-harvest font-bold">
+                      <span className="font-serif italic text-lg sm:text-xl text-gold-harvest font-bold">
                         {pillar.number}
                       </span>
-                      <span className="font-serif text-lg sm:text-xl lg:text-2xl font-bold">
+                      <span className="font-serif text-base sm:text-xl lg:text-2xl font-bold">
                         {pillar.title}
                       </span>
                     </div>
                   </div>
-                  <p className="hidden sm:block font-sans text-xs sm:text-sm text-ivory-canvas/75 line-clamp-2 pl-9">
+                  <p className="hidden sm:block font-sans text-xs sm:text-sm text-ivory-canvas/75 line-clamp-2 pl-8">
                     {pillar.description}
                   </p>
                 </button>
@@ -89,18 +89,18 @@ export const HomePillars: React.FC = () => {
           </div>
 
           {/* Right: Active Pillar Editorial Spread + Atmospheric Still-Life Detail (7 cols) */}
-          <div role="tabpanel" id={`pillar-panel-${PILLARS[activeTab].id}`} aria-labelledby={`pillar-tab-${PILLARS[activeTab].id}`} tabIndex={0} className="lg:col-span-7 min-w-0 bg-[#0D2824] border border-gold-harvest/30 p-7 sm:p-10 lg:p-12 flex flex-col justify-between relative overflow-hidden">
+          <div role="tabpanel" id={`pillar-panel-${PILLARS[activeTab].id}`} aria-labelledby={`pillar-tab-${PILLARS[activeTab].id}`} tabIndex={0} className="lg:col-span-7 min-w-0 rounded-2xl bg-midnight/80 border border-gold-harvest/25 p-6 sm:p-9 lg:p-11 flex flex-col justify-between relative overflow-hidden">
             <div>
-              <div className="flex flex-wrap items-center justify-between gap-4 pb-6 mb-8 border-b border-ivory-canvas/15">
+              <div className="flex flex-wrap items-center justify-between gap-4 pb-5 mb-6 border-b border-ivory-canvas/15">
                 <div>
-                  <span className="text-xs uppercase tracking-[0.22em] text-gold-harvest font-semibold block mb-1">
+                  <span className="text-xs uppercase tracking-[0.2em] text-gold-harvest font-semibold block mb-1">
                     Pillar {PILLARS[activeTab].number}
                   </span>
-                  <h3 className="font-serif text-3xl sm:text-4xl font-bold text-white">
+                  <h3 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-white">
                     {PILLARS[activeTab].title}
                   </h3>
                 </div>
-                <span className="font-serif italic text-5xl sm:text-6xl text-gold-harvest/25 font-bold select-none">
+                <span className="font-serif italic text-4xl sm:text-5xl text-gold-harvest/25 font-bold select-none">
                   {PILLARS[activeTab].number}
                 </span>
               </div>
@@ -109,7 +109,7 @@ export const HomePillars: React.FC = () => {
                 {PILLARS[activeTab].description}
               </p>
 
-              <div className="p-4 sm:p-5 bg-ivory-canvas/5 border-l-2 border-gold-harvest/70 mb-8">
+              <div className="p-4 sm:p-5 rounded-xl bg-ivory-canvas/5 border-l-2 border-gold-harvest/70 mb-6">
                 <p className="font-serif italic text-sm sm:text-base text-ivory-canvas/90">
                   {j2bContent.communityGuidelines[1]}
                 </p>
@@ -117,9 +117,9 @@ export const HomePillars: React.FC = () => {
             </div>
 
             {/* Editorial Photography Accent & Single Consolidated Pathway CTA */}
-            <div className="pt-6 border-t border-ivory-canvas/15 flex flex-col xl:flex-row xl:items-center justify-between gap-6">
-              <div className="flex items-center gap-4">
-                <div className="relative size-14 overflow-hidden border border-gold-harvest/40 flex-shrink-0">
+            <div className="pt-6 border-t border-ivory-canvas/15 flex flex-col sm:flex-row sm:items-center justify-between gap-5">
+              <div className="flex items-center gap-3.5">
+                <div className="relative size-12 sm:size-14 rounded-lg overflow-hidden border border-gold-harvest/40 flex-shrink-0">
                   <Image
                     src="/images/journal-stillness.jpg"
                     alt="Tactile journal and stoneware mug"
@@ -129,7 +129,7 @@ export const HomePillars: React.FC = () => {
                   />
                 </div>
                 <div>
-                  <span className="text-[11px] uppercase tracking-[0.18em] text-gold-harvest font-semibold block">
+                  <span className="text-[10px] uppercase tracking-[0.18em] text-gold-harvest font-semibold block">
                     All in one place
                   </span>
                   <p className="font-sans text-xs text-ivory-canvas/75">
@@ -140,17 +140,16 @@ export const HomePillars: React.FC = () => {
 
               <Link
                 href="/community"
-                className="inline-flex items-center justify-center gap-3 rounded-full bg-gold-harvest hover:bg-gold-light text-midnight-deep px-7 py-3.5 text-xs font-semibold uppercase tracking-wider transition-all duration-300 text-center shadow-sm"
+                className="inline-flex items-center justify-center gap-2.5 rounded-full bg-gold-harvest hover:bg-gold-light text-midnight-deep px-6 py-3.5 min-h-[46px] text-xs font-semibold uppercase tracking-wider transition-all duration-200 text-center shadow-sm whitespace-nowrap flex-shrink-0"
               >
-                <span>Explore the Community</span>
-                <ArrowRight className="size-4" />
+                <span>Explore Community</span>
+                <ArrowRight className="size-3.5" />
               </Link>
             </div>
           </div>
-
         </div>
-
       </div>
     </section>
   );
 };
+

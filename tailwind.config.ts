@@ -37,7 +37,7 @@ const config: Config = {
           DEFAULT: "var(--gold)",
           harvest: "#D5A044",
           light: "#E5B660",
-          deep: "#B6832A",
+          deep: "#8E6116",
           subtle: "#FAF2DE",
         },
         border: "var(--border)",

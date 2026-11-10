@@ -26,11 +26,11 @@ export const CommunityGuidelines: React.FC = () => (
         </div>
 
         <div className="lg:col-span-7">
-          <ol className="space-y-4">
+          <ol className="space-y-3.5">
             {j2bContent.communityGuidelines.map((guideline, index) => (
               <li
                 key={guideline}
-                className="flex items-start gap-4 p-5 sm:p-6 bg-ivory-canvas border-l-2 border-teal-living/50"
+                className="flex items-start gap-4 p-5 sm:p-6 rounded-xl bg-ivory-canvas border-l-2 border-teal-living/50"
               >
                 <span
                   aria-hidden="true"
@@ -49,7 +49,7 @@ export const CommunityGuidelines: React.FC = () => (
 
       <aside
         aria-labelledby="health-note"
-        className="mt-12 sm:mt-16 p-6 sm:p-8 rounded-2xl border border-gold-harvest/60 bg-gold-subtle/60"
+        className="mt-12 sm:mt-16 p-6 sm:p-8 rounded-2xl border border-gold-harvest/35 bg-gold-subtle/30"
       >
         <h3
           id="health-note"

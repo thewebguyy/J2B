@@ -32,7 +32,7 @@ export default function NotFound() {
 
         <Link
           href="/"
-          className="inline-flex items-center justify-center gap-2 rounded-full bg-midnight hover:bg-midnight-deep text-ivory-canvas px-8 py-3.5 text-xs font-semibold uppercase tracking-wider border border-gold-harvest/40 transition-all duration-300 shadow-xs"
+          className="inline-flex items-center justify-center gap-2 rounded-full bg-midnight hover:bg-midnight-deep text-ivory-canvas px-8 py-3.5 text-xs font-semibold uppercase tracking-wider border border-gold-harvest/40 transition-all duration-300 shadow-sm min-h-[46px]"
         >
           <ArrowLeft className="size-4 text-gold-harvest" />
           <span>Back to Homepage</span>

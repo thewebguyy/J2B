@@ -25,7 +25,7 @@ export const AboutHero: React.FC = () => {
 
             <h1 className="font-serif editorial-display font-bold text-midnight mb-8 reveal-heading">
               Growing is easier{" "}
-              <span className="italic font-normal text-gold-harvest block sm:inline">
+              <span className="italic font-normal text-gold-deep block sm:inline">
                 when you&apos;re not alone.
               </span>
             </h1>
@@ -39,10 +39,10 @@ export const AboutHero: React.FC = () => {
         {/* Editorial Feature Lockup: Unboxed Pull-Quote Style with Generous Gold Left Border */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-start">
           
-          {/* Left: Origin Story Narrative (Unboxed Editorial Pull-Quote Spread on Warm Ivory) */}
-          <div className="lg:col-span-7 pl-6 sm:pl-10 lg:pl-12 border-l-4 border-gold-harvest py-2 relative">
-            <div className="flex items-center gap-2.5 mb-4">
-              <span className="text-xs uppercase tracking-[0.22em] font-semibold text-gold-deep">
+          {/* Left: Origin Story Narrative */}
+          <div className="lg:col-span-7 pl-5 sm:pl-8 lg:pl-10 border-l-2 border-gold-harvest/80 py-2 relative">
+            <div className="flex items-center gap-2 mb-3.5">
+              <span className="text-[11px] uppercase tracking-[0.2em] font-semibold text-gold-deep">
                 Why we started
               </span>
               <BotanicalMotif size={16} orientation="up" />
@@ -52,7 +52,7 @@ export const AboutHero: React.FC = () => {
               &ldquo;{j2bContent.about[0]}&rdquo;
             </h2>
 
-            <div className="space-y-5 text-charcoal/85 font-sans text-base sm:text-lg leading-relaxed max-w-2xl">
+            <div className="space-y-4 text-charcoal/85 font-sans text-base sm:text-lg leading-relaxed max-w-2xl">
               <p>
                 {brandPositioning.memoir}
               </p>
@@ -64,7 +64,7 @@ export const AboutHero: React.FC = () => {
 
           {/* Right: Authentic Still-Life Photography & Community Details */}
           <div className="lg:col-span-5 flex flex-col items-start lg:items-end justify-center">
-            <figure className="relative w-full max-w-md bg-ivory-surface p-4 sm:p-5 border border-ivory-border shadow-[0_20px_50px_-20px_rgba(2,64,77,0.15)]">
+            <figure className="relative w-full max-w-md rounded-2xl bg-ivory-surface p-4 sm:p-5 border border-ivory-border shadow-[0_16px_40px_-16px_rgba(2,64,77,0.12)]">
               <div className="flex items-center justify-between text-[10px] uppercase tracking-[0.2em] text-muted-foreground mb-3 pb-2 border-b border-ivory-border">
                 <span>COMMUNITY &bull; COMPANIONSHIP</span>
                 <span className="font-serif italic normal-case tracking-normal text-xs text-midnight">

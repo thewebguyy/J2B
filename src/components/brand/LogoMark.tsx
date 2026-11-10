@@ -68,7 +68,7 @@ export const LogoMark: React.FC<LogoMarkProps> = ({
     return (
       <div className={`flex items-center gap-3.5 select-none ${className}`}>
         {/* Clean SVG Monogram Emblem — No clipped embedded text */}
-        <div className="relative w-10 h-10 rounded-full overflow-hidden border border-gold-harvest/65 bg-ivory-canvas shadow-xs flex-shrink-0">
+        <div className="relative w-10 h-10 rounded-full overflow-hidden border border-gold-harvest/65 bg-ivory-canvas shadow-sm flex-shrink-0">
           <BrandMonogramSVG />
         </div>
         <div className="flex flex-col">
@@ -102,17 +102,23 @@ export const LogoMark: React.FC<LogoMarkProps> = ({
 
   if (size === "footer") {
     return (
-      <div className={`flex flex-col items-start gap-4 select-none ${className}`}>
-        <div className="relative w-44 sm:w-52 aspect-[1206/986] rounded-xl overflow-hidden bg-ivory-canvas border border-gold-harvest/30 shadow-md">
-          <Image
-            src="/images/logo.jpeg"
-            alt="Journey 2 Better"
-            fill
-            className="object-contain p-1.5"
-          />
+      <div className={`flex flex-col items-start gap-3 select-none ${className}`}>
+        <div className="flex items-center gap-3.5">
+          <div className="relative w-11 h-11 rounded-full overflow-hidden border border-gold-harvest/60 bg-ivory-canvas shadow-sm flex-shrink-0">
+            <BrandMonogramSVG />
+          </div>
+          <div className="flex flex-col">
+            <span className="font-serif text-xl tracking-tight font-bold text-white leading-none">
+              Journey <span className="font-sans text-teal-bright font-extrabold">2</span>{" "}
+              <span className="text-gold-harvest">Better</span>
+            </span>
+            <span className="text-[10px] tracking-[0.2em] uppercase text-ivory-surface/75 font-medium font-sans mt-1">
+              The Living Journey
+            </span>
+          </div>
         </div>
         {showTagline && (
-          <p className="text-sm font-sans text-ivory-surface/90 italic tracking-wide max-w-xs">
+          <p className="text-xs sm:text-sm font-sans text-ivory-surface/80 italic tracking-wide max-w-xs">
             &ldquo;Your companion on the journey to better&rdquo;
           </p>
         )}

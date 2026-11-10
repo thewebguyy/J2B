@@ -42,17 +42,17 @@ export const HomeBook: React.FC = () => (
           <p className="font-sans text-base sm:text-lg text-charcoal/85 leading-relaxed mb-8 max-w-2xl">
             {brandPositioning.memoir}
           </p>
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex flex-col sm:flex-row gap-3.5">
             <Link
               href="/book"
-              className="inline-flex items-center justify-center gap-2.5 rounded-full bg-midnight hover:bg-midnight-deep text-ivory-canvas px-7 py-3.5 text-xs font-semibold uppercase tracking-wider border border-gold-harvest/45 transition-all duration-300"
+              className="inline-flex w-full sm:w-auto items-center justify-center gap-2.5 rounded-full bg-midnight hover:bg-midnight-deep text-ivory-canvas px-6 py-3.5 text-xs font-semibold uppercase tracking-wider border border-gold-harvest/45 transition-all duration-200 min-h-[46px]"
             >
               <span>Discover the memoir</span>
               <ArrowRight className="size-4 text-gold-harvest" />
             </Link>
             <Link
               href="/contact?interest=book-resources"
-              className="inline-flex items-center justify-center rounded-full border border-midnight/55 bg-ivory-surface/60 hover:border-midnight text-midnight px-7 py-3.5 text-xs font-semibold uppercase tracking-wider transition-all duration-300"
+              className="inline-flex w-full sm:w-auto items-center justify-center rounded-full border border-midnight/40 bg-ivory-surface/60 hover:border-midnight hover:bg-ivory-surface text-midnight px-6 py-3.5 text-xs font-semibold uppercase tracking-wider transition-all duration-200 min-h-[46px]"
             >
               Register book interest
             </Link>

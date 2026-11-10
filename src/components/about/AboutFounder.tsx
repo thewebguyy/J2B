@@ -59,13 +59,13 @@ export const AboutFounder: React.FC = () => {
               ))}
             </div>
 
-            <div className="mt-10 p-6 sm:p-8 bg-ivory-canvas border-l-4 border-gold-harvest">
+            <div className="mt-8 rounded-xl p-6 sm:p-8 bg-ivory-canvas border-l-2 border-gold-harvest">
               <p className="font-sans text-base sm:text-lg text-charcoal/90 leading-relaxed">
                 {contactLine}
               </p>
               <a
                 href="/contact?interest=speaking"
-                className="mt-6 inline-flex items-center gap-2.5 rounded-full bg-midnight hover:bg-midnight-deep text-ivory-canvas px-7 py-3.5 text-xs font-semibold uppercase tracking-wider border border-gold-harvest/45 transition-all duration-300"
+                className="mt-6 inline-flex w-full sm:w-auto items-center justify-center gap-2.5 rounded-full bg-midnight hover:bg-midnight-deep text-ivory-canvas px-6 py-3.5 text-xs font-semibold uppercase tracking-wider border border-gold-harvest/45 transition-all duration-200"
               >
                 <Mail className="size-4 text-gold-harvest" />
                 <span>Work with Sade</span>

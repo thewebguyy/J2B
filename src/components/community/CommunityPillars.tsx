@@ -28,20 +28,22 @@ export const CommunityPillars: React.FC = () => (
         {j2bContent.pillars.map((pillar) => (
           <article
             key={pillar.id}
-            className="relative p-7 sm:p-9 bg-ivory-surface border-t-4 border-gold-harvest tactile-surface"
+            className="relative rounded-2xl p-6 sm:p-8 bg-ivory-surface border border-ivory-border/90 border-t-2 border-t-gold-harvest tactile-surface hover:border-gold-harvest/50 flex flex-col justify-between"
           >
-            <span
-              aria-hidden="true"
-              className="font-serif italic text-5xl font-bold text-gold-harvest/40 leading-none block mb-5 select-none"
-            >
-              {pillar.number}
-            </span>
-            <h3 className="font-serif text-xl sm:text-2xl font-bold text-midnight mb-3 leading-snug">
-              {pillar.title}
-            </h3>
-            <p className="font-sans text-sm sm:text-base text-charcoal/80 leading-relaxed">
-              {pillar.description}
-            </p>
+            <div>
+              <span
+                aria-hidden="true"
+                className="font-serif italic text-4xl sm:text-5xl font-bold text-gold-harvest/40 leading-none block mb-4 select-none"
+              >
+                {pillar.number}
+              </span>
+              <h3 className="font-serif text-xl sm:text-2xl font-bold text-midnight mb-2.5 leading-snug">
+                {pillar.title}
+              </h3>
+              <p className="font-sans text-sm sm:text-base text-charcoal/80 leading-relaxed">
+                {pillar.description}
+              </p>
+            </div>
           </article>
         ))}
       </div>

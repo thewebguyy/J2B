@@ -31,7 +31,7 @@ export const CommunityHero: React.FC = () => {
 
             <h1 className="font-serif editorial-display font-bold text-midnight mb-8 reveal-heading">
               There&apos;s room for you{" "}
-              <span className="italic font-normal text-gold-harvest block sm:inline">
+              <span className="italic font-normal text-gold-deep block sm:inline">
                 at this table.
               </span>
             </h1>

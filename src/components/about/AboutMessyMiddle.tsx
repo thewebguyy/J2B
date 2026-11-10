@@ -94,7 +94,7 @@ export const AboutMessyMiddle: React.FC = () => {
                 People celebrate the start and the finish. But most of life happens in between — the uncertain mornings, the self-doubt, the career wobbles and the changes that don&apos;t fit a neat story.
               </p>
 
-              <blockquote className="pl-6 sm:pl-8 border-l-4 border-gold-harvest py-2 my-6">
+              <blockquote className="pl-5 sm:pl-7 border-l-2 border-gold-harvest py-1.5 my-5">
                 <p className="font-serif italic editorial-pullquote text-white font-normal">
                   &ldquo;You don&apos;t need to wait until you&apos;re &lsquo;sorted&rsquo; to deserve real connection.&rdquo;
                 </p>
@@ -181,8 +181,8 @@ export const AboutMessyMiddle: React.FC = () => {
 
                 {/* Unboxed Editorial Phase Text with Left Accent Border */}
                 <div
-                  className={`pl-5 border-l-2 py-1 ${
-                    isMiddle ? "border-gold-harvest bg-ivory-canvas/80 p-6" : "border-teal-living/40"
+                  className={`pl-5 border-l-2 ${
+                    isMiddle ? "border-gold-harvest bg-ivory-canvas/90 p-5 sm:p-6 rounded-xl" : "border-teal-living/50 py-1"
                   }`}
                 >
                   <h3 className="font-serif text-2xl font-bold text-midnight mb-2.5">

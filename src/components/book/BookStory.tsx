@@ -37,21 +37,21 @@ export const BookStory: React.FC = () => (
         </div>
 
         <div className="lg:col-span-7">
-          <div className="p-7 sm:p-10 bg-ivory-canvas border-l-4 border-gold-harvest mb-8">
+          <div className="rounded-xl p-6 sm:p-8 bg-ivory-canvas border-l-2 border-gold-harvest mb-8">
             <p className="font-serif italic text-xl sm:text-2xl text-midnight leading-relaxed">
               &ldquo;{j2bContent.founder.biography[2]}&rdquo;
             </p>
           </div>
 
-          <div className="mt-10">
-            <h3 className="text-xs uppercase tracking-[0.22em] font-semibold text-teal-living mb-5">
+          <div className="mt-8">
+            <h3 className="text-xs uppercase tracking-[0.2em] font-semibold text-teal-living mb-4">
               Themes woven through the pages
             </h3>
-            <ul className="flex flex-wrap gap-3">
+            <ul className="flex flex-wrap gap-2.5">
               {THEMES.map((theme) => (
                 <li
                   key={theme}
-                  className="rounded-full border border-gold-harvest/50 bg-ivory-surface px-4 py-2 font-serif italic text-sm text-midnight"
+                  className="rounded-full border border-gold-harvest/40 bg-ivory-surface px-3.5 py-1.5 font-serif italic text-sm text-midnight"
                 >
                   {theme}
                 </li>
@@ -59,7 +59,7 @@ export const BookStory: React.FC = () => (
             </ul>
           </div>
 
-          <div className="mt-10 pt-8 border-t border-ivory-border">
+          <div className="mt-8 pt-8 border-t border-ivory-border">
             <h3 className="font-serif text-2xl sm:text-3xl font-bold text-midnight mb-3">
               From one story to a shared journey
             </h3>
@@ -70,7 +70,7 @@ export const BookStory: React.FC = () => (
             </p>
             <Link
               href="/contact?interest=book-resources"
-              className="inline-flex items-center gap-2.5 rounded-full bg-gold-harvest hover:bg-gold-light text-midnight-deep px-7 py-3.5 text-xs font-semibold uppercase tracking-wider transition-all duration-300"
+              className="inline-flex w-full sm:w-auto items-center justify-center gap-2.5 rounded-full bg-gold-harvest hover:bg-gold-light text-midnight-deep px-6 py-3.5 text-xs font-semibold uppercase tracking-wider transition-all duration-200"
             >
               <span>Register your book interest</span>
               <ArrowRight className="size-4" />

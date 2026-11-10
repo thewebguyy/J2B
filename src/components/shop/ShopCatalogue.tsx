@@ -71,31 +71,31 @@ export const ShopCatalogue: React.FC = () => (
         </div>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 lg:gap-8">
         {CATALOGUE.map((item) => (
           <article
             key={item.title}
-            className="flex flex-col justify-between p-7 sm:p-8 bg-ivory-canvas border-t-4 border-gold-harvest tactile-surface"
+            className="flex flex-col justify-between p-6 sm:p-7 rounded-2xl bg-ivory-canvas border border-ivory-border/90 border-t-2 border-t-gold-harvest tactile-surface hover:border-gold-harvest/50"
           >
             <div>
-              <div className="flex items-center justify-between mb-5">
-                <span className="font-serif italic text-3xl font-bold text-gold-harvest/60">
+              <div className="flex items-center justify-between mb-4">
+                <span className="font-serif italic text-2xl sm:text-3xl font-bold text-gold-harvest/60">
                   {item.number}
                 </span>
-                <span className="rounded-full border border-midnight/25 px-3 py-1 text-[10px] uppercase tracking-[0.18em] font-semibold text-midnight/70">
+                <span className="rounded-full border border-midnight/20 bg-ivory-surface px-2.5 py-1 text-[10px] uppercase tracking-[0.16em] font-semibold text-midnight/70">
                   Future offering
                 </span>
               </div>
-              <h3 className="font-serif text-2xl font-bold text-midnight mb-3">
+              <h3 className="font-serif text-xl sm:text-2xl font-bold text-midnight mb-2">
                 {item.title}
               </h3>
-              <p className="font-sans text-sm sm:text-base text-charcoal/80 leading-relaxed">
+              <p className="font-sans text-xs sm:text-sm text-charcoal/80 leading-relaxed">
                 {item.description}
               </p>
             </div>
             <Link
               href={`/contact?interest=${item.interest}`}
-              className="mt-6 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.16em] text-teal-living hover:text-gold-deep transition-colors"
+              className="mt-5 inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-teal-living hover:text-gold-deep transition-colors min-h-[36px]"
             >
               <span>Register interest</span>
               <ArrowRight className="size-3.5" />

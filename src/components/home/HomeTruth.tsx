@@ -69,13 +69,13 @@ export const HomeTruth: React.FC = () => {
             
             {/* Stage 01: Life Transitions */}
             <article className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
-              <div className="lg:col-span-6 relative pl-6 sm:pl-8 border-l-2 border-gold-harvest/60">
-                <div className="flex items-baseline gap-4 mb-3">
-                  <span className="font-serif italic text-6xl sm:text-7xl text-gold-harvest/45 font-bold leading-none select-none">
+              <div className="lg:col-span-6 relative pl-5 sm:pl-7 border-l-2 border-gold-harvest/70">
+                <div className="flex items-baseline gap-3 sm:gap-4 mb-3">
+                  <span className="font-serif italic text-5xl sm:text-6xl text-gold-harvest/40 font-bold leading-none select-none">
                     01
                   </span>
                   <div>
-                    <span className="text-xs uppercase tracking-[0.18em] font-semibold text-teal-living block">
+                    <span className="text-[11px] uppercase tracking-[0.18em] font-semibold text-teal-living block">
                       Somewhere to breathe
                     </span>
                     <h3 className="font-serif text-2xl sm:text-3xl font-bold text-midnight mt-1">
@@ -88,9 +88,9 @@ export const HomeTruth: React.FC = () => {
                 </p>
               </div>
 
-              {/* In-practice note (descriptive, not a testimonial) */}
-              <div className="lg:col-span-5 lg:col-start-8 lg:mt-6 bg-ivory-canvas p-6 sm:p-7 border border-ivory-border">
-                <span className="font-serif italic text-xs text-teal-living block mb-2">
+              {/* In-practice note */}
+              <div className="lg:col-span-5 lg:col-start-8 lg:mt-4 rounded-xl bg-ivory-canvas p-5 sm:p-6 border border-ivory-border/90">
+                <span className="font-serif italic text-xs text-teal-living block mb-1.5">
                   In practice
                 </span>
                 <p className="font-serif italic text-base sm:text-lg text-midnight/90 leading-relaxed">
@@ -99,11 +99,11 @@ export const HomeTruth: React.FC = () => {
               </div>
             </article>
 
-            {/* Stage 02: The Messy Middle (Eliminated redundant duplicate pull-quote) */}
+            {/* Stage 02: The Messy Middle */}
             <article className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
               {/* Paired Editorial Margin Reflection on Left */}
-              <div className="lg:col-span-5 order-2 lg:order-1 bg-ivory-canvas p-6 sm:p-7 border border-ivory-border">
-                <span className="font-serif italic text-xs text-gold-deep block mb-2">
+              <div className="lg:col-span-5 order-2 lg:order-1 rounded-xl bg-ivory-canvas p-5 sm:p-6 border border-ivory-border/90">
+                <span className="font-serif italic text-xs text-gold-deep block mb-1.5">
                   In practice
                 </span>
                 <p className="font-serif italic text-base sm:text-lg text-midnight/90 leading-relaxed">
@@ -111,17 +111,17 @@ export const HomeTruth: React.FC = () => {
                 </p>
               </div>
 
-              <div className="lg:col-span-6 lg:col-start-7 order-1 lg:order-2 bg-ivory-canvas border-l-4 border-gold-harvest p-7 sm:p-10 shadow-xs">
-                <div className="flex items-baseline justify-between mb-4">
+              <div className="lg:col-span-6 lg:col-start-7 order-1 lg:order-2 rounded-xl bg-ivory-canvas border-l-2 border-gold-harvest p-6 sm:p-8 shadow-sm">
+                <div className="flex items-baseline justify-between mb-3">
                   <div>
-                    <span className="text-xs uppercase tracking-[0.18em] font-semibold text-gold-deep block">
+                    <span className="text-[11px] uppercase tracking-[0.18em] font-semibold text-gold-deep block">
                       Where most of life happens
                     </span>
-                    <h3 className="font-serif text-2xl sm:text-3xl lg:text-[2.15rem] font-bold text-midnight mt-1">
+                    <h3 className="font-serif text-2xl sm:text-3xl lg:text-[2rem] font-bold text-midnight mt-1">
                       The Messy Middle
                     </h3>
                   </div>
-                  <span className="font-serif italic text-6xl sm:text-7xl text-gold-harvest/45 font-bold leading-none select-none">
+                  <span className="font-serif italic text-5xl sm:text-6xl text-gold-harvest/40 font-bold leading-none select-none">
                     02
                   </span>
                 </div>
@@ -133,13 +133,13 @@ export const HomeTruth: React.FC = () => {
 
             {/* Stage 03: True Companionship */}
             <article className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
-              <div className="lg:col-span-6 relative pl-6 sm:pl-8 border-l-2 border-teal-living/60">
-                <div className="flex items-baseline gap-4 mb-3">
-                  <span className="font-serif italic text-6xl sm:text-7xl text-gold-harvest/45 font-bold leading-none select-none">
+              <div className="lg:col-span-6 relative pl-5 sm:pl-7 border-l-2 border-teal-living/70">
+                <div className="flex items-baseline gap-3 sm:gap-4 mb-3">
+                  <span className="font-serif italic text-5xl sm:text-6xl text-gold-harvest/40 font-bold leading-none select-none">
                     03
                   </span>
                   <div>
-                    <span className="text-xs uppercase tracking-[0.18em] font-semibold text-midnight block">
+                    <span className="text-[11px] uppercase tracking-[0.18em] font-semibold text-midnight block">
                       Side by side
                     </span>
                     <h3 className="font-serif text-2xl sm:text-3xl font-bold text-midnight mt-1">
@@ -152,8 +152,8 @@ export const HomeTruth: React.FC = () => {
                 </p>
               </div>
 
-              <div className="lg:col-span-5 lg:col-start-8 lg:mt-4 bg-ivory-canvas p-6 sm:p-7 border border-ivory-border">
-                <span className="font-serif italic text-xs text-teal-living block mb-2">
+              <div className="lg:col-span-5 lg:col-start-8 lg:mt-4 rounded-xl bg-ivory-canvas p-5 sm:p-6 border border-ivory-border/90">
+                <span className="font-serif italic text-xs text-teal-living block mb-1.5">
                   In practice
                 </span>
                 <p className="font-serif italic text-base sm:text-lg text-midnight/90 leading-relaxed">

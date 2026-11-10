@@ -178,7 +178,7 @@ export const CommunitySteps: React.FC = () => {
                   <div
                     className={`lg:hidden absolute left-0 top-1 size-9 rounded-full flex items-center justify-center font-serif text-sm font-bold border-2 transition-colors duration-300 ${
                       isReached
-                        ? "bg-gold-harvest text-midnight-deep border-gold-harvest shadow-xs"
+                        ? "bg-gold-harvest text-midnight-deep border-gold-harvest shadow-sm"
                         : "bg-ivory-canvas text-midnight border-gold-harvest/50"
                     }`}
                   >

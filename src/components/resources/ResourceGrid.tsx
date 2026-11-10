@@ -57,21 +57,21 @@ export const ResourceGrid: React.FC = () => (
         {RESOURCES.map((resource) => (
           <article
             key={resource.title}
-            className="flex flex-col justify-between p-7 sm:p-9 bg-ivory-canvas border-t-4 border-gold-harvest tactile-surface"
+            className="flex flex-col justify-between p-6 sm:p-8 rounded-2xl bg-ivory-canvas border border-ivory-border/90 border-t-2 border-t-gold-harvest tactile-surface hover:border-gold-harvest/50"
           >
             <div>
-              <div className="flex items-center justify-between mb-5">
-                <span className="font-serif italic text-4xl font-bold text-gold-harvest/60">
+              <div className="flex items-center justify-between mb-4">
+                <span className="font-serif italic text-3xl sm:text-4xl font-bold text-gold-harvest/60">
                   {resource.number}
                 </span>
-                <span className="rounded-full border border-teal-living/40 px-3 py-1 text-[10px] uppercase tracking-[0.18em] font-semibold text-teal-living">
+                <span className="rounded-full border border-teal-living/40 bg-teal-subtle/50 px-3 py-1 text-[10px] uppercase tracking-[0.16em] font-semibold text-teal-living">
                   In development
                 </span>
               </div>
-              <h3 className="font-serif text-2xl sm:text-3xl font-bold text-midnight mb-3 leading-tight">
+              <h3 className="font-serif text-2xl sm:text-3xl font-bold text-midnight mb-2.5 leading-tight">
                 {resource.title}
               </h3>
-              <p className="font-sans text-base text-charcoal/80 leading-relaxed">
+              <p className="font-sans text-sm sm:text-base text-charcoal/80 leading-relaxed">
                 {resource.description}
               </p>
             </div>
@@ -79,7 +79,7 @@ export const ResourceGrid: React.FC = () => (
         ))}
       </div>
 
-      <div className="mt-10 rounded-2xl border border-ivory-border bg-ivory-canvas p-6 sm:p-8">
+      <div className="mt-8 rounded-2xl border border-ivory-border bg-ivory-canvas p-6 sm:p-8">
         <p className="font-sans text-sm sm:text-base text-charcoal/80 leading-relaxed">
           Several of these resources draw on a faith-based perspective. They are optional
           companions, and Journey2Better remains a welcoming space for people of all backgrounds
@@ -87,10 +87,10 @@ export const ResourceGrid: React.FC = () => (
         </p>
       </div>
 
-      <div className="mt-10 flex flex-col sm:flex-row sm:items-center gap-4">
+      <div className="mt-8 flex flex-col sm:flex-row sm:items-center gap-4">
         <Link
           href="/contact?interest=book-resources"
-          className="inline-flex items-center justify-center gap-2.5 rounded-full bg-midnight hover:bg-midnight-deep text-ivory-canvas px-7 py-3.5 text-xs font-semibold uppercase tracking-wider border border-gold-harvest/45 transition-all duration-300"
+          className="inline-flex w-full sm:w-auto items-center justify-center gap-2.5 rounded-full bg-midnight hover:bg-midnight-deep text-ivory-canvas px-6 py-3.5 text-xs font-semibold uppercase tracking-wider border border-gold-harvest/45 transition-all duration-200"
         >
           <span>Register resource interest</span>
           <ArrowRight className="size-4 text-gold-harvest" />

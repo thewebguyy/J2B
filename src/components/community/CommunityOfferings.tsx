@@ -105,7 +105,7 @@ export const CommunityOfferings: React.FC = () => {
             </div>
 
             {/* Column 3: Offset Editorial Ledger */}
-            <div className="lg:col-span-5 lg:mt-6 bg-ivory-canvas/90 border-l-2 border-teal-living p-6 sm:p-8 tactile-surface">
+            <div className="lg:col-span-5 lg:mt-6 rounded-2xl bg-ivory-canvas/90 border border-ivory-border border-l-2 border-l-teal-living p-6 sm:p-8 tactile-surface">
               <div className="flex items-center justify-between mb-5 pb-3 border-b border-ivory-border">
                 <h4 className="font-serif italic text-lg font-bold text-midnight">
                   What to expect
@@ -129,7 +129,7 @@ export const CommunityOfferings: React.FC = () => {
         {/* Spread 02: Life Stories & Personal Growth — Deep Sanctuary Editorial Band with Right-Aligned Architecture */}
         <article
           id={OFFERINGS[1].id}
-          className="relative my-8 sm:my-12 bg-midnight-deep text-ivory-surface p-8 sm:p-12 lg:p-16 border-l-4 border-gold-harvest overflow-hidden"
+          className="relative my-8 sm:my-12 rounded-2xl bg-midnight-deep text-ivory-surface p-8 sm:p-12 lg:p-16 border-l-4 border-gold-harvest overflow-hidden"
         >
           {/* Subtle Botanical Watermark on Right */}
           <div className="pointer-events-none absolute -right-10 -bottom-10 opacity-30" aria-hidden="true">
@@ -212,7 +212,7 @@ export const CommunityOfferings: React.FC = () => {
                 {OFFERINGS[2].highlights.map((item, idx) => (
                   <div
                     key={item}
-                    className="p-5 bg-ivory-canvas border-t-2 border-gold-harvest/60 tactile-surface"
+                    className="p-5 rounded-xl bg-ivory-canvas border border-ivory-border/80 border-t-2 border-t-gold-harvest/60 tactile-surface"
                   >
                     <span className="font-serif italic text-xs text-teal-living font-semibold block mb-1.5">
                       0{idx + 1}

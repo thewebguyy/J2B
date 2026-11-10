@@ -276,7 +276,7 @@ export const EnquiryForm: React.FC = () => {
           <button
             type="submit"
             disabled={status === "submitting"}
-            className="inline-flex items-center justify-center gap-2.5 rounded-full bg-midnight hover:bg-midnight-deep disabled:opacity-60 text-ivory-canvas px-8 py-3.5 text-xs font-semibold uppercase tracking-wider border border-gold-harvest/45 transition-all duration-300"
+            className="inline-flex w-full sm:w-auto items-center justify-center gap-2.5 rounded-full bg-midnight hover:bg-midnight-deep disabled:opacity-60 text-ivory-canvas px-8 py-3.5 text-xs font-semibold uppercase tracking-wider border border-gold-harvest/45 transition-all duration-200 min-h-[48px]"
           >
             <span>{status === "submitting" ? "Sending…" : "Send enquiry"}</span>
             <ArrowRight className="size-4 text-gold-harvest" />
