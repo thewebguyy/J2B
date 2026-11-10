@@ -5,7 +5,7 @@ import { Mail, MessageCircle, ArrowUpRight } from "lucide-react";
 import { LogoMark } from "@/components/brand/LogoMark";
 
 const footerLinkClass =
-  "inline-flex items-center min-h-[44px] py-1.5 hover:text-gold-harvest transition-colors";
+  "flex items-center min-h-[44px] w-full py-1.5 hover:text-gold-harvest transition-colors";
 
 export const Footer: React.FC = () => {
   return (
@@ -13,10 +13,10 @@ export const Footer: React.FC = () => {
       <div className="relative mx-auto max-w-7xl px-6 sm:px-10 lg:px-12 z-10">
 
         {/* Three-Column Mobile-First Footer Grid */}
-        <div className="pb-10 sm:pb-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-12 border-b border-ivory-surface/15">
+        <div className="pb-10 sm:pb-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-10 border-b border-ivory-surface/15">
 
           {/* Column 1: What is Journey2Better? */}
-          <div className="lg:col-span-5 flex flex-col justify-between">
+          <div className="lg:col-span-4 flex flex-col justify-between">
             <div>
               <LogoMark size="footer" showTagline={false} className="mb-4" />
               <p className="text-ivory-surface/85 text-sm leading-relaxed max-w-sm font-sans mt-3">
@@ -79,14 +79,14 @@ export const Footer: React.FC = () => {
           </div>
 
           {/* Column 3: How do I contact the organization? */}
-          <div className="lg:col-span-3">
+          <div className="lg:col-span-4">
             <h2 className="font-sans text-xs font-semibold uppercase tracking-[0.2em] text-gold-harvest mb-4 pb-2 border-b border-ivory-surface/15">
               Contact
             </h2>
             <div className="space-y-2.5 text-xs font-sans text-ivory-surface/90">
               <a
                 href="mailto:hello@journey2better.com"
-                className="flex items-center justify-between gap-3 p-3 rounded-xl bg-ivory-surface/5 hover:bg-ivory-surface/10 border border-ivory-surface/15 transition-colors min-h-[52px]"
+                className="flex items-center justify-between gap-2.5 p-3 rounded-xl bg-ivory-surface/5 hover:bg-ivory-surface/10 border border-ivory-surface/15 transition-colors min-h-[52px]"
               >
                 <div className="flex items-center gap-2.5 min-w-0">
                   <Mail className="size-4 text-gold-harvest flex-shrink-0" aria-hidden="true" />
@@ -94,7 +94,7 @@ export const Footer: React.FC = () => {
                     <span className="block text-[10px] text-ivory-surface/75 uppercase tracking-wider">
                       Email
                     </span>
-                    <span className="font-medium text-white truncate block text-xs sm:text-sm">
+                    <span className="font-medium text-white block text-xs xl:text-sm break-all sm:break-normal">
                       hello@journey2better.com
                     </span>
                   </div>
@@ -106,7 +106,7 @@ export const Footer: React.FC = () => {
                 href="https://wa.me/447960964839"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-between gap-3 p-3 rounded-xl bg-ivory-surface/5 hover:bg-ivory-surface/10 border border-ivory-surface/15 transition-colors min-h-[52px]"
+                className="flex items-center justify-between gap-2.5 p-3 rounded-xl bg-ivory-surface/5 hover:bg-ivory-surface/10 border border-ivory-surface/15 transition-colors min-h-[52px]"
               >
                 <div className="flex items-center gap-2.5 min-w-0">
                   <MessageCircle className="size-4 text-gold-harvest flex-shrink-0" aria-hidden="true" />
@@ -114,7 +114,7 @@ export const Footer: React.FC = () => {
                     <span className="block text-[10px] text-ivory-surface/75 uppercase tracking-wider">
                       WhatsApp
                     </span>
-                    <span className="font-medium text-white block text-xs sm:text-sm">
+                    <span className="font-medium text-white block text-xs xl:text-sm">
                       +44 7960 964839
                     </span>
                   </div>

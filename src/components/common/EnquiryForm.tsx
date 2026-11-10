@@ -153,7 +153,7 @@ export const EnquiryForm: React.FC = () => {
             ))}
           </select>
           {fieldErrors.interest && (
-            <p id="interest-error" className="mt-2 text-sm text-red-600">
+            <p id="interest-error" className="mt-2 text-sm text-red-700">
               {fieldErrors.interest}
             </p>
           )}
@@ -177,7 +177,7 @@ export const EnquiryForm: React.FC = () => {
               className={`${inputClass} ${fieldErrors.name ? "border-red-500" : ""}`}
             />
             {fieldErrors.name && (
-              <p id="name-error" className="mt-2 text-sm text-red-600">
+              <p id="name-error" className="mt-2 text-sm text-red-700">
                 {fieldErrors.name}
               </p>
             )}
@@ -200,7 +200,7 @@ export const EnquiryForm: React.FC = () => {
               className={`${inputClass} ${fieldErrors.email ? "border-red-500" : ""}`}
             />
             {fieldErrors.email && (
-              <p id="email-error" className="mt-2 text-sm text-red-600">
+              <p id="email-error" className="mt-2 text-sm text-red-700">
                 {fieldErrors.email}
               </p>
             )}
@@ -237,7 +237,7 @@ export const EnquiryForm: React.FC = () => {
             className={`${inputClass} resize-y`}
           />
           {fieldErrors.message && (
-            <p id="message-error" className="mt-2 text-sm text-red-600">
+            <p id="message-error" className="mt-2 text-sm text-red-700">
               {fieldErrors.message}
             </p>
           )}
@@ -261,7 +261,7 @@ export const EnquiryForm: React.FC = () => {
           </label>
         </div>
         {fieldErrors.consent && (
-          <p id="consent-error" className="-mt-3 text-sm text-red-600">
+          <p id="consent-error" className="-mt-3 text-sm text-red-700">
             {fieldErrors.consent}
           </p>
         )}

@@ -66,7 +66,7 @@ export const EventsTimeline: React.FC = () => {
 
           {/* Cyclical Wheel of Becoming SVG Indicator */}
           <div className="lg:col-span-5 flex lg:justify-end">
-            <div className="inline-flex items-center gap-5 bg-ivory-surface/80 border border-gold-harvest/40 px-6 py-4">
+            <div className="inline-flex items-center gap-5 rounded-2xl bg-ivory-surface/80 border border-gold-harvest/40 px-6 py-4">
               <svg
                 viewBox="0 0 88 88"
                 className="size-16 flex-shrink-0 overflow-visible"
@@ -167,7 +167,7 @@ export const EventsTimeline: React.FC = () => {
 
           {/* Mobile Vertical Golden Spine */}
           <div
-            className="md:hidden pointer-events-none absolute left-4 top-4 bottom-4 w-0.5 bg-gradient-to-b from-teal-living via-gold-harvest to-midnight"
+            className="md:hidden pointer-events-none absolute left-[21px] top-4 bottom-4 w-0.5 bg-gradient-to-b from-teal-living via-gold-harvest to-midnight"
             aria-hidden="true"
           />
 
@@ -181,7 +181,7 @@ export const EventsTimeline: React.FC = () => {
                   key={stage.id}
                   onMouseEnter={() => setActiveStage(idx)}
                   onFocus={() => setActiveStage(idx)}
-                  className={`md:col-span-4 pl-12 md:pl-0 relative transition-all duration-400 ${
+                  className={`md:col-span-4 pl-14 md:pl-0 relative transition-all duration-300 ${
                     idx === 1 ? "md:mt-8" : idx === 2 ? "md:mt-16" : ""
                   }`}
                 >
@@ -191,7 +191,7 @@ export const EventsTimeline: React.FC = () => {
                       type="button"
                       onClick={() => setActiveStage(idx)}
                       aria-label={`Highlight ${stage.title} (${stage.phase})`}
-                      className={`absolute left-0 md:static size-9 md:size-12 rounded-full flex items-center justify-center font-serif italic text-sm md:text-lg font-bold border-2 transition-all duration-300 ${
+                      className={`absolute left-0 md:static size-11 md:size-12 rounded-full flex items-center justify-center font-serif italic text-base md:text-lg font-bold border-2 transition-all duration-300 ${
                         isSelected
                           ? "bg-midnight-deep text-gold-harvest border-gold-harvest shadow-[0_0_20px_rgba(213,160,68,0.4)] scale-105"
                           : "bg-ivory-canvas text-midnight border-gold-harvest/50 hover:border-gold-harvest"
@@ -212,7 +212,7 @@ export const EventsTimeline: React.FC = () => {
 
                   {/* Editorial Stage Content */}
                   <div
-                    className={`p-6 sm:p-8 border-l-2 transition-all duration-400 ${
+                    className={`p-6 sm:p-8 rounded-2xl border-l-2 transition-all duration-300 ${
                       isSelected
                         ? "bg-ivory-surface border-gold-harvest shadow-[0_12px_32px_-12px_rgba(2,64,77,0.1)]"
                         : "bg-ivory-canvas/60 border-ivory-border hover:bg-ivory-surface/70"
@@ -234,14 +234,14 @@ export const EventsTimeline: React.FC = () => {
                     </p>
 
                     {/* Smooth Accordion Expansion for Gathering Cadence Note */}
-                    <div className="pt-4 border-t border-ivory-border/80">
+                    <div className="pt-2 border-t border-ivory-border/80">
                       <button
                         type="button"
                         onClick={() =>
                           setExpandedDetail(isExpanded ? null : idx)
                         }
                         aria-expanded={isExpanded}
-                        className="w-full flex items-center justify-between text-left text-xs uppercase tracking-[0.18em] font-semibold text-midnight hover:text-teal-living transition-colors py-1"
+                        className="w-full min-h-[44px] flex items-center justify-between text-left text-xs uppercase tracking-[0.18em] font-semibold text-midnight hover:text-teal-living transition-colors py-2.5"
                       >
                         <span>About this format</span>
                         <ChevronDown

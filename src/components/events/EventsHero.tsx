@@ -26,7 +26,7 @@ export const EventsHero: React.FC = () => {
 
               <h1 className="font-serif editorial-display font-bold text-midnight reveal-heading">
                 Some moments are{" "}
-                <span className="italic font-normal text-gold-harvest block sm:inline">
+                <span className="italic font-normal text-gold-deep block sm:inline">
                   better shared.
                 </span>
               </h1>
@@ -37,13 +37,13 @@ export const EventsHero: React.FC = () => {
                 The founder’s ambitions include annual events, retreats, travel and social experiences that bring people together. These are future plans; dates, locations and availability are TBC.
               </p>
 
-              <div className="flex flex-col sm:flex-row sm:items-center gap-4">
-                <MagneticButton href="#gatherings" variant="primary" className="w-full sm:w-auto">
+              <div className="flex flex-col sm:flex-row sm:flex-wrap sm:items-center gap-3.5">
+                <MagneticButton href="#gatherings" variant="primary" className="w-full sm:w-auto sm:whitespace-nowrap">
                   <span>Explore Future Plans</span>
-                  <ArrowRight className="size-4 text-gold-harvest" />
+                  <ArrowRight className="size-4 text-gold-harvest flex-shrink-0" />
                 </MagneticButton>
 
-                <MagneticButton href="#rhythm" variant="outline" className="w-full sm:w-auto">
+                <MagneticButton href="#rhythm" variant="outline" className="w-full sm:w-auto sm:whitespace-nowrap">
                   <span>Planning Status</span>
                 </MagneticButton>
               </div>

@@ -92,11 +92,13 @@ export const Navigation: React.FC = () => {
 
   // Lock body scroll and prevent background interaction while mobile drawer is open
   useEffect(() => {
+    const header = document.querySelector("header");
     const main = document.getElementById("main-content");
     const footer = document.querySelector("footer");
 
     if (mobileMenuOpen) {
       document.body.style.overflow = "hidden";
+      header?.setAttribute("inert", "");
       main?.setAttribute("inert", "");
       main?.setAttribute("aria-hidden", "true");
       footer?.setAttribute("inert", "");
@@ -106,6 +108,7 @@ export const Navigation: React.FC = () => {
       });
     } else {
       document.body.style.overflow = "";
+      header?.removeAttribute("inert");
       main?.removeAttribute("inert");
       main?.removeAttribute("aria-hidden");
       footer?.removeAttribute("inert");
@@ -114,6 +117,7 @@ export const Navigation: React.FC = () => {
 
     return () => {
       document.body.style.overflow = "";
+      header?.removeAttribute("inert");
       main?.removeAttribute("inert");
       main?.removeAttribute("aria-hidden");
       footer?.removeAttribute("inert");
@@ -223,159 +227,162 @@ export const Navigation: React.FC = () => {
   const isExploreActive = EXPLORE_LINKS.some((item) => pathname === item.href);
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled || mobileMenuOpen
-          ? "bg-ivory-canvas/95 backdrop-blur-md shadow-[0_4px_24px_-8px_rgba(2,64,77,0.06)] border-b border-ivory-border/80 py-3 sm:py-3.5"
-          : "bg-transparent py-4 sm:py-5"
-      }`}
-    >
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-5 sm:px-8 lg:px-12">
-        {/* Brand Lockup */}
-        <Link
-          href="/"
-          className="group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-harvest rounded-lg flex-shrink-0"
-          aria-label="Journey 2 Better Homepage"
-        >
-          <LogoMark size="nav" />
-        </Link>
+    <>
+      <header
+        aria-hidden={mobileMenuOpen ? "true" : undefined}
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+          scrolled
+            ? "bg-ivory-canvas/95 backdrop-blur-md shadow-[0_4px_24px_-8px_rgba(2,64,77,0.06)] border-b border-ivory-border/80 py-2 sm:py-2.5"
+            : "bg-ivory-canvas/95 backdrop-blur-sm border-b border-ivory-border/50 py-2 sm:py-2.5"
+        }`}
+      >
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-5 sm:px-8 lg:px-12">
+          {/* Brand Lockup */}
+          <Link
+            href="/"
+            className="group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-harvest rounded-lg flex-shrink-0"
+            aria-label="Journey 2 Better Homepage"
+          >
+            <LogoMark size="nav" />
+          </Link>
 
-        {/* Desktop Editorial Navigation (Clean, composed, 1024px+) */}
-        <nav
-          className="hidden lg:flex items-center gap-7 xl:gap-8 text-[13.5px] font-sans tracking-[0.02em] text-midnight/85"
-          aria-label="Primary Navigation"
-        >
-          {PRIMARY_LINKS.map((link) => {
-            const isActive = pathname === link.href;
-            return (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={`relative py-2 transition-colors duration-200 hover:text-midnight font-medium whitespace-nowrap ${
-                  isActive ? "text-midnight font-semibold" : "text-midnight/80"
+          {/* Desktop Editorial Navigation (Clean, composed, 1024px+) */}
+          <nav
+            className="hidden lg:flex items-center gap-7 xl:gap-8 text-[13.5px] font-sans tracking-[0.02em] text-midnight/85"
+            aria-label="Primary Navigation"
+          >
+            {PRIMARY_LINKS.map((link) => {
+              const isActive = pathname === link.href;
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={`relative py-2 transition-colors duration-200 hover:text-midnight font-medium whitespace-nowrap ${
+                    isActive ? "text-midnight font-semibold" : "text-midnight/80"
+                  }`}
+                  aria-current={isActive ? "page" : undefined}
+                >
+                  <span>{link.label}</span>
+                  {isActive && (
+                    <span
+                      className="absolute -bottom-0.5 left-0 right-0 h-[2px] bg-gold-harvest rounded-full"
+                      aria-hidden="true"
+                    />
+                  )}
+                </Link>
+              );
+            })}
+
+            {/* Accessible "Explore" Dropdown Menu */}
+            <div
+              className="relative"
+              ref={dropdownRef}
+              onBlur={(event) => {
+                if (exploreMenuOpen && !dropdownRef.current?.contains(event.relatedTarget as Node)) {
+                  setExploreMenuOpen(false);
+                }
+              }}
+            >
+              <button
+                ref={exploreTriggerRef}
+                id="explore-menu-button"
+                type="button"
+                onClick={() => setExploreMenuOpen((prev) => !prev)}
+                onKeyDown={handleExploreTriggerKeyDown}
+                aria-expanded={exploreMenuOpen}
+                aria-haspopup="menu"
+                aria-controls="explore-menu"
+                className={`relative inline-flex items-center gap-1.5 py-2 transition-colors duration-200 hover:text-midnight font-medium whitespace-nowrap ${
+                  isExploreActive ? "text-midnight font-semibold" : "text-midnight/80"
                 }`}
-                aria-current={isActive ? "page" : undefined}
               >
-                <span>{link.label}</span>
-                {isActive && (
+                <span>Explore</span>
+                <ChevronDown
+                  className={`size-3.5 text-muted-foreground transition-transform duration-200 ${
+                    exploreMenuOpen ? "rotate-180" : ""
+                  }`}
+                  aria-hidden="true"
+                />
+                {isExploreActive && (
                   <span
                     className="absolute -bottom-0.5 left-0 right-0 h-[2px] bg-gold-harvest rounded-full"
                     aria-hidden="true"
                   />
                 )}
-              </Link>
-            );
-          })}
+              </button>
 
-          {/* Accessible "Explore" Dropdown Menu */}
-          <div
-            className="relative"
-            ref={dropdownRef}
-            onBlur={(event) => {
-              if (exploreMenuOpen && !dropdownRef.current?.contains(event.relatedTarget as Node)) {
-                setExploreMenuOpen(false);
-              }
-            }}
-          >
-            <button
-              ref={exploreTriggerRef}
-              id="explore-menu-button"
-              type="button"
-              onClick={() => setExploreMenuOpen((prev) => !prev)}
-              onKeyDown={handleExploreTriggerKeyDown}
-              aria-expanded={exploreMenuOpen}
-              aria-haspopup="menu"
-              aria-controls="explore-menu"
-              className={`relative inline-flex items-center gap-1.5 py-2 transition-colors duration-200 hover:text-midnight font-medium whitespace-nowrap ${
-                isExploreActive ? "text-midnight font-semibold" : "text-midnight/80"
-              }`}
-            >
-              <span>Explore</span>
-              <ChevronDown
-                className={`size-3.5 text-muted-foreground transition-transform duration-200 ${
-                  exploreMenuOpen ? "rotate-180" : ""
-                }`}
-                aria-hidden="true"
-              />
-              {isExploreActive && (
-                <span
-                  className="absolute -bottom-0.5 left-0 right-0 h-[2px] bg-gold-harvest rounded-full"
-                  aria-hidden="true"
-                />
-              )}
-            </button>
-
-            {exploreMenuOpen && (
-              <div
-                id="explore-menu"
-                role="menu"
-                aria-labelledby="explore-menu-button"
-                className="absolute left-1/2 -translate-x-1/2 top-full mt-2 w-72 rounded-2xl bg-ivory-canvas p-2.5 shadow-[0_18px_40px_-10px_rgba(2,64,77,0.18)] border border-ivory-border z-50"
-              >
-                {EXPLORE_LINKS.map((item, idx) => {
-                  const isActive = pathname === item.href;
-                  return (
-                    <Link
-                      key={item.href}
-                      ref={(el) => {
-                        menuItemRefs.current[idx] = el;
-                      }}
-                      href={item.href}
-                      role="menuitem"
-                      aria-current={isActive ? "page" : undefined}
-                      onKeyDown={(e) => handleMenuItemKeyDown(e, idx)}
-                      onClick={() => setExploreMenuOpen(false)}
-                      className={`group block p-3 rounded-xl transition-colors ${
-                        isActive
-                          ? "bg-ivory-surface border-l-2 border-gold-harvest text-midnight font-semibold"
-                          : "hover:bg-ivory-surface text-midnight/85 hover:text-midnight"
-                      }`}
-                    >
-                      <div className="flex items-center justify-between text-sm font-medium">
-                        <span>{item.label}</span>
-                        {isActive && (
-                          <span className="size-1.5 rounded-full bg-gold-harvest" aria-hidden="true" />
+              {exploreMenuOpen && (
+                <div
+                  id="explore-menu"
+                  role="menu"
+                  aria-labelledby="explore-menu-button"
+                  className="absolute left-1/2 -translate-x-1/2 top-full mt-2 w-72 rounded-2xl bg-ivory-canvas p-2.5 shadow-[0_18px_40px_-10px_rgba(2,64,77,0.18)] border border-ivory-border z-50"
+                >
+                  {EXPLORE_LINKS.map((item, idx) => {
+                    const isActive = pathname === item.href;
+                    return (
+                      <Link
+                        key={item.href}
+                        ref={(el) => {
+                          menuItemRefs.current[idx] = el;
+                        }}
+                        href={item.href}
+                        role="menuitem"
+                        aria-current={isActive ? "page" : undefined}
+                        onKeyDown={(e) => handleMenuItemKeyDown(e, idx)}
+                        onClick={() => setExploreMenuOpen(false)}
+                        className={`group block p-3 rounded-xl transition-colors ${
+                          isActive
+                            ? "bg-ivory-surface border-l-2 border-gold-harvest text-midnight font-semibold"
+                            : "hover:bg-ivory-surface text-midnight/85 hover:text-midnight"
+                        }`}
+                      >
+                        <div className="flex items-center justify-between text-sm font-medium">
+                          <span>{item.label}</span>
+                          {isActive && (
+                            <span className="size-1.5 rounded-full bg-gold-harvest" aria-hidden="true" />
+                          )}
+                        </div>
+                        {item.description && (
+                          <p className="mt-1 text-xs text-muted-foreground font-normal leading-normal">
+                            {item.description}
+                          </p>
                         )}
-                      </div>
-                      {item.description && (
-                        <p className="mt-1 text-xs text-muted-foreground font-normal leading-normal">
-                          {item.description}
-                        </p>
-                      )}
-                    </Link>
-                  );
-                })}
-              </div>
-            )}
+                      </Link>
+                    );
+                  })}
+                </div>
+              )}
+            </div>
+          </nav>
+
+          {/* Desktop Header Action Button */}
+          <div className="hidden lg:flex items-center gap-3.5 flex-shrink-0">
+            <Link
+              href="/contact"
+              className="group inline-flex items-center gap-2 rounded-full bg-midnight px-5 py-2.5 text-xs font-semibold uppercase tracking-wider text-ivory-canvas border border-gold-harvest/40 shadow-sm transition-all duration-200 hover:bg-midnight-deep hover:border-gold-harvest min-h-[44px] whitespace-nowrap"
+            >
+              <span>Get in Touch</span>
+              <ArrowRight className="size-3.5 text-gold-harvest transition-transform duration-200 group-hover:translate-x-0.5" />
+            </Link>
           </div>
-        </nav>
 
-        {/* Desktop Header Action Button */}
-        <div className="hidden lg:flex items-center gap-3.5 flex-shrink-0">
-          <Link
-            href="/contact"
-            className="group inline-flex items-center gap-2 rounded-full bg-midnight px-5 py-2.5 text-xs font-semibold uppercase tracking-wider text-ivory-canvas border border-gold-harvest/40 shadow-sm transition-all duration-200 hover:bg-midnight-deep hover:border-gold-harvest min-h-[44px] whitespace-nowrap"
+          {/* Mobile Hamburger Toggle Button */}
+          <button
+            ref={mobileTriggerRef}
+            type="button"
+            onClick={() => setMobileMenuOpen((prev) => !prev)}
+            aria-expanded={mobileMenuOpen}
+            aria-controls="mobile-navigation"
+            aria-label="Open menu"
+            className="lg:hidden inline-flex items-center justify-center min-h-[44px] min-w-[44px] p-2.5 text-midnight hover:text-teal-living focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-harvest rounded-xl bg-ivory-surface/90 border border-ivory-border"
           >
-            <span>Get in Touch</span>
-            <ArrowRight className="size-3.5 text-gold-harvest transition-transform duration-200 group-hover:translate-x-0.5" />
-          </Link>
+            <Menu className="size-5 text-midnight" aria-hidden="true" />
+          </button>
         </div>
+      </header>
 
-        {/* Mobile Hamburger Toggle Button */}
-        <button
-          ref={mobileTriggerRef}
-          type="button"
-          onClick={() => setMobileMenuOpen((prev) => !prev)}
-          aria-expanded={mobileMenuOpen}
-          aria-controls="mobile-navigation"
-          aria-label="Open menu"
-          className="lg:hidden inline-flex items-center justify-center min-h-[44px] min-w-[44px] p-2.5 text-midnight hover:text-teal-living focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-harvest rounded-xl bg-ivory-surface/90 border border-ivory-border"
-        >
-          <Menu className="size-5 text-midnight" aria-hidden="true" />
-        </button>
-      </div>
-
-      {/* Full-Viewport Mobile Navigation Modal Drawer */}
+      {/* Full-Viewport Mobile Navigation Modal Drawer (Sibling to header so backdrop-filter never traps fixed inset-0) */}
       {mobileMenuOpen && (
         <div
           ref={drawerRef}
@@ -383,15 +390,15 @@ export const Navigation: React.FC = () => {
           role="dialog"
           aria-modal="true"
           aria-label="Site navigation"
-          className="lg:hidden fixed inset-0 z-50 bg-ivory-canvas flex flex-col justify-between overflow-y-auto"
+          className="lg:hidden fixed inset-0 z-[60] bg-ivory-canvas flex flex-col justify-between overflow-y-auto"
         >
           <div>
             {/* Modal Top Bar aligned cleanly with page header */}
-            <div className="flex items-center justify-between px-5 sm:px-8 py-4 border-b border-ivory-border/80 bg-ivory-canvas">
+            <div className="flex items-center justify-between px-5 sm:px-8 py-2 border-b border-ivory-border/80 bg-ivory-canvas">
               <Link
                 href="/"
                 onClick={() => setMobileMenuOpen(false)}
-                className="group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-harvest rounded-lg flex-shrink-0"
+                className="group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-harvest rounded-lg flex-shrink-0 min-h-[44px] inline-flex items-center"
                 aria-label="Journey 2 Better Homepage"
               >
                 <LogoMark size="nav" />
@@ -423,7 +430,7 @@ export const Navigation: React.FC = () => {
                       key={link.href}
                       href={link.href}
                       onClick={() => setMobileMenuOpen(false)}
-                      className={`flex items-center justify-between py-3 px-3.5 rounded-xl transition-colors font-serif text-xl sm:text-2xl min-h-[48px] ${
+                      className={`flex items-center justify-between py-2.5 px-3.5 rounded-xl transition-colors font-serif text-xl sm:text-2xl min-h-[46px] ${
                         isActive
                           ? "text-midnight bg-ivory-surface font-semibold border-l-2 border-gold-harvest"
                           : "text-midnight/85 hover:bg-ivory-surface/70 hover:text-midnight"
@@ -476,6 +483,6 @@ export const Navigation: React.FC = () => {
           </div>
         </div>
       )}
-    </header>
+    </>
   );
 };

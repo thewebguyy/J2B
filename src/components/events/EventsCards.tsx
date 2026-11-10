@@ -108,7 +108,7 @@ export const EventsCards: React.FC = () => {
               {/* Left Editorial Narrative (7 cols) */}
               <div className="lg:col-span-7">
                 <div className="flex flex-wrap items-center gap-3 mb-4">
-                  <span className="font-serif italic text-3xl font-bold text-gold-harvest">
+                  <span className="font-serif italic text-3xl font-bold text-gold-deep">
                     {EVENTS_DATA[0].number}
                   </span>
                   <span className="text-xs uppercase tracking-[0.22em] font-semibold text-teal-living">
@@ -126,7 +126,7 @@ export const EventsCards: React.FC = () => {
 
                 <a
                   href={EVENTS_DATA[0].ctaHref}
-                  className="inline-flex w-full sm:w-auto items-center justify-center gap-3 rounded-full bg-midnight hover:bg-midnight-deep text-ivory-canvas px-7 py-3.5 text-xs font-semibold uppercase tracking-wider border border-gold-harvest/40 transition-all duration-300 shadow-xs"
+                  className="inline-flex w-full sm:w-auto items-center justify-center gap-3 rounded-full bg-midnight hover:bg-midnight-deep text-ivory-canvas px-7 py-3.5 min-h-[46px] text-xs font-semibold uppercase tracking-wider border border-gold-harvest/40 transition-all duration-300 shadow-sm"
                 >
                   <span>{EVENTS_DATA[0].ctaText}</span>
                   <ArrowRight className="size-3.5 text-gold-harvest" />
@@ -174,7 +174,7 @@ export const EventsCards: React.FC = () => {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
               
               {/* Left Experience Architecture Column (5 cols) */}
-              <div className="lg:col-span-5 order-2 lg:order-1 bg-midnight-deep/80 p-7 sm:p-9 border-l-2 border-gold-harvest">
+              <div className="lg:col-span-5 order-2 lg:order-1 rounded-2xl bg-midnight-deep/80 p-7 sm:p-9 border border-gold-harvest/25 border-l-2 border-l-gold-harvest">
                 <div className="flex items-center justify-between mb-5 pb-3 border-b border-ivory-surface/15">
                   <h4 className="font-serif italic text-lg font-bold text-gold-harvest">
                     What to expect

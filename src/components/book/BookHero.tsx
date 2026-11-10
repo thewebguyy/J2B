@@ -72,7 +72,7 @@ export const BookHero: React.FC = () => (
               <div>
                 <span className="block h-px w-16 bg-gold-harvest/70 mb-4" aria-hidden="true" />
                 <p className="font-serif italic text-lg text-gold-harvest">Sade Omatsuli</p>
-                <p className="text-[10px] uppercase tracking-[0.24em] text-ivory-surface/60 mt-2">
+                <p className="text-[10px] uppercase tracking-[0.24em] text-ivory-surface/75 mt-2">
                   Journey2Better
                 </p>
               </div>

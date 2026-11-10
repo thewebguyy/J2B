@@ -62,7 +62,7 @@ export const MentorshipSpeaking: React.FC = () => (
               <div>
                 <div className="flex items-center justify-between mb-5 pb-3 border-b border-ivory-surface/15">
                   <div className="flex items-center gap-2.5">
-                    <Icon className="size-4.5 text-gold-harvest" />
+                    <Icon className="size-5 text-gold-harvest" aria-hidden="true" />
                     <span className="text-[10px] uppercase tracking-[0.2em] font-semibold text-gold-harvest">
                       {offer.eyebrow}
                     </span>
@@ -78,12 +78,12 @@ export const MentorshipSpeaking: React.FC = () => (
               <div>
                 <Link
                   href={offer.href}
-                  className="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full bg-gold-harvest hover:bg-gold-light text-midnight-deep px-5 py-3 text-xs font-semibold uppercase tracking-wider transition-all duration-200"
+                  className="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full bg-gold-harvest hover:bg-gold-light text-midnight-deep px-5 py-3.5 min-h-[46px] text-xs font-semibold uppercase tracking-wider transition-all duration-200"
                 >
                   <span>{offer.cta}</span>
-                  <ArrowRight className="size-3.5" />
+                  <ArrowRight className="size-3.5" aria-hidden="true" />
                 </Link>
-                <p className="mt-2.5 text-xs text-ivory-surface/60 font-sans">{offer.note}</p>
+                <p className="mt-2.5 text-xs text-ivory-surface/75 font-sans">{offer.note}</p>
               </div>
             </article>
           );

@@ -77,7 +77,7 @@ export default function RootLayout({
       </head>
       <body className="min-h-screen flex flex-col bg-ivory-canvas text-foreground antialiased selection:bg-teal-living selection:text-white botanical-grain">
         <Navigation />
-        <main id="main-content" className="flex-1 relative z-10 pt-20">
+        <main id="main-content" className="flex-1 relative z-10 pt-[94px] sm:pt-[106px]">
           {children}
         </main>
         <Footer />

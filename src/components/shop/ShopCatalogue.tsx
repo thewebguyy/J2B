@@ -95,7 +95,7 @@ export const ShopCatalogue: React.FC = () => (
             </div>
             <Link
               href={`/contact?interest=${item.interest}`}
-              className="mt-5 inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-teal-living hover:text-gold-deep transition-colors min-h-[36px]"
+              className="mt-4 inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-teal-living hover:text-gold-deep transition-colors min-h-[44px] py-2"
             >
               <span>Register interest</span>
               <ArrowRight className="size-3.5" />

@@ -61,7 +61,7 @@ export const MagneticButton: React.FC<MagneticButtonProps> = ({
     gold:
       "bg-gold-harvest hover:bg-gold-light text-midnight-deep border border-gold-deep/20 shadow-sm transition-all duration-200",
     outline:
-      "border border-midnight/40 bg-ivory-canvas/70 hover:border-midnight hover:bg-ivory-surface text-midnight transition-all duration-200",
+      "border border-midnight/40 bg-ivory-canvas/95 hover:border-midnight hover:bg-ivory-surface text-midnight shadow-sm transition-all duration-200",
   };
 
   const content = (
