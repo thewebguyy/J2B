@@ -316,7 +316,7 @@ export const Navigation: React.FC = () => {
                   id="explore-menu"
                   role="menu"
                   aria-labelledby="explore-menu-button"
-                  className="absolute left-1/2 -translate-x-1/2 top-full mt-2 w-72 rounded-2xl bg-ivory-canvas p-2.5 shadow-[0_18px_40px_-10px_rgba(2,64,77,0.18)] border border-ivory-border z-50"
+                  className="absolute left-1/2 top-full mt-2 w-72 rounded-2xl bg-ivory-canvas p-2.5 shadow-[0_18px_40px_-10px_rgba(2,64,77,0.18)] border border-ivory-border z-50 animate-dropdown-enter"
                 >
                   {EXPLORE_LINKS.map((item, idx) => {
                     const isActive = pathname === item.href;
@@ -390,7 +390,7 @@ export const Navigation: React.FC = () => {
           role="dialog"
           aria-modal="true"
           aria-label="Site navigation"
-          className="lg:hidden fixed inset-0 z-[60] bg-ivory-canvas flex flex-col justify-between overflow-y-auto"
+          className="lg:hidden fixed inset-0 z-[60] bg-ivory-canvas flex flex-col justify-between overflow-y-auto animate-drawer-enter"
         >
           <div>
             {/* Modal Top Bar aligned cleanly with page header */}

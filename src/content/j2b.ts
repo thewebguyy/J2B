@@ -98,7 +98,14 @@ export const j2bContent = {
     "Community conversations are not substitutes for medical, mental-health, financial or legal advice.",
     "Moderators may remove harmful content and intervene when conversations become unsafe."
   ],
-  "healthDisclaimer": "This is general information and support group, not medical advice. If your symptoms are severe, sudden, or don’t improve, talk to a healthcare professional."
+  "healthDisclaimer": "This is general information and support group, not medical advice. If your symptoms are severe, sudden, or don’t improve, talk to a healthcare professional.",
+  /** Client-supplied reflection preserved verbatim pending editorial sign-off on polished copy. */
+  "reflection": {
+    "eyebrow": "Founder’s Reflection",
+    "exactSource": "You don’t have to wait until on ur death bed to reflect on your life - Reflect now you have a chance to make it better",
+    "proposedPolished": "You don’t have to wait until you’re on your deathbed to reflect on your life. Reflect now, while you still have the chance to make it better.",
+    "attribution": "Sade Omatsuli • Founder, Journey2Better"
+  }
 } as const;
 
 /** Sprint 1 positioning derived from the founder's clarification, not a live service catalogue. */

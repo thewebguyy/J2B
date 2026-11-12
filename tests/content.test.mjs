@@ -132,3 +132,18 @@ test("About and Community pages render their Sprint 2 sections", () => {
   assert.ok(community.includes("CommunityGuidelines"), "Community page must render the guidelines");
   assert.ok(community.includes("CommunityOfferings"), "Community page must render the shared direction");
 });
+
+test("founder reflection source is preserved verbatim and surfaced on homepage", () => {
+  const content = read("src/content/j2b.ts");
+  assert.ok(
+    content.includes(
+      "You don’t have to wait until on ur death bed to reflect on your life - Reflect now you have a chance to make it better"
+    ),
+    "content layer must preserve exact client reflection wording"
+  );
+  const home = read("src/app/page.tsx");
+  assert.ok(home.includes("HomeReflection"), "homepage must render HomeReflection");
+
+  const logoMark = read("src/components/brand/LogoMark.tsx");
+  assert.ok(logoMark.includes('"/images/logo.jpeg"'), "LogoMark must use approved non-scripture logo.jpeg");
+});

@@ -3,6 +3,7 @@ import { brandPositioning, j2bContent } from "@/content/j2b";
 import Link from "next/link";
 import { Mail, MessageCircle, ArrowUpRight } from "lucide-react";
 import { LogoMark } from "@/components/brand/LogoMark";
+import { MotionReveal } from "@/components/common/MotionReveal";
 
 const footerLinkClass =
   "flex items-center min-h-[44px] w-full py-1.5 hover:text-gold-harvest transition-colors";
@@ -13,7 +14,8 @@ export const Footer: React.FC = () => {
       <div className="relative mx-auto max-w-7xl px-6 sm:px-10 lg:px-12 z-10">
 
         {/* Three-Column Mobile-First Footer Grid */}
-        <div className="pb-10 sm:pb-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-10 border-b border-ivory-surface/15">
+        <MotionReveal y={14} duration={0.65}>
+          <div className="pb-10 sm:pb-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-10 border-b border-ivory-surface/15">
 
           {/* Column 1: What is Journey2Better? */}
           <div className="lg:col-span-4 flex flex-col justify-between">
@@ -128,7 +130,8 @@ export const Footer: React.FC = () => {
             </p>
           </div>
 
-        </div>
+          </div>
+        </MotionReveal>
 
         {/* Health Disclaimer */}
         <p className="pt-6 pb-6 text-xs sm:text-sm leading-relaxed text-ivory-surface/80 border-b border-ivory-surface/15">
