@@ -182,3 +182,22 @@ Results in this environment: typecheck passed, lint passed (no warnings), 28/28
 tests passed. `npm ci`, `npm run build`, and `npm audit` require network and
 were blocked; build failure was limited to the offline Google Fonts fetch and
 is not a code regression.
+
+## 13. Editorial flag for client review (not changed by this branch)
+
+There is a discrepancy between the founder's verbatim reflection and what the
+homepage now renders:
+
+- `src/content/j2b.ts` keeps `reflection.exactSource` — Sade Omatsuli's original
+  wording — and still carries a comment saying it is "preserved verbatim pending
+  editorial sign-off on polished copy".
+- `src/components/home/HomeReflection.tsx` renders `reflection.proposedPolished`
+  (the corrected wording), while its own docstring still says it "Displays the
+  client-supplied reflection verbatim while proposed copy edits await approval".
+
+In other words, the polished wording is already live on the homepage, but the
+surrounding comments still describe it as awaiting approval. This branch does
+not modify either file; the discrepancy should be resolved with the client
+(accept the polished wording and update the comments, or revert to the verbatim
+quote) before release. Flagging rather than silently rewriting the founder's
+statement is intentional.
