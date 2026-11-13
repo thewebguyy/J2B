@@ -43,12 +43,50 @@ export const CONTACT_EMAIL = "hello@journey2better.com";
 
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 
+/** Hard cap on the JSON request body (name, email, country, message). */
+export const MAX_BODY_BYTES = 16 * 1024;
+
 export function isValidEmail(value: string): boolean {
   return value.length <= 254 && EMAIL_PATTERN.test(value.trim());
 }
 
 export function categoryLabel(id: string): string {
   return ENQUIRY_CATEGORIES.find((category) => category.id === id)?.label ?? id;
+}
+
+/** Escape user-supplied text before it is interpolated into HTML email content. */
+export function escapeHtml(value: string): string {
+  return value
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
+}
+
+/** Accept only JSON request bodies (allows an optional charset suffix). */
+export function isJsonContentType(contentType: string | null): boolean {
+  return (
+    typeof contentType === "string" &&
+    contentType.trim().toLowerCase().startsWith("application/json")
+  );
+}
+
+/**
+ * Allow same-origin and configured origins, and non-browser clients that send
+ * no Origin header. Entries may contain a single `*` wildcard (e.g.
+ * "https://*.vercel.app").
+ */
+export function isAllowedOrigin(
+  origin: string | null | undefined,
+  allowed: readonly string[]
+): boolean {
+  if (!origin) return true;
+  const normalized = origin.trim().replace(/\/+$/, "");
+  return allowed.some((entry) => {
+    if (!entry) return false;
+    if (!entry.includes("*")) return entry === normalized;
+    const escaped = entry.replace(/[.+?^${}()|[\]\\]/g, "\\$&").replace(/\*/g, ".*");
+    return new RegExp(`^${escaped}$`).test(normalized);
+  });
 }
 
 export type EnquiryInput = {

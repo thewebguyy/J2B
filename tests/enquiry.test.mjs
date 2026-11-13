@@ -3,6 +3,10 @@ import assert from "node:assert/strict";
 import {
   ENQUIRY_CATEGORIES,
   CATEGORY_IDS,
+  MAX_BODY_BYTES,
+  escapeHtml,
+  isAllowedOrigin,
+  isJsonContentType,
   isValidEmail,
   parseEnquiry,
 } from "../src/lib/enquiry.ts";
@@ -78,4 +82,33 @@ test("validates email addresses sensibly", () => {
   assert.equal(isValidEmail("plainaddress"), false);
   assert.equal(isValidEmail("a@b"), false);
   assert.equal(isValidEmail("a b@c.co"), false);
+});
+
+test("escapes user text for HTML email rendering", () => {
+  assert.equal(escapeHtml('<a href="x">&</a>'), "&lt;a href=\"x\"&gt;&amp;&lt;/a&gt;");
+  assert.equal(escapeHtml("plain text"), "plain text");
+});
+
+test("accepts only JSON content types", () => {
+  assert.equal(isJsonContentType("application/json"), true);
+  assert.equal(isJsonContentType("application/json; charset=utf-8"), true);
+  assert.equal(isJsonContentType("Application/JSON"), true);
+  assert.equal(isJsonContentType("text/plain"), false);
+  assert.equal(isJsonContentType(null), false);
+});
+
+test("allows non-browser and same-origin requests, rejects unknown origins", () => {
+  const allowed = ["https://j2b-theta.vercel.app", "https://*.vercel.app"];
+  assert.equal(isAllowedOrigin(null, allowed), true);
+  assert.equal(isAllowedOrigin(undefined, allowed), true);
+  assert.equal(isAllowedOrigin("", allowed), true);
+  assert.equal(isAllowedOrigin("https://j2b-theta.vercel.app", allowed), true);
+  assert.equal(isAllowedOrigin("https://j2b-abc123-team.vercel.app", allowed), true);
+  assert.equal(isAllowedOrigin("https://evil.example.com", allowed), false);
+  assert.equal(isAllowedOrigin("https://notvercel.example.com", allowed), false);
+});
+
+test("defines a sane request body limit", () => {
+  assert.ok(MAX_BODY_BYTES > 0);
+  assert.ok(MAX_BODY_BYTES <= 64 * 1024);
 });
