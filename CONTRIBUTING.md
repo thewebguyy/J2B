@@ -38,4 +38,6 @@ npm run build
 
 Re-encode video from `assets/video-sources/` using `scripts/encode-videos.py`
 when the approved footage changes. Commit only optimized renditions under
-`public/videos/`; keep originals outside `public/`.
+`public/videos/`. Originals are kept out of `public/` and are currently tracked
+under `assets/video-sources/` so they are preserved; the longer-term plan is
+object storage or Git LFS, at which point they can be untracked.

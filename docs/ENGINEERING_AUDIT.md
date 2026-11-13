@@ -35,30 +35,30 @@ The architecture is appropriate for the product stage. See
 
 ### Confirmed by code
 
-- **S3 — No secrets committed.** No hardcoded credentials, tokens, or `.env`
+- **P3 — No secrets committed.** No hardcoded credentials, tokens, or `.env`
   files in tracked files. `RESEND_API_KEY` is read from the server environment
   only; the single public variable is the non-secret
   `NEXT_PUBLIC_ENQUIRY_ENABLED` flag.
-- **S3 — Safe HTML emission.** The only `dangerouslySetInnerHTML` is the static
+- **P3 — Safe HTML emission.** The only `dangerouslySetInnerHTML` is the static
   JSON-LD block in `src/app/layout.tsx`, and `<` is escaped. Enquiry email HTML
   escapes name/email/country/message (`escapeHtml` in the API route).
-- **S3 — No dangerous client code.** No `eval`, `innerHTML`, `localStorage`,
+- **P3 — No dangerous client code.** No `eval`, `innerHTML`, `localStorage`,
   `sessionStorage`, or unexpected outbound requests. The only outbound call is
   the server-side Resend delivery; external links are limited to WhatsApp and
   mailto.
-- **S3 — Enquiry validation is server-side.** Categories are allowlisted,
+- **P3 — Enquiry validation is server-side.** Categories are allowlisted,
   lengths capped, email normalized and pattern-checked, and consent is
   mandatory (`src/lib/enquiry.ts`).
 
 ### Requiring runtime verification
 
-- **S2 — Rate limiting is in-memory and per-instance**
+- **P2 — Rate limiting is in-memory and per-instance**
   (`src/app/api/enquiries/route.ts`). It resets on cold start and is not shared
   across serverless instances. Low impact while the route is disabled; upgrade
   to a durable limiter (Upstash) before enabling delivery at volume.
-- **S2 — No request body-size cap.** `request.json()` parses unbounded input;
+- **P2 — No request body-size cap.** `request.json()` parses unbounded input;
   length checks run after parse. Add a content-length guard or capped read.
-- **S2 — Dependency findings could not be re-verified.** `npm audit` cannot
+- **P2 — Dependency findings could not be re-verified.** `npm audit` cannot
   reach the registry from this sandbox. A prior networked run reported nine
   findings (eight moderate, one high) concentrated in the dev toolchain
   (`postcss` transitive of `next`, `minimatch` transitive of

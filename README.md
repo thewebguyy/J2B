@@ -25,7 +25,8 @@ availability are marked TBC until the client confirms them.
 
 ## Requirements
 
-- Node.js 20 or newer
+- Node.js 22.6 or newer (the tests import TypeScript directly, which needs
+  Node's type-stripping support); Node 24 LTS is recommended
 - npm
 
 ## Running locally
