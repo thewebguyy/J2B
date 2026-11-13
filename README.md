@@ -1,91 +1,73 @@
-# Journey 2 Better — Becoming: A Living Journey
+# Journey 2 Better
 
-> A bespoke, editorial digital sanctuary for an emerging UK-based community built on personal development, mindful gatherings, and everyday encouragement for anyone navigating life's changes.
+Journey2Better is a personal-development brand founded by Sade Omatsuli. The
+site begins with the founder's forthcoming memoir and opens into a wider journey
+of life lessons, personal growth, community and mutual encouragement.
 
-[![Next.js](https://img.shields.io/badge/Next.js-15.5-black?style=flat-square&logo=next.js)](https://nextjs.org/)
-[![React](https://img.shields.io/badge/React-19.0-61dafb?style=flat-square&logo=react)](https://react.dev/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.7-blue?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4-38bdf8?style=flat-square&logo=tailwind-css)](https://tailwindcss.com/)
-[![GSAP](https://img.shields.io/badge/Motion-GSAP_3.12-88ce02?style=flat-square&logo=greensock)](https://gsap.com/)
+The site is built with Next.js 15 (App Router), React 19, TypeScript, Tailwind
+CSS and GSAP. It is deployed on Vercel.
 
----
+## Pages
 
-## ✦ The Creative Concept: Becoming — A Living Journey
+| Route | Purpose |
+| --- | --- |
+| `/` | Homepage with the cinematic hero |
+| `/about` | Story, founder, values and vision |
+| `/community` | Pillars, guidelines and disclaimer |
+| `/events` | Better Together, annual events and the memoir launch |
+| `/book` | The memoir |
+| `/resources` | Provisional journals, study guide and cards |
+| `/shop` | Merchandise catalogue preview |
+| `/contact` | Enquiry form |
 
-**"The journey towards becoming a better version of yourself is personal, but it does not have to be lonely."**
+Several offerings are intentionally provisional. Dates, prices, formats and
+availability are marked TBC until the client confirms them.
 
-Journey 2 Better is an authentic, art-directed sanctuary designed around the client's official brand logo. Moving far beyond generic templates or clinical wellness SaaS patterns, it weaves expressive editorial design, organic botanical illustration, thoughtful typography, and honest human-centred storytelling.
+## Requirements
 
----
+- Node.js 22.6 or newer (the tests import TypeScript directly, which needs
+  Node's type-stripping support); Node 24 LTS is recommended
+- npm
 
-## ✦ Canonical Brand Palette (Extracted From Official Logo)
-
-* **Midnight Teal (`#02404D`):** Primary grounding tone, silhouettes, editorial headings, and deep sanctuary threshold sections.
-* **Living Teal (`#036E76`):** Vibrancy, energy, right profile silhouette, and forward motion.
-* **Harvest Gold (`#D5A044`):** The ascending pathway ribbon, top sun beacon, and botanical leaf accents.
-* **Warm Ivory (`#FCF9E8`):** Canonical warm linen canvas extracted directly from the logo artwork.
-* **Soft Warm Parchment (`#F7F2E2`):** Textured card and container surfaces.
-* **Dark Slate Charcoal (`#12242B`):** High-legibility editorial typography (AAA contrast).
-
----
-
-## ✦ Core Pages & Architecture
-
-| Route | Page | Narrative Proposition | Highlights |
-| :--- | :--- | :--- | :--- |
-| `/` | **Homepage** | *"Every journey begins somewhere."* | Living brand moment, official logo lockup, the human truth of life transitions, the 4 Pillars of Becoming, and threshold invitation. |
-| `/about` | **About** | *"Becoming is not something we do alone."* | Founding intention, the sacred philosophy of the messy middle, the 4 anchoring values (Honesty, Belonging, Courage, Celebration), and future vision. |
-| `/community` | **Community** | *"There is room for you here."* | The 3 verified offerings (Community Circles, 1-on-1 Mentorship, Everyday Encouragement) and the 3-step Path of Becoming vertical journey. |
-| `/events` | **Events** | *"Some moments are better shared."* | Virtual Rise & Reflect Morning Circles, in-person Better Together London workshops, Annual Community Retreat, and the Gathering Rhythm. |
-
----
-
-## ✦ The Signature Visual System: The Path of Becoming
-
-Derived directly from the flowing golden pathway and ascending sun beacon in the official logo:
-* **Bespoke SVG Ribbon Paths (`PathRibbon`):** Flowing golden ribbons connecting narrative chapters.
-* **Botanical Leaf Accents (`BotanicalMotif`):** Organic dual-leaf motifs (Living Teal & Harvest Gold) echoing the logo's floral details.
-* **Authentic Brand Lockups (`LogoMark`):** High-density navigation mark, hero framed sanctuary artwork, and footer brand lockup with official tagline: *"Your companion on the journey to better"*.
-
----
-
-## ✦ Getting Started
-
-### Installation
+## Running locally
 
 ```bash
-git clone https://github.com/thewebguyy/J2B.git
-cd J2B
-npm install
-```
-
-### Development & Production
-
-```bash
-# Run local dev server
+npm ci
 npm run dev
-
-# Run type checking
-npx tsc --noEmit
-
-# Build production bundle
-npm run build
-
-# Start production server
-npm run start
 ```
 
----
+Open `http://localhost:3000`.
 
-## ✦ Deployment
+## Validation
 
-Optimized for continuous zero-config deployment on [Vercel](https://vercel.com):
-* **Framework Preset:** `Next.js`
-* **Root Directory:** `./`
-* **Production Branch:** `main` / `master`
+```bash
+npm run typecheck   # TypeScript
+npm run lint        # ESLint via Next.js
+npm test            # Node test runner
+npm run build       # Production build
+```
 
----
+## Environment variables
 
-## ✦ License & Rights
+Copy `.env.example` to `.env.local` for local work. The enquiry form is disabled
+until email delivery is configured. See [SECURITY.md](SECURITY.md) for the
+server-only variables. Never commit real secrets.
 
-Private repository. All rights reserved &copy; Journey 2 Better.
+## Media pipeline
+
+The cinematic hero and page backgrounds are muted, optimized MP4 files under
+`public/videos/`, with poster frames under `public/videos/posters/`. Original
+footage lives outside `public/` in `assets/video-sources/` and is re-encoded
+with `scripts/encode-videos.py`. See [ARCHITECTURE.md](ARCHITECTURE.md) for
+details and long-term storage guidance.
+
+## Deployment
+
+Vercel builds from the `main` branch for production and creates preview
+deployments for other branches. No `vercel.json` is required; the framework is
+auto-detected.
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md). To report a security issue, follow
+[SECURITY.md](SECURITY.md).

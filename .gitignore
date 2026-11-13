@@ -39,3 +39,16 @@ Thumbs.db
 
 # Temporary scratch & test artifacts
 /scratch/
+
+# Video source footage and encoding intermediates (keep outside public/ and
+# prefer object storage or Git LFS for long-term ownership)
+/*.mp4
+/*.mov
+/*.webm
+
+# Local browser QA artifacts
+/public/qa-screens/
+
+# Python tooling caches for the media scripts
+__pycache__/
+*.pyc

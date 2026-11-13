@@ -1,3 +1,11 @@
+"""Reproducible video pipeline for the J2B hero and page backgrounds.
+
+Requirements (run once, not part of the web app): `pip install imageio-ffmpeg`
+
+Reads original footage from assets/video-sources/ and writes the optimized,
+muted MP4 renditions and poster frames into public/videos/. Original sources
+are intentionally kept OUTSIDE public/ so they are not served or deployed.
+"""
 import subprocess
 import os
 import imageio_ffmpeg
@@ -47,7 +55,9 @@ os.makedirs(poster_dir, exist_ok=True)
 stats = []
 
 for sc in SCENES:
-    src = sc["source"]
+    src = os.path.join("assets", "video-sources", sc["source"])
+    if not os.path.exists(src):
+        raise FileNotFoundError(f"Missing source video: {src}")
     orig_size = os.path.getsize(src)
     print(f"\nProcessing {sc['title']} ({src}, {orig_size / 1024 / 1024:.2f} MB)...")
     
