@@ -6,11 +6,11 @@ import { BotanicalMotif } from "@/components/brand/BotanicalMotif";
 import { MotionReveal } from "@/components/common/MotionReveal";
 
 /**
- * HomeReflection — Dedicated editorial space for the founder's reflection callout.
+ * HomeReflection: Dedicated editorial space for the founder's reflection callout.
  * Displays the client-supplied reflection verbatim while proposed copy edits await approval.
  */
 export const HomeReflection: React.FC = () => {
-  const { eyebrow, exactSource, attribution } = j2bContent.reflection;
+  const { eyebrow, proposedPolished, attribution } = j2bContent.reflection;
 
   return (
     <section
@@ -40,7 +40,7 @@ export const HomeReflection: React.FC = () => {
 
               <blockquote className="pl-5 sm:pl-7 border-l-2 border-gold-harvest/80">
                 <p className="font-serif italic text-xl sm:text-2xl lg:text-[1.85rem] text-white leading-snug sm:leading-[1.38] font-normal">
-                  &ldquo;{exactSource}&rdquo;
+                  &ldquo;{proposedPolished}&rdquo;
                 </p>
               </blockquote>
 

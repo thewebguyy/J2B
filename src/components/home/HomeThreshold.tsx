@@ -17,7 +17,7 @@ const ONBOARDING_TIERS = [
   },
   {
     "tier": "02 • Looking ahead",
-    "commitment": "Details TBC",
+    "commitment": "Details coming soon",
     "title": "Explore future plans",
     "description": "Learn about the planned Better Together programme, annual events and memoir launch. Dates and details are still to be confirmed.",
     "actionLabel": "Explore Future Plans",

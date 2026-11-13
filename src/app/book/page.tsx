@@ -5,7 +5,7 @@ import { BookStory } from "@/components/book/BookStory";
 
 export const metadata: Metadata = pageMetadata(
   "/book",
-  "My Journey to Becoming Better — A Memoir by Sade Omatsuli",
+  "My Journey to Becoming Better: A Memoir by Sade Omatsuli",
   "A forthcoming reflective memoir rooted in Sade Omatsuli's lived experiences, lessons and the founding of Journey2Better."
 );
 

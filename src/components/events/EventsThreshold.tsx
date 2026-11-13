@@ -31,7 +31,7 @@ export const EventsThreshold: React.FC = () => {
             </h2>
 
             <p className="font-sans text-base sm:text-lg text-ivory-surface/85 max-w-2xl leading-relaxed">
-              Email or message us about future plans. Dates and details are TBC. Contacting us is an enquiry, not a confirmed booking, registration or book order.
+              Email or message us about future plans. Dates and details are coming soon. Contacting us is an enquiry, not a confirmed booking, registration or book order.
             </p>
           </div>
 
@@ -49,7 +49,7 @@ export const EventsThreshold: React.FC = () => {
             </div>
 
             <div className="pt-6 border-t border-ivory-surface/15 w-full text-xs text-ivory-surface/75">
-              Details TBC &bull;{" "}
+              Details coming soon &bull;{" "}
               <a href="mailto:hello@journey2better.com" className="underline decoration-gold-harvest/50 hover:text-gold-harvest transition-colors">
                 hello@journey2better.com
               </a>{" "}

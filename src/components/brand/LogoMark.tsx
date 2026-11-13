@@ -8,10 +8,10 @@ interface LogoMarkProps {
 }
 
 const OFFICIAL_LOGO_SRC = "/images/logo.jpeg";
-const OFFICIAL_LOGO_ALT = "Journey 2 Better — Your companion on the journey to better";
+const OFFICIAL_LOGO_ALT = "Journey 2 Better: Your companion on the journey to better";
 
 /**
- * LogoMark — Official Journey 2 Better Brand Artwork Lockup
+ * LogoMark: Official Journey 2 Better Brand Artwork Lockup
  * Renders the unmodified client-provided artwork (1206x986, matching j2b logo.jpeg)
  * at its native proportions within an intentional Warm Ivory surface frame.
  */

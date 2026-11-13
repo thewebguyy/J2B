@@ -115,7 +115,7 @@ export const EnquiryForm: React.FC = () => {
       <fieldset ref={focusRef} className="space-y-6">
         <legend className="sr-only">Contact enquiry</legend>
 
-        {/* Honeypot — hidden from real users. */}
+        {/* Honeypot: hidden from real users. */}
         <div className="sr-only" aria-hidden="true">
           <label htmlFor="website">Website</label>
           <input
@@ -287,7 +287,7 @@ export const EnquiryForm: React.FC = () => {
       <div aria-live="polite" className="mt-6">
         {status === "success" && (
           <p className="rounded-lg bg-teal-subtle px-4 py-4 text-sm text-midnight">
-            Thank you — your enquiry has been received. We will be in touch at the email address
+            Thank you: your enquiry has been received. We will be in touch at the email address
             you provided.
           </p>
         )}

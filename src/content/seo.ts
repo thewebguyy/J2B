@@ -7,7 +7,7 @@ export const socialImage = {
   url: "/images/sanctuary-gathering.jpg",
   width: 1200,
   height: 800,
-  alt: "Journey 2 Better — Life Stories, Personal Growth & Community",
+  alt: "Journey 2 Better: Life Stories, Personal Growth & Community",
 };
 
 export function pageMetadata(path: string, title: string, description: string): Metadata {

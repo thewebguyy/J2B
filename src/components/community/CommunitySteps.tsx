@@ -14,7 +14,7 @@ const STEPS = [
   {
     "step": "02",
     "title": "Explore the plans",
-    "subtitle": "Details TBC",
+    "subtitle": "Details coming soon",
     "description": "Learn about the planned Better Together programme and future events. Dates, locations and participation details are still to be confirmed."
   },
   {

@@ -60,7 +60,7 @@ export const BookHero: React.FC = () => (
           </div>
         </div>
 
-        {/* Text-led book treatment — no fabricated cover imagery. */}
+        {/* Text-led book treatment: no fabricated cover imagery. */}
         <div className="lg:col-span-5 flex justify-center lg:justify-end">
           <figure className="relative w-full max-w-sm aspect-[3/4] rounded-xl overflow-hidden bg-midnight-deep border border-gold-harvest/40 shadow-[0_30px_70px_-30px_rgba(2,64,77,0.55)]">
             <div className="absolute inset-0 opacity-25 pointer-events-none" aria-hidden="true">

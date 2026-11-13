@@ -8,7 +8,7 @@ interface BotanicalMotifProps {
 }
 
 /**
- * BotanicalMotif — Organic dual-leaf & silhouette-inspired motif directly inspired by the logo's floral accents.
+ * BotanicalMotif: Organic dual-leaf & silhouette-inspired motif directly inspired by the logo's floral accents.
  * Comprises one Living Teal leaf and one Harvest Gold leaf in graceful organic curve, plus watermark/silhouette variants.
  */
 export const BotanicalMotif: React.FC<BotanicalMotifProps> = ({

@@ -14,7 +14,7 @@ interface MotionRevealProps {
 }
 
 /**
- * MotionReveal — Progressive, accessibility-first scroll entrance using GSAP ScrollTrigger.
+ * MotionReveal: Progressive, accessibility-first scroll entrance using GSAP ScrollTrigger.
  * Elements always render visible in SSR/initial DOM and animate smoothly once on scroll.
  * Clears transform and opacity inline styles upon completion and skips cleanly under prefers-reduced-motion.
  */

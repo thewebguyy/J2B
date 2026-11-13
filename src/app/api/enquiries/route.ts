@@ -91,7 +91,7 @@ export async function POST(request: NextRequest) {
     from: fromEmail,
     to: [toEmail],
     reply_to: result.data.email,
-    subject: "Website enquiry — " + categoryLabel(result.data.interest),
+    subject: "Website enquiry: " + categoryLabel(result.data.interest),
     html: renderEmail(result.data),
   };
 

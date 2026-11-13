@@ -11,7 +11,7 @@ const PHASES = [
     label: "Step 1 • Deciding",
     title: "Something needs to change",
     description:
-      "Noticing you want more from this part of your life — and taking a first step.",
+      "Noticing you want more from this part of your life, and taking a first step.",
   },
   {
     number: "02",
@@ -91,7 +91,7 @@ export const AboutMessyMiddle: React.FC = () => {
             {/* Right Expansive Editorial Prose & Pull-Quote */}
             <div className="lg:col-span-7 space-y-6 text-ivory-surface/85 font-sans text-base sm:text-lg leading-relaxed">
               <p>
-                People celebrate the start and the finish. But most of life happens in between — the uncertain mornings, the self-doubt, the career wobbles and the changes that don&apos;t fit a neat story.
+                People celebrate the start and the finish. But most of life happens in between: the uncertain mornings, the self-doubt, the career wobbles and the changes that don&apos;t fit a neat story.
               </p>
 
               <blockquote className="pl-5 sm:pl-7 border-l-2 border-gold-harvest py-1.5 my-5">

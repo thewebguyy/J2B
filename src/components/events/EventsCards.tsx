@@ -9,14 +9,14 @@ const EVENTS_DATA = [
     "chapter": "Planned Programme",
     "number": "01",
     "title": "Becoming Better Together",
-    "format": "Workshop programme • Details TBC",
-    "cadence": "10 weeks • Start TBC",
+    "format": "Workshop programme • Details coming soon",
+    "cadence": "10 weeks • Start date coming soon",
     "description": "A planned 10-week small-group workshop programme for shared learning and personal growth. The start date and participation details are to be confirmed.",
     "features": [
       "10-week programme",
-      "Start date TBC",
-      "Format and location TBC",
-      "Participation details TBC"
+      "Start date coming soon",
+      "Format and location coming soon",
+      "Participation details coming soon"
     ],
     "ctaText": "Ask About Becoming Better Together",
     "ctaHref": "/contact?interest=workshops-retreats-events"
@@ -26,13 +26,13 @@ const EVENTS_DATA = [
     "chapter": "Future Gatherings",
     "number": "02",
     "title": "Annual Events & Shared Experiences",
-    "format": "Dates and locations TBC",
-    "cadence": "Annual events • Details TBC",
+    "format": "Dates and locations coming soon",
+    "cadence": "Annual events • Details coming soon",
     "description": "Annual events, retreats, travel and enjoyable social experiences are part of the founder’s ambitions for Journey2Better. No dates, venues or travel arrangements are confirmed here.",
     "features": [
       "Annual events are planned",
       "Retreats and travel are ambitions",
-      "Formats and locations TBC",
+      "Formats and locations coming soon",
       "No bookings available here"
     ],
     "ctaText": "Ask About Future Events",
@@ -43,13 +43,13 @@ const EVENTS_DATA = [
     "chapter": "Forthcoming Memoir",
     "number": "03",
     "title": "The Founder’s Memoir & Book Launch",
-    "format": "Launch details TBC",
-    "cadence": "Date and details TBC",
+    "format": "Launch details coming soon",
+    "cadence": "Date and details coming soon",
     "description": "Sade Omatsuli’s reflective memoir is the starting point of a wider personal-development journey. Publication and launch details are to be confirmed.",
     "features": [
       "Life experiences and lessons learned",
-      "Launch date and location TBC",
-      "Book price and availability TBC",
+      "Launch date and location coming soon",
+      "Book price and availability coming soon",
       "No orders or payments taken here"
     ],
     "ctaText": "Ask About the Memoir",
@@ -81,7 +81,7 @@ export const EventsCards: React.FC = () => {
 
           <div className="lg:col-span-5 lg:pl-6 border-l border-gold-harvest/50">
             <p className="font-sans text-base sm:text-lg text-charcoal/80 leading-relaxed">
-              Programmes and events are in development. Enquiries are welcome; dates, locations and participation details remain TBC.
+              Programmes and events are in development. Enquiries are welcome; dates, locations and participation details will be announced soon.
             </p>
           </div>
         </div>

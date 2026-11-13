@@ -71,7 +71,7 @@ export const CommunityHero: React.FC = () => {
           </div>
         </div>
 
-        {/* Safe Sanctuary — Intimate Horizontal Editorial Spread connected by a delicate gold thread */}
+        {/* Safe Sanctuary: Intimate Horizontal Editorial Spread connected by a delicate gold thread */}
         <div className="relative pt-12 border-t border-gold-harvest/40">
           {/* Flowing Golden Thread Connector */}
           <div
@@ -97,7 +97,7 @@ export const CommunityHero: React.FC = () => {
             {/* Spread Column 1: Zero Judgment */}
             <article className="md:col-span-4 relative pl-5 border-l border-teal-living/35">
               <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-teal-living block mb-2">
-                01 &mdash; Safe
+                01: Safe
               </span>
               <h2 className="font-serif text-2xl sm:text-[1.65rem] font-bold text-midnight mb-3">
                 No judgement
@@ -110,7 +110,7 @@ export const CommunityHero: React.FC = () => {
             {/* Spread Column 2: Shared Celebration (Elevated Stagger) */}
             <article className="md:col-span-4 md:mt-5 relative pl-5 border-l border-gold-harvest/60">
               <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-gold-deep block mb-2">
-                02 &mdash; Supportive
+                02: Supportive
               </span>
               <h2 className="font-serif text-2xl sm:text-[1.65rem] font-bold text-midnight mb-3">
                 Friends, not rivals
@@ -123,7 +123,7 @@ export const CommunityHero: React.FC = () => {
             {/* Spread Column 3: Everyday Connection */}
             <article className="md:col-span-4 md:mt-10 relative pl-5 border-l border-midnight/30">
               <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-midnight block mb-2">
-                03 &mdash; Ongoing
+                03: Ongoing
               </span>
               <h2 className="font-serif text-2xl sm:text-[1.65rem] font-bold text-midnight mb-3">
                 Encouragement along the way

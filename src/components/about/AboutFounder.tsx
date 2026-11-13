@@ -12,7 +12,7 @@ export const AboutFounder: React.FC = () => {
     <section className="relative py-20 sm:py-28 bg-ivory-surface border-y border-ivory-border overflow-hidden">
       <div className="relative mx-auto max-w-7xl px-6 sm:px-10 lg:px-14">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
-          {/* Intentional text-led monogram placeholder — no approved photograph exists. */}
+          {/* Intentional text-led monogram placeholder: no approved photograph exists. */}
           <div className="lg:col-span-4">
             <figure className="relative aspect-[4/5] w-full max-w-sm mx-auto lg:mx-0 rounded-2xl overflow-hidden bg-midnight-deep border border-gold-harvest/40 shadow-[0_24px_60px_-24px_rgba(2,64,77,0.45)] flex items-center justify-center">
               <BotanicalMotif

@@ -15,11 +15,11 @@ export const j2bContent = {
     "name": "Sade Omatsuli",
     "email": "hello@journey2better.com",
     "biography": [
-      "Sade Omatsuli is a Registered Mental Health Nurse, Chartered Manager (CMI), and faith-based leader with over three decades of professional and personal experience spanning healthcare, leadership, ministry, and emotional wellbeing. Born in Lagos, Nigeria, and raised across several Nigerian cities, she relocated to the United Kingdom in 1989, where she built a distinguished career in mental health practice and health promotion and management",
-      "Sade trained at the School of Psychiatric Nursing in Aro, Abeokuta, before completing further studies in the United Kingdom, including a BA (Hons) in Health Promotion, an MBA, a Chartered Manager qualification with the Chartered Management Institute, and a PG Certificate in Education.  Alongside her clinical and managerial work in NHS, she has served as a parish pastor and faith-based mentor, offering spiritual guidance and leadership within her community.",
+      "Sade Omatsuli is a Registered Mental Health Nurse, Chartered Manager (CMI), and faith-based leader with over three decades of professional and personal experience spanning healthcare, leadership, ministry, and emotional wellbeing. Born in Lagos, Nigeria, and raised across several Nigerian cities, she relocated to the United Kingdom in 1989, where she built a distinguished career in mental health practice and health promotion and management.",
+      "Sade trained at the School of Psychiatric Nursing in Aro, Abeokuta, before completing further studies in the United Kingdom, including a BA (Hons) in Health Promotion, an MBA, a Chartered Manager qualification with the Chartered Management Institute, and a PG Certificate in Education. Alongside her clinical and managerial work in NHS, she has served as a parish pastor and faith-based mentor, offering spiritual guidance and leadership within her community.",
       "Her writing is shaped by lived experience, cultural depth, and a profound understanding of human resilience. In this memoir, she reflects on identity, healing, boundaries, gratitude, and the lifelong process of becoming, inviting readers into their own journey of self-discovery and restoration.",
       "Sade resides in the United Kingdom, where she continues to serve, lead, write, and support others in their pursuit of wholeness and purpose.",
-      "If you would like to work with Sade — for personal growth support, or as a guest speaker or facilitator at your events — she can be reached at hello@journey2better.com."
+      "If you would like to work with Sade: for personal growth support, or as a guest speaker or facilitator at your events, she can be reached at hello@journey2better.com."
     ]
   },
   "vision": "A world in which people feel supported and empowered to grow through their experiences and to encourage others along the way",
@@ -42,7 +42,7 @@ export const j2bContent = {
     },
     {
       "title": "Growth",
-      "description": "reflects, learn and take constructive steps forward."
+      "description": "reflect, learn and take constructive steps forward."
     },
     {
       "title": "Hope",
@@ -57,7 +57,7 @@ export const j2bContent = {
       "description": "Listen carefully and disagree without hostility."
     }
   ],
-  "communityIntroduction": "Journey2Better is an inclusive community created from the founder’s conviction that life experiences—both joyful and difficult—can become valuable lessons. Men and women, across ages, backgrounds and beliefs, have wisdom to share and something to learn from one another.",
+  "communityIntroduction": "Journey2Better is an inclusive community created from the founder’s conviction that life experiences, both joyful and difficult, can become valuable lessons. Men and women, across ages, backgrounds and beliefs, have wisdom to share and something to learn from one another.",
   "pillars": [
     {
       "id": "life-lessons",
@@ -110,9 +110,9 @@ export const j2bContent = {
 
 /** Sprint 1 positioning derived from the founder's clarification, not a live service catalogue. */
 export const brandPositioning = {
-  title: "Journey 2 Better — Life Stories, Personal Growth & Community",
+  title: "Journey 2 Better: Life Stories, Personal Growth & Community",
   description: "Beginning with Sade Omatsuli’s forthcoming memoir, Journey2Better brings life lessons, personal growth and mutual encouragement into a shared journey of becoming better.",
   memoir: "Sade Omatsuli’s forthcoming memoir is the starting point: a reflection on life experiences and lessons learned, opening into a wider journey of personal growth, shared stories and encouragement.",
   future: "The vision reaches beyond the book: community, support for people exploring their own life stories, speaking and facilitation, annual events, retreats, travel and social experiences, alongside books, journals and motivational keepsakes. These are ambitions in development; availability and details are to be confirmed.",
-  availability: "Programmes, events and products are in development. Dates and details are TBC.",
+  availability: "Programmes, events and products are in development. Dates and details are coming soon.",
 } as const;

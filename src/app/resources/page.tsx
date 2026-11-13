@@ -6,7 +6,7 @@ import { MentorshipSpeaking } from "@/components/resources/MentorshipSpeaking";
 
 export const metadata: Metadata = pageMetadata(
   "/resources",
-  "Resources — Journals, Study Guide & Companion Tools",
+  "Resources: Journals, Study Guide & Companion Tools",
   "Provisional Journey2Better resources being developed alongside the memoir, including a 28-day journal, study guide, Daily Victories and declaration cards."
 );
 

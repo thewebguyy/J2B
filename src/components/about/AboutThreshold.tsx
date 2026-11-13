@@ -24,7 +24,7 @@ export const AboutThreshold: React.FC = () => {
             </div>
 
             <h2 className="font-serif editorial-h2 font-bold text-white leading-tight mb-6 reveal-heading">
-              We&apos;re still growing —{" "}
+              We&apos;re still growing,{" "}
               <span className="italic font-normal text-gold-harvest block mt-1">
                 and we&apos;d love you to be part of it.
               </span>

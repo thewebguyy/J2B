@@ -42,7 +42,7 @@ export const AboutHero: React.FC = () => {
             </h1>
 
             <p className="font-sans text-lg sm:text-xl text-charcoal/95 leading-relaxed font-normal max-w-2xl bg-ivory-canvas/80 sm:bg-transparent rounded-lg p-2 sm:p-0">
-              Journey2Better begins with life experiences and lessons learned — and a belief that we can encourage one another to grow.
+              Journey2Better begins with life experiences and lessons learned, and a belief that we can encourage one another to grow.
             </p>
           </div>
         </div>

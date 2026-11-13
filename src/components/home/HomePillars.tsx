@@ -22,7 +22,7 @@ export const HomePillars: React.FC = () => {
     <section className="relative py-16 sm:py-24 lg:py-28 bg-midnight-deep text-ivory-canvas overflow-hidden">
       <div className="relative mx-auto max-w-7xl px-5 sm:px-10 lg:px-14">
         
-        {/* Editorial Chapter Header — Inverted Warm Cream on Deep Midnight Teal */}
+        {/* Editorial Chapter Header: Inverted Warm Cream on Deep Midnight Teal */}
         <MotionReveal y={16} duration={0.65}>
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-end mb-12 sm:mb-16 pb-8 border-b border-ivory-canvas/15">
             <div className="lg:col-span-7">

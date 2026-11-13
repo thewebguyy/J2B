@@ -46,7 +46,7 @@ export const EventsHero: React.FC = () => {
             <div className="lg:col-span-5 lg:pb-2">
               <div className="bg-ivory-canvas/85 sm:bg-ivory-canvas/75 backdrop-blur-sm p-4 sm:p-5 rounded-2xl border border-gold-harvest/25 shadow-sm mb-6">
                 <p className="font-sans text-base sm:text-lg text-charcoal/95 leading-relaxed font-normal">
-                  The founder’s ambitions include annual events, retreats, travel and social experiences that bring people together. These are future plans; dates, locations and availability are TBC.
+                  The founder’s ambitions include annual events, retreats, travel and social experiences that bring people together. These are future plans; dates, locations and availability are coming soon.
                 </p>
               </div>
 
@@ -64,7 +64,7 @@ export const EventsHero: React.FC = () => {
           </div>
         </div>
 
-        {/* P1 — Editorial Pull-Quote Spread (Unboxed, directly on warm ivory canvas with rich-gold left border) */}
+        {/* P1: Editorial Pull-Quote Spread (Unboxed, directly on warm ivory canvas with rich-gold left border) */}
         <div className="relative max-w-5xl mx-auto lg:ml-14 pt-6 sm:pt-10">
           <blockquote className="relative pl-6 sm:pl-10 lg:pl-12 border-l-4 border-gold-harvest py-2">
             <div className="flex items-center gap-2.5 mb-4">

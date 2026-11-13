@@ -204,7 +204,7 @@ export const HomeTruth: React.FC = () => {
                   </span>
                 </div>
                 <p className="font-sans text-base sm:text-lg text-charcoal/85 leading-relaxed">
-                  Change is rarely neat. We&apos;re here for the in-between part — when you&apos;re letting go of who you were and not yet sure who you&apos;re becoming.
+                  Change is rarely neat. We&apos;re here for the in-between part, when you&apos;re letting go of who you were and not yet sure who you&apos;re becoming.
                 </p>
               </div>
             </article>

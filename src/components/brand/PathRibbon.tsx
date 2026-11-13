@@ -12,7 +12,7 @@ interface PathRibbonProps {
 }
 
 /**
- * PathRibbon — The Path of Becoming signature visual motif.
+ * PathRibbon: The Path of Becoming signature visual motif.
  * Derived from the flowing golden pathway and ascending sun beacon in the Journey 2 Better logo.
  */
 export const PathRibbon: React.FC<PathRibbonProps> = ({

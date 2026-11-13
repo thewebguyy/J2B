@@ -13,7 +13,7 @@ const OFFERINGS = [
       "Share only what you choose",
       "Respect privacy and differences",
       "Learn from different perspectives",
-      "Participation details TBC"
+      "Participation details coming soon"
     ]
   },
   {
@@ -25,7 +25,7 @@ const OFFERINGS = [
     "highlights": [
       "Writing support is an ambition",
       "No sessions are currently offered here",
-      "Format and availability TBC",
+      "Format and availability coming soon",
       "Questions are welcome by email"
     ]
   },
@@ -74,7 +74,7 @@ export const CommunityOfferings: React.FC = () => {
           </div>
         </div>
 
-        {/* Spread 01: Shared Experiences — Flush-left Oversized Gold Numeral & Offset Ledger */}
+        {/* Spread 01: Shared Experiences: Flush-left Oversized Gold Numeral & Offset Ledger */}
         <article
           id={OFFERINGS[0].id}
           className="relative py-12 sm:py-16 border-t border-ivory-border/90"
@@ -126,7 +126,7 @@ export const CommunityOfferings: React.FC = () => {
           </div>
         </article>
 
-        {/* Spread 02: Life Stories & Personal Growth — Deep Sanctuary Editorial Band with Right-Aligned Architecture */}
+        {/* Spread 02: Life Stories & Personal Growth: Deep Sanctuary Editorial Band with Right-Aligned Architecture */}
         <article
           id={OFFERINGS[1].id}
           className="relative my-8 sm:my-12 rounded-2xl bg-midnight-deep text-ivory-surface p-8 sm:p-12 lg:p-16 border-l-4 border-gold-harvest overflow-hidden"
@@ -175,7 +175,7 @@ export const CommunityOfferings: React.FC = () => {
           </div>
         </article>
 
-        {/* Spread 03: Mutual Encouragement — Open Two-Tone Editorial Essay & Horizontal Rhythm */}
+        {/* Spread 03: Mutual Encouragement: Open Two-Tone Editorial Essay & Horizontal Rhythm */}
         <article
           id={OFFERINGS[2].id}
           className="relative pt-12 sm:pt-16 pb-4 border-t border-ivory-border/90"

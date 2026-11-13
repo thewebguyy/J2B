@@ -8,17 +8,17 @@ const RHYTHM_STAGES = [
   {
     "id": "rhythm-better-together",
     "number": "01",
-    "phase": "10 weeks • Start TBC",
+    "phase": "10 weeks • Start date coming soon",
     "title": "Becoming Better Together",
     "subtitle": "Planned 10-week workshop programme",
     "description": "An opportunity for shared learning and personal growth is being developed.",
     "tag": "In development",
-    "rhythmNotes": "The start date, format, location and participation details are TBC."
+    "rhythmNotes": "The start date, format, location and participation details are coming soon."
   },
   {
     "id": "rhythm-annual-events",
     "number": "02",
-    "phase": "Annual • Details TBC",
+    "phase": "Annual • Details coming soon",
     "title": "Annual Events",
     "subtitle": "Future shared experiences",
     "description": "Events, retreats, travel and social experiences are ambitions for the growing brand.",
@@ -28,12 +28,12 @@ const RHYTHM_STAGES = [
   {
     "id": "rhythm-memoir-launch",
     "number": "03",
-    "phase": "Launch date TBC",
+    "phase": "Launch date coming soon",
     "title": "Memoir Launch",
     "subtitle": "The founder’s story",
     "description": "A forthcoming reflective memoir about life experiences and lessons learned.",
-    "tag": "Details TBC",
-    "rhythmNotes": "Publication details, launch arrangements, price and availability are TBC. Enquiries do not place an order."
+    "tag": "Details coming soon",
+    "rhythmNotes": "Publication details, launch arrangements, price and availability are coming soon. Enquiries do not place an order."
   }
 ];
 

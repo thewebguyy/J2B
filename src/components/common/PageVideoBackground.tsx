@@ -108,7 +108,7 @@ export const PageVideoBackground: React.FC<PageVideoBackgroundProps> = ({
         />
       )}
 
-      {/* Layer 1: Mobile Full Scrim — Guarantees AAA text readability across all mobile viewports (320-768px) */}
+      {/* Layer 1: Mobile Full Scrim: Guarantees AAA text readability across all mobile viewports (320-768px) */}
       <div
         className="md:hidden absolute inset-0 z-10"
         style={{
@@ -117,7 +117,7 @@ export const PageVideoBackground: React.FC<PageVideoBackgroundProps> = ({
         }}
       />
 
-      {/* Layer 2: Desktop Directional Scrim — Keeps text safe on left/top while showcasing video on right */}
+      {/* Layer 2: Desktop Directional Scrim: Keeps text safe on left/top while showcasing video on right */}
       {variant === "editorial-split" && (
         <div
           className="hidden md:block absolute inset-y-0 left-0 w-full z-10"
