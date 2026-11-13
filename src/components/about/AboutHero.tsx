@@ -3,11 +3,21 @@ import { brandPositioning, j2bContent } from "@/content/j2b";
 import Image from "next/image";
 import { BotanicalMotif } from "@/components/brand/BotanicalMotif";
 import { PathRibbon } from "@/components/brand/PathRibbon";
+import { PageVideoBackground } from "@/components/common/PageVideoBackground";
+import { PAGE_VIDEOS } from "@/content/videos";
 
 export const AboutHero: React.FC = () => {
   return (
     <section className="relative pt-10 pb-20 sm:pb-28 bg-ivory-canvas overflow-hidden">
-      <div className="relative mx-auto max-w-7xl px-6 sm:px-10 lg:px-14">
+      {/* Subtle Cinematic Background Treatment */}
+      <PageVideoBackground
+        desktopSrc={PAGE_VIDEOS.about.desktopSrc}
+        mobileSrc={PAGE_VIDEOS.about.mobileSrc}
+        posterSrc={PAGE_VIDEOS.about.posterSrc}
+        overlayOpacityClass="bg-gradient-to-r from-ivory-canvas/98 via-ivory-canvas/92 to-ivory-canvas/60 lg:to-ivory-canvas/30"
+      />
+
+      <div className="relative mx-auto max-w-7xl px-6 sm:px-10 lg:px-14 z-10">
         
         {/* Staggered Asymmetric Editorial Hero with Left Golden Line Anchor */}
         <div className="relative pl-0 sm:pl-10 lg:pl-14 mb-16 sm:mb-24">

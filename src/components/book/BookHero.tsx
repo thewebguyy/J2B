@@ -4,10 +4,20 @@ import { ArrowRight } from "lucide-react";
 import { BotanicalMotif } from "@/components/brand/BotanicalMotif";
 import { PathRibbon } from "@/components/brand/PathRibbon";
 import { brandPositioning } from "@/content/j2b";
+import { PageVideoBackground } from "@/components/common/PageVideoBackground";
+import { PAGE_VIDEOS } from "@/content/videos";
 
 export const BookHero: React.FC = () => (
   <section className="relative pt-10 pb-20 sm:pb-28 bg-ivory-canvas overflow-hidden">
-    <div className="relative mx-auto max-w-7xl px-6 sm:px-10 lg:px-14">
+    {/* Subtle Cinematic Background Treatment */}
+    <PageVideoBackground
+      desktopSrc={PAGE_VIDEOS.book.desktopSrc}
+      mobileSrc={PAGE_VIDEOS.book.mobileSrc}
+      posterSrc={PAGE_VIDEOS.book.posterSrc}
+      overlayOpacityClass="bg-gradient-to-r from-ivory-canvas/98 via-ivory-canvas/92 to-ivory-canvas/60 lg:to-ivory-canvas/30"
+    />
+
+    <div className="relative mx-auto max-w-7xl px-6 sm:px-10 lg:px-14 z-10">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
         <div className="lg:col-span-7">
           <div className="inline-flex items-center gap-3 mb-6">

@@ -1,10 +1,20 @@
 import React from "react";
 import { BotanicalMotif } from "@/components/brand/BotanicalMotif";
 import { PathRibbon } from "@/components/brand/PathRibbon";
+import { PageVideoBackground } from "@/components/common/PageVideoBackground";
+import { PAGE_VIDEOS } from "@/content/videos";
 
 export const ResourcesHero: React.FC = () => (
   <section className="relative pt-10 pb-20 sm:pb-28 bg-ivory-canvas overflow-hidden">
-    <div className="relative mx-auto max-w-7xl px-6 sm:px-10 lg:px-14">
+    {/* Subtle Cinematic Background Treatment */}
+    <PageVideoBackground
+      desktopSrc={PAGE_VIDEOS.resources.desktopSrc}
+      mobileSrc={PAGE_VIDEOS.resources.mobileSrc}
+      posterSrc={PAGE_VIDEOS.resources.posterSrc}
+      overlayOpacityClass="bg-gradient-to-r from-ivory-canvas/98 via-ivory-canvas/92 to-ivory-canvas/60 lg:to-ivory-canvas/30"
+    />
+
+    <div className="relative mx-auto max-w-7xl px-6 sm:px-10 lg:px-14 z-10">
       <div className="relative pl-0 sm:pl-10 lg:pl-14">
         <div className="hidden sm:block absolute left-0 top-1 bottom-0 w-8 pointer-events-none" aria-hidden="true">
           <PathRibbon variant="margin-anchor" className="h-full" />

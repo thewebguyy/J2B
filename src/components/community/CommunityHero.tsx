@@ -4,10 +4,20 @@ import { j2bContent } from "@/content/j2b";
 import { MagneticButton } from "@/components/common/MagneticButton";
 import { BotanicalMotif } from "@/components/brand/BotanicalMotif";
 import { PathRibbon } from "@/components/brand/PathRibbon";
+import { PageVideoBackground } from "@/components/common/PageVideoBackground";
+import { PAGE_VIDEOS } from "@/content/videos";
 
 export const CommunityHero: React.FC = () => {
   return (
     <section className="relative pt-10 pb-20 sm:pb-28 bg-ivory-canvas overflow-hidden">
+      {/* Subtle Cinematic Background Treatment */}
+      <PageVideoBackground
+        desktopSrc={PAGE_VIDEOS.community.desktopSrc}
+        mobileSrc={PAGE_VIDEOS.community.mobileSrc}
+        posterSrc={PAGE_VIDEOS.community.posterSrc}
+        overlayOpacityClass="bg-gradient-to-r from-ivory-canvas/98 via-ivory-canvas/92 to-ivory-canvas/60 lg:to-ivory-canvas/30"
+      />
+
       {/* Overlapping Botanical Watercolor Vignette in Living Teal */}
       <div
         className="pointer-events-none absolute -right-12 top-4 w-[320px] sm:w-[460px] lg:w-[520px] opacity-90 -z-10"
