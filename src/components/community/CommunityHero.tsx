@@ -10,51 +10,51 @@ import { PAGE_VIDEOS } from "@/content/videos";
 export const CommunityHero: React.FC = () => {
   return (
     <section className="relative pt-10 pb-20 sm:pb-28 bg-ivory-canvas overflow-hidden">
-      {/* Subtle Cinematic Background Treatment */}
+      {/* Subtle Cinematic Background Treatment with Directional Text-Safe Scrim */}
       <PageVideoBackground
         desktopSrc={PAGE_VIDEOS.community.desktopSrc}
         mobileSrc={PAGE_VIDEOS.community.mobileSrc}
         posterSrc={PAGE_VIDEOS.community.posterSrc}
-        overlayOpacityClass="bg-gradient-to-r from-ivory-canvas/98 via-ivory-canvas/92 to-ivory-canvas/60 lg:to-ivory-canvas/30"
+        variant="editorial-split"
       />
 
       {/* Overlapping Botanical Watercolor Vignette in Living Teal */}
       <div
-        className="pointer-events-none absolute -right-12 top-4 w-[320px] sm:w-[460px] lg:w-[520px] opacity-90 -z-10"
+        className="pointer-events-none absolute -right-12 top-4 w-[320px] sm:w-[460px] lg:w-[520px] opacity-75 -z-10"
         aria-hidden="true"
       >
         <BotanicalMotif variant="vignette" className="w-full h-auto" />
       </div>
 
-      <div className="relative mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
+      <div className="relative mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 z-20">
 
         {/* Asymmetric Editorial Hero Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-end mb-20 sm:mb-24">
           <div className="lg:col-span-8">
-            <div className="inline-flex items-center gap-3 mb-6">
-              <BotanicalMotif size={20} />
+            <div className="inline-flex items-center gap-3 mb-6 px-3 py-1.5 rounded-full bg-ivory-canvas/95 backdrop-blur-sm border border-gold-harvest/40 shadow-sm w-fit">
+              <BotanicalMotif size={18} />
               <span className="text-[11px] sm:text-xs uppercase tracking-[0.22em] font-semibold text-teal-living">
                 Community
               </span>
-              <span className="h-px w-10 bg-teal-living/40" aria-hidden="true" />
+              <span className="h-px w-6 bg-teal-living/40" aria-hidden="true" />
             </div>
 
             <h1 className="font-serif editorial-display font-bold text-midnight mb-8 reveal-heading">
               There&apos;s room for you{" "}
-              <span className="italic font-normal text-gold-deep block sm:inline">
+              <span className="italic font-normal text-teal-living block sm:inline">
                 at this table.
               </span>
             </h1>
 
-            <p className="font-sans text-lg sm:text-xl text-charcoal/85 leading-relaxed font-normal max-w-2xl">
+            <p className="font-sans text-lg sm:text-xl text-charcoal/95 leading-relaxed font-normal max-w-2xl bg-ivory-canvas/80 sm:bg-transparent rounded-lg p-2 sm:p-0">
               {j2bContent.communityIntroduction}
             </p>
           </div>
 
-          {/* Right Asymmetric Editorial Anchor & Truthful CTAs */}
+          {/* Right Asymmetric Editorial Anchor & Truthful CTAs on High-Contrast Surface */}
           <div className="lg:col-span-4 flex flex-col items-start lg:items-end justify-end">
-            <div className="w-full border-l-2 border-teal-living/60 pl-6 py-2">
-              <p className="font-serif italic text-base text-midnight/90 mb-6 leading-relaxed">
+            <div className="w-full border-l-2 border-teal-living/70 pl-6 py-4 bg-ivory-canvas/85 backdrop-blur-sm rounded-r-2xl border border-gold-harvest/25 shadow-sm">
+              <p className="font-serif italic text-base text-midnight font-medium mb-6 leading-relaxed">
                 Come as you are. Talk if you want to, or just listen.
               </p>
               <div className="flex flex-col sm:flex-row lg:flex-col gap-3.5 w-full">

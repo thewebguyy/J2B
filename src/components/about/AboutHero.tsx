@@ -9,15 +9,15 @@ import { PAGE_VIDEOS } from "@/content/videos";
 export const AboutHero: React.FC = () => {
   return (
     <section className="relative pt-10 pb-20 sm:pb-28 bg-ivory-canvas overflow-hidden">
-      {/* Subtle Cinematic Background Treatment */}
+      {/* Subtle Cinematic Background Treatment with Directional Text-Safe Scrim */}
       <PageVideoBackground
         desktopSrc={PAGE_VIDEOS.about.desktopSrc}
         mobileSrc={PAGE_VIDEOS.about.mobileSrc}
         posterSrc={PAGE_VIDEOS.about.posterSrc}
-        overlayOpacityClass="bg-gradient-to-r from-ivory-canvas/98 via-ivory-canvas/92 to-ivory-canvas/60 lg:to-ivory-canvas/30"
+        variant="editorial-split"
       />
 
-      <div className="relative mx-auto max-w-7xl px-6 sm:px-10 lg:px-14 z-10">
+      <div className="relative mx-auto max-w-7xl px-6 sm:px-10 lg:px-14 z-20">
         
         {/* Staggered Asymmetric Editorial Hero with Left Golden Line Anchor */}
         <div className="relative pl-0 sm:pl-10 lg:pl-14 mb-16 sm:mb-24">
@@ -26,21 +26,22 @@ export const AboutHero: React.FC = () => {
           </div>
 
           <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-3 mb-6">
+            <div className="inline-flex items-center gap-3 mb-6 px-3 py-1.5 rounded-full bg-ivory-canvas/95 backdrop-blur-sm border border-gold-harvest/40 shadow-sm w-fit">
+              <span className="size-1.5 rounded-full bg-teal-living" aria-hidden="true" />
               <span className="text-[11px] sm:text-xs uppercase tracking-[0.22em] font-semibold text-teal-living">
                 About us
               </span>
-              <span className="h-px w-10 bg-gold-harvest/60" aria-hidden="true" />
+              <span className="h-px w-6 bg-gold-harvest/60" aria-hidden="true" />
             </div>
 
             <h1 className="font-serif editorial-display font-bold text-midnight mb-8 reveal-heading">
               Growing is easier{" "}
-              <span className="italic font-normal text-gold-deep block sm:inline">
+              <span className="italic font-normal text-teal-living block sm:inline">
                 when you&apos;re not alone.
               </span>
             </h1>
 
-            <p className="font-sans text-lg sm:text-xl text-charcoal/85 leading-relaxed font-normal max-w-2xl">
+            <p className="font-sans text-lg sm:text-xl text-charcoal/95 leading-relaxed font-normal max-w-2xl bg-ivory-canvas/80 sm:bg-transparent rounded-lg p-2 sm:p-0">
               Journey2Better begins with life experiences and lessons learned — and a belief that we can encourage one another to grow.
             </p>
           </div>
@@ -49,8 +50,8 @@ export const AboutHero: React.FC = () => {
         {/* Editorial Feature Lockup: Unboxed Pull-Quote Style with Generous Gold Left Border */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-start">
           
-          {/* Left: Origin Story Narrative */}
-          <div className="lg:col-span-7 pl-5 sm:pl-8 lg:pl-10 border-l-2 border-gold-harvest/80 py-2 relative">
+          {/* Left: Origin Story Narrative on Soft Text-Safe Surface */}
+          <div className="lg:col-span-7 pl-5 sm:pl-8 lg:pl-10 border-l-2 border-gold-harvest/80 py-3 relative bg-ivory-canvas/75 sm:bg-ivory-canvas/60 rounded-r-2xl backdrop-blur-xs">
             <div className="flex items-center gap-2 mb-3.5">
               <span className="text-[11px] uppercase tracking-[0.2em] font-semibold text-gold-deep">
                 Why we started
@@ -62,7 +63,7 @@ export const AboutHero: React.FC = () => {
               &ldquo;{j2bContent.about[0]}&rdquo;
             </h2>
 
-            <div className="space-y-4 text-charcoal/85 font-sans text-base sm:text-lg leading-relaxed max-w-2xl">
+            <div className="space-y-4 text-charcoal/95 font-sans text-base sm:text-lg leading-relaxed max-w-2xl">
               <p>
                 {brandPositioning.memoir}
               </p>

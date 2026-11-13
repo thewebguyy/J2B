@@ -9,49 +9,51 @@ import { PAGE_VIDEOS } from "@/content/videos";
 
 export const BookHero: React.FC = () => (
   <section className="relative pt-10 pb-20 sm:pb-28 bg-ivory-canvas overflow-hidden">
-    {/* Subtle Cinematic Background Treatment */}
+    {/* Subtle Cinematic Background Treatment with Directional Text-Safe Scrim */}
     <PageVideoBackground
       desktopSrc={PAGE_VIDEOS.book.desktopSrc}
       mobileSrc={PAGE_VIDEOS.book.mobileSrc}
       posterSrc={PAGE_VIDEOS.book.posterSrc}
-      overlayOpacityClass="bg-gradient-to-r from-ivory-canvas/98 via-ivory-canvas/92 to-ivory-canvas/60 lg:to-ivory-canvas/30"
+      variant="editorial-split"
     />
 
-    <div className="relative mx-auto max-w-7xl px-6 sm:px-10 lg:px-14 z-10">
+    <div className="relative mx-auto max-w-7xl px-6 sm:px-10 lg:px-14 z-20">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
         <div className="lg:col-span-7">
-          <div className="inline-flex items-center gap-3 mb-6">
-            <BotanicalMotif size={20} />
+          <div className="inline-flex items-center gap-3 mb-6 px-3 py-1.5 rounded-full bg-ivory-canvas/95 backdrop-blur-sm border border-gold-harvest/40 shadow-sm w-fit">
+            <BotanicalMotif size={18} />
             <span className="text-[11px] sm:text-xs uppercase tracking-[0.22em] font-semibold text-teal-living">
               The Memoir
             </span>
-            <span className="h-px w-10 bg-gold-harvest/60" aria-hidden="true" />
+            <span className="h-px w-6 bg-gold-harvest/60" aria-hidden="true" />
           </div>
 
           <h1 className="font-serif editorial-display font-bold text-midnight mb-6 reveal-heading">
             My Journey to{" "}
-            <span className="italic font-normal text-gold-deep">Becoming Better</span>
+            <span className="italic font-normal text-teal-living">Becoming Better</span>
           </h1>
 
-          <p className="font-sans text-lg sm:text-xl text-charcoal/85 leading-relaxed max-w-2xl mb-4">
-            A forthcoming reflective memoir by Sade Omatsuli, rooted in lived experience and the
-            lessons gathered along the way.
-          </p>
-          <p className="font-sans text-base sm:text-lg text-charcoal/75 leading-relaxed max-w-2xl mb-8">
-            {brandPositioning.memoir}
-          </p>
+          <div className="space-y-4 mb-8 bg-ivory-canvas/80 sm:bg-transparent rounded-xl p-3 sm:p-0">
+            <p className="font-sans text-lg sm:text-xl text-charcoal/95 leading-relaxed max-w-2xl">
+              A forthcoming reflective memoir by Sade Omatsuli, rooted in lived experience and the
+              lessons gathered along the way.
+            </p>
+            <p className="font-sans text-base sm:text-lg text-charcoal/90 leading-relaxed max-w-2xl">
+              {brandPositioning.memoir}
+            </p>
+          </div>
 
           <div className="flex flex-col sm:flex-row gap-3.5">
             <Link
               href="#story"
-              className="inline-flex w-full sm:w-auto items-center justify-center gap-2.5 rounded-full bg-midnight hover:bg-midnight-deep text-ivory-canvas px-6 py-3.5 text-xs font-semibold uppercase tracking-wider border border-gold-harvest/45 transition-all duration-200 min-h-[46px]"
+              className="inline-flex w-full sm:w-auto items-center justify-center gap-2.5 rounded-full bg-midnight hover:bg-midnight-deep text-ivory-canvas px-6 py-3.5 text-xs font-semibold uppercase tracking-wider border border-gold-harvest/45 transition-all duration-200 min-h-[46px] shadow-sm"
             >
               <span>Explore the story</span>
               <ArrowRight className="size-4 text-gold-harvest" />
             </Link>
             <Link
               href="/contact?interest=book-resources"
-              className="inline-flex w-full sm:w-auto items-center justify-center gap-2.5 rounded-full border border-midnight/40 bg-ivory-canvas/70 hover:border-midnight hover:bg-ivory-surface text-midnight px-6 py-3.5 text-xs font-semibold uppercase tracking-wider transition-all duration-200 min-h-[46px]"
+              className="inline-flex w-full sm:w-auto items-center justify-center gap-2.5 rounded-full border border-midnight/40 bg-ivory-canvas/95 hover:border-midnight hover:bg-ivory-surface text-midnight px-6 py-3.5 text-xs font-semibold uppercase tracking-wider transition-all duration-200 min-h-[46px] shadow-sm"
             >
               <span>Register book interest</span>
             </Link>

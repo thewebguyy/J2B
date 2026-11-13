@@ -1,14 +1,18 @@
 "use client";
 
-import React, { useEffect, useRef, useState, useCallback } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import { Pause, Play } from "lucide-react";
+
+export type VideoScrimVariant =
+  | "editorial-split" // Heavy ivory on left/text zone (98% -> 94% -> 55% -> 0%), clear right zone
+  | "editorial-centered" // Heavy ivory on top/left, gradual fade for center-staggered layouts
+  | "sanctuary-dark"; // Deep midnight scrim when text is light/ivory
 
 interface PageVideoBackgroundProps {
   desktopSrc: string;
   mobileSrc: string;
   posterSrc: string;
-  overlayOpacityClass?: string;
+  variant?: VideoScrimVariant;
   className?: string;
   ariaLabel?: string;
 }
@@ -21,9 +25,8 @@ export const PageVideoBackground: React.FC<PageVideoBackgroundProps> = ({
   desktopSrc,
   mobileSrc,
   posterSrc,
-  overlayOpacityClass = "bg-ivory-canvas/85",
+  variant = "editorial-split",
   className = "absolute inset-0 w-full h-full overflow-hidden select-none pointer-events-none",
-  ariaLabel = "Background video",
 }) => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isDesktop, setIsDesktop] = useState<boolean | null>(null);
@@ -31,7 +34,6 @@ export const PageVideoBackground: React.FC<PageVideoBackgroundProps> = ({
   const [saveData, setSaveData] = useState(false);
   const [userOptedIn, setUserOptedIn] = useState(false);
   const [isVideoReady, setIsVideoReady] = useState(false);
-  const [isPlaying, setIsPlaying] = useState(false);
   const [hasError, setHasError] = useState(false);
 
   useEffect(() => {
@@ -69,13 +71,13 @@ export const PageVideoBackground: React.FC<PageVideoBackgroundProps> = ({
     vid.defaultMuted = true;
     const p = vid.play();
     if (p && typeof p.catch === "function") {
-      p.then(() => setIsPlaying(true)).catch(() => setIsPlaying(false));
+      p.catch(() => {});
     }
   }, [shouldPlay, videoSrc]);
 
   return (
     <div className={className} aria-hidden="true">
-      {/* Base Poster */}
+      {/* Base Poster: Always loaded for instant LCP & zero CLS */}
       <Image
         src={posterSrc}
         alt=""
@@ -86,7 +88,7 @@ export const PageVideoBackground: React.FC<PageVideoBackgroundProps> = ({
         className="object-cover object-center"
       />
 
-      {/* Video */}
+      {/* Optimized Video */}
       {shouldPlay && (
         <video
           ref={videoRef}
@@ -98,8 +100,7 @@ export const PageVideoBackground: React.FC<PageVideoBackgroundProps> = ({
           preload="metadata"
           poster={posterSrc}
           onCanPlay={() => setIsVideoReady(true)}
-          onPlaying={() => setIsPlaying(true)}
-          onPause={() => setIsPlaying(false)}
+          onPlaying={() => setIsVideoReady(true)}
           onError={() => setHasError(true)}
           className={`absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-700 ${
             isVideoReady ? "opacity-100" : "opacity-0"
@@ -107,9 +108,48 @@ export const PageVideoBackground: React.FC<PageVideoBackgroundProps> = ({
         />
       )}
 
-      {/* Editorial Scrim Overlay */}
-      <div className={`absolute inset-0 ${overlayOpacityClass}`} />
+      {/* Layer 1: Mobile Full Scrim — Guarantees AAA text readability across all mobile viewports (320-768px) */}
+      <div
+        className="md:hidden absolute inset-0 z-10"
+        style={{
+          background:
+            "linear-gradient(180deg, rgba(252, 249, 232, 0.96) 0%, rgba(252, 249, 232, 0.90) 55%, rgba(252, 249, 232, 0.96) 100%)",
+        }}
+      />
+
+      {/* Layer 2: Desktop Directional Scrim — Keeps text safe on left/top while showcasing video on right */}
+      {variant === "editorial-split" && (
+        <div
+          className="hidden md:block absolute inset-y-0 left-0 w-full z-10"
+          style={{
+            background:
+              "linear-gradient(90deg, rgba(252, 249, 232, 0.98) 0%, rgba(252, 249, 232, 0.95) 45%, rgba(252, 249, 232, 0.78) 65%, rgba(252, 249, 232, 0.35) 85%, rgba(252, 249, 232, 0.10) 100%)",
+          }}
+        />
+      )}
+
+      {variant === "editorial-centered" && (
+        <div
+          className="hidden md:block absolute inset-0 z-10"
+          style={{
+            background:
+              "radial-gradient(ellipse at 35% 35%, rgba(252, 249, 232, 0.98) 0%, rgba(252, 249, 232, 0.94) 50%, rgba(252, 249, 232, 0.70) 75%, rgba(252, 249, 232, 0.20) 100%)",
+          }}
+        />
+      )}
+
+      {variant === "sanctuary-dark" && (
+        <div
+          className="hidden md:block absolute inset-0 z-10"
+          style={{
+            background:
+              "linear-gradient(90deg, rgba(1, 43, 52, 0.96) 0%, rgba(1, 43, 52, 0.90) 50%, rgba(1, 43, 52, 0.50) 80%, rgba(1, 43, 52, 0.20) 100%)",
+          }}
+        />
+      )}
+
+      {/* Subtle bottom edge blend into Warm Ivory canvas */}
+      <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-ivory-canvas via-ivory-canvas/60 to-transparent z-10" />
     </div>
   );
 };
-

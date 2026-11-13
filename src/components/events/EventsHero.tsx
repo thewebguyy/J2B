@@ -9,15 +9,15 @@ import { PAGE_VIDEOS } from "@/content/videos";
 export const EventsHero: React.FC = () => {
   return (
     <section className="relative pt-10 pb-20 sm:pb-28 bg-ivory-canvas overflow-hidden">
-      {/* Subtle Cinematic Background Treatment */}
+      {/* Subtle Cinematic Background Treatment with Directional Text-Safe Scrim */}
       <PageVideoBackground
         desktopSrc={PAGE_VIDEOS.events.desktopSrc}
         mobileSrc={PAGE_VIDEOS.events.mobileSrc}
         posterSrc={PAGE_VIDEOS.events.posterSrc}
-        overlayOpacityClass="bg-gradient-to-r from-ivory-canvas/98 via-ivory-canvas/92 to-ivory-canvas/60 lg:to-ivory-canvas/30"
+        variant="editorial-split"
       />
 
-      <div className="relative mx-auto max-w-7xl px-6 sm:px-10 lg:px-14 z-10">
+      <div className="relative mx-auto max-w-7xl px-6 sm:px-10 lg:px-14 z-20">
         
         {/* Staggered Asymmetric Editorial Hero on Unobstructed Canvas */}
         <div className="relative pl-0 sm:pl-10 lg:pl-14 mb-20 sm:mb-28">
@@ -28,7 +28,8 @@ export const EventsHero: React.FC = () => {
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-end">
             <div className="lg:col-span-7">
-              <div className="inline-flex items-center gap-3 mb-6">
+              <div className="inline-flex items-center gap-3 mb-6 px-3 py-1.5 rounded-full bg-ivory-canvas/95 backdrop-blur-sm border border-gold-harvest/40 shadow-sm w-fit">
+                <span className="size-1.5 rounded-full bg-teal-living" aria-hidden="true" />
                 <span className="text-[11px] sm:text-xs uppercase tracking-[0.22em] font-semibold text-teal-living">
                   Future Programmes &amp; Events
                 </span>
@@ -36,16 +37,18 @@ export const EventsHero: React.FC = () => {
 
               <h1 className="font-serif editorial-display font-bold text-midnight reveal-heading">
                 Some moments are{" "}
-                <span className="italic font-normal text-gold-deep block sm:inline">
+                <span className="italic font-normal text-teal-living block sm:inline">
                   better shared.
                 </span>
               </h1>
             </div>
 
             <div className="lg:col-span-5 lg:pb-2">
-              <p className="font-sans text-lg sm:text-xl text-charcoal/85 leading-relaxed font-normal mb-8">
-                The founder’s ambitions include annual events, retreats, travel and social experiences that bring people together. These are future plans; dates, locations and availability are TBC.
-              </p>
+              <div className="bg-ivory-canvas/85 sm:bg-ivory-canvas/75 backdrop-blur-sm p-4 sm:p-5 rounded-2xl border border-gold-harvest/25 shadow-sm mb-6">
+                <p className="font-sans text-base sm:text-lg text-charcoal/95 leading-relaxed font-normal">
+                  The founder’s ambitions include annual events, retreats, travel and social experiences that bring people together. These are future plans; dates, locations and availability are TBC.
+                </p>
+              </div>
 
               <div className="flex flex-col sm:flex-row sm:flex-wrap sm:items-center gap-3.5">
                 <MagneticButton href="#gatherings" variant="primary" className="w-full sm:w-auto sm:whitespace-nowrap">
