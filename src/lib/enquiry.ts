@@ -70,23 +70,31 @@ export function isJsonContentType(contentType: string | null): boolean {
   );
 }
 
+function normalizeOrigin(value: string): string | null {
+  try {
+    const parsed = new URL(value.trim());
+    if (parsed.protocol !== "http:" && parsed.protocol !== "https:") return null;
+    return parsed.origin;
+  } catch {
+    return null;
+  }
+}
+
 /**
- * Allow same-origin and configured origins, and non-browser clients that send
- * no Origin header. Entries may contain a single `*` wildcard (e.g.
- * "https://*.vercel.app").
+ * Exact-match origin allowlist. A missing Origin header is allowed because it
+ * marks a non-browser client; Origin is NOT used as authentication. Malformed
+ * or opaque origins (for example the literal "null") are rejected. Wildcards
+ * are intentionally not supported because an attacker can own a *.vercel.app
+ * project; list the exact trusted origins instead.
  */
 export function isAllowedOrigin(
   origin: string | null | undefined,
   allowed: readonly string[]
 ): boolean {
   if (!origin) return true;
-  const normalized = origin.trim().replace(/\/+$/, "");
-  return allowed.some((entry) => {
-    if (!entry) return false;
-    if (!entry.includes("*")) return entry === normalized;
-    const escaped = entry.replace(/[.+?^${}()|[\]\\]/g, "\\$&").replace(/\*/g, ".*");
-    return new RegExp(`^${escaped}$`).test(normalized);
-  });
+  const normalized = normalizeOrigin(origin);
+  if (!normalized) return false;
+  return allowed.some((entry) => entry && normalizeOrigin(entry) === normalized);
 }
 
 export type EnquiryInput = {

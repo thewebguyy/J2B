@@ -61,6 +61,14 @@ footage lives outside `public/` in `assets/video-sources/` and is re-encoded
 with `scripts/encode-videos.py`. See [ARCHITECTURE.md](ARCHITECTURE.md) for
 details and long-term storage guidance.
 
+## Fonts
+
+Playfair Display and Plus Jakarta Sans are self-hosted WOFF2 files in
+`src/fonts/` and loaded with `next/font/local`, so production builds never fetch
+`fonts.googleapis.com`. Both families are licensed under the SIL Open Font
+License 1.1; attribution and the license text are in `src/fonts/README.md` and
+`src/fonts/OFL.txt`.
+
 ## Deployment
 
 Vercel builds from the `main` branch for production and creates preview
