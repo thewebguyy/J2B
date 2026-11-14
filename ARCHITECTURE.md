@@ -46,6 +46,11 @@ docs/                # Design/engineering notes
   Graph and Twitter metadata from one helper.
 - **Server vs client**: pages are server components; only interactive pieces
   (`Navigation`, `EnquiryForm`, the video hero, `MotionReveal`) are `"use client"`.
+- **API security**: the enquiry route enforces an origin allowlist, a JSON
+  content type, a 16 KiB body cap with streamed enforcement, server-side
+  validation, HTML escaping, a honeypot, and per-instance rate limiting.
+- **Response headers**: `next.config.ts` applies `nosniff`, a referrer policy,
+  frame options, a permissions policy, and DNS prefetch control site-wide.
 - **Motion**: GSAP is loaded dynamically and only when `prefers-reduced-motion`
   is not set. `MotionReveal` wraps content and clears inline styles on finish.
 - **Video**: the homepage uses a double-buffered sequencer; secondary pages use

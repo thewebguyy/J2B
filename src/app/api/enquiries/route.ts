@@ -1,5 +1,14 @@
 import { NextRequest, NextResponse } from "next/server";
-import { categoryLabel, parseEnquiry, type EnquiryInput } from "@/lib/enquiry";
+import {
+  categoryLabel,
+  escapeHtml,
+  isAllowedOrigin,
+  isJsonContentType,
+  MAX_BODY_BYTES,
+  parseEnquiry,
+  type EnquiryInput,
+} from "@/lib/enquiry";
+import { siteUrl } from "@/content/seo";
 
 // In-memory, per-instance rate limiting. Adequate as a first defence; a durable
 // store (e.g. Upstash) is recommended before launch. Values are not persisted.
@@ -8,16 +17,53 @@ const RATE_LIMIT_MAX = 5;
 const attempts = new Map<string, number[]>();
 
 function clientIp(request: NextRequest): string {
-  const forwarded = request.headers.get("x-forwarded-for");
+  // On Vercel, x-vercel-forwarded-for is set by the platform and is not client
+  // controllable. Prefer it and only fall back to x-forwarded-for elsewhere.
   const vercelForwarded = request.headers.get("x-vercel-forwarded-for");
-  return (forwarded ?? vercelForwarded ?? "unknown").split(",")[0]?.trim() ?? "unknown";
+  const forwarded = request.headers.get("x-forwarded-for");
+  return (vercelForwarded ?? forwarded ?? "unknown").split(",")[0]?.trim() ?? "unknown";
 }
 
-function escapeHtml(value: string): string {
-  return value
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;");
+function allowedOrigins(): string[] {
+  const configured = (process.env.ALLOWED_ORIGINS ?? "")
+    .split(",")
+    .map((value) => value.trim())
+    .filter(Boolean);
+  if (configured.length > 0) return configured;
+  return [
+    siteUrl,
+    "http://localhost:3000",
+    "http://127.0.0.1:3000",
+    "https://*.vercel.app",
+  ];
+}
+
+async function readBody(
+  request: NextRequest
+): Promise<{ ok: true; text: string } | { ok: false; status: number }> {
+  const contentLength = Number(request.headers.get("content-length"));
+  if (Number.isFinite(contentLength) && contentLength > MAX_BODY_BYTES) {
+    return { ok: false, status: 413 };
+  }
+
+  if (!request.body) return { ok: true, text: "" };
+
+  const reader = request.body.getReader();
+  const decoder = new TextDecoder();
+  let text = "";
+  try {
+    for (;;) {
+      const { done, value } = await reader.read();
+      if (done) break;
+      text += decoder.decode(value, { stream: true });
+      if (text.length > MAX_BODY_BYTES) {
+        return { ok: false, status: 413 };
+      }
+    }
+  } catch {
+    return { ok: false, status: 400 };
+  }
+  return { ok: true, text };
 }
 
 function renderEmail(data: {
@@ -45,6 +91,21 @@ function renderEmail(data: {
 }
 
 export async function POST(request: NextRequest) {
+  // Reject cross-origin browser submissions.
+  if (!isAllowedOrigin(request.headers.get("origin"), allowedOrigins())) {
+    return NextResponse.json(
+      { error: "forbidden", message: "This request was blocked." },
+      { status: 403 }
+    );
+  }
+
+  if (!isJsonContentType(request.headers.get("content-type"))) {
+    return NextResponse.json(
+      { error: "unsupported_media_type", message: "Expected a JSON request body." },
+      { status: 415 }
+    );
+  }
+
   const ip = clientIp(request);
   const now = Date.now();
   const recent = (attempts.get(ip) ?? []).filter((t) => now - t < RATE_LIMIT_WINDOW_MS);
@@ -58,9 +119,21 @@ export async function POST(request: NextRequest) {
   recent.push(now);
   attempts.set(ip, recent);
 
+  const bodyRead = await readBody(request);
+  if (!bodyRead.ok) {
+    const tooLarge = bodyRead.status === 413;
+    return NextResponse.json(
+      {
+        error: tooLarge ? "payload_too_large" : "invalid_request",
+        message: tooLarge ? "The request body is too large." : "Could not read your submission.",
+      },
+      { status: bodyRead.status }
+    );
+  }
+
   let body: unknown;
   try {
-    body = await request.json();
+    body = JSON.parse(bodyRead.text);
   } catch {
     return NextResponse.json(
       { error: "invalid_request", message: "Could not read your submission." },
