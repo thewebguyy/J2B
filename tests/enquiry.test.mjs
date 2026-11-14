@@ -97,15 +97,23 @@ test("accepts only JSON content types", () => {
   assert.equal(isJsonContentType(null), false);
 });
 
-test("allows non-browser and same-origin requests, rejects unknown origins", () => {
-  const allowed = ["https://j2b-theta.vercel.app", "https://*.vercel.app"];
+test("allows non-browser and exact configured origins, rejects everything else", () => {
+  const allowed = [
+    "https://j2b-theta.vercel.app",
+    "https://j2b-preview-123.vercel.app",
+    "http://localhost:3000",
+  ];
   assert.equal(isAllowedOrigin(null, allowed), true);
   assert.equal(isAllowedOrigin(undefined, allowed), true);
   assert.equal(isAllowedOrigin("", allowed), true);
   assert.equal(isAllowedOrigin("https://j2b-theta.vercel.app", allowed), true);
-  assert.equal(isAllowedOrigin("https://j2b-abc123-team.vercel.app", allowed), true);
-  assert.equal(isAllowedOrigin("https://evil.example.com", allowed), false);
-  assert.equal(isAllowedOrigin("https://notvercel.example.com", allowed), false);
+  assert.equal(isAllowedOrigin("https://j2b-theta.vercel.app/", allowed), true);
+  assert.equal(isAllowedOrigin("https://j2b-preview-123.vercel.app", allowed), true);
+  assert.equal(isAllowedOrigin("http://localhost:3000", allowed), true);
+  assert.equal(isAllowedOrigin("https://other-org.vercel.app", allowed), false);
+  assert.equal(isAllowedOrigin("https://j2b-theta.vercel.app.evil.com", allowed), false);
+  assert.equal(isAllowedOrigin("null", allowed), false);
+  assert.equal(isAllowedOrigin("not a url", allowed), false);
 });
 
 test("defines a sane request body limit", () => {

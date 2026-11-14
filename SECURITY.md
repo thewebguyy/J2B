@@ -28,9 +28,14 @@ Use `.env.local` locally. `.env.example` documents the names without values.
   streamed consumption) and returns `413` when exceeded.
 - Only `application/json` requests are accepted (`415` otherwise), and malformed
   JSON returns a controlled `400`.
-- Browser requests are restricted to allowed origins (defaults cover production,
-  localhost and `*.vercel.app` previews; override with `ALLOWED_ORIGINS`).
+- Browser requests are restricted to an exact-match origin allowlist. Defaults
+  are the production URL, localhost, and this deployment's exact `VERCEL_URL`;
+  previews use that trusted platform value. Override with `ALLOWED_ORIGINS`
+  (exact origins only; wildcards are not supported).
 - A honeypot field and per-instance rate limiting provide basic spam defence.
+- Rate-limit keys trust `x-forwarded-for`/`x-real-ip` only when running on
+  Vercel (`VERCEL=1`); elsewhere those headers are untrusted and all requests
+  share a single bucket.
 - Email content is HTML-escaped before rendering.
 - Delivery is disabled (HTTP 503) unless credentials are present, so the form
   never reports false success.

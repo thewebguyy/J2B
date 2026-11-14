@@ -17,11 +17,17 @@ const RATE_LIMIT_MAX = 5;
 const attempts = new Map<string, number[]>();
 
 function clientIp(request: NextRequest): string {
-  // On Vercel, x-vercel-forwarded-for is set by the platform and is not client
-  // controllable. Prefer it and only fall back to x-forwarded-for elsewhere.
-  const vercelForwarded = request.headers.get("x-vercel-forwarded-for");
-  const forwarded = request.headers.get("x-forwarded-for");
-  return (vercelForwarded ?? forwarded ?? "unknown").split(",")[0]?.trim() ?? "unknown";
+  // Only trust forwarding headers on Vercel, where the platform sets them and
+  // overwrites client-supplied values. Elsewhere they are client-controllable,
+  // so every request shares a single conservative bucket instead of allowing a
+  // spoofed header to bypass throttling.
+  if (process.env.VERCEL === "1") {
+    const forwarded = request.headers.get("x-forwarded-for");
+    const realIp = request.headers.get("x-real-ip");
+    const candidate = forwarded?.split(",")[0]?.trim() || realIp?.trim();
+    if (candidate) return candidate;
+  }
+  return "untrusted";
 }
 
 function allowedOrigins(): string[] {
@@ -30,12 +36,20 @@ function allowedOrigins(): string[] {
     .map((value) => value.trim())
     .filter(Boolean);
   if (configured.length > 0) return configured;
-  return [
+
+  const defaults: string[] = [
     siteUrl,
     "http://localhost:3000",
     "http://127.0.0.1:3000",
-    "https://*.vercel.app",
   ];
+  // Vercel exposes the exact deployment/production hostnames for this project.
+  // Adding those gives preview support via trusted platform values without
+  // trusting every *.vercel.app origin.
+  if (process.env.VERCEL_URL) defaults.push(`https://${process.env.VERCEL_URL}`);
+  if (process.env.VERCEL_PROJECT_PRODUCTION_URL) {
+    defaults.push(`https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`);
+  }
+  return defaults;
 }
 
 async function readBody(

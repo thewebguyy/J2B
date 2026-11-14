@@ -29,15 +29,22 @@ leaking internals.
 
 ### P2 — Cross-origin form submissions
 
-Added an `Origin` check. Requests without an `Origin` header (non-browser
-clients) are accepted; browser requests must originate from an allowed origin.
-Defaults cover the production URL, localhost, and `*.vercel.app` previews, and
-are overridable via `ALLOWED_ORIGINS`. Rejected requests return `403`.
+Added an exact-match `Origin` check. Requests without an `Origin` header
+(non-browser clients) are accepted; browser requests must originate from an
+explicitly allowed origin. Defaults are the production URL, localhost, and the
+exact `VERCEL_URL`/`VERCEL_PROJECT_PRODUCTION_URL` hostnames for this
+deployment, so previews work without trusting every `*.vercel.app` domain.
+Wildcards are not supported; `ALLOWED_ORIGINS` lists exact origins. Rejected or
+malformed origins (including the opaque `"null"`) return `403`. Origin is an
+abuse/CSRF control, not authentication.
 
 ### P2 — Trusted-forwarded-header handling
 
-`clientIp` now prefers `x-vercel-forwarded-for` (set by the platform) over
-`x-forwarded-for` and never trusts arbitrary `X-Forwarded-*` values directly.
+`clientIp` trusts `x-forwarded-for`/`x-real-ip` only when `VERCEL=1`, where the
+platform sets and overwrites them. Outside Vercel those headers are
+client-controllable, so all requests share one conservative bucket instead of
+letting a spoofed header bypass throttling. The limiter remains in-memory and
+per-instance; it is not distributed.
 
 ### P2 — Missing security headers
 
@@ -67,19 +74,23 @@ predictable `502` responses on delivery failure.
 
 ## Configuration
 
-- `ALLOWED_ORIGINS` — optional comma-separated origin allowlist (supports one
-  `*` wildcard). Defaults cover production, localhost, and Vercel previews.
+- `ALLOWED_ORIGINS` — optional comma-separated list of exact trusted origins
+  (no wildcards). Defaults cover production, localhost, and the exact
+  `VERCEL_URL`/`VERCEL_PROJECT_PRODUCTION_URL` hostnames.
 - Delivery stays disabled until `RESEND_API_KEY` and `ENQUIRY_TO_EMAIL` are
   intentionally configured.
 
 ## Testing evidence
 
-Local HTTP verification of `/api/enquiries`: `415` (non-JSON), `413` (oversized
-body), `403` (cross-origin), `400` (malformed JSON, missing consent, honeypot),
-`503` (valid submission without delivery credentials). Security headers were
-observed on the homepage response. Unit tests cover `escapeHtml`,
-`isJsonContentType`, `isAllowedOrigin`, and the body-size constant; 32 tests
-pass in total.
+Local HTTP verification of `/api/enquiries` is automated in
+`tests/enquiry-api.integration.mjs` (run with `npm run test:api`, also a CI
+step). It launches Next and asserts: valid request → `503` disabled state with
+no email sent, missing Origin accepted, invalid JSON → `400`, non-JSON → `415`,
+unauthorized Origin → `403`, oversized body with Content-Length → `413`,
+oversized streamed body without Content-Length → `413`, and the security
+headers. Unit tests also cover `escapeHtml`, `isJsonContentType`,
+`isAllowedOrigin` (exact match, malformed and opaque origins), and the
+body-size constant. 32 unit tests plus 8 endpoint integration tests pass.
 
 ## Production rollout
 
