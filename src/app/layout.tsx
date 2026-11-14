@@ -1,24 +1,26 @@
 import type { Metadata, Viewport } from "next";
-import { Playfair_Display, Plus_Jakarta_Sans } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import { Navigation } from "@/components/common/Navigation";
 import { Footer } from "@/components/common/Footer";
 import { brandPositioning } from "@/content/j2b";
 import { organizationSchema, pageMetadata, siteUrl } from "@/content/seo";
 
-const playfair = Playfair_Display({
-  subsets: ["latin"],
+const playfair = localFont({
+  src: [
+    { path: "../fonts/playfair-display-latin.woff2", weight: "400 700", style: "normal" },
+    { path: "../fonts/playfair-display-latin-italic.woff2", weight: "400 700", style: "italic" },
+  ],
   variable: "--font-playfair",
   display: "swap",
-  weight: ["400", "500", "600", "700"],
-  style: ["normal", "italic"],
 });
 
-const jakarta = Plus_Jakarta_Sans({
-  subsets: ["latin"],
+const jakarta = localFont({
+  src: [
+    { path: "../fonts/plus-jakarta-sans-latin.woff2", weight: "300 700", style: "normal" },
+  ],
   variable: "--font-sans",
   display: "swap",
-  weight: ["300", "400", "500", "600", "700"],
 });
 
 export const viewport: Viewport = {
